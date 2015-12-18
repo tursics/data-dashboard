@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.hexagon {
+	background: red;
+	height: 55px;
+	position: relative;
+	width: 100px;
+}
+
+.hexagon:before {
+	content: '';
+	position: absolute;
+	top: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 25px solid red;
+}
+
+.hexagon:after {
+	content: '';
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 25px solid red;
+}
