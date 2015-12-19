@@ -8,16 +8,24 @@ body {
 	margin: 0;
 }
 
-.card { 
+#board {
+	padding: 0 0 3.14em 0;
+}
+
+.card {
 	float:left;
 	height: 7em;
-	margin: 3.14em 0 0 0;
+	margin: 3.64em .5em 0 0;
 	-webkit-perspective: 1000;
 	   -moz-perspective: 1000;
 	     -o-perspective: 1000;
 	        perspective: 1000;
 	position: relative;
 	width: 12.6em;
+}
+
+.endcard {
+	clear:both;
 }
 
 .cardwrapper {
@@ -56,6 +64,10 @@ body {
 }
 
 .cardwrapper figure:before {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
 	border-bottom: 3.14em solid white;
 	border-left: 6.28em solid transparent;
 	border-right: 6.28em solid transparent;
@@ -68,6 +80,10 @@ body {
 }
 
 .cardwrapper figure:after {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
 	border-left: 6.28em solid transparent;
 	border-right: 6.28em solid transparent;
 	border-top: 3.14em solid white;
