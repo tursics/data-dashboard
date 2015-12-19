@@ -9,13 +9,13 @@ body {
 }
 
 #board {
-	padding: 0 0 3.14em 0;
+	padding: 0 0 3.6em 0;
 }
 
 .card {
 	float:left;
-	height: 7em;
-	margin: 3.64em .5em 0 0;
+	height: 7.4em;
+	margin: 4.1em .5em 0 0;
 	-webkit-perspective: 1000;
 	   -moz-perspective: 1000;
 	     -o-perspective: 1000;
@@ -68,14 +68,14 @@ body {
 	   -moz-backface-visibility: hidden;
 	     -o-backface-visibility: hidden;
 	        backface-visibility: hidden;
-	border-bottom: 3.14em solid white;
+	border-bottom: 3.6em solid white;
 	border-left: 6.28em solid transparent;
 	border-right: 6.28em solid transparent;
 	content: '';
 	height: 0;
 	left: 0;
 	position: absolute;
-	top: -3.14em;
+	top: -3.55em;
 	width: 0;
 }
 
@@ -86,8 +86,8 @@ body {
 	        backface-visibility: hidden;
 	border-left: 6.28em solid transparent;
 	border-right: 6.28em solid transparent;
-	border-top: 3.14em solid white;
-	bottom: -3.14em;
+	border-top: 3.6em solid white;
+	bottom: -3.55em;
 	content: '';
 	height: 0;
 	left: 0;
@@ -122,4 +122,15 @@ body {
 }
 .blue .cardwrapper figure.front:after {
 	border-top-color: blue;
+}
+
+.transparent .cardwrapper .front {
+	background: transparent;
+	color: white;
+}
+.transparent .cardwrapper figure.front:before {
+	border-bottom-color: transparent;
+}
+.transparent .cardwrapper figure.front:after {
+	border-top-color: transparent;
 }
