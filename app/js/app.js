@@ -2,10 +2,10 @@
 
 function createNewCard(front,back,color)
 {
-	var str = '<div id="card"><figure class="front">'+front+'</figure><figure class="back">'+back+'</figure></div>';
+	var str = '<div class="cardwrapper"><figure class="front">'+front+'</figure><figure class="back">'+back+'</figure></div>';
 
 	$( '<section>', {
-		class: 'container '/*+color*/,
+		class: 'card '+color,
 		html: str
 	})
 	.appendTo( $('#board') )
@@ -17,27 +17,10 @@ function createNewCard(front,back,color)
 //-----------------------------------------------------------------------
 
 $( document ).ready( function() {
-	$( '<div>', {
-		class: 'hexagon red',
-		text: 'Test 1'
-	}).appendTo( $('#board') );
-
-	$( '<div>', {
-		class: 'hexagon blue',
-		text: 'Test 2'
-	}).appendTo( $('#board') );
-
-	$( '<div>', {
-		class: 'hexagon red',
-		text: 'Test 3'
-	}).appendTo( $('#board') );
-
-	$( '<div>', {
-		class: 'hexagon blue',
-		text: 'Test 4'
-	}).appendTo( $('#board') );
-
-	createNewCard('Front text','Back text','red');
+	createNewCard('Text 1','Red','red');
+	createNewCard('Text 2','Blue','blue');
+	createNewCard('Text 3','Red','red');
+	createNewCard('Text 4','Blue','blue');
 });
 
 //-----------------------------------------------------------------------

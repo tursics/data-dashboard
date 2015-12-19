@@ -5,110 +5,105 @@ body {
 	color: #fff;
 	font-family: Arial;
 	font-size: 12pt;
+	margin: 0;
 }
 
-.hexagon {
-	background: white;
-	height: 55px;
+.card { 
+	float:left;
+	height: 7em;
+	margin: 3.14em 0 0 0;
+	-webkit-perspective: 1000;
+	   -moz-perspective: 1000;
+	     -o-perspective: 1000;
+	        perspective: 1000;
 	position: relative;
-	width: 100px;
+	width: 12.6em;
 }
 
-.hexagon:before {
-	content: '';
-	position: absolute;
-	top: -25px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 25px solid white;
-}
-
-.hexagon:after {
-	content: '';
-	position: absolute;
-	bottom: -25px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 25px solid white;
-}
-
-.hexagon.red {
-	background: red;
-}
-.hexagon.red:before {
-	border-bottom-color:red;
-}
-.hexagon.red:after {
-	border-top-color:red;
-}
-
-.hexagon.blue {
-	background: blue;
-}
-.hexagon.blue:before {
-	border-bottom-color:blue;
-}
-.hexagon.blue:after {
-	border-top-color:blue;
-}
-
-.container { 
-	width: 200px;
-	height: 260px;
-	position: relative;
-	-webkit-perspective: 800px;
-	   -moz-perspective: 800px;
-	     -o-perspective: 800px;
-	        perspective: 800px;
-}
-
-#card {
-	width: 100%;
+.cardwrapper {
 	height: 100%;
 	position: absolute;
 	-webkit-transform-style: preserve-3d;
 	   -moz-transform-style: preserve-3d;
 	     -o-transform-style: preserve-3d;
 	        transform-style: preserve-3d;
-	-webkit-transition: transform 1s;
-	   -moz-transition: transform 1s;
-	     -o-transition: transform 1s;
-	        transition: transform 1s;
+	-webkit-transition: transform .7s;
+	   -moz-transition: transform .7s;
+	     -o-transition: transform .7s;
+	        transition: transform .7s;
+	width: 100%;
 }
 
-#card.flipped {
+.cardwrapper.flipped {
 	-webkit-transform: rotateY( 180deg );
 	   -moz-transform: rotateY( 180deg );
 	     -o-transform: rotateY( 180deg );
 	        transform: rotateY( 180deg );
 }
 
-#card figure {
-	margin: 0;
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
+.cardwrapper figure {
 	-webkit-backface-visibility: hidden;
 	   -moz-backface-visibility: hidden;
 	     -o-backface-visibility: hidden;
 	        backface-visibility: hidden;
+	background: white;
+	color: black;
+	display: block;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	width: 100%;
 }
 
-#card .front {
-	background: red;
+.cardwrapper figure:before {
+	border-bottom: 3.14em solid white;
+	border-left: 6.28em solid transparent;
+	border-right: 6.28em solid transparent;
+	content: '';
+	height: 0;
+	left: 0;
+	position: absolute;
+	top: -3.14em;
+	width: 0;
 }
 
-#card .back {
-	background: blue;
+.cardwrapper figure:after {
+	border-left: 6.28em solid transparent;
+	border-right: 6.28em solid transparent;
+	border-top: 3.14em solid white;
+	bottom: -3.14em;
+	content: '';
+	height: 0;
+	left: 0;
+	position: absolute;
+	width: 0;
+}
+
+.cardwrapper .back {
 	-webkit-transform: rotateY( 180deg );
 	   -moz-transform: rotateY( 180deg );
 	     -o-transform: rotateY( 180deg );
 	        transform: rotateY( 180deg );
+}
+
+.red .cardwrapper .front {
+	background: red;
+	color: white;
+}
+.red .cardwrapper figure.front:before {
+	border-bottom-color: red;
+}
+.red .cardwrapper figure.front:after {
+	border-top-color: red;
+}
+
+.blue .cardwrapper .front {
+	background: blue;
+	color: white;
+}
+.blue .cardwrapper figure.front:before {
+	border-bottom-color: blue;
+}
+.blue .cardwrapper figure.front:after {
+	border-top-color: blue;
 }
