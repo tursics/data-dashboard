@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	background-color: #000;
+	background-color: #848;
 	color: #fff;
 	font-family: Arial;
 	font-size: 12pt;
@@ -95,33 +95,42 @@ body {
 	width: 0;
 }
 
+.cardwrapper .front {
+	line-height: 7.4em;
+	text-align: center;
+	white-space: nowrap;
+}
+
 .cardwrapper .back {
+	line-height: 7.4em;
+	text-align: center;
 	-webkit-transform: rotateY( 180deg );
 	   -moz-transform: rotateY( 180deg );
 	     -o-transform: rotateY( 180deg );
 	        transform: rotateY( 180deg );
+	white-space: nowrap;
 }
 
-.red .cardwrapper .front {
-	background: red;
-	color: white;
+.black .cardwrapper .front {
+	background: #020406;
+	color: #ffffff;
 }
-.red .cardwrapper figure.front:before {
-	border-bottom-color: red;
+.black .cardwrapper figure.front:before {
+	border-bottom-color: #020406;
 }
-.red .cardwrapper figure.front:after {
-	border-top-color: red;
+.black .cardwrapper figure.front:after {
+	border-top-color: #020406;
 }
 
 .blue .cardwrapper .front {
-	background: blue;
-	color: white;
+	background: #35a1d7;
+	color: #ffffff;
 }
 .blue .cardwrapper figure.front:before {
-	border-bottom-color: blue;
+	border-bottom-color: #35a1d7;
 }
 .blue .cardwrapper figure.front:after {
-	border-top-color: blue;
+	border-top-color: #35a1d7;
 }
 
 .transparent .cardwrapper .front {
