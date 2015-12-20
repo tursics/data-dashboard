@@ -1,11 +1,30 @@
 //-----------------------------------------------------------------------
 
-function createNewCard(front,back,color)
+function createNewCard(config)
 {
-	var str = '<div class="cardwrapper"><figure class="front">'+front+'</figure><figure class="back">'+back+'</figure></div>';
+	config = config || {};
+	config.front = config.front || {};
+	config.front.css = config.front.css || '';
+	config.front.image = config.front.image || '';
+	config.front.text = config.front.text || '';
+	config.back = config.back || {};
+	config.back.css = config.back.css || '';
+	config.back.image = config.back.image || '';
+	config.back.text = config.back.text || '';
+
+	if(''!==config.front.image) {
+		config.front.css = 'transparent';
+		config.front.text = '<img src="'+config.front.image+'" style="width:100%;margin-top:-3.6em;">';
+	}
+	if(''!==config.back.image) {
+		config.back.css = 'transparent';
+		config.back.text = '<img src="'+config.back.image+'" style="width:100%;margin-top:-3.6em;">';
+	}
+
+	var str = '<div class="cardwrapper"><figure class="front '+config.front.css+'">'+config.front.text+'</figure><figure class="back '+config.back.css+'">'+config.back.text+'</figure></div>';
 
 	$( '<section>', {
-		class: 'card '+color,
+		class: 'card',
 		html: str
 	})
 	.appendTo($('#board'))
@@ -52,30 +71,90 @@ function finishBoard()
 //-----------------------------------------------------------------------
 
 $(document).ready(function() {
-	createNewCard('<img src="./img/codefor_berlin.png" style="width:100%;margin-top:-3.6em;">','Berlin','transparent');
-	createNewCard('<img src="./img/codefor_chemnitz.png" style="width:100%;margin-top:-3.6em;">','Chemnitz','transparent');
-	createNewCard('<img src="./img/codefor_koeln.png" style="width:100%;margin-top:-3.6em;">','Köln','transparent');
-	createNewCard('<img src="./img/codefor_heilbronn.png" style="width:100%;margin-top:-3.6em;">','Heilbronn','transparent');
+	createNewCard({
+		front:{image:'./img/codefor_berlin.png'},
+		back:{text:'Berlin'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_chemnitz.png'},
+		back:{text:'Chemnitz'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_koeln.png'},
+		back:{text:'Köln'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_heilbronn.png'},
+		back:{text:'Heilbronn'}
+	});
 
-	createNewCard('<img src="./img/codefor_leipzig.png" style="width:100%;margin-top:-3.6em;">','Leipzig','transparent');
-	createNewCard('<img src="./img/codefor_ulm.png" style="width:100%;margin-top:-3.6em;">','Ulm','transparent');
-	createNewCard('<img src="./img/codefor_magdeburg.png" style="width:100%;margin-top:-3.6em;">','Magdeburg','transparent');
-	createNewCard('<img src="./img/codefor_frankfurt.png" style="width:100%;margin-top:-3.6em;">','Frankfurt','transparent');
+	createNewCard({
+		front:{image:'./img/codefor_leipzig.png'},
+		back:{text:'Leipzig'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_ulm.png'},
+		back:{text:'Ulm'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_magdeburg.png'},
+		back:{text:'Magdeburg'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_frankfurt.png'},
+		back:{text:'Frankfurt'}
+	});
 
-	createNewCard('<img src="./img/codefor_jena.png" style="width:100%;margin-top:-3.6em;">','Jena','transparent');
-	createNewCard('<img src="./img/codefor_wuppertal.png" style="width:100%;margin-top:-3.6em;">','Wuppertal','transparent');
-	createNewCard('<img src="./img/codefor_giessen.png" style="width:100%;margin-top:-3.6em;">','Gießen','transparent');
-	createNewCard('<img src="./img/codefor_muenster.png" style="width:100%;margin-top:-3.6em;">','Münster','transparent');
+	createNewCard({
+		front:{image:'./img/codefor_jena.png'},
+		back:{text:'Jena'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_wuppertal.png'},
+		back:{text:'Wuppertal'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_giessen.png'},
+		back:{text:'Gießen'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_muenster.png'},
+		back:{text:'Münster'}
+	});
 
-	createNewCard('<img src="./img/codefor_bonn.png" style="width:100%;margin-top:-3.6em;">','Bonn','transparent');
-	createNewCard('<img src="./img/codefor_muenchen.png" style="width:100%;margin-top:-3.6em;">','München','transparent');
-	createNewCard('<img src="./img/codefor_hamburg.png" style="width:100%;margin-top:-3.6em;">','Hamburg','transparent');
-	createNewCard('Code for Freiburg','Freiburg','blue');
+	createNewCard({
+		front:{image:'./img/codefor_bonn.png'},
+		back:{text:'Bonn'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_muenchen.png'},
+		back:{text:'München'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_hamburg.png'},
+		back:{text:'Hamburg'}
+	});
+	createNewCard({
+		front:{text:'Code for Freiburg',css:'blue'},
+		back:{text:'Freiburg'}
+	});
 
-	createNewCard('<img src="./img/codefor_karlsruhe.png" style="width:100%;margin-top:-3.6em;">','Karlsruhe','transparent');
-	createNewCard('<img src="./img/codefor_dresden.png" style="width:100%;margin-top:-3.6em;">','Dresden','transparent');
-	createNewCard('<img src="./img/codefor_stuttgart.png" style="width:100%;margin-top:-3.6em;">','Stuttgart','transparent');
-	createNewCard('OpenRuhr','OpenRuhr','black');
+	createNewCard({
+		front:{image:'./img/codefor_karlsruhe.png'},
+		back:{text:'Karlsruhe'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_dresden.png'},
+		back:{text:'Dresden'}
+	});
+	createNewCard({
+		front:{image:'./img/codefor_stuttgart.png'},
+		back:{text:'Stuttgart'}
+	});
+	createNewCard({
+		front:{text:'OpenRuhr',css:'black'},
+		back:{text:'OpenRuhr'},
+	});
 
 	finishBoard();
 });

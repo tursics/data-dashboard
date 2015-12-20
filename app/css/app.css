@@ -111,35 +111,35 @@ body {
 	white-space: nowrap;
 }
 
-.black .cardwrapper .front {
+figure.black {
 	background: #020406;
 	color: #ffffff;
 }
-.black .cardwrapper figure.front:before {
+figure.black:before {
 	border-bottom-color: #020406;
 }
-.black .cardwrapper figure.front:after {
+figure.black:after {
 	border-top-color: #020406;
 }
 
-.blue .cardwrapper .front {
+figure.blue {
 	background: #35a1d7;
 	color: #ffffff;
 }
-.blue .cardwrapper figure.front:before {
+figure.blue:before {
 	border-bottom-color: #35a1d7;
 }
-.blue .cardwrapper figure.front:after {
+figure.blue:after {
 	border-top-color: #35a1d7;
 }
 
-.transparent .cardwrapper .front {
+figure.transparent {
 	background: transparent;
 	color: white;
 }
-.transparent .cardwrapper figure.front:before {
+figure.transparent:before {
 	border-bottom-color: transparent;
 }
-.transparent .cardwrapper figure.front:after {
+figure.transparent:after {
 	border-top-color: transparent;
 }
