@@ -138,6 +138,14 @@ $(document).ready(function() {
 		front:{text:'Code for Freiburg',css:'blue'},
 		back:{text:'Freiburg'}
 	});
+	createNewCard({
+		front:{text:'Code for Düsseldorf',css:'blue'},
+		back:{text:'Düsseldorf'},
+	});
+	createNewCard({
+		front:{text:'Code for Erlangen',css:'blue'},
+		back:{text:'Erlangen'},
+	});
 
 	createNewCard({
 		front:{image:'./img/codefor_karlsruhe.png'},
@@ -154,6 +162,14 @@ $(document).ready(function() {
 	createNewCard({
 		front:{text:'OpenRuhr',css:'black'},
 		back:{text:'OpenRuhr'},
+	});
+	createNewCard({
+		front:{text:'Code for Kassel',css:'black'},
+		back:{text:'Kassel'},
+	});
+	createNewCard({
+		front:{text:'Code for Niederrhein',css:'black'},
+		back:{text:'Niederrhein'},
 	});
 
 	finishBoard();
