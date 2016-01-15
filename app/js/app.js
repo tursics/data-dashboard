@@ -72,104 +72,16 @@ function finishBoard()
 
 $(document).ready(function() {
 	createNewCard({
-		front:{image:'./img/codefor_berlin.png'},
-		back:{text:'Berlin'}
+		front:{image:'./img/berlinopendata.svg'},
+		back:{text:'In Berlin gibt es das<br><a href="http://daten.berlin.de" target="_blank">Datenportal</a><br>und den<br><a href="http://fbinter.stadt-berlin.de/fb/" target="_blank">FIS-Broker</a>.',css:'card4lines'}
 	});
 	createNewCard({
-		front:{image:'./img/codefor_chemnitz.png'},
-		back:{text:'Chemnitz'}
+		front:{image:'./img/codeforberlin.svg'},
+		back:{text:'<a href="http://codefor.berlin" target="_blank">Code for Berlin</a>',css:'card1line'}
 	});
 	createNewCard({
-		front:{image:'./img/codefor_koeln.png'},
-		back:{text:'Köln'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_heilbronn.png'},
-		back:{text:'Heilbronn'}
-	});
-
-	createNewCard({
-		front:{image:'./img/codefor_leipzig.png'},
-		back:{text:'Leipzig'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_ulm.png'},
-		back:{text:'Ulm'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_magdeburg.png'},
-		back:{text:'Magdeburg'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_frankfurt.png'},
-		back:{text:'Frankfurt'}
-	});
-
-	createNewCard({
-		front:{image:'./img/codefor_jena.png'},
-		back:{text:'Jena'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_wuppertal.png'},
-		back:{text:'Wuppertal'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_giessen.png'},
-		back:{text:'Gießen'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_muenster.png'},
-		back:{text:'Münster'}
-	});
-
-	createNewCard({
-		front:{image:'./img/codefor_bonn.png'},
-		back:{text:'Bonn'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_muenchen.png'},
-		back:{text:'München'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_hamburg.png'},
-		back:{text:'Hamburg'}
-	});
-	createNewCard({
-		front:{text:'Code for Freiburg',css:'blue'},
-		back:{text:'Freiburg'}
-	});
-	createNewCard({
-		front:{text:'Code for Düsseldorf',css:'blue'},
-		back:{text:'Düsseldorf'},
-	});
-	createNewCard({
-		front:{text:'Code for Erlangen',css:'blue'},
-		back:{text:'Erlangen'},
-	});
-
-	createNewCard({
-		front:{image:'./img/codefor_karlsruhe.png'},
-		back:{text:'Karlsruhe'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_dresden.png'},
-		back:{text:'Dresden'}
-	});
-	createNewCard({
-		front:{image:'./img/codefor_stuttgart.png'},
-		back:{text:'Stuttgart'}
-	});
-	createNewCard({
-		front:{text:'OpenRuhr',css:'black'},
-		back:{text:'OpenRuhr'},
-	});
-	createNewCard({
-		front:{text:'Code for Kassel',css:'black'},
-		back:{text:'Kassel'},
-	});
-	createNewCard({
-		front:{text:'Code for Niederrhein',css:'black'},
-		back:{text:'Niederrhein'},
+		front:{text:'Du brauchst Hilfe?<br>Klick hier',css:'card2lines'},
+		back:{text:'Dann klick noch mal',css:'card1line'},
 	});
 
 	finishBoard();

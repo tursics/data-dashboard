@@ -111,6 +111,19 @@ body {
 	white-space: nowrap;
 }
 
+.cardwrapper .back.card1line, .cardwrapper .front.card1line {
+	line-height: 7.4em;
+}
+.cardwrapper .back.card2lines, .cardwrapper .front.card2lines {
+	line-height: 3.7em;
+}
+.cardwrapper .back.card3lines, .cardwrapper .front.card3lines {
+	line-height: 2.45em;
+}
+.cardwrapper .back.card4lines, .cardwrapper .front.card4lines {
+	line-height: 1.85em;
+}
+
 figure.black {
 	background: #020406;
 	color: #ffffff;
