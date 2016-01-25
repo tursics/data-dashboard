@@ -1,11 +1,137 @@
 @charset "UTF-8";
 
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2015 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mårten Nettelbladt
+ * License URL: http://www.fontspring.com/licenses/marten-nettelbladt/webfont
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'misoregular';
+    src: url('miso-regular-webfont.eot');
+    src: url('miso-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('miso-regular-webfont.woff2') format('woff2'),
+         url('miso-regular-webfont.woff') format('woff'),
+         url('miso-regular-webfont.ttf') format('truetype'),
+         url('miso-regular-webfont.svg#misoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'misolight';
+    src: url('miso-light-webfont.eot');
+    src: url('miso-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('miso-light-webfont.woff2') format('woff2'),
+         url('miso-light-webfont.woff') format('woff'),
+         url('miso-light-webfont.ttf') format('truetype'),
+         url('miso-light-webfont.svg#misolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'misobold';
+    src: url('miso-bold-webfont.eot');
+    src: url('miso-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('miso-bold-webfont.woff2') format('woff2'),
+         url('miso-bold-webfont.woff') format('woff'),
+         url('miso-bold-webfont.ttf') format('truetype'),
+         url('miso-bold-webfont.svg#misobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'judsonmedium';
+    src: url('judson-regular-webfont.eot');
+    src: url('judson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('judson-regular-webfont.woff2') format('woff2'),
+         url('judson-regular-webfont.woff') format('woff'),
+         url('judson-regular-webfont.ttf') format('truetype'),
+         url('judson-regular-webfont.svg#judsonmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'judsonbold';
+    src: url('judson-bold-webfont.eot');
+    src: url('judson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('judson-bold-webfont.woff2') format('woff2'),
+         url('judson-bold-webfont.woff') format('woff'),
+         url('judson-bold-webfont.ttf') format('truetype'),
+         url('judson-bold-webfont.svg#judsonbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'judsonitalic';
+    src: url('judson-italic-webfont.eot');
+    src: url('judson-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('judson-italic-webfont.woff2') format('woff2'),
+         url('judson-italic-webfont.woff') format('woff'),
+         url('judson-italic-webfont.ttf') format('truetype'),
+         url('judson-italic-webfont.svg#judsonitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'francois_oneregular';
+    src: url('francoisone-webfont.eot');
+    src: url('francoisone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('francoisone-webfont.woff2') format('woff2'),
+         url('francoisone-webfont.woff') format('woff'),
+         url('francoisone-webfont.ttf') format('truetype'),
+         url('francoisone-webfont.svg#francois_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	background-color: #848;
 	color: #fff;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	font-size: 12pt;
 	margin: 0;
+}
+
+.fontMisoRegular {
+	font-family: 'misoregular', Arial, sans-serif;
+}
+.fontMisoLight {
+	font-family: 'misolight', Arial, sans-serif;
+}
+.fontMisoBold {
+	font-family: 'misobold', Arial, sans-serif;
+}
+.fontJudsonMedium {
+	font-family: 'judsonmedium', Arial, sans-serif;
+}
+.fontJudsonBold {
+	font-family: 'judsonbold', Arial, sans-serif;
+}
+.fontJudsonItalic {
+	font-family: 'judsonitalic', Arial, sans-serif;
+}
+.fontFrancoisOne {
+	font-family: 'francois_oneregular', Arial, sans-serif;
 }
 
 #board {
