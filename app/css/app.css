@@ -1,10 +1,44 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'judsonmedium';
+    src: url('judson-regular-webfont.eot');
+    src: url('judson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('judson-regular-webfont.woff2') format('woff2'),
+         url('judson-regular-webfont.woff') format('woff'),
+         url('judson-regular-webfont.ttf') format('truetype'),
+         url('judson-regular-webfont.svg#judsonmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'judsonbold';
+    src: url('judson-bold-webfont.eot');
+    src: url('judson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('judson-bold-webfont.woff2') format('woff2'),
+         url('judson-bold-webfont.woff') format('woff'),
+         url('judson-bold-webfont.ttf') format('truetype'),
+         url('judson-bold-webfont.svg#judsonbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'judsonitalic';
+    src: url('judson-italic-webfont.eot');
+    src: url('judson-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('judson-italic-webfont.woff2') format('woff2'),
+         url('judson-italic-webfont.woff') format('woff'),
+         url('judson-italic-webfont.ttf') format('truetype'),
+         url('judson-italic-webfont.svg#judsonitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	background-color: #848;
 	color: #fff;
-	font-family: Arial;
-	font-size: 12pt;
+	font-family: 'judsonitalic', Arial, sans-serif;
+}	font-size: 12pt;
 	margin: 0;
 }
 
@@ -96,63 +130,68 @@ body {
 }
 
 .cardwrapper .front {
-	line-height: 7.4em;
-	text-align: center;
-	white-space: nowrap;
 }
 
 .cardwrapper .back {
-	line-height: 7.4em;
-	text-align: center;
 	-webkit-transform: rotateY( 180deg );
 	   -moz-transform: rotateY( 180deg );
 	     -o-transform: rotateY( 180deg );
 	        transform: rotateY( 180deg );
+}
+
+.cardwrapper .front div, .cardwrapper .back div {
+	overflow: hidden;
+	margin: 0 .5em 0 .5em;
+	text-align: center;
+}
+
+.cardwrapper .front.card1line div, .cardwrapper .back.card1line div {
+	padding-top: 3.2em;
 	white-space: nowrap;
 }
-
-.cardwrapper .back.card1line, .cardwrapper .front.card1line {
-	line-height: 7.4em;
+.cardwrapper .front.card2lines div, .cardwrapper .back.card2lines div {
+	padding-top: 2.7em;
+	white-space: nowrap;
 }
-.cardwrapper .back.card2lines, .cardwrapper .front.card2lines {
-	line-height: 3.7em;
+.cardwrapper .front.card3lines div, .cardwrapper .back.card3lines div {
+	line-height: 1.5em;
+	padding-top: 1.45em;
+	white-space: nowrap;
 }
-.cardwrapper .back.card3lines, .cardwrapper .front.card3lines {
-	line-height: 2.45em;
+.cardwrapper .front.display div {
+	line-height: 1.5em;
+	padding-top: 1.1em;
+	white-space: nowrap;
 }
-.cardwrapper .back.card4lines, .cardwrapper .front.card4lines {
-	line-height: 1.85em;
-}
-
-figure.black {
-	background: #020406;
-	color: #ffffff;
-}
-figure.black:before {
-	border-bottom-color: #020406;
-}
-figure.black:after {
-	border-top-color: #020406;
+.cardwrapper .front.display div span {
+	font-family: 'judsonmedium', Arial, sans-serif;
+	font-size: 3em;
 }
 
-figure.blue {
-	background: #35a1d7;
-	color: #ffffff;
-}
-figure.blue:before {
-	border-bottom-color: #35a1d7;
-}
-figure.blue:after {
-	border-top-color: #35a1d7;
+img.background {
+	left: 0;
+	position: absolute;
+	top: -3.6em;
+	width: 100%;
+	z-index: -1;
 }
 
 figure.transparent {
 	background: transparent;
-	color: white;
 }
 figure.transparent:before {
 	border-bottom-color: transparent;
 }
 figure.transparent:after {
 	border-top-color: transparent;
+}
+
+figure.refugees {
+	background: #fecb32;
+}
+figure.refugees:before {
+	border-bottom-color: #fecb32;
+}
+figure.refugees:after {
+	border-top-color: #fecb32;
 }
