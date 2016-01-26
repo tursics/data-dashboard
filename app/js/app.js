@@ -7,11 +7,13 @@ function loadCard(url)
 		data = data || {};
 		data.front = data.front || {};
 		data.front.textTop = data.front.textTop || '';
+		data.front.textButton = data.front.textButton || '';
 		data.front.value = data.front.value || '';
 		data.front.unit = data.front.unit || '';
-		data.front.textButton = data.front.textButton || '';
-		data.front.color = data.front.color || '';
+		data.front.changePerDay = data.front.changePerDay || '';
+		data.front.format = data.front.format || '';
 		data.front.background = data.front.background || '';
+		data.front.color = data.front.color || '';
 		data.front.cssClass = data.front.cssClass || '';
 		data.back = data.back || {};
 		data.back.text = data.back.text || '';
@@ -19,7 +21,23 @@ function loadCard(url)
 		data.back.background = data.back.background || '';
 		data.back.cssClass = data.back.cssClass || '';
 
-		var front = data.front.textTop+'<br><span>'+data.front.value+' '+data.front.unit+'</span><br>'+data.front.textButton;
+		var value = data.front.value+' '+data.front.unit;
+		if('date'==data.front.format) {
+			var d1 = new Date();
+			var d2 = new Date(data.front.value);
+			var diff = (d2-d1)/1000/60/60/24;
+			console.log(d1);
+			console.log(d2);
+			console.log(diff);
+			if(diff<1) {
+				value = '- Tage';
+			} else if(diff<2) {
+				value = '1 Tag';
+			} else {
+				value = parseInt(diff)+' Tage';
+			}
+		}
+		var front = data.front.textTop+'<br><span>'+value+'</span><br>'+data.front.textButton;
 		var frontTextColor = 'color:'+data.front.color+';';
 		var frontBGImage = data.front.background;
 		var frontCSSClass = data.front.cssClass;
@@ -190,6 +208,7 @@ $(document).ready(function() {
 	});
 
 	loadCard('berlin/angebote-zur-unterstuetzung-von-fluechtlingen.json');
+	loadCard('berlin/aktuelle-ausschreibungen-nach-vol-vob-vof-oder-fuer-interessenbekundungsverfahren-0.json');
 
 	recalcBoard();
 
