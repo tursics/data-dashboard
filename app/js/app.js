@@ -4,6 +4,21 @@ function loadCard(url)
 {
 	function createCard(data)
 	{
+		data = data || {};
+		data.front = data.front || {};
+		data.front.textTop = data.front.textTop || '';
+		data.front.value = data.front.value || '';
+		data.front.unit = data.front.unit || '';
+		data.front.textButton = data.front.textButton || '';
+		data.front.color = data.front.color || '';
+		data.front.background = data.front.background || '';
+		data.front.cssClass = data.front.cssClass || '';
+		data.back = data.back || {};
+		data.back.text = data.back.text || '';
+		data.back.color = data.back.color || '';
+		data.back.background = data.back.background || '';
+		data.back.cssClass = data.back.cssClass || '';
+
 		var front = data.front.textTop+'<br><span>'+data.front.value+' '+data.front.unit+'</span><br>'+data.front.textButton;
 		var frontTextColor = 'color:'+data.front.color+';';
 		var frontBGImage = data.front.background;
@@ -20,7 +35,8 @@ function loadCard(url)
 	}
 
 	$.ajax(url)
-	.done(function(data){
+	.done(function(json){
+		var data = jQuery.parseJSON(json);
 		createCard(data);
 	})
 	.fail(function(jqXHR, textStatus){
