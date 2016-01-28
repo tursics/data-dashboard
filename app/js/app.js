@@ -1,7 +1,41 @@
 //-----------------------------------------------------------------------
 
-function loadCard(url)
+function loadCard()
 {
+	function stringValueFormatter(startValue,changePerDay,unit,seconds)
+	{
+		return startValue+' '+unit;
+	}
+
+	function dateValueFormatter(startValue,changePerDay,unit,seconds)
+	{
+	}
+
+	function euroValueFormatter(startValue,changePerDay,unit,seconds)
+	{
+		var value = seconds*changePerDay/24/60/60;
+		if(value<1000) {
+			value = parseInt(value*100);
+			value = value.toString();
+			while(value.length<3) {
+				value = '0'+value;
+			}
+			value = value.substr(0,value.length-2)+','+value.substr(-2);
+		} else {
+//value*=1000;
+			value = parseInt(value).toString();
+			if(value.length>3) {
+				value = value.substr(0,value.length-3)+'.'+value.substr(-3);
+			}
+			if(value.length>7) {
+				value = parseInt(parseInt(value.substr(0,value.length-4))/100);
+				value = value.toString();
+				value = value.substr(0,value.length-1)+','+value.substr(-1)+'Mio ';
+			}
+		}
+		return value+' '+unit;
+	}
+
 	function createCard(data)
 	{
 		data = data || {};
@@ -22,13 +56,11 @@ function loadCard(url)
 		data.back.cssClass = data.back.cssClass || '';
 
 		var value = data.front.value+' '+data.front.unit;
+		var valueFormatter = stringValueFormatter;
 		if('date'==data.front.format) {
 			var d1 = new Date();
 			var d2 = new Date(data.front.value);
 			var diff = (d2-d1)/1000/60/60/24;
-			console.log(d1);
-			console.log(d2);
-			console.log(diff);
 			if(diff<1) {
 				value = '- Tage';
 			} else if(diff<2) {
@@ -36,6 +68,9 @@ function loadCard(url)
 			} else {
 				value = parseInt(diff)+' Tage';
 			}
+		} else if('euro'==data.front.format) {
+			valueFormatter = euroValueFormatter;
+			value = valueFormatter(data.front.value,0,data.front.unit,0);
 		}
 		var front = data.front.textTop+'<br><span>'+value+'</span><br>'+data.front.textButton;
 		var frontTextColor = 'color:'+data.front.color+';';
@@ -45,72 +80,83 @@ function loadCard(url)
 		var backTextColor = 'color:'+data.back.color+';';
 		var backBGImage = data.back.background;
 		var backCSSClass = data.back.cssClass;
+		var changePerDay = data.front.changePerDay;
 
 		createNewCard({
 			front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
 			back:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass},
+			data:{value:data.front.value,unit:data.front.unit,change:changePerDay,formatter:valueFormatter},
 		});
 	}
 
-	$.ajax(url)
-	.done(function(json){
-		var data = jQuery.parseJSON(json);
-		createCard(data);
-	})
-	.fail(function(jqXHR, textStatus){
-		if('parsererror'==textStatus) {
-			var data = jQuery.parseJSON(jqXHR.responseText);
-			if( typeof data.location != 'undefined') {
-				createCard(data);
-				return;
+	if(config.loaded < config.cards.length) {
+		var url = config.cards[config.loaded];
+		$.ajax(url)
+		.done(function(json){
+			var data = jQuery.parseJSON(json);
+			createCard(data);
+		})
+		.fail(function(jqXHR, textStatus){
+			if('parsererror'==textStatus) {
+				var data = jQuery.parseJSON(jqXHR.responseText);
+				if( typeof data.location != 'undefined') {
+					createCard(data);
+					return;
+				}
 			}
-		}
-		createNewCard({
-			front:{text:textStatus,css:'card1line'},
-			back:{text:'Error in reading '+url,css:''},
+			createNewCard({
+				front:{text:textStatus,css:'card1line'},
+				back:{text:'Error in reading '+url,css:''},
+			});
+		})
+		.always(function(){
+			// make the back of the card invisible
+			// show back
+			recalcBoard(); // re-calc all positions
+			// load all pending images
+			// flip card to front
+			// make the back of the card visible
+
+			++config.loaded;
+			loadCard();
 		});
-	})
-	.always(function(){
-		// make the back of the card invisible
-		// show back
-		recalcBoard(); // re-calc all positions
-		// load all pending images
-		// flip card to front
-		// make the back of the card visible
-		// process next card
-	});
+	}
 }
 
 //-----------------------------------------------------------------------
 
-function createNewCard(config)
+function createNewCard(card)
 {
-	config = config || {};
-	config.front = config.front || {};
-	config.front.css = config.front.css || '';
-	config.front.image = config.front.image || '';
-	config.front.style = config.front.style || '';
-	config.front.text = config.front.text || '';
-	config.back = config.back || {};
-	config.back.css = config.back.css || '';
-	config.back.image = config.back.image || '';
-	config.back.style = config.back.style || '';
-	config.back.text = config.back.text || '';
+	card = card || {};
+	card.front = card.front || {};
+	card.front.css = card.front.css || '';
+	card.front.image = card.front.image || '';
+	card.front.style = card.front.style || '';
+	card.front.text = card.front.text || '';
+	card.back = card.back || {};
+	card.back.css = card.back.css || '';
+	card.back.image = card.back.image || '';
+	card.back.style = card.back.style || '';
+	card.back.text = card.back.text || '';
+	card.data.value = card.data.value || '';
+	card.data.unit = card.data.unit || '';
+	card.data.change = card.data.change || 0;
+	card.data.formatter = card.data.formatter || function() { return ''; };
 
-	if(''!==config.front.image) {
-		config.front.css = 'transparent '+config.front.css;
-		config.front.text = '<img src="'+config.front.image+'" class="background"><div style="'+config.front.style+'">'+config.front.text+'</div>';
+	if(''!==card.front.image) {
+		card.front.css = 'transparent '+card.front.css;
+		card.front.text = '<img src="'+card.front.image+'" class="background"><div style="'+card.front.style+'">'+card.front.text+'</div>';
 	} else {
-		config.front.text = '<div style="'+config.front.style+'">'+config.front.text+'</div>';
+		card.front.text = '<div style="'+card.front.style+'">'+card.front.text+'</div>';
 	}
-	if(''!==config.back.image) {
-		config.back.css = 'transparent';
-		config.back.text = '<img src="'+config.back.image+'" class="background">';
+	if(''!==card.back.image) {
+		card.back.css = 'transparent';
+		card.back.text = '<img src="'+card.back.image+'" class="background">';
 	} else {
-		config.back.text = '<div style="'+config.back.style+'">'+config.back.text+'</div>';
+		card.back.text = '<div style="'+card.back.style+'">'+card.back.text+'</div>';
 	}
 
-	var str = '<div class="cardwrapper"><figure class="front '+config.front.css+'">'+config.front.text+'</figure><figure class="back '+config.back.css+'">'+config.back.text+'</figure></div>';
+	var str = '<div class="cardwrapper"><figure class="front '+card.front.css+'">'+card.front.text+'</figure><figure class="back '+card.back.css+'">'+card.back.text+'</figure></div>';
 
 	$( '<section>', {
 		class: 'card',
@@ -120,6 +166,17 @@ function createNewCard(config)
 	.click(function() {
 		$(this).children().first().toggleClass('flipped');
 	});
+
+	if( card.data.change > 0) {
+		var elem = $( 'section:nth-last-child(2) div figure.front span');
+		config.updates.push({
+			dom:elem,
+			value:card.data.value,
+			change:card.data.change,
+			unit:card.data.unit,
+			formatter: card.data.formatter,
+		});
+	}
 }
 
 //-----------------------------------------------------------------------
@@ -148,6 +205,30 @@ function installEvents()
 			lastTop = top;
 		};
 	};
+}
+
+//-----------------------------------------------------------------------
+
+function installTimer()
+{
+	var startTime = (new Date()).getTime();
+	var delay = 100;
+
+	function timerFunc() {
+		try {
+			var diffTime = parseInt(((new Date()).getTime() - startTime) / 1000);
+			for(var i = 0; i< config.updates.length; ++i) {
+				var update = config.updates[i];
+				update.dom.text( update.formatter(update.value,update.change,update.unit,diffTime));
+			}
+		} catch(e) {
+//			console.log(e);
+		}
+
+		setTimeout(timerFunc, delay);
+	}
+
+	setTimeout(timerFunc, delay);
 }
 
 //-----------------------------------------------------------------------
@@ -193,24 +274,13 @@ function test()
 
 $(document).ready(function() {
 	installEvents();
-
-	createNewCard({
-		front:{image:'./img/berlinopendata.svg'},
-		back:{text:'In Berlin gibt es das<br><a href="http://daten.berlin.de" target="_blank">Datenportal</a><br>und den<br><a href="http://fbinter.stadt-berlin.de/fb/" target="_blank">FIS-Broker</a>.',css:''}
-	});
-	createNewCard({
-		front:{image:'./img/codeforberlin.svg'},
-		back:{text:'<a href="http://codefor.berlin" target="_blank">Code for Berlin</a>',css:'card1line'}
-	});
-	createNewCard({
-		front:{text:'Du brauchst Hilfe?<br>Klick hier',css:'card2lines'},
-		back:{text:'Dann klick noch mal',css:'card1line'},
-	});
-
-	loadCard('berlin/angebote-zur-unterstuetzung-von-fluechtlingen.json');
-	loadCard('berlin/aktuelle-ausschreibungen-nach-vol-vob-vof-oder-fuer-interessenbekundungsverfahren-0.json');
-
+	installTimer();
 	recalcBoard();
+
+	config.loaded = 0;
+	config.updates = new Array();
+
+	loadCard();
 
 //	test();
 });
