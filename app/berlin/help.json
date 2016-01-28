@@ -1,0 +1,48 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin",
+	"districts":{
+		"Mitte":false,
+		"FriedrichshainKreuzberg":false,
+		"Pankow":false,
+		"CharlottenburgWilmersdorf":false,
+		"Spandau":false,
+		"SteglitzZehlendorf":false,
+		"TempelhofSchoeneberg":false,
+		"Neukoelln":false,
+		"TreptowKoepenick":false,
+		"MarzahnHellersdorf":false,
+		"Lichtenberg":false,
+		"Reinickendorf":false
+	}
+},
+"portal":{
+	"url":"",
+	"title":"Hilfe",
+	"description":"",
+	"license":"",
+	"licenseURL":"",
+	"attribution":"",
+	"author":"",
+	"created":"",
+	"updated":""
+},
+"front":{
+	"textTop":"Du brauchst",
+	"textButton":"> Klicke hier <",
+	"value":"Hilfe?",
+	"unit":"",
+	"changePerDay":0,
+	"format":"text",
+	"background":"",
+	"color":"",
+	"cssClass":""
+},
+"back":{
+	"text":"Du kannst auf jedes Achteck klicken. Auf der Vorderseite stehen Daten, auf der Rückseite mehr Informationen dazu.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}

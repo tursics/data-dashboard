@@ -1,0 +1,48 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin",
+	"districts":{
+		"Mitte":false,
+		"FriedrichshainKreuzberg":false,
+		"Pankow":false,
+		"CharlottenburgWilmersdorf":false,
+		"Spandau":false,
+		"SteglitzZehlendorf":false,
+		"TempelhofSchoeneberg":false,
+		"Neukoelln":false,
+		"TreptowKoepenick":false,
+		"MarzahnHellersdorf":false,
+		"Lichtenberg":false,
+		"Reinickendorf":false
+	}
+},
+"portal":{
+	"url":"http://daten.berlin.de",
+	"title":"Berliner Datenportal",
+	"description":"Im Berliner Datenportal stellt das Land Berlin Datensätze der öffentlichen Verwaltung zur Verfügung.",
+	"license":"",
+	"licenseURL":"",
+	"attribution":"",
+	"author":"",
+	"created":"",
+	"updated":""
+},
+"front":{
+	"textTop":"",
+	"textButton":"",
+	"value":"",
+	"unit":"",
+	"changePerDay":0,
+	"format":"",
+	"background":"img/berlinopendata.svg",
+	"color":"",
+	"cssClass":""
+},
+"back":{
+	"text":"Die zentrale Daten-Sammelstelle in Berlin ist das Datenportal. Aber auch im <a href='http://fbinter.stadt-berlin.de/fb/' target='_blank'>FIS-Broker</a> gibt es Daten.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}
