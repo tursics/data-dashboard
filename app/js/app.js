@@ -22,15 +22,26 @@ function loadCard()
 			}
 			value = value.substr(0,value.length-2)+','+value.substr(-2);
 		} else {
-//value*=1000;
 			value = parseInt(value).toString();
 			if(value.length>3) {
 				value = value.substr(0,value.length-3)+'.'+value.substr(-3);
 			}
-			if(value.length>7) {
+			if(value.length>11) {
+				value = parseInt(parseInt(value.substr(0,value.length-4))/1000000);
+				value = value.toString();
+				value = value+' Mrd ';
+			} else if(value.length>10) {
+				value = parseInt(parseInt(value.substr(0,value.length-4))/100000);
+				value = value.toString();
+				value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mrd ';
+			} else if(value.length>8) {
+				value = parseInt(parseInt(value.substr(0,value.length-4))/1000);
+				value = value.toString();
+				value = value+' Mio ';
+			} else if(value.length>7) {
 				value = parseInt(parseInt(value.substr(0,value.length-4))/100);
 				value = value.toString();
-				value = value.substr(0,value.length-1)+','+value.substr(-1)+'Mio ';
+				value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mio ';
 			}
 		}
 		return value+' '+unit;
