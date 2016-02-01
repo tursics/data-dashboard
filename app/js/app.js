@@ -149,6 +149,7 @@ function createNewCard(card)
 	card.back.image = card.back.image || '';
 	card.back.style = card.back.style || '';
 	card.back.text = card.back.text || '';
+	card.data = card.data || {};
 	card.data.value = card.data.value || '';
 	card.data.unit = card.data.unit || '';
 	card.data.change = card.data.change || 0;
