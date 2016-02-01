@@ -12,10 +12,10 @@ var config = config || {
 		'berlin/angebote-zur-unterstuetzung-von-fluechtlingen.json',
 		'berlin/aktuelle-ausschreibungen-nach-vol-vob-vof-oder-fuer-interessenbekundungsverfahren-0.json',
 		'berlin/bezirksamtsbeschluesse.json',
+		'berlin/angebote-fuer-kinder-jugend-und-familie.json',
+		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2015.json',
 
 		// other data from 2016
-//		'berlin/angebote-fuer-kinder-jugend-und-familie.json',
-//		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2015.json',
 //		'berlin/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-fuer-20162017.json',
 //		'berlin/wochen-und-troedelmaerkte.json',
 //		'berlin/daten-zur-arbeitslosigkeit-fuer-opendata.json',

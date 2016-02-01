@@ -1,0 +1,48 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin",
+	"districts":{
+		"Mitte":false,
+		"FriedrichshainKreuzberg":false,
+		"Pankow":false,
+		"CharlottenburgWilmersdorf":false,
+		"Spandau":false,
+		"SteglitzZehlendorf":false,
+		"TempelhofSchoeneberg":false,
+		"Neukoelln":false,
+		"TreptowKoepenick":false,
+		"MarzahnHellersdorf":false,
+		"Lichtenberg":true,
+		"Reinickendorf":false
+	}
+},
+"portal":{
+	"url":"http://daten.berlin.de/datensaetze/kamerale-monatsdaten-bezirk-lichtenberg-2015",
+	"title":"Kamerale Monatsdaten Bezirk Lichtenberg 2015",
+	"description":"Stand der Haushaltswirtschaft im laufenden Haushaltsjahr zum jeweiligen Monatsende im Bezirk Lichtenberg, Kapitel, Titel, Ansatz, Verfügbares Soll, Anordnungssoll, Festlegung, Verfügbare Mittel, Ist",
+	"license":"Creative Commons Namensnennung CC-BY License",
+	"licenseURL":"http://creativecommons.org/licenses/by/3.0/de/",
+	"attribution":"Bezirksamt Lichtenberg",
+	"author":"dagmar.haenisch@lichtenberg.berlin.de",
+	"created":"2015-07-08",
+	"updated":"2016-01-14"
+},
+"front":{
+	"textTop":"Auch ein Betrag von",
+	"textButton":"steht in der Buchhaltung",
+	"value":0.31,
+	"unit":"€",
+	"changePerDay":0,
+	"format":"euro",
+	"background":"img/template.svg",
+	"color":"#ffffff",
+	"cssClass":""
+},
+"back":{
+	"text":"Monatliche kamerale Buchhaltung veröffentlicht Berlin-Lichtenberg.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}
