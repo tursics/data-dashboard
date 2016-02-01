@@ -13,7 +13,11 @@ function loadCard()
 
 	function euroValueFormatter(startValue,changePerDay,unit,seconds)
 	{
-		var value = seconds*changePerDay/24/60/60;
+		var value = startValue;
+		if(0<changePerDay) {
+			value = seconds*changePerDay/24/60/60;
+		}
+
 		if(value<1000) {
 			value = parseInt(value*100);
 			value = value.toString();
