@@ -277,33 +277,22 @@ function recalcBoard()
 
 //-----------------------------------------------------------------------
 
-function test()
+function buildCard()
 {
-	// http://daten.berlin.de/datensaetze/web-service-last-und-erzeugung-berlin
-	// http://www.stromnetz-berlin.de/de/file/Erl_uterungen-Livedaten-Zugriff-Stromnetz-Berlin-SMeter_Engine_93664683.pdf
+	var front = 'Oben ein bisschen Text<br><span>Eine Zahl</span><br>Unten ein Text';
+	var frontTextColor = 'color:white;';
+	var frontBGImage = 'img/blueprintcard.svg';
+	var frontCSSClass = '';
+	createNewCard({
+		front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
+	});
 
-	var url = 'https://www.vattenfall.de/SmeterEngine/energyProjection';
-	var xml = '<smeterengine start="2013-06-12T09:00:00" end="2013-06-12T11:00:00">'
-			+ '    <cities> '
-			+ '    <city>BERLIN</city> '
-			+ '    <latitude>52.30</latitude> '
-			+ '    <longitude>13.25</longitude> '
-			+ '    </cities>           '
-			+ '</smeterengine> ';
-	$.ajax({
-		url: url,
-		data: xml,
-		type: 'POST',
-		contentType: 'text/xml',
-		dataType: 'text',
-		success : function(){
-			console.log('xx');
-		},
-		error : function(xhr, ajaxOptions, thrownError){
-			console.log(xhr);
-			console.log(xhr.status);
-			console.log(thrownError);
-		}
+	var back = 'Auf der Rückseite kann man sehr viel Text anzeigen. Es stehen 4 Zeilen zur Verfügung.';
+	var backTextColor = 'color:white;';
+	var backBGImage = 'img/blueprintcard.svg';
+	var backCSSClass = '';
+	createNewCard({
+		front:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass},
 	});
 }
 
@@ -319,7 +308,8 @@ $(document).ready(function() {
 
 	loadCard();
 
-//	test();
+//	$('body').addClass('build');
+//	buildCard();
 });
 
 //-----------------------------------------------------------------------
