@@ -3,18 +3,19 @@
 	"country":"Germany",
 	"city":"Berlin",
 	"districts":{
-		"Mitte":true,
-		"FriedrichshainKreuzberg":true,
-		"Pankow":true,
-		"CharlottenburgWilmersdorf":true,
-		"Spandau":true,
-		"SteglitzZehlendorf":true,
-		"TempelhofSchoeneberg":true,
-		"Neukoelln":true,
-		"TreptowKoepenick":true,
-		"MarzahnHellersdorf":true,
-		"Lichtenberg":true,
-		"Reinickendorf":true
+		"Berlin":true,
+		"Mitte":false,
+		"FriedrichshainKreuzberg":false,
+		"Pankow":false,
+		"CharlottenburgWilmersdorf":false,
+		"Spandau":false,
+		"SteglitzZehlendorf":false,
+		"TempelhofSchoeneberg":false,
+		"Neukoelln":false,
+		"TreptowKoepenick":false,
+		"MarzahnHellersdorf":false,
+		"Lichtenberg":false,
+		"Reinickendorf":false
 	}
 },
 "portal":{

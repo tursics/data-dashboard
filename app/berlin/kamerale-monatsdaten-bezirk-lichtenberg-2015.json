@@ -3,6 +3,7 @@
 	"country":"Germany",
 	"city":"Berlin",
 	"districts":{
+		"Berlin":false,
 		"Mitte":false,
 		"FriedrichshainKreuzberg":false,
 		"Pankow":false,
@@ -40,7 +41,7 @@
 	"cssClass":""
 },
 "back":{
-	"text":"Monatliche kamerale Buchhaltung veröffentlicht Berlin-Lichtenberg.",
+	"text":"Kleine aber auch große Beträge werden jeden Monat in Lichtenberg ausgegeben.",
 	"background":"",
 	"color":"#000000",
 	"cssClass":""

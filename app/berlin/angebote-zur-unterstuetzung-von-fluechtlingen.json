@@ -3,6 +3,7 @@
 	"country":"Germany",
 	"city":"Berlin",
 	"districts":{
+		"Berlin":false,
 		"Mitte":false,
 		"FriedrichshainKreuzberg":true,
 		"Pankow":false,
