@@ -38,8 +38,12 @@ body {
 	background-color: #848;
 	color: #fff;
 	font-family: 'judsonitalic', Arial, sans-serif;
-}	font-size: 12pt;
+	font-size: 12pt;
 	margin: 0;
+}
+
+body.build {
+	background: #2c71b8 url('../img/blueprintbackground.svg');
 }
 
 #board {
