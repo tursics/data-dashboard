@@ -14,12 +14,10 @@ var config = config || {
 		'berlin/bezirksamtsbeschluesse.json',
 		'berlin/angebote-fuer-kinder-jugend-und-familie.json',
 		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2015.json',
-
-		// other data from 2016
-//		'berlin/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-fuer-20162017.json',
-//		'berlin/wochen-und-troedelmaerkte.json',
-//		'berlin/daten-zur-arbeitslosigkeit-fuer-opendata.json',
-//		'berlin/beschaeftigungsdaten-fuer-opendata.json',
+		'berlin/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-fuer-20162017.json',
+		'berlin/wochen-und-troedelmaerkte.json',
+		'berlin/daten-zur-arbeitslosigkeit-fuer-opendata.json',
+		'berlin/beschaeftigungsdaten-fuer-opendata.json',
 
 		// and many more data from 2015 and older
 	]

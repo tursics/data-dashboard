@@ -1,0 +1,49 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin",
+	"districts":{
+		"Berlin":true,
+		"Mitte":false,
+		"FriedrichshainKreuzberg":false,
+		"Pankow":false,
+		"CharlottenburgWilmersdorf":false,
+		"Spandau":false,
+		"SteglitzZehlendorf":false,
+		"TempelhofSchoeneberg":false,
+		"Neukoelln":false,
+		"TreptowKoepenick":false,
+		"MarzahnHellersdorf":false,
+		"Lichtenberg":false,
+		"Reinickendorf":false
+	}
+},
+"portal":{
+	"url":"http://daten.berlin.de/datensaetze/wochen-und-tr%C3%B6delm%C3%A4rkte",
+	"title":"Wochen- und Trödelmärkte",
+	"description":"Hier finden Sie die Berliner und Brandenburger Wochen- und Trödelmärkte 2015",
+	"license":"Creative Commons Namensnennung CC-BY License",
+	"licenseURL":"http://creativecommons.org/licenses/by/3.0/de/",
+	"attribution":"Senatsverwaltung für Wirtschaft, Technologie und Forschung",
+	"author":"ralf.eberhardt@senwtf.berlin.de",
+	"created":"2014-04-15",
+	"updated":"2016-01-14"
+},
+"front":{
+	"textTop":"Schlendern sie über",
+	"textButton":"Wochen- und Trödelmärkte",
+	"value":183,
+	"unit":"",
+	"changePerDay":0,
+	"format":"int",
+	"background":"img/template.svg",
+	"color":"#ffffff",
+	"cssClass":""
+},
+"back":{
+	"text":"Zusätzlich noch einige Wochen- und Trödelmärkte aus Brandenburg findet man unter:",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}
