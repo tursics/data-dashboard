@@ -11,6 +11,24 @@ function loadCard()
 	{
 	}
 
+	function intValueFormatter(startValue,changePerDay,unit,seconds)
+	{
+		var value = startValue;
+		if(''==value) {
+			value = 0;
+		}
+		if(0<changePerDay) {
+			value = seconds*changePerDay/24/60/60;
+		}
+		value = parseInt(value);
+
+		if(value>1000) {
+			value = value.toString();
+			value = value.substr(0,value.length-3)+'.'+value.substr(-3);
+		}
+		return value+' '+unit;
+	}
+
 	function euroValueFormatter(startValue,changePerDay,unit,seconds)
 	{
 		var value = startValue;
@@ -85,6 +103,9 @@ function loadCard()
 			}
 		} else if('euro'==data.front.format) {
 			valueFormatter = euroValueFormatter;
+			value = valueFormatter(data.front.value,0,data.front.unit,0);
+		} else if('int'==data.front.format) {
+			valueFormatter = intValueFormatter;
 			value = valueFormatter(data.front.value,0,data.front.unit,0);
 		}
 		var front = data.front.textTop+'<br><span>'+value+'</span><br>'+data.front.textButton;
