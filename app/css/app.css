@@ -2,34 +2,34 @@
 
 @font-face {
     font-family: 'judsonmedium';
-    src: url('judson-regular-webfont.eot');
-    src: url('judson-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('judson-regular-webfont.woff2') format('woff2'),
-         url('judson-regular-webfont.woff') format('woff'),
-         url('judson-regular-webfont.ttf') format('truetype'),
-         url('judson-regular-webfont.svg#judsonmedium') format('svg');
+    src: url('../fonts/judson-regular-webfont.eot');
+    src: url('../fonts/judson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/judson-regular-webfont.woff2') format('woff2'),
+         url('../fonts/judson-regular-webfont.woff') format('woff'),
+         url('../fonts/judson-regular-webfont.ttf') format('truetype'),
+         url('../fonts/judson-regular-webfont.svg#judsonmedium') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'judsonbold';
-    src: url('judson-bold-webfont.eot');
-    src: url('judson-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('judson-bold-webfont.woff2') format('woff2'),
-         url('judson-bold-webfont.woff') format('woff'),
-         url('judson-bold-webfont.ttf') format('truetype'),
-         url('judson-bold-webfont.svg#judsonbold') format('svg');
+    src: url('../fonts/judson-bold-webfont.eot');
+    src: url('../fonts/judson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/judson-bold-webfont.woff2') format('woff2'),
+         url('../fonts/judson-bold-webfont.woff') format('woff'),
+         url('../fonts/judson-bold-webfont.ttf') format('truetype'),
+         url('../fonts/judson-bold-webfont.svg#judsonbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'judsonitalic';
-    src: url('judson-italic-webfont.eot');
-    src: url('judson-italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('judson-italic-webfont.woff2') format('woff2'),
-         url('judson-italic-webfont.woff') format('woff'),
-         url('judson-italic-webfont.ttf') format('truetype'),
-         url('judson-italic-webfont.svg#judsonitalic') format('svg');
+    src: url('../fonts/judson-italic-webfont.eot');
+    src: url('../fonts/judson-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/judson-italic-webfont.woff2') format('woff2'),
+         url('../fonts/judson-italic-webfont.woff') format('woff'),
+         url('../fonts/judson-italic-webfont.ttf') format('truetype'),
+         url('../fonts/judson-italic-webfont.svg#judsonitalic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -37,9 +37,10 @@
 body {
 	background-color: #848;
 	color: #fff;
-	font-family: 'judsonitalic', Arial, sans-serif;
+	font-family: 'judsonmedium', Arial, sans-serif;
 	font-size: 12pt;
 	margin: 0;
+	padding-top: 50px;
 }
 
 body.build {
@@ -47,7 +48,8 @@ body.build {
 }
 
 #board {
-	padding: 0 0 3.6em 0;
+	font-family: 'judsonitalic', Arial, sans-serif;
+	padding: 0 0.5em 3.6em 0.5em;
 }
 
 .card {
