@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------
 
-function loadCard()
+function loadCards()
 {
 	function stringValueFormatter(startValue,changePerDay,unit,seconds)
 	{
@@ -154,7 +154,7 @@ function loadCard()
 			// make the back of the card visible
 
 			++config.loaded;
-			loadCard();
+			loadCards();
 		});
 	}
 }
@@ -204,16 +204,163 @@ function createNewCard(card)
 		$(this).children().first().toggleClass('flipped');
 	});
 
+	config.elements.push($( 'section:nth-last-child(2)'));
 	if( card.data.change > 0) {
-		var elem = $( 'section:nth-last-child(2) div figure.front span');
 		config.updates.push({
-			dom:elem,
+			dom:$( 'section:nth-last-child(2) div figure.front span'),
 			value:card.data.value,
 			change:card.data.change,
 			unit:card.data.unit,
 			formatter: card.data.formatter,
 		});
 	}
+}
+
+//-----------------------------------------------------------------------
+
+function installNavigation()
+{
+	var initPage = false;
+
+	function loadNavigation()
+	{
+		var queries = location.search.replace(/^\?/, '').split('&');
+		var params = {};
+		for(var i = 0; i < queries.length; ++i) {
+			split = queries[i].split('=');
+			params[split[0]] = split[1];
+		}
+
+		if(typeof params['city'] !== 'undefined') {
+			window.navigation.city = params['city'];
+		}
+		if(-1 == $.inArray(window.navigation.city, ['berlin'/*,'viena',...*/])) {
+			window.navigation.city = 'berlin';
+		}
+
+		if(typeof params['page'] !== 'undefined') {
+			window.navigation.page = params['page'];
+		}
+		if(-1 == $.inArray(window.navigation.page, ['cards','build'])) {
+			window.navigation.page = 'cards';
+		}
+	}
+
+	function saveNavigation(pushHistory)
+	{
+		var url = '?city=' + window.navigation.city;
+		url += '&page=' + window.navigation.page;
+
+		try {
+			if(pushHistory) {
+				window.history.pushState( {}, '', url);
+			} else {
+				window.history.replaceState( {}, '', url);
+			}
+		} catch(e) {
+			console.log(e);
+		}
+	}
+
+	window.navigation = window.navigation || {
+		city: '',
+		page: '',
+		replaceURI: function() {
+			saveNavigation(false);
+		},
+		showPage: function(pageName) {
+			if(!initPage) {
+				initPage = true;
+			} else if(pageName == this.page){
+				return;
+			}
+
+			this.page = pageName;
+
+			if('cards' == pageName) {
+				$('#menuPageCards').parent().addClass('active');
+			} else {
+				$('#menuPageCards').parent().removeClass('active');
+			}
+
+			if('build' == pageName) {
+				$('body').addClass('build');
+			} else {
+				$('body').removeClass('build');
+			}
+
+			if('cards' == pageName) {
+				window.navigation.replaceURI();
+
+				resetCards();
+				loadCards();
+			} else if('build' == pageName) {
+				window.navigation.replaceURI();
+
+				resetCards();
+				buildCards();
+			} else {
+				console.log('Page "'+pageName+'" does not exist');
+			}
+		}
+	};
+
+	loadNavigation();
+	window.navigation.replaceURI();
+}
+
+//-----------------------------------------------------------------------
+
+function installMenu()
+{
+	var brandTitle = 'Daten Dashboard';
+	document.title = brandTitle;
+
+	var str = $('.navbar-header').html();
+	str += '<span class="navbar-brand">'+brandTitle+'</span>';
+	$('.navbar-header').html(str);
+
+	str = '';
+	str += '<ul class="nav navbar-nav">';
+	str += '<li><a id="menuPageCards" href="#">Daten</a></li>';
+//	str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
+//	str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
+	str += '<li class="disabled"><a id="menuPageAbout" href="#">Über</a></li>';
+//	str += '<li class="dropdown">';
+//	str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Berlin <span class="caret"></span></a>';
+//	str += '<ul class="dropdown-menu">';
+//	str += '<li class="dropdown-header">Verfügbare Städte</li>';
+//	str += '<li><a href="#">Berlin</a></li>';
+//	str += '</ul>';
+//	str += '</li>';
+	str += '</ul>';
+
+	str += '<ul class="nav navbar-nav navbar-right">';
+	str += '<li><a href="mailto:thomas@tursics.de">E-Mail</a></li>';
+	str += '<li><a href="https://twitter.com/tursics/" target="_blank">Twitter</a></li>';
+	str += '<li class="dropdown">';
+	str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mithelfen <span class="caret"></span></a>';
+	str += '<ul class="dropdown-menu">';
+	str += '<li><a href="https://github.com/tursics/data-dashboard/" target="_blank">Github</a></li>';
+	str += '<li><a id="menuPageBuild" href="#">Bearbeiten</a></li>';
+	str += '</ul>';
+	str += '</li>';
+	str += '</ul>';
+
+	$('#navbar').html(str);
+
+	$('#menuPageCards').click(function() {
+		window.navigation.showPage('cards');
+//		return false;
+	});
+	$('#menuPageAbout').click(function() {
+		window.navigation.showPage('about');
+//		return false;
+	});
+	$('#menuPageBuild').click(function() {
+		window.navigation.showPage('build');
+//		return false;
+	});
 }
 
 //-----------------------------------------------------------------------
@@ -254,7 +401,7 @@ function installTimer()
 	function timerFunc() {
 		try {
 			var diffTime = parseInt(((new Date()).getTime() - startTime) / 1000);
-			for(var i = 0; i< config.updates.length; ++i) {
+			for(var i = 0; i < config.updates.length; ++i) {
 				var update = config.updates[i];
 				update.dom.text( update.formatter(update.value,update.change,update.unit,diffTime));
 			}
@@ -277,7 +424,23 @@ function recalcBoard()
 
 //-----------------------------------------------------------------------
 
-function buildCard()
+function resetCards()
+{
+	config.elements = config.elements || new Array();
+
+	for(var i = 0; i < config.elements.length; ++i) {
+		var element = config.elements[i];
+		element.remove();
+	}
+
+	config.loaded = 0;
+	config.elements = new Array();
+	config.updates = new Array();
+}
+
+//-----------------------------------------------------------------------
+
+function buildCards()
 {
 	var front = 'Oben ein bisschen Text<br><span>Eine Zahl</span><br>Unten ein Text';
 	var frontTextColor = 'color:white;';
@@ -299,17 +462,13 @@ function buildCard()
 //-----------------------------------------------------------------------
 
 $(document).ready(function() {
+	installNavigation();
+	installMenu();
 	installEvents();
 	installTimer();
 	recalcBoard();
 
-	config.loaded = 0;
-	config.updates = new Array();
-
-	loadCard();
-
-//	$('body').addClass('build');
-//	buildCard();
+	window.navigation.showPage(window.navigation.page);
 });
 
 //-----------------------------------------------------------------------
