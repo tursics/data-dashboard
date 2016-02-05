@@ -442,7 +442,7 @@ function resetCards()
 
 function buildCards()
 {
-	var front = 'Oben ein bisschen Text<br><span>Eine Zahl</span><br>Unten ein Text';
+	var front = 'Ein Text<br><span>Zahl</span><br>Ein Text';
 	var frontTextColor = 'color:white;';
 	var frontBGImage = 'img/blueprintcard.svg';
 	var frontCSSClass = '';
@@ -450,13 +450,90 @@ function buildCards()
 		front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
 	});
 
-	var back = 'Auf der Rückseite kann man sehr viel Text anzeigen. Es stehen 4 Zeilen zur Verfügung.';
+	var back = 'Beschreibungstext';
 	var backTextColor = 'color:white;';
 	var backBGImage = 'img/blueprintcard.svg';
 	var backCSSClass = '';
 	createNewCard({
 		front:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass},
 	});
+
+	var str = '';
+
+	str += '<br>';
+
+	str += '<div class="row">';
+	str += '<div class="col-sm-6">';
+	str += '<div class="panel panel-info">';
+	str += '<div class="panel-heading"><h3 class="panel-title">Vorderseite</h3></div>';
+	str += '<div class="panel-body">';
+
+	str += '<div class="input-group">';
+	str += '<span class="input-group-addon" id="basic-addon1">Oben</span>';
+	str += '<input type="text" class="form-control" id="inputFrontTop" placeholder="Ein Text" aria-describedby="basic-addon1">';
+	str += '</div>';
+	str += '<br>';
+
+	str += '<div class="row">';
+	str += '<div class="col-sm-8">';
+	str += '<div class="input-group">';
+	str += '<div class="input-group-btn">';
+	str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputFrontFormat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+	str += 'Ganzzahl <span class="caret"></span></button>';
+	str += '<ul class="dropdown-menu">';
+	str += '<li><a href="#">Text</a></li>';
+	str += '<li><a href="#">Ganzzahl</a></li>';
+	str += '<li><a href="#">Euro-Betrag</a></li>';
+	str += '<li><a href="#">Datum</a></li>';
+	str += '</ul>';
+	str += '</div>';
+
+	str += '<input type="text" class="form-control" id="inputFrontMiddle" placeholder="Zahl" aria-describedby="basic-addon1">';
+	str += '</div>';
+	str += '</div>';
+
+	str += '<div class="col-sm-4">';
+	str += '<div class="input-group">';
+	str += '<input type="text" class="form-control" id="inputFrontUnit" placeholder="Einheit" aria-describedby="basic-addon1">';
+	str += '</div>';
+	str += '</div>';
+	str += '</div>';
+
+	str += '<div class="input-group">';
+	str += '<span class="input-group-addon" id="basic-addon1">Änderungen pro Tag</span>';
+	str += '<input type="text" class="form-control" id="inputFrontChange" placeholder="Eine Zahl" aria-describedby="basic-addon1">';
+	str += '</div>';
+	str += '<br>';
+
+	str += '<div class="input-group">';
+	str += '<span class="input-group-addon" id="basic-addon1">Unten</span>';
+	str += '<input type="text" class="form-control" id="inputFrontBottom" placeholder="Ein Text" aria-describedby="basic-addon1">';
+	str += '</div>';
+
+	str += '</div>';
+	str += '</div>';
+	str += '</div>';
+//	"background":"img/template.svg",
+//	"color":"#ffffff",
+//	"cssClass":""
+
+	str += '<div class="col-sm-6">';
+	str += '<div class="panel panel-info">';
+	str += '<div class="panel-heading"><h3 class="panel-title">Rückseite</h3></div>';
+	str += '<div class="panel-body">';
+	str += '<div class="input-group">';
+	str += '<span class="input-group-addon" id="basic-addon1">Text</span>';
+	str += '<input type="text" class="form-control" id="inputBackTop" placeholder="Beschreibungstext" aria-describedby="basic-addon1">';
+	str += '</div>';
+	str += '</div>';
+	str += '</div>';
+	str += '</div>';
+	str += '</div>';
+//	"background":"",
+//	"color":"#000000",
+//	"cssClass":""
+
+	$('#build').html( str);
 }
 
 //-----------------------------------------------------------------------
