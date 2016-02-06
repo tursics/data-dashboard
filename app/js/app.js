@@ -1,74 +1,83 @@
 //-----------------------------------------------------------------------
 
-function loadCards()
+function stringValueFormatter(startValue,changePerDay,unit,seconds)
 {
-	function stringValueFormatter(startValue,changePerDay,unit,seconds)
-	{
-		return startValue+' '+unit;
+	return startValue+' '+unit;
+}
+
+//-----------------------------------------------------------------------
+
+function dateValueFormatter(startValue,changePerDay,unit,seconds)
+{
+	return startValue+' '+unit;
+}
+
+//-----------------------------------------------------------------------
+
+function intValueFormatter(startValue,changePerDay,unit,seconds)
+{
+	var value = startValue;
+	if(''==value) {
+		value = 0;
+	}
+	if(0<changePerDay) {
+		value = seconds*changePerDay/24/60/60;
+	}
+	value = parseInt(value);
+
+	if(value>1000) {
+		value = value.toString();
+		value = value.substr(0,value.length-3)+'.'+value.substr(-3);
+	}
+	return value+' '+unit;
+}
+
+//-----------------------------------------------------------------------
+
+function euroValueFormatter(startValue,changePerDay,unit,seconds)
+{
+	var value = startValue;
+	if(0<changePerDay) {
+		value = seconds*changePerDay/24/60/60;
 	}
 
-	function dateValueFormatter(startValue,changePerDay,unit,seconds)
-	{
-	}
-
-	function intValueFormatter(startValue,changePerDay,unit,seconds)
-	{
-		var value = startValue;
-		if(''==value) {
-			value = 0;
+	if(value<1000) {
+		value = parseInt(value*100);
+		value = value.toString();
+		while(value.length<3) {
+			value = '0'+value;
 		}
-		if(0<changePerDay) {
-			value = seconds*changePerDay/24/60/60;
-		}
-		value = parseInt(value);
-
-		if(value>1000) {
-			value = value.toString();
+		value = value.substr(0,value.length-2)+','+value.substr(-2);
+	} else {
+		value = parseInt(value).toString();
+		if(value.length>3) {
 			value = value.substr(0,value.length-3)+'.'+value.substr(-3);
 		}
-		return value+' '+unit;
-	}
-
-	function euroValueFormatter(startValue,changePerDay,unit,seconds)
-	{
-		var value = startValue;
-		if(0<changePerDay) {
-			value = seconds*changePerDay/24/60/60;
-		}
-
-		if(value<1000) {
-			value = parseInt(value*100);
+		if(value.length>11) {
+			value = parseInt(parseInt(value.substr(0,value.length-4))/1000000);
 			value = value.toString();
-			while(value.length<3) {
-				value = '0'+value;
-			}
-			value = value.substr(0,value.length-2)+','+value.substr(-2);
-		} else {
-			value = parseInt(value).toString();
-			if(value.length>3) {
-				value = value.substr(0,value.length-3)+'.'+value.substr(-3);
-			}
-			if(value.length>11) {
-				value = parseInt(parseInt(value.substr(0,value.length-4))/1000000);
-				value = value.toString();
-				value = value+' Mrd ';
-			} else if(value.length>10) {
-				value = parseInt(parseInt(value.substr(0,value.length-4))/100000);
-				value = value.toString();
-				value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mrd ';
-			} else if(value.length>8) {
-				value = parseInt(parseInt(value.substr(0,value.length-4))/1000);
-				value = value.toString();
-				value = value+' Mio ';
-			} else if(value.length>7) {
-				value = parseInt(parseInt(value.substr(0,value.length-4))/100);
-				value = value.toString();
-				value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mio ';
-			}
+			value = value+' Mrd ';
+		} else if(value.length>10) {
+			value = parseInt(parseInt(value.substr(0,value.length-4))/100000);
+			value = value.toString();
+			value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mrd ';
+		} else if(value.length>8) {
+			value = parseInt(parseInt(value.substr(0,value.length-4))/1000);
+			value = value.toString();
+			value = value+' Mio ';
+		} else if(value.length>7) {
+			value = parseInt(parseInt(value.substr(0,value.length-4))/100);
+			value = value.toString();
+			value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mio ';
 		}
-		return value+' '+unit;
 	}
+	return value+' '+unit;
+}
 
+//-----------------------------------------------------------------------
+
+function loadCards()
+{
 	function createCard(data)
 	{
 		data = data || {};
@@ -442,12 +451,13 @@ function resetCards()
 
 function buildCards()
 {
-	var front = 'Ein Text<br><span>Zahl</span><br>Ein Text';
+	var front = 'Ein Text<br><span>Text</span><br>Ein Text';
 	var frontTextColor = 'color:white;';
 	var frontBGImage = 'img/blueprintcard.svg';
 	var frontCSSClass = '';
 	createNewCard({
 		front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
+		data:{value:'Text',unit:'',change:1,formatter:stringValueFormatter},
 	});
 
 	var back = 'Beschreibungstext';
@@ -479,16 +489,16 @@ function buildCards()
 	str += '<div class="input-group">';
 	str += '<div class="input-group-btn">';
 	str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputFrontFormat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-	str += 'Ganzzahl <span class="caret"></span></button>';
+	str += 'Text <span class="caret"></span></button>';
 	str += '<ul class="dropdown-menu">';
-	str += '<li><a href="#">Text</a></li>';
-	str += '<li><a href="#">Ganzzahl</a></li>';
-	str += '<li><a href="#">Euro-Betrag</a></li>';
-	str += '<li><a href="#">Datum</a></li>';
+	str += '<li><a href="#" id="inputFrontFormatText">Text</a></li>';
+	str += '<li><a href="#" id="inputFrontFormatInt">Ganzzahl</a></li>';
+	str += '<li><a href="#" id="inputFrontFormatEuro">Euro-Betrag</a></li>';
+	str += '<li><a href="#" id="inputFrontFormatDate">Datum</a></li>';
 	str += '</ul>';
 	str += '</div>';
 
-	str += '<input type="text" class="form-control" id="inputFrontMiddle" placeholder="Zahl" aria-describedby="basic-addon1">';
+	str += '<input type="text" class="form-control" id="inputFrontMiddle" placeholder="Text" aria-describedby="basic-addon1">';
 	str += '</div>';
 	str += '</div>';
 
@@ -500,7 +510,7 @@ function buildCards()
 	str += '</div>';
 
 	str += '<div class="input-group">';
-	str += '<span class="input-group-addon" id="basic-addon1">Änderungen pro Tag</span>';
+	str += '<span class="input-group-addon" id="basic-addon1">Änderung pro Tag</span>';
 	str += '<input type="text" class="form-control" id="inputFrontChange" placeholder="Eine Zahl" aria-describedby="basic-addon1">';
 	str += '</div>';
 	str += '<br>';
@@ -534,6 +544,52 @@ function buildCards()
 //	"cssClass":""
 
 	$('#build').html( str);
+
+	function setFormat(buttonText, placeholder, formatter)
+	{
+		$('#inputFrontFormat').html(buttonText+' <span class="caret"></span>');
+		$('#inputFrontMiddle').attr('placeholder',placeholder);
+		config.updates[0].formatter = formatter;
+	}
+
+	$('#inputFrontMiddle').change(function() {
+		config.updates[0].value = $(this).val();
+	});
+	$('#inputFrontUnit').change(function() {
+		config.updates[0].unit = $(this).val();
+	});
+	$('#inputFrontChange').change(function() {
+		config.updates[0].change = $(this).val();
+	});
+	$('#inputFrontFormatText').click(function() {
+		setFormat('Text', 'Text', stringValueFormatter);
+	});
+	$('#inputFrontFormatInt').click(function() {
+		setFormat('Ganzzahl', 'Zahl', intValueFormatter);
+	});
+	$('#inputFrontFormatEuro').click(function() {
+		setFormat('Euro-Betrag', 'Zahl', euroValueFormatter);
+	});
+	$('#inputFrontFormatDate').click(function() {
+		setFormat('Datum', 'JJJJ-MM-TT', dateValueFormatter);
+	});
+	$('#inputFrontTop').change(function() {
+		var elem = config.updates[0].dom.parent();
+		var arr = elem.html().split('<span>');
+		elem.html( $(this).val()+'<br><span>'+arr[1]);
+		config.updates[0].dom = $('span',elem);
+	});
+	$('#inputFrontBottom').change(function() {
+		var elem = config.updates[0].dom.parent();
+		var arr = elem.html().split('</span>');
+		elem.html( arr[0]+'</span><br>'+$(this).val());
+		config.updates[0].dom = $('span',elem);
+	});
+//	$('#inputBackTop').change(function() {
+//		var elem = config.updates[1].dom.parent();
+//		elem.html( $(this).val());
+//		config.updates[1].dom = $('span',elem);
+//	});
 }
 
 //-----------------------------------------------------------------------
