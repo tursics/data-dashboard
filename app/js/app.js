@@ -590,6 +590,44 @@ function buildCards()
 //		elem.html( $(this).val());
 //		config.updates[1].dom = $('span',elem);
 //	});
+
+	readFeed(config.data.feed);
+}
+
+//-----------------------------------------------------------------------
+
+function readFeed(url)
+{
+	console.log(url);
+	$.ajax(url)
+	.done(function(json){
+/*		var data = jQuery.parseJSON(json);
+		createCard(data);
+*/	})
+	.fail(function(jqXHR, textStatus){
+/*		if('parsererror'==textStatus) {
+			var data = jQuery.parseJSON(jqXHR.responseText);
+			if( typeof data.location != 'undefined') {
+				createCard(data);
+				return;
+			}
+		}
+		createNewCard({
+			front:{text:textStatus,css:'card1line'},
+			back:{text:'Error in reading '+url,css:''},
+		});
+*/	})
+	.always(function(){
+/*		// make the back of the card invisible
+		// show back
+		recalcBoard(); // re-calc all positions
+		// load all pending images
+		// flip card to front
+		// make the back of the card visible
+
+		++config.loaded;
+		loadCards();
+*/	});
 }
 
 //-----------------------------------------------------------------------
