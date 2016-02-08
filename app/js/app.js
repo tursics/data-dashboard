@@ -447,6 +447,7 @@ function resetCards()
 	config.loaded = 0;
 	config.elements = new Array();
 	config.updates = new Array();
+	config.feed = new Array();
 }
 
 //-----------------------------------------------------------------------

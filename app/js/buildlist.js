@@ -24,16 +24,23 @@ function getUpdates(url)
 
 	$.ajax(url)
 	.done(function(data){
-		var feedData = new Array();
+		config.feed = new Array();
 		var xml = $(data);
 		xml.find('item').each(function() {
 			var node = $(this);
+
+			var elemTitle = document.createElement('textarea');
+			elemTitle.innerHTML = node.find('title').text().trim();
+			var elemDesc = document.createElement('textarea');
+			elemDesc.innerHTML = node.find('description').text().trim();
+
 			var item = {
-				title: node.find('title').text(),
-				link: node.find('link').text(),
-				description: node.find('description').text(),
-				pubDate: node.find('pubDate').text(),
-				author: node.find('author').text(),
+				title: elemTitle.value,
+				link: node.find('link').text().trim(),
+				description: elemDesc.value,
+				pubDate: node.find('pubDate').text().trim(),
+				author: node.find('author').text().trim(),
+				json: '',
 				status: 'new'
 			};
 			if(('' == item.link) && (typeof node.find('link')[0].nextSibling.data != 'undefined')) {
@@ -53,10 +60,10 @@ function getUpdates(url)
 			}
 			item.pubDate = feedDate;
 
-			feedData.push(item);
+			config.feed.push(item);
 		});
 
-		parseFeed(feedData);
+		parseFeed();
 	})
 	.fail(function(jqXHR, textStatus){
 		console.log('fail');
@@ -65,9 +72,9 @@ function getUpdates(url)
 
 //-----------------------------------------------------------------------
 
-function parseFeed(feed)
+function parseFeed()
 {
-	var max = (0==feed.length ? 1 : feed.length);
+	var max = (0==config.feed.length ? 1 : config.feed.length);
 	var fine = 0;
 	var dirty = 0;
 	var recent = 0;
@@ -115,20 +122,22 @@ function parseFeed(feed)
 
 	function readCardInfos()
 	{
-		function colorizeCard(data)
+		function colorizeCard(data,url)
 		{
 			data = data || {};
 			data.portal = data.portal || {};
 			data.portal.url = data.portal.url || '';
 			data.portal.updated = data.portal.updated || '';
 
-			for(var i = 0; i < feed.length; ++i) {
-				if(feed[i].link == data.portal.url) {
-					if(feed[i].pubDate == data.portal.updated) {
-						feed[i].status = 'fine';
+			for(var i = 0; i < config.feed.length; ++i) {
+				if(config.feed[i].link == data.portal.url) {
+					config.feed[i].json = url;
+
+					if(config.feed[i].pubDate == data.portal.updated) {
+						config.feed[i].status = 'fine';
 						++fine;
 					} else {
-						feed[i].status = 'dirty';
+						config.feed[i].status = 'dirty';
 						++dirty;
 					}
 					return;
@@ -142,13 +151,13 @@ function parseFeed(feed)
 			$.ajax(url)
 			.done(function(json){
 				var data = jQuery.parseJSON(json);
-				colorizeCard(data);
+				colorizeCard(data, url);
 			})
 			.fail(function(jqXHR, textStatus){
 				if('parsererror'==textStatus) {
 					var data = jQuery.parseJSON(jqXHR.responseText);
 					if( typeof data.location != 'undefined') {
-						colorizeCard(data);
+						colorizeCard(data, url);
 						return;
 					}
 				}
@@ -163,7 +172,7 @@ function parseFeed(feed)
 			recent = max;
 			updateBars();
 
-			showUpdateTable(feed);
+			showUpdateTable();
 		}
 	}
 
@@ -174,7 +183,7 @@ function parseFeed(feed)
 
 //-----------------------------------------------------------------------
 
-function showUpdateTable(feed)
+function showUpdateTable()
 {
 	var str = '';
 	str += '<div class="panel panel-info">';
@@ -189,35 +198,35 @@ function showUpdateTable(feed)
 	str += '<th></th>';
 	str += '</tr></thead><tbody>';
 
-	for(var i = 0; i < feed.length; ++i) {
+	for(var i = 0; i < config.feed.length; ++i) {
 		str += '<tr>';
-		if('new' == feed[i].status) {
+		if('new' == config.feed[i].status) {
 			str += '<td class="label-info"></td>';
-		} else if('dirty' == feed[i].status) {
+		} else if('dirty' == config.feed[i].status) {
 			str += '<td class="label-warning"></td>';
-		} else if('fine' == feed[i].status) {
+		} else if('fine' == config.feed[i].status) {
 			str += '<td class="label-success"></td>';
-		} else if('error' == feed[i].status) {
+		} else if('error' == config.feed[i].status) {
 			str += '<td class="label-danger"></td>';
 		} else {
 			str += '<td></td>';
 		}
 
-		str += '<td>' + feed[i].title + '</td>';
+		str += '<td>' + config.feed[i].title + '</td>';
 
-		if(feed[i].description.length>200) {
-			str += '<td>' + feed[i].description.substr(0, 200) + '...</td>';
+		if(config.feed[i].description.length>200) {
+			str += '<td>' + config.feed[i].description.substr(0, 200) + '...</td>';
 		} else {
-			str += '<td>' + feed[i].description + '</td>';
+			str += '<td>' + config.feed[i].description + '</td>';
 		}
 
-		var days = parseInt((Date.now() - new Date(feed[i].pubDate)) / 1000 / 60 / 60 / 24);
+		var days = parseInt((Date.now() - new Date(config.feed[i].pubDate)) / 1000 / 60 / 60 / 24);
 		if(0 == days) {
 			str += '<td>Heute</td>';
 		} else if(1 == days) {
 			str += '<td>Gestern</td>';
 		} else {
-			var pubDate = new Date(feed[i].pubDate);
+			var pubDate = new Date(config.feed[i].pubDate);
 			var feedDate = '';
 			if(pubDate.getDate()<10) {
 				feedDate += '0' + pubDate.getDate();
@@ -233,12 +242,12 @@ function showUpdateTable(feed)
 			str += '<td>' + feedDate + '</td>';
 		}
 
-		if('new' == feed[i].status) {
-			str += '<td><button type="button" class="btn btn-primary">Hinzufügen</button></td>';
-		} else if('dirty' == feed[i].status) {
-			str += '<td><button type="button" class="btn btn-primary">Updaten</button></td>';
-		} else if('fine' == feed[i].status) {
-			str += '<td><button type="button" class="btn btn-primary">Bearbeiten</button></td>';
+		if('new' == config.feed[i].status) {
+			str += '<td><button type="button" class="btn btn-primary" data-feedidx="' + i + '">Hinzufügen</button></td>';
+		} else if('dirty' == config.feed[i].status) {
+			str += '<td><button type="button" class="btn btn-primary" data-feedidx="' + i + '">Updaten</button></td>';
+		} else if('fine' == config.feed[i].status) {
+			str += '<td><button type="button" class="btn btn-default" data-feedidx="' + i + '">Bearbeiten</button></td>';
 		} else {
 			str += '<td></td>';
 		}
@@ -252,10 +261,10 @@ function showUpdateTable(feed)
 	$('#datasettable').html( str);
 
 	$('#datasettable').on('click', 'button', function() {
-		console.log(this);
+		var obj = config.feed[$(this).data('feedidx')];
 
 		resetCards();
-		buildCards();
+		buildCards(obj);
 	});
 }
 

@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------
 
-function buildCards()
+function buildCards(cardObj)
 {
 	var front = 'Ein Text<br><span>Text</span><br>Ein Text';
 	var frontTextColor = 'color:white;';
@@ -141,6 +141,22 @@ function buildCards()
 //		elem.html( $(this).val());
 //		config.updates[1].dom = $('span',elem);
 //	});
+
+	buildCardFill(cardObj);
+}
+
+//-----------------------------------------------------------------------
+
+function buildCardFill(obj)
+{
+	if('new' == obj.status) {
+		$('#inputFrontTop').val(obj.title).change();
+		$('#inputBackTop').val(obj.description).change();
+	} else {
+		
+	}
+
+	console.log(obj);
 }
 
 //-----------------------------------------------------------------------
