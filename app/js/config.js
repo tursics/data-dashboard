@@ -33,6 +33,50 @@ var config = config || {
 		'berlin/beschaeftigungsdaten-fuer-opendata.json',
 
 		// and many more data from 2015 and older
+	],
+	templates: [
+	{
+		'frontBackground': 'img/template.svg',
+		'frontColor': '#ffffff',
+		'backColor': '#000000',
+		'backClass': ''
+	},
+	{
+		'frontBackground': 'img/template2.svg',
+		'frontColor': '#ffffff',
+		'backColor': '#000000',
+		'backClass': ''
+	},
+	{
+		'frontBackground': 'img/template3.svg',
+		'frontColor': '#ffffff',
+		'backColor': '#000000',
+		'backClass': ''
+	},
+	{
+		'frontBackground': 'img/refugees.svg',
+		'frontColor': '#fecb32',
+		'backColor': '#000000',
+		'backClass': 'refugees'
+	},
+	{
+		'frontBackground': 'img/codeforberlin.svg',
+		'frontColor': '',
+		'backColor': '#000000',
+		'backClass': ''
+	},
+	{
+		'frontBackground': 'img/berlinopendata.svg',
+		'frontColor': '',
+		'backColor': '#000000',
+		'backClass': ''
+	},
+	{
+		'frontBackground': 'img/blueprintcard.svg',
+		'frontColor': '#ffffff',
+		'backColor': '#ffffff',
+		'backClass': 'blueprint'
+	}
 	]
 };
 
