@@ -150,6 +150,7 @@ body.build {
 }
 
 .cardwrapper .front div, .cardwrapper .back div {
+	height: 100%;
 	overflow: hidden;
 	margin: 0 .5em 0 .5em;
 	text-align: center;
@@ -205,4 +206,14 @@ figure.refugees:before {
 }
 figure.refugees:after {
 	border-top-color: #fecb32;
+}
+
+figure.blueprint {
+	background: #2c71b8;
+}
+figure.blueprint:before {
+	border-bottom-color: #2c71b8;
+}
+figure.blueprint:after {
+	border-top-color: #2c71b8;
 }
