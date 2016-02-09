@@ -127,6 +127,57 @@ function buildCards(cardObj)
 		str += '</div>';
 	}
 	str += '</div>';
+	{ // metadata
+		str += '<div class="panel panel-info">';
+		str += '<div class="panel-heading"><h3 class="panel-title">Metadaten</h3></div>';
+		str += '<div class="panel-body">';
+		{ // content
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">URL</span>';
+			str += '<input type="text" class="form-control" id="inputMetaLink" placeholder="Link zur Datenportal-Seite" aria-describedby="basic-addon1">';
+			str += '</div>';
+
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">Titel</span>';
+			str += '<input type="text" class="form-control" id="inputMetaTitle" placeholder="Titel des Datensatzes" aria-describedby="basic-addon1">';
+			str += '</div>';
+
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">Text</span>';
+			str += '<input type="text" class="form-control" id="inputMetaDescription" placeholder="Beschreibung zum Datensatz" aria-describedby="basic-addon1">';
+			str += '</div>';
+
+			str += '<div class="input-group-btn">';
+			str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputMetaLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+			str += 'Lizenz <span class="caret"></span></button>';
+			str += '<ul class="dropdown-menu">';
+			str += '<li><a href="#" id="inputMetaLicenseCCBY">Creative Commons Namensnennung CC-BY License</a></li>';
+			str += '</ul>';
+			str += '</div>';
+
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">Urheber</span>';
+			str += '<input type="text" class="form-control" id="inputMetaAttribution" placeholder="Name des Datenbereitstellers" aria-describedby="basic-addon1">';
+			str += '</div>';
+
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">E-Mail</span>';
+			str += '<input type="text" class="form-control" id="inputMetaMail" placeholder="Kontaktadresse" aria-describedby="basic-addon1">';
+			str += '</div>';
+
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">Erzeugt</span>';
+			str += '<input type="text" class="form-control" id="inputMetaCreated" placeholder="Datum der Erzeugung des Datensatzes" aria-describedby="basic-addon1">';
+			str += '</div>';
+
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">Geändert</span>';
+			str += '<input type="text" class="form-control" id="inputMetaUpdated" placeholder="Datum der letzten Änderung des Datensatzes" aria-describedby="basic-addon1">';
+			str += '</div>';
+		}
+		str += '</div>';
+		str += '</div>';
+	}
 
 	$('#build').html( str);
 
@@ -200,6 +251,7 @@ function fillBuildCard(obj)
 		$('#inputFrontTop').val(obj.title).change();
 		$('#inputBackTop').val(obj.description).change();
 		$('#buttonOpen').attr('href', obj.link);
+		$('#inputMetaLink').val(obj.link).change();
 	} else {
 		fillBuildCardByOldValues(obj.json)
 	}
@@ -244,6 +296,7 @@ function fillBuildCardByOldValues(url)
 		$('#inputFrontBottom').val(data.front.textButton).change();
 		$('#inputBackTop').val(data.back.text).change();
 		$('#buttonOpen').attr('href', data.portal.url);
+		$('#inputMetaLink').val(data.portal.url).change();
 
 		var template = config.templates[$(this).data('template')];
 		var elem = config.updates[0].dom.parent();
@@ -281,4 +334,14 @@ function fillBuildCardByOldValues(url)
 	});
 }
 
+/*"portal":{
+	"title":"Aktuelle Ausschreibungen nach VOL, VOB, VOF oder für Interessenbekundungsverfahren",
+	"description":"Sie interessieren sich für Ausschreibungen nach VOL, VOB, VOF oder für Interessenbekundungsverfahren beziehungsweise sonstige Wettbewerbe? Hier finden Sie Informationen zu den aktuellen Ausschreibungen in Lichtenberg.",
+	"license":"Creative Commons Namensnennung CC-BY License",
+	"licenseURL":"http://creativecommons.org/licenses/by/3.0/de/",
+	"attribution":"Facility Management Lichtenberg",
+	"author":"Manuela.Maedge@lichtenberg.berlin.de",
+	"created":"2015-06-29",
+	"updated":"2016-01-25"
+},*/
 //-----------------------------------------------------------------------
