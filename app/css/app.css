@@ -56,6 +56,10 @@ body.build {
 	color: #000;
 }
 
+.build .thumbnail {
+	background: #eee;
+}
+
 .card {
 	float:left;
 	height: 7.4em;
