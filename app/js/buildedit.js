@@ -106,6 +106,20 @@ function buildCards(cardObj)
 	{ // right 'back card side'
 		str += '<div class="col-sm-6">';
 		str += '<div class="panel panel-info">';
+		str += '<div class="panel-heading"><h3 class="panel-title">Datenquelle</h3></div>';
+		str += '<div class="panel-body" style="text-align:center;">';
+		{ // content
+			str += '<div class="input-group">';
+			str += '<span class="input-group-addon" id="basic-addon1">Link</span>';
+			str += '<input type="text" class="form-control" id="inputMetaLink" placeholder="Link zur Datenportal-Seite" aria-describedby="basic-addon1">';
+			str += '<span class="input-group-btn">';
+			str += '<a href="#" class="btn btn-primary" type="button" id="buttonOpen" target="_blank">Öffnen</a>';
+			str += '</span>';
+			str += '</div>';
+  		}
+		str += '</div>';
+		str += '</div>';
+		str += '<div class="panel panel-info">';
 		str += '<div class="panel-heading"><h3 class="panel-title">Rückseite</h3></div>';
 		str += '<div class="panel-body">';
 		{ // content
@@ -116,14 +130,6 @@ function buildCards(cardObj)
 		}
 		str += '</div>';
 		str += '</div>';
-		str += '<div class="panel panel-info">';
-		str += '<div class="panel-heading"><h3 class="panel-title">Datenquelle</h3></div>';
-		str += '<div class="panel-body">';
-		{ // content
-			str += '<a href="#" class="btn btn-primary" type="button" id="buttonOpen" target="_blank">Webseite öffnen</a>';
-  		}
-		str += '</div>';
-		str += '</div>';
 		str += '</div>';
 	}
 	str += '</div>';
@@ -132,48 +138,82 @@ function buildCards(cardObj)
 		str += '<div class="panel-heading"><h3 class="panel-title">Metadaten</h3></div>';
 		str += '<div class="panel-body">';
 		{ // content
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">URL</span>';
-			str += '<input type="text" class="form-control" id="inputMetaLink" placeholder="Link zur Datenportal-Seite" aria-describedby="basic-addon1">';
-			str += '</div>';
+			str += '<div class="row">';
+			{ // left side
+				str += '<div class="col-sm-6">';
 
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Titel</span>';
-			str += '<input type="text" class="form-control" id="inputMetaTitle" placeholder="Titel des Datensatzes" aria-describedby="basic-addon1">';
-			str += '</div>';
+				str += '<div class="input-group">';
+				str += '<span class="input-group-addon" id="basic-addon1">Titel</span>';
+				str += '<input type="text" class="form-control" id="inputMetaTitle" placeholder="Titel des Datensatzes" aria-describedby="basic-addon1">';
+				str += '</div>';
+				str += '<br>';
 
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Text</span>';
-			str += '<input type="text" class="form-control" id="inputMetaDescription" placeholder="Beschreibung zum Datensatz" aria-describedby="basic-addon1">';
-			str += '</div>';
+				str += '<div class="input-group">';
+				str += '<span class="input-group-addon" id="basic-addon1">Text</span>';
+				str += '<input type="text" class="form-control" id="inputMetaDescription" placeholder="Beschreibung zum Datensatz" aria-describedby="basic-addon1">';
+				str += '</div>';
+				str += '<br>';
 
-			str += '<div class="input-group-btn">';
-			str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputMetaLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-			str += 'Lizenz <span class="caret"></span></button>';
-			str += '<ul class="dropdown-menu">';
-			str += '<li><a href="#" id="inputMetaLicenseCCBY">Creative Commons Namensnennung CC-BY License</a></li>';
-			str += '</ul>';
-			str += '</div>';
+				str += '<div class="row">';
+				str += '<div class="col-sm-7">';
 
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Urheber</span>';
-			str += '<input type="text" class="form-control" id="inputMetaAttribution" placeholder="Name des Datenbereitstellers" aria-describedby="basic-addon1">';
-			str += '</div>';
+				str += '<div class="input-group">';
+				str += '<span class="input-group-addon" id="basic-addon1">Urheber</span>';
+				str += '<input type="text" class="form-control" id="inputMetaAttribution" placeholder="Name" aria-describedby="basic-addon1">';
+				str += '</div>';
 
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">E-Mail</span>';
-			str += '<input type="text" class="form-control" id="inputMetaMail" placeholder="Kontaktadresse" aria-describedby="basic-addon1">';
-			str += '</div>';
+				str += '</div>';
+				str += '<div class="col-sm-5">';
 
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Erzeugt</span>';
-			str += '<input type="text" class="form-control" id="inputMetaCreated" placeholder="Datum der Erzeugung des Datensatzes" aria-describedby="basic-addon1">';
-			str += '</div>';
+				str += '<input type="text" class="form-control" id="inputMetaMail" placeholder="E-Mail-Adresse" aria-describedby="basic-addon1">';
 
-			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Geändert</span>';
-			str += '<input type="text" class="form-control" id="inputMetaUpdated" placeholder="Datum der letzten Änderung des Datensatzes" aria-describedby="basic-addon1">';
+				str += '</div>';
+				str += '</div>';
+
+				str += '</div>';
+			}
+			{ // right side
+				str += '<div class="col-sm-6">';
+
+				str += '<div class="input-group">';
+				str += '<span class="input-group-addon" id="basic-addon1">Lizenz</span>';
+				str += '<div class="input-group-btn">';
+				str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputMetaLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+				str += 'Andere Lizenz <span class="caret"></span></button>';
+				str += '<ul class="dropdown-menu">';
+				str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, Creative Commons Namensnennung</a></li>';
+				str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, Creative Commons Namensnennung unter gleichen Bedingungen</a></li>';
+				str += '<li><a href="#" id="inputMetaLicenseOther">Andere Lizenz</a></li>';
+				str += '</ul>';
+				str += '</div>';
+				str += '</div>';
+				str += '<br>';
+
+				str += '<div class="input-group">';
+				str += '<span class="input-group-addon" id="basic-addon1">Erzeugt</span>';
+				str += '<input type="text" class="form-control" id="inputMetaCreated" placeholder="Datum der Erzeugung des Datensatzes" aria-describedby="basic-addon1">';
+				str += '</div>';
+				str += '<br>';
+
+				str += '<div class="input-group">';
+				str += '<span class="input-group-addon" id="basic-addon1">Geändert</span>';
+				str += '<input type="text" class="form-control" id="inputMetaUpdated" placeholder="Datum der letzten Änderung des Datensatzes" aria-describedby="basic-addon1">';
+				str += '</div>';
+
+				str += '</div>';
+			}
 			str += '</div>';
+		}
+		str += '</div>';
+		str += '</div>';
+	}
+	{ // action buttons
+		str += '<div class="panel panel-info">';
+		str += '<div class="panel-body" style="text-align:center;">';
+		{ // content
+			str += '<button class="btn btn-primary" type="button" id="inputButtonOK">Speichern</button>';
+			str += '&nbsp;&nbsp;&nbsp;';
+			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">Abbrechen</button>';
 		}
 		str += '</div>';
 		str += '</div>';
@@ -239,6 +279,22 @@ function buildCards(cardObj)
 
 		return false;
 	});
+	$('#inputMetaLicenseCCBY').click(function() {
+		$('#inputMetaLicense').html('CC BY <span class="caret"></span>');
+	});
+	$('#inputMetaLicenseCCBYSA').click(function() {
+		$('#inputMetaLicense').html('CC BY-SA <span class="caret"></span>');
+	});
+	$('#inputMetaLicenseOther').click(function() {
+		$('#inputMetaLicense').html('Andere Lizenz <span class="caret"></span>');
+	});
+	$('#inputButtonOK').click(function() {
+		alert('not yet implemented');
+	});
+	$('#inputButtonCancel').click(function() {
+		resetCards();
+		getUpdates(config.data.feed);
+	});
 
 	fillBuildCard(cardObj);
 }
@@ -252,6 +308,8 @@ function fillBuildCard(obj)
 		$('#inputBackTop').val(obj.description).change();
 		$('#buttonOpen').attr('href', obj.link);
 		$('#inputMetaLink').val(obj.link).change();
+
+		fillBuildCardWithMetadata();
 	} else {
 		fillBuildCardByOldValues(obj.json)
 	}
@@ -331,17 +389,72 @@ function fillBuildCardByOldValues(url)
 		$('#inputBackTop').val('Error in reading ' + url).change();
 	})
 	.always(function(){
+		fillBuildCardWithMetadata();
 	});
 }
 
-/*"portal":{
-	"title":"Aktuelle Ausschreibungen nach VOL, VOB, VOF oder für Interessenbekundungsverfahren",
-	"description":"Sie interessieren sich für Ausschreibungen nach VOL, VOB, VOF oder für Interessenbekundungsverfahren beziehungsweise sonstige Wettbewerbe? Hier finden Sie Informationen zu den aktuellen Ausschreibungen in Lichtenberg.",
-	"license":"Creative Commons Namensnennung CC-BY License",
-	"licenseURL":"http://creativecommons.org/licenses/by/3.0/de/",
-	"attribution":"Facility Management Lichtenberg",
-	"author":"Manuela.Maedge@lichtenberg.berlin.de",
-	"created":"2015-06-29",
-	"updated":"2016-01-25"
-},*/
+//-----------------------------------------------------------------------
+
+function fillBuildCardWithMetadata()
+{
+	function fillData(data)
+	{
+		data = data || {};
+		data.link = data.link || '';
+		data.name = data.name || '';
+		data.description = data.description || '';
+		data.licenseUrl = data.licenseUrl || '';
+		data.licenseName = data.licenseName || '';
+		data.created = data.created || '';
+		data.modified = data.modified || '';
+		data.attribution = data.attribution || '';
+		data.mail = data.mail || '';
+
+		if('http://creativecommons.org/licenses/by/3.0/de/'==data.licenseUrl) {
+			$('#inputMetaLicenseCCBY').click();
+		} else if('http://creativecommons.org/licenses/by-sa/3.0/de/'==data.licenseUrl) {
+			$('#inputMetaLicenseCCBYSA').click();
+		} else {
+			$('#inputMetaLicenseOther').click();
+		}
+		$('#inputMetaLink').val(data.link).change();
+		$('#buttonOpen').attr('href', data.link);
+		$('#inputMetaTitle').val(data.name).change();
+		$('#inputMetaDescription').val(data.description).change();
+		$('#inputMetaAttribution').val(data.attribution).change();
+		$('#inputMetaMail').val(data.mail).change();
+		$('#inputMetaCreated').val(data.created).change();
+		$('#inputMetaUpdated').val(data.modified).change();
+	}
+
+	var url = $('#inputMetaLink').val();
+	url = 'berlin/metadata.php?url=' + encodeURI(url);
+	if('' == url) {
+		return;
+	}
+
+	$.ajax(url)
+	.done(function(json){
+		var data = jQuery.parseJSON(json);
+		fillData(data);
+	})
+	.fail(function(jqXHR, textStatus){
+		if('parsererror'==textStatus) {
+			var data = jQuery.parseJSON(jqXHR.responseText);
+			if( typeof data.location != 'undefined') {
+				fillData(data);
+				return;
+			}
+		}
+
+		$('#inputFrontTop').val('Es ist ein').change();
+		$('#inputFrontFormatText').click();
+		$('#inputFrontMiddle').val('Fehler').change();
+		$('#inputFrontBottom').val('aufgetreten').change();
+		$('#inputBackTop').val('Error in reading ' + url).change();
+	})
+	.always(function(){
+	});
+}
+
 //-----------------------------------------------------------------------
