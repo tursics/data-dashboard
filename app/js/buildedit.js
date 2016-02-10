@@ -289,7 +289,7 @@ function buildCards(cardObj)
 		$('#inputMetaLicense').html('Andere Lizenz <span class="caret"></span>');
 	});
 	$('#inputButtonOK').click(function() {
-		alert('not yet implemented');
+		saveBuildCardToCSV();
 	});
 	$('#inputButtonCancel').click(function() {
 		resetCards();
@@ -455,6 +455,73 @@ function fillBuildCardWithMetadata()
 	})
 	.always(function(){
 	});
+}
+
+//-----------------------------------------------------------------------
+
+function saveBuildCardToCSV()
+{
+	var data = {
+'location':{
+	'country':'Germany',
+	'city':'Berlin',
+	'districts':{
+		'Berlin':false,
+		'Mitte':false,
+		'FriedrichshainKreuzberg':false,
+		'Pankow':false,
+		'CharlottenburgWilmersdorf':false,
+		'Spandau':false,
+		'SteglitzZehlendorf':false,
+		'TempelhofSchoeneberg':false,
+		'Neukoelln':false,
+		'TreptowKoepenick':false,
+		'MarzahnHellersdorf':false,
+		'Lichtenberg':false,
+		'Reinickendorf':false
+	}
+},
+		'portal':{
+			'url':$('#inputMetaLink').val(),
+			'title':$('#inputMetaTitle').val(),
+			'description':$('#inputMetaDescription').val(),
+			'license':'',
+			'licenseURL':'',
+			'attribution':$('#inputMetaAttribution').val(),
+			'author':$('#inputMetaMail').val(),
+			'created':$('#inputMetaCreated').val(),
+			'updated':$('#inputMetaUpdated').val()
+		},
+		'front':{
+			'textTop':$('#inputFrontTop').val(),
+			'textButton':$('#inputFrontBottom').val(),
+			'value':$('#inputFrontMiddle').val(),
+			'unit':$('#inputFrontUnit').val(),
+			'changePerDay':$('#inputFrontChange').val(),
+'format':"date",
+'background':"img/template.svg",
+'color':"#ffffff"
+		},
+		'back':{
+			'text':$('#inputBackTop').val(),
+'color':"#000000",
+'cssClass':""
+		}
+	};
+
+	var license = $('#inputMetaLicense').html().split('<span')[0].trim();
+	if('CC BY' == license) {
+		data.portal.license = 'Creative Commons Namensnennung';
+		data.portal.licenseURL = 'http://creativecommons.org/licenses/by/3.0/de/';
+	} else if('CC BY-SA' == license) {
+		data.portal.license = 'Creative Commons Namensnennung unter gleichen Bedingungen';
+		data.portal.licenseURL = 'http://creativecommons.org/licenses/by-sa/3.0/de/';
+	}
+
+	var str = JSON.stringify(data);
+	console.log(str);
+	console.log(data);
+	alert('Geht noch nicht');
 }
 
 //-----------------------------------------------------------------------
