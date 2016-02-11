@@ -211,9 +211,9 @@ function buildCards(cardObj)
 		str += '<div class="panel panel-info">';
 		str += '<div class="panel-body" style="text-align:center;">';
 		{ // content
-			str += '<button class="btn btn-primary" type="button" id="inputButtonOK">Speichern</button>';
+			str += '<button class="btn btn-primary" type="button" id="inputButtonDownloadJSON">JSON herunterladen</button>';
 			str += '&nbsp;&nbsp;&nbsp;';
-			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">Abbrechen</button>';
+			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">Schließen</button>';
 		}
 		str += '</div>';
 		str += '</div>';
@@ -223,9 +223,9 @@ function buildCards(cardObj)
 
 	function setFormat(buttonText, placeholder, formatter)
 	{
+		config.updates[0].formatter = formatter;
 		$('#inputFrontFormat').html(buttonText+' <span class="caret"></span>');
 		$('#inputFrontMiddle').attr('placeholder',placeholder);
-		config.updates[0].formatter = formatter;
 	}
 
 	$('#inputFrontMiddle').change(function() {
@@ -288,8 +288,8 @@ function buildCards(cardObj)
 	$('#inputMetaLicenseOther').click(function() {
 		$('#inputMetaLicense').html('Andere Lizenz <span class="caret"></span>');
 	});
-	$('#inputButtonOK').click(function() {
-		saveBuildCardToCSV();
+	$('#inputButtonDownloadJSON').click(function() {
+		saveBuildCardToJSON();
 	});
 	$('#inputButtonCancel').click(function() {
 		resetCards();
@@ -459,28 +459,31 @@ function fillBuildCardWithMetadata()
 
 //-----------------------------------------------------------------------
 
-function saveBuildCardToCSV()
+function saveBuildCardToJSON()
 {
-	var data = {
-'location':{
-	'country':'Germany',
-	'city':'Berlin',
-	'districts':{
-		'Berlin':false,
-		'Mitte':false,
-		'FriedrichshainKreuzberg':false,
-		'Pankow':false,
-		'CharlottenburgWilmersdorf':false,
-		'Spandau':false,
-		'SteglitzZehlendorf':false,
-		'TempelhofSchoeneberg':false,
-		'Neukoelln':false,
-		'TreptowKoepenick':false,
-		'MarzahnHellersdorf':false,
-		'Lichtenberg':false,
-		'Reinickendorf':false
+	var elem = config.updates[0].dom.parent();
+	var frontColor = elem.attr('style') || '';
+	if('' != frontColor) {
+		frontColor = frontColor.split(':')[1].split(';')[0];
 	}
-},
+
+	elem = elem.parent();
+	var frontBackground = $('img', elem).attr('src');
+
+	elem = $('div figure.front div', config.elements[1]);
+	var backColor = elem.attr('style') || '';
+	if('' != backColor) {
+		backColor = backColor.split(':')[1].split(';')[0];
+	}
+
+	elem = elem.parent();
+	var backClass = elem.attr('class').split(/\s+/)[1] || '';
+
+	var data = {
+		'location':{
+			'country':'Germany',
+			'city':'Berlin'
+		},
 		'portal':{
 			'url':$('#inputMetaLink').val(),
 			'title':$('#inputMetaTitle').val(),
@@ -498,14 +501,14 @@ function saveBuildCardToCSV()
 			'value':$('#inputFrontMiddle').val(),
 			'unit':$('#inputFrontUnit').val(),
 			'changePerDay':$('#inputFrontChange').val(),
-'format':"date",
-'background':"img/template.svg",
-'color':"#ffffff"
+			'format':'string',
+			'background':frontBackground,
+			'color':frontColor
 		},
 		'back':{
 			'text':$('#inputBackTop').val(),
-'color':"#000000",
-'cssClass':""
+			'color':backColor,
+			'cssClass':backClass
 		}
 	};
 
@@ -518,10 +521,39 @@ function saveBuildCardToCSV()
 		data.portal.licenseURL = 'http://creativecommons.org/licenses/by-sa/3.0/de/';
 	}
 
-	var str = JSON.stringify(data);
-	console.log(str);
-	console.log(data);
-	alert('Geht noch nicht');
+	var format = $('#inputFrontFormat').html().split('<span')[0].trim();
+	if('Datum' == format) {
+		data.front.format = 'date';
+	} else if('Euro-Betrag' == format) {
+		data.front.format = 'euro';
+	} else if('Ganzzahl' == format) {
+		data.front.format = 'int';
+	} else if('Text' == format) {
+		data.front.format = 'string';
+	}
+
+	function downloadCSV(obj, filename) {
+		var str = JSON.stringify(obj, null, '\t');
+		str = unescape(encodeURIComponent(str));
+		var uri = 'data:text/csv;charset=utf-8;base64,' + btoa(str);
+
+		var link = document.createElement('a');
+		link.download = filename;
+		link.href = uri;
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		delete link;
+	}
+
+	var filename = data.portal.url.split('/');
+	filename = filename[filename.length - 1];
+	filename = filename.replace(/%C3%A4/g, 'ae');
+	filename = filename.replace(/%C3%B6/g, 'oe');
+	filename = filename.replace(/%C3%BC/g, 'ue');
+	filename = filename.replace(/%C3%9F/g, 'ss');
+	filename += '.json';
+	downloadCSV(data, filename);
 }
 
 //-----------------------------------------------------------------------
