@@ -9,7 +9,27 @@ function stringValueFormatter(startValue,changePerDay,unit,seconds)
 
 function dateValueFormatter(startValue,changePerDay,unit,seconds)
 {
-	return startValue+' '+unit;
+	var usedUnit = 'Tage';
+	if('Tagen' == unit) {
+		usedUnit = unit;
+	} else if('Tage' == unit) {
+		usedUnit = unit;
+	}
+//	return startValue+' '+unit;
+
+	var d1 = new Date();
+	var d2 = new Date(startValue);
+	var diff = (d2-d1)/1000/60/60/24;
+
+	if(diff<1) {
+		value = '- ' + usedUnit;
+	} else if(diff<2) {
+		value = '1 Tag';
+	} else {
+		value = parseInt(diff)+' ' + usedUnit;
+	}
+
+	return value;
 }
 
 //-----------------------------------------------------------------------
@@ -20,7 +40,7 @@ function intValueFormatter(startValue,changePerDay,unit,seconds)
 	if(''==value) {
 		value = 0;
 	}
-	if(0<changePerDay) {
+	if(0<parseInt(changePerDay)) {
 		value = seconds*changePerDay/24/60/60;
 	}
 	value = parseInt(value);
@@ -100,16 +120,8 @@ function loadCards()
 		var value = data.front.value+' '+data.front.unit;
 		var valueFormatter = stringValueFormatter;
 		if('date'==data.front.format) {
-			var d1 = new Date();
-			var d2 = new Date(data.front.value);
-			var diff = (d2-d1)/1000/60/60/24;
-			if(diff<1) {
-				value = '- Tage';
-			} else if(diff<2) {
-				value = '1 Tag';
-			} else {
-				value = parseInt(diff)+' Tage';
-			}
+			valueFormatter = dateValueFormatter;
+			value = valueFormatter(data.front.value,0,data.front.unit,0);
 		} else if('euro'==data.front.format) {
 			valueFormatter = euroValueFormatter;
 			value = valueFormatter(data.front.value,0,data.front.unit,0);
