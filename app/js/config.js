@@ -20,6 +20,18 @@ var config = config || {
 
 		// datasets from http://daten.berlin.de/datensaetze
 
+		// February 2016
+		'berlin/standorte-von-altglascontainern-auf-oeffentlichem-strassenland-charlottenburg-1.json',
+		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2016.json',
+		// Straßenverzeichnis der Stadtplanung im Bezirk Lichtenberg
+		'berlin/orte-fuer-kinder-jugend-und-familie.json',
+		'berlin/traeger-von-kindertagesstaetten-marzahn-hellersdorf.json',
+		'berlin/kindertagesstaetten-marzahn-hellersdorf-0.json',
+		'berlin/beschaeftigungsdaten-fuer-opendata.json',
+		'berlin/berliner-weihnachtsmaerkte-0.json',
+		'berlin/wochen-und-troedelmaerkte.json',
+		'berlin/strassen-und-volksfeste.json',
+
 		// January 2016
 		'berlin/doppelhaushalt-20162017.json',
 		'berlin/angebote-zur-unterstuetzung-von-fluechtlingen.json',
@@ -28,9 +40,7 @@ var config = config || {
 		'berlin/angebote-fuer-kinder-jugend-und-familie.json',
 		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2015.json',
 		'berlin/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-fuer-20162017.json',
-		'berlin/wochen-und-troedelmaerkte.json',
 		'berlin/daten-zur-arbeitslosigkeit-fuer-opendata.json',
-		'berlin/beschaeftigungsdaten-fuer-opendata.json',
 
 		// and many more data from 2015 and older
 	],
