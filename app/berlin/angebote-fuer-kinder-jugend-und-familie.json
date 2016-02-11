@@ -1,49 +1,32 @@
 {
-"location":{
-	"country":"Germany",
-	"city":"Berlin",
-	"districts":{
-		"Berlin":false,
-		"Mitte":false,
-		"FriedrichshainKreuzberg":false,
-		"Pankow":false,
-		"CharlottenburgWilmersdorf":false,
-		"Spandau":false,
-		"SteglitzZehlendorf":false,
-		"TempelhofSchoeneberg":false,
-		"Neukoelln":false,
-		"TreptowKoepenick":false,
-		"MarzahnHellersdorf":true,
-		"Lichtenberg":false,
-		"Reinickendorf":false
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/angebote-f%C3%BCr-kinder-jugend-und-familie",
+		"title": "Angebote für &quot;KINDER, JUGEND und FAMILIE&quot;",
+		"description": "Angebote für Kinder, Jugend und Familie",
+		"license": "Creative Commons Namensnennung unter gleichen Bedingungen",
+		"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+		"attribution": "Bezirksamt Marzahn-Hellersdorf von Berlin Jugendamt",
+		"author": "angelika.herda@ba-mh.berlin.de",
+		"created": "2015-02-26",
+		"updated": "2016-01-15"
+	},
+	"front": {
+		"textTop": "Marzahn-Hellersdorf hat",
+		"textButton": "Angebote für Kinder",
+		"value": "625",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Das Jugendamt von Marzahn-Hellersdorf präsentiert die Angebote für Kinder, Jugend und Familie.",
+		"color": "#000000",
+		"cssClass": ""
 	}
-},
-"portal":{
-	"url":"http://daten.berlin.de/datensaetze/angebote-f%C3%BCr-kinder-jugend-und-familie",
-	"title":"Angebote für \"KINDER, JUGEND und FAMILIE\"",
-	"description":"Angebote für Kinder, Jugend und Familie",
-	"license":"Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen CC-BY-SA License",
-	"licenseURL":"http://creativecommons.org/licenses/by-sa/3.0/de/",
-	"attribution":"Bezirksamt Marzahn-Hellersdorf von Berlin Jugendamt",
-	"author":"angelika.herda@ba-mh.berlin.de",
-	"created":"2015-02-26",
-	"updated":"2016-01-15"
-},
-"front":{
-	"textTop":"Marzahn-Hellersdorf hat",
-	"textButton":"Angebote für Kinder",
-	"value":625,
-	"unit":"",
-	"changePerDay":0,
-	"format":"int",
-	"background":"img/template.svg",
-	"color":"#ffffff",
-	"cssClass":""
-},
-"back":{
-	"text":"Das Jugendamt von Marzahn-Hellersdorf präsentiert die Angebote für Kinder, Jugend und Familie.",
-	"background":"",
-	"color":"#000000",
-	"cssClass":""
-}
 }

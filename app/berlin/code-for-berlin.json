@@ -1,22 +1,7 @@
 {
 "location":{
 	"country":"Germany",
-	"city":"Berlin",
-	"districts":{
-		"Berlin":false,
-		"Mitte":false,
-		"FriedrichshainKreuzberg":false,
-		"Pankow":false,
-		"CharlottenburgWilmersdorf":false,
-		"Spandau":false,
-		"SteglitzZehlendorf":false,
-		"TempelhofSchoeneberg":false,
-		"Neukoelln":false,
-		"TreptowKoepenick":false,
-		"MarzahnHellersdorf":false,
-		"Lichtenberg":false,
-		"Reinickendorf":false
-	}
+	"city":"Berlin"
 },
 "portal":{
 	"url":"http://codefor.berlin",
