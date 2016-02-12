@@ -15,7 +15,6 @@ function dateValueFormatter(startValue,changePerDay,unit,seconds)
 	} else if('Tage' == unit) {
 		usedUnit = unit;
 	}
-//	return startValue+' '+unit;
 
 	var d1 = new Date();
 	var d2 = new Date(startValue);
@@ -116,6 +115,8 @@ function loadCards()
 		data.back.color = data.back.color || '';
 		data.back.background = data.back.background || '';
 		data.back.cssClass = data.back.cssClass || '';
+		data.portal = data.portal || {};
+		data.portal.url = data.portal.url || '';
 
 		var value = data.front.value+' '+data.front.unit;
 		var valueFormatter = stringValueFormatter;
@@ -141,7 +142,7 @@ function loadCards()
 
 		createNewCard({
 			front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
-			back:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass},
+			back:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass,url:data.portal.url},
 			data:{value:data.front.value,unit:data.front.unit,change:changePerDay,formatter:valueFormatter},
 		});
 	}
@@ -195,15 +196,25 @@ function createNewCard(card)
 	card.back.image = card.back.image || '';
 	card.back.style = card.back.style || '';
 	card.back.text = card.back.text || '';
+	card.back.url = card.back.url || '';
 	card.data = card.data || {};
 	card.data.value = card.data.value || '';
 	card.data.unit = card.data.unit || '';
 	card.data.change = card.data.change || 0;
 	card.data.formatter = card.data.formatter || function() { return ''; };
 
+//	<i class="dashboardicon animate-spin">&#xe801;</i>
+
+	var button = '<div class="buttonbar">';
+	button += '<button type="button" class="btn btn-primary btn-flipp"><i class="dashboardicon">&#xe805;</i></button>';
+	if('' != card.back.url) {
+		button += '<button type="button" class="btn btn-primary btn-data" data-url="' + card.back.url + '"><i class="dashboardicon">&#xe809;</i></button>';
+	}
+	button += '</div>'
+
 	if(''!==card.front.image) {
 		card.front.css = 'transparent '+card.front.css;
-		card.front.text = '<img src="'+card.front.image+'" class="background"><div style="'+card.front.style+'">'+card.front.text+'</div>';
+		card.front.text = '<img src="'+card.front.image+'" class="background"><div style="pointer-events: none;'+card.front.style+'">'+card.front.text+'</div>';
 	} else {
 		card.front.text = '<div style="'+card.front.style+'">'+card.front.text+'</div>';
 	}
@@ -211,18 +222,34 @@ function createNewCard(card)
 		card.back.css = 'transparent';
 		card.back.text = '<img src="'+card.back.image+'" class="background">';
 	} else {
-		card.back.text = '<div style="'+card.back.style+'">'+card.back.text+'</div>';
+		card.back.text = '<div style="'+card.back.style+'">'+card.back.text+'</div>'+button;
 	}
 
 	var str = '<div class="cardwrapper"><figure class="front '+card.front.css+'">'+card.front.text+'</figure><figure class="back '+card.back.css+'">'+card.back.text+'</figure></div>';
 
-	$( '<section>', {
+	var cardwrapper = $( '<section>', {
 		class: 'card',
 		html: str
 	})
 	.insertBefore('section.endcard')
-	.click(function() {
-		$(this).children().first().toggleClass('flipped');
+	.children().first();
+
+	$('.front',cardwrapper).click(function() {
+		$(this).parent().toggleClass('flipped');
+	});
+	$('.back .btn-flipp',cardwrapper).click(function() {
+		$(this).parent().parent().parent().toggleClass('flipped');
+	});
+	$('.back .btn-data',cardwrapper).click(function() {
+		var url = $(this).data('url');
+
+		var link = document.createElement('a');
+		link.href = url;
+		link.target = '_blank';
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+		delete link;
 	});
 
 	config.elements.push($( 'section:nth-last-child(2)'));
