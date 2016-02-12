@@ -26,7 +26,7 @@
 	"cssClass":""
 },
 "back":{
-	"text":"Die zentrale Daten-Sammelstelle in Berlin ist das Datenportal. Aber auch im <a href='http://fbinter.stadt-berlin.de/fb/' target='_blank'>FIS-Broker</a> gibt es Daten.",
+	"text":"Alle Daten kommen aus dem Berliner Datenportal. Im <a href='http://fbinter.stadt-berlin.de/fb/' target='_blank'>FIS-Broker</a> gibt es zusätzlich Daten.",
 	"background":"",
 	"color":"#000000",
 	"cssClass":""
