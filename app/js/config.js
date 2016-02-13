@@ -1,7 +1,6 @@
 //-----------------------------------------------------------------------
 
 var config = config || {
-	city: "Berlin",
 	menu: {
 		'cards': true,
 		'build': true,
@@ -9,6 +8,28 @@ var config = config || {
 		'twitter': 'https://twitter.com/tursics/',
 		'github': 'https://github.com/tursics/data-dashboard/'
 	},
+	cities: [
+		{
+			name: 'Berlin',
+			path: 'berlin',
+			badge: 'Beta',
+			group: 'city'
+		},
+		{
+			name: 'Wien',
+			path: 'viena',
+			badge: 'Alpha',
+			group: 'city'
+		},
+		{
+			name: 'Open Data Portal Österreich',
+			path: 'opd.at',
+			badge: 'Alpha',
+			group: 'portal'
+		}
+	],
+
+	city: "Berlin",
 	data: {
 //		'feed': 'http://daten.berlin.de/datensaetze/rss.xml'
 		'feed': 'http://tursics.de/sample/data-dashboard/berlin/rss.php'

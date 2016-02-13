@@ -279,11 +279,16 @@ function installNavigation()
 			params[split[0]] = split[1];
 		}
 
+		window.navigation.cityId = 0;
+		window.navigation.city = config.cities[0].path;
 		if(typeof params['city'] !== 'undefined') {
-			window.navigation.city = params['city'];
-		}
-		if(-1 == $.inArray(window.navigation.city, ['berlin'/*,'viena',...*/])) {
-			window.navigation.city = 'berlin';
+			for(var i = 0; i < config.cities.length; ++i) {
+				if(params['city'] == config.cities[i].path) {
+					window.navigation.cityId = i;
+					window.navigation.city = params['city'];
+					break;
+				}
+			}
 		}
 
 		if(typeof params['page'] !== 'undefined') {
@@ -312,6 +317,7 @@ function installNavigation()
 
 	window.navigation = window.navigation || {
 		city: '',
+		cityId: 0,
 		page: '',
 		replaceURI: function() {
 			saveNavigation(false);
@@ -374,13 +380,39 @@ function installMenu()
 //	str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
 //	str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
 	str += '<li class="disabled"><a id="menuPageAbout" href="#">Über</a></li>';
-//	str += '<li class="dropdown">';
-//	str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Berlin <span class="caret"></span></a>';
-//	str += '<ul class="dropdown-menu">';
-//	str += '<li class="dropdown-header">Verfügbare Städte</li>';
-//	str += '<li><a href="#">Berlin</a></li>';
-//	str += '</ul>';
-//	str += '</li>';
+
+/*	if(config.cities.length > 1) {
+		var citylist = '';
+		var portallist = '';
+		for(var i = 0; i < config.cities.length; ++i) {
+			var citydata = config.cities[i];
+			var badge = '';
+			if('' != citydata.badge) {
+				badge = ' <span class="label label-success">' + citydata.badge + '</span>';
+			}
+			if('city' == citydata.group) {
+				citylist += '<li><a href="#">' + citydata.name + badge + '</a></li>';
+			} else if('portal' == citydata.group) {
+				portallist += '<li><a href="#">' + citydata.name + badge + '</a></li>';
+			}
+		}
+
+		str += '<li class="dropdown">';
+		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.navigation.cityId].name + ' <span class="caret"></span></a>';
+		str += '<ul class="dropdown-menu">';
+		if(citylist.length > 0) {
+			str += '<li class="dropdown-header">Verfügbare Städte</li>';
+			str += citylist;
+		}
+		if(portallist.length > 0) {
+			str += '<li role="separator" class="divider"></li>';
+			str += '<li class="dropdown-header">Andere Portale</li>';
+			str += portallist;
+		}
+		str += '</ul>';
+		str += '</li>';
+	}*/
+
 	str += '</ul>';
 
 	str += '<ul class="nav navbar-nav navbar-right">';
