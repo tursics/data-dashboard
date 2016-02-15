@@ -146,8 +146,8 @@ function parseFeed()
 			++recent;
 		}
 
-		if(config.loaded < config.cards.length) {
-			var url = config.cards[config.loaded];
+		if(config.loaded < cityConfig.cards.length) {
+			var url = cityConfig.cards[config.loaded];
 			$.ajax(url)
 			.done(function(json){
 				var data = jQuery.parseJSON(json);

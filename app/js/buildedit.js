@@ -293,7 +293,7 @@ function buildCards(cardObj)
 	});
 	$('#inputButtonCancel').click(function() {
 		resetCards();
-		getUpdates(config.data.feed);
+		getUpdates(cityConfig.data.feed);
 	});
 
 	fillBuildCard(cardObj);

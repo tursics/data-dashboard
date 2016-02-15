@@ -147,8 +147,8 @@ function loadCards()
 		});
 	}
 
-	if(config.loaded < config.cards.length) {
-		var url = config.cards[config.loaded];
+	if(config.loaded < cityConfig.cards.length) {
+		var url = cityConfig.cards[config.loaded];
 		$.ajax(url)
 		.done(function(json){
 			var data = jQuery.parseJSON(json);
@@ -352,7 +352,7 @@ function installNavigation()
 				window.navigation.replaceURI();
 
 				resetCards();
-				getUpdates(config.data.feed);
+				getUpdates(cityConfig.data.feed);
 			} else {
 				console.log('Page "'+pageName+'" does not exist');
 			}
@@ -361,6 +361,33 @@ function installNavigation()
 
 	loadNavigation();
 	window.navigation.replaceURI();
+}
+
+//-----------------------------------------------------------------------
+
+function installCity(callbackFunc)
+{
+	cityConfig = {};
+
+	var url = window.navigation.city + '/cityConfig.json';
+	$.ajax(url)
+		.done(function(json){
+			var data = jQuery.parseJSON(json);
+			cityConfig = data;
+	})
+	.fail(function(jqXHR, textStatus){
+		if('parsererror'==textStatus) {
+			var data = jQuery.parseJSON(jqXHR.responseText);
+			if( typeof data.location != 'undefined') {
+				cityConfig = data;
+				return;
+			}
+		}
+		console.log('Could not load "' + url + '"');
+	})
+	.always(function(){
+		callbackFunc();
+	});
 }
 
 //-----------------------------------------------------------------------
@@ -381,7 +408,7 @@ function installMenu()
 //	str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
 	str += '<li class="disabled"><a id="menuPageAbout" href="#">Über</a></li>';
 
-/*	if(config.cities.length > 1) {
+	if(cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
 		var citylist = '';
 		var portallist = '';
 		for(var i = 0; i < config.cities.length; ++i) {
@@ -391,9 +418,9 @@ function installMenu()
 				badge = ' <span class="label label-success">' + citydata.badge + '</span>';
 			}
 			if('city' == citydata.group) {
-				citylist += '<li><a href="#">' + citydata.name + badge + '</a></li>';
+				citylist += '<li><a href="./?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
 			} else if('portal' == citydata.group) {
-				portallist += '<li><a href="#">' + citydata.name + badge + '</a></li>';
+				portallist += '<li><a href="./?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
 			}
 		}
 
@@ -411,17 +438,17 @@ function installMenu()
 		}
 		str += '</ul>';
 		str += '</li>';
-	}*/
+	}
 
 	str += '</ul>';
 
 	str += '<ul class="nav navbar-nav navbar-right">';
-	str += '<li><a href="mailto:thomas@tursics.de">E-Mail</a></li>';
-	str += '<li><a href="https://twitter.com/tursics/" target="_blank">Twitter</a></li>';
+	str += '<li><a href="mailto:' + cityConfig.meta.mail + '">E-Mail</a></li>';
+	str += '<li><a href="' + cityConfig.meta.twitter + '" target="_blank">Twitter</a></li>';
 	str += '<li class="dropdown">';
 	str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mithelfen <span class="caret"></span></a>';
 	str += '<ul class="dropdown-menu">';
-	str += '<li><a href="https://github.com/tursics/data-dashboard/" target="_blank">Github</a></li>';
+	str += '<li><a href="' + cityConfig.meta.github + '" target="_blank">Github</a></li>';
 	str += '<li><a id="menuPageBuild" href="#">Bearbeiten</a></li>';
 	str += '</ul>';
 	str += '</li>';
@@ -525,12 +552,14 @@ function resetCards()
 
 $(document).ready(function() {
 	installNavigation();
-	installMenu();
-	installEvents();
-	installTimer();
-	recalcBoard();
+	installCity(function() {
+		installMenu();
+		installEvents();
+		installTimer();
+		recalcBoard();
 
-	window.navigation.showPage(window.navigation.page);
+		window.navigation.showPage(window.navigation.page);
+	});
 });
 
 //-----------------------------------------------------------------------

@@ -1,13 +1,6 @@
 //-----------------------------------------------------------------------
 
 var config = config || {
-	menu: {
-		'cards': true,
-		'build': true,
-		'mail': 'thomas@tursics.de',
-		'twitter': 'https://twitter.com/tursics/',
-		'github': 'https://github.com/tursics/data-dashboard/'
-	},
 	cities: [
 		{
 			name: 'Berlin',
@@ -17,97 +10,60 @@ var config = config || {
 		},
 		{
 			name: 'Wien',
-			path: 'viena',
+			path: 'vienna',
 			badge: 'Alpha',
 			group: 'city'
 		},
 		{
 			name: 'Open Data Portal Österreich',
-			path: 'opd.at',
+			path: 'odp.at',
 			badge: 'Alpha',
 			group: 'portal'
 		}
 	],
-
-	city: "Berlin",
-	data: {
-//		'feed': 'http://daten.berlin.de/datensaetze/rss.xml'
-		'feed': 'http://tursics.de/sample/data-dashboard/berlin/rss.php'
-	},
-	cards: [
-		'berlin/berlin-opendata.json',
-		'berlin/code-for-berlin.json',
-		'berlin/help.json',
-
-		// datasets from http://daten.berlin.de/datensaetze
-
-		// February 2016
-		'berlin/standorte-von-altglascontainern-auf-oeffentlichem-strassenland-charlottenburg-1.json',
-		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2016.json',
-		// Straßenverzeichnis der Stadtplanung im Bezirk Lichtenberg
-		'berlin/orte-fuer-kinder-jugend-und-familie.json',
-		'berlin/traeger-von-kindertagesstaetten-marzahn-hellersdorf.json',
-		'berlin/kindertagesstaetten-marzahn-hellersdorf-0.json',
-		'berlin/beschaeftigungsdaten-fuer-opendata.json',
-		'berlin/berliner-weihnachtsmaerkte-0.json',
-		'berlin/wochen-und-troedelmaerkte.json',
-		'berlin/strassen-und-volksfeste.json',
-
-		// January 2016
-		'berlin/doppelhaushalt-20162017.json',
-		'berlin/angebote-zur-unterstuetzung-von-fluechtlingen.json',
-		'berlin/aktuelle-ausschreibungen-nach-vol-vob-vof-oder-fuer-interessenbekundungsverfahren-0.json',
-		'berlin/bezirksamtsbeschluesse.json',
-		'berlin/angebote-fuer-kinder-jugend-und-familie.json',
-		'berlin/kamerale-monatsdaten-bezirk-lichtenberg-2015.json',
-		'berlin/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-fuer-20162017.json',
-		'berlin/daten-zur-arbeitslosigkeit-fuer-opendata.json',
-
-		// and many more data from 2015 and older
-	],
 	templates: [
-	{
-		'frontBackground': 'img/template.svg',
-		'frontColor': '#ffffff',
-		'backColor': '#000000',
-		'backClass': ''
-	},
-	{
-		'frontBackground': 'img/template2.svg',
-		'frontColor': '#ffffff',
-		'backColor': '#000000',
-		'backClass': ''
-	},
-	{
-		'frontBackground': 'img/template3.svg',
-		'frontColor': '#ffffff',
-		'backColor': '#000000',
-		'backClass': ''
-	},
-	{
-		'frontBackground': 'img/refugees.svg',
-		'frontColor': '#fecb32',
-		'backColor': '#000000',
-		'backClass': 'refugees'
-	},
-	{
-		'frontBackground': 'img/codeforberlin.svg',
-		'frontColor': '',
-		'backColor': '#000000',
-		'backClass': ''
-	},
-	{
-		'frontBackground': 'img/berlinopendata.svg',
-		'frontColor': '',
-		'backColor': '#000000',
-		'backClass': ''
-	},
-	{
-		'frontBackground': 'img/blueprintcard.svg',
-		'frontColor': '#ffffff',
-		'backColor': '#ffffff',
-		'backClass': 'blueprint'
-	}
+		{
+			'frontBackground': 'img/template.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/template2.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/template3.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/refugees.svg',
+			'frontColor': '#fecb32',
+			'backColor': '#000000',
+			'backClass': 'refugees'
+		},
+		{
+			'frontBackground': 'img/codeforberlin.svg',
+			'frontColor': '',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/berlinopendata.svg',
+			'frontColor': '',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/blueprintcard.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#ffffff',
+			'backClass': 'blueprint'
+		}
 	]
 };
 
