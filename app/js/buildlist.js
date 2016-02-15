@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------
 
-function getUpdates(url)
+function getUpdates(feedUrl, ckanUrl)
 {
 	var str = '';
 	str += '<div class="panel panel-info">';
@@ -22,46 +22,71 @@ function getUpdates(url)
 
 	$('#build').html( str);
 
+	var ckan = false;
+	var url = feedUrl;
+	if( typeof ckanUrl != 'undefined') {
+		ckan = true;
+		url = ckanUrl + '&limit=400';
+	}
 	$.ajax(url)
 	.done(function(data){
 		config.feed = new Array();
-		var xml = $(data);
-		xml.find('item').each(function() {
-			var node = $(this);
+		if(ckan) {
+			for(var i = 0; i < data.result.length; ++i) {
+				var node = data.result[i];
+				var datasetUrl = url.split('/api/')[0] + '/dataset/' + node.object_id.trim();
 
-			var elemTitle = document.createElement('textarea');
-			elemTitle.innerHTML = node.find('title').text().trim();
-			var elemDesc = document.createElement('textarea');
-			elemDesc.innerHTML = node.find('description').text().trim();
+				var item = {
+					title: node.data.package.title.trim(),
+					link: datasetUrl,
+					description: node.data.package.notes.trim(),
+					pubDate: node.timestamp.trim(),
+					author: node.data.package.maintainer.trim(),
+					json: '',
+					status: 'new'
+				};
 
-			var item = {
-				title: elemTitle.value,
-				link: node.find('link').text().trim(),
-				description: elemDesc.value,
-				pubDate: node.find('pubDate').text().trim(),
-				author: node.find('author').text().trim(),
-				json: '',
-				status: 'new'
+				config.feed.push(item);
 			};
-			if(('' == item.link) && (typeof node.find('link')[0].nextSibling.data != 'undefined')) {
-				item.link = node.find('link')[0].nextSibling.data.trim();
-			}
-			var pubDate = new Date(Date.parse(item.pubDate));
-			var feedDate = pubDate.getFullYear();
-			if(pubDate.getMonth()<9) {
-				feedDate += '-0' + (pubDate.getMonth()+1);
-			} else {
-				feedDate += '-' + (pubDate.getMonth()+1);
-			}
-			if(pubDate.getDate()<10) {
-				feedDate += '-0' + pubDate.getDate();
-			} else {
-				feedDate += '-' + pubDate.getDate();
-			}
-			item.pubDate = feedDate;
+		} else {
+			var xml = $(data);
+			xml.find('item').each(function() {
+				var node = $(this);
 
-			config.feed.push(item);
-		});
+				var elemTitle = document.createElement('textarea');
+				elemTitle.innerHTML = node.find('title').text().trim();
+				var elemDesc = document.createElement('textarea');
+				elemDesc.innerHTML = node.find('description').text().trim();
+
+				var item = {
+					title: elemTitle.value,
+					link: node.find('link').text().trim(),
+					description: elemDesc.value,
+					pubDate: node.find('pubDate').text().trim(),
+					author: node.find('author').text().trim(),
+					json: '',
+					status: 'new'
+				};
+				if(('' == item.link) && (typeof node.find('link')[0].nextSibling.data != 'undefined')) {
+					item.link = node.find('link')[0].nextSibling.data.trim();
+				}
+				var pubDate = new Date(Date.parse(item.pubDate));
+				var feedDate = pubDate.getFullYear();
+				if(pubDate.getMonth()<9) {
+					feedDate += '-0' + (pubDate.getMonth()+1);
+				} else {
+					feedDate += '-' + (pubDate.getMonth()+1);
+				}
+				if(pubDate.getDate()<10) {
+					feedDate += '-0' + pubDate.getDate();
+				} else {
+					feedDate += '-' + pubDate.getDate();
+				}
+				item.pubDate = feedDate;
+
+				config.feed.push(item);
+			});
+		}
 
 		parseFeed();
 	})

@@ -352,7 +352,7 @@ function installNavigation()
 				window.navigation.replaceURI();
 
 				resetCards();
-				getUpdates(cityConfig.data.feed);
+				getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
 			} else {
 				console.log('Page "'+pageName+'" does not exist');
 			}

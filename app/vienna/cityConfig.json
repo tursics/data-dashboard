@@ -6,7 +6,7 @@
 		"showMenuCity": true
 	},
 	"data": {
-		"feed": "http://tursics.de/sample/data-dashboard/vienna/rss.php"
+		"ckan": "https://www.data.gv.at/katalog/api/3/action/organization_activity_list?id=stadt-wien"
 	},
 	"cards": [
 		"vienna/code-for-berlin.json",
