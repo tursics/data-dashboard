@@ -1,0 +1,15 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true
+	},
+	"data": {
+		"feed": "http://tursics.de/sample/data-dashboard/vienna/rss.php"
+	},
+	"cards": [
+		"vienna/code-for-berlin.json",
+		"vienna/help.json"
+	]
+}

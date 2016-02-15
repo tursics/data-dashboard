@@ -1,0 +1,15 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true
+	},
+	"data": {
+		"feed": "http://tursics.de/sample/data-dashboard/odp.at/rss.php"
+	},
+	"cards": [
+		"odp.at/code-for-berlin.json",
+		"odp.at/help.json"
+	]
+}
