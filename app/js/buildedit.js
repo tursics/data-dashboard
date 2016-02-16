@@ -213,6 +213,8 @@ function buildCards(cardObj)
 		{ // content
 			str += '<button class="btn btn-primary" type="button" id="inputButtonDownloadJSON">JSON herunterladen</button>';
 			str += '&nbsp;&nbsp;&nbsp;';
+//			str += '<button class="btn btn-primary" type="button" id="inputButtonSaveJSON">Lokal speichern</button>';
+//			str += '&nbsp;&nbsp;&nbsp;';
 			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">Schließen</button>';
 		}
 		str += '</div>';
@@ -289,12 +291,20 @@ function buildCards(cardObj)
 		$('#inputMetaLicense').html('Andere Lizenz <span class="caret"></span>');
 	});
 	$('#inputButtonDownloadJSON').click(function() {
+		downloadBuildCardToJSON();
+	});
+	$('#inputButtonSaveJSON').click(function() {
 		saveBuildCardToJSON();
 	});
 	$('#inputButtonCancel').click(function() {
 		resetCards();
 		getUpdates(cityConfig.data.feed);
 	});
+
+	window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+	if(typeof window.requestFileSystem  == 'undefined') {
+		$('#inputButtonSaveJSON').addClass('disabled');
+	}
 
 	fillBuildCard(cardObj);
 }
@@ -376,7 +386,7 @@ function fillBuildCardByOldValues(url)
 	.fail(function(jqXHR, textStatus){
 		if('parsererror'==textStatus) {
 			var data = jQuery.parseJSON(jqXHR.responseText);
-			if( typeof data.location != 'undefined') {
+			if(typeof data.location != 'undefined') {
 				fillData(data);
 				return;
 			}
@@ -397,14 +407,13 @@ function fillBuildCardByOldValues(url)
 
 function fillBuildCardWithMetadata()
 {
-	function fillData(data)
+	function fillRSSData(data)
 	{
 		data = data || {};
 		data.link = data.link || '';
 		data.name = data.name || '';
 		data.description = data.description || '';
 		data.licenseUrl = data.licenseUrl || '';
-		data.licenseName = data.licenseName || '';
 		data.created = data.created || '';
 		data.modified = data.modified || '';
 		data.attribution = data.attribution || '';
@@ -427,23 +436,67 @@ function fillBuildCardWithMetadata()
 		$('#inputMetaUpdated').val(data.modified).change();
 	}
 
+	function fillCKANData(data, link)
+	{
+		data = data || {};
+		data.result = data.result || {};
+		data.result.title = data.result.title || '';
+		data.result.notes = data.result.notes || '';
+		data.result.license_id = data.result.license_id || '';
+		data.result.metadata_created = data.result.metadata_created || '';
+		data.result.metadata_modified = data.result.metadata_modified || '';
+		data.result.maintainer = data.result.maintainer || '';
+		data.result.maintainer_email = data.result.maintainer_email || '';
+
+		if('cc-by'==data.result.license_id) {
+			$('#inputMetaLicenseCCBY').click();
+		} else if('cc-by-sa'==data.result.license_id) {
+			$('#inputMetaLicenseCCBYSA').click();
+		} else {
+			$('#inputMetaLicenseOther').click();
+		}
+		$('#inputMetaLink').val(link).change();
+		$('#buttonOpen').attr('href', link);
+		$('#inputMetaTitle').val(data.result.title).change();
+		$('#inputMetaDescription').val(data.result.notes).change();
+		$('#inputMetaAttribution').val(data.result.maintainer).change();
+		$('#inputMetaMail').val(data.result.maintainer_email).change();
+		$('#inputMetaCreated').val(data.result.metadata_created.split('T')[0]).change();
+		$('#inputMetaUpdated').val(data.result.metadata_modified.split('T')[0]).change();
+	}
+
 	var url = $('#inputMetaLink').val();
-	url = 'berlin/metadata.php?url=' + encodeURI(url);
+	var isCKAN = false;
+	if('berlin' == config.cities[window.navigation.cityId].path) {
+		url = config.cities[window.navigation.cityId].path + '/metadata.php?url=' + encodeURI(url);
+	}
 	if('' == url) {
 		return;
 	}
 
+	if(typeof cityConfig.data.ckan != 'undefined') {
+		isCKAN = true;
+		url = url.split('/dataset/')[0] + '/api/3/action/package_show?id=' + url.split('/dataset/')[1];
+	}
+
 	$.ajax(url)
 	.done(function(json){
-		var data = jQuery.parseJSON(json);
-		fillData(data);
+		if(isCKAN) {
+			fillCKANData(json, $('#inputMetaLink').val());
+		} else {
+			var data = jQuery.parseJSON(json);
+			fillRSSData(data);
+		}
 	})
 	.fail(function(jqXHR, textStatus){
 		if('parsererror'==textStatus) {
-			var data = jQuery.parseJSON(jqXHR.responseText);
-			if( typeof data.location != 'undefined') {
-				fillData(data);
-				return;
+			try {
+				var data = jQuery.parseJSON(jqXHR.responseText);
+				if(typeof data.location != 'undefined') {
+					fillRSSData(data);
+					return;
+				}
+			} catch(x) {
 			}
 		}
 
@@ -459,7 +512,7 @@ function fillBuildCardWithMetadata()
 
 //-----------------------------------------------------------------------
 
-function saveBuildCardToJSON()
+function composeBuildCardData()
 {
 	var elem = config.updates[0].dom.parent();
 	var frontColor = elem.attr('style') || '';
@@ -481,8 +534,8 @@ function saveBuildCardToJSON()
 
 	var data = {
 		'location':{
-			'country':'Germany',
-			'city':'Berlin'
+			'country':config.cities[window.navigation.cityId].country,
+			'city':config.cities[window.navigation.cityId].name
 		},
 		'portal':{
 			'url':$('#inputMetaLink').val(),
@@ -532,19 +585,14 @@ function saveBuildCardToJSON()
 		data.front.format = 'string';
 	}
 
-	function downloadCSV(obj, filename) {
-		var str = JSON.stringify(obj, null, '\t');
-		str = unescape(encodeURIComponent(str));
-		var uri = 'data:text/csv;charset=utf-8;base64,' + btoa(str);
+	return data;
+}
 
-		var link = document.createElement('a');
-		link.download = filename;
-		link.href = uri;
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-		delete link;
-	}
+//-----------------------------------------------------------------------
+
+function downloadBuildCardToJSON()
+{
+	var data = composeBuildCardData();
 
 	var filename = data.portal.url.split('/');
 	filename = filename[filename.length - 1];
@@ -553,7 +601,48 @@ function saveBuildCardToJSON()
 	filename = filename.replace(/%C3%BC/g, 'ue');
 	filename = filename.replace(/%C3%9F/g, 'ss');
 	filename += '.json';
-	downloadCSV(data, filename);
+
+	var str = JSON.stringify(data, null, '\t');
+	str = unescape(encodeURIComponent(str));
+	var uri = 'data:text/csv;charset=utf-8;base64,' + btoa(str);
+
+	var link = document.createElement('a');
+	link.download = filename;
+	link.href = uri;
+	document.body.appendChild(link);
+	link.click();
+	document.body.removeChild(link);
+	delete link;
+}
+
+//-----------------------------------------------------------------------
+
+function saveBuildCardToJSON()
+{
+	window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+	if(typeof window.requestFileSystem  == 'undefined') {
+		return;
+	}
+
+	var data = composeBuildCardData();
+	var filesize = data.length * 1.2;
+
+	navigator.webkitPersistentStorage.requestQuota(filesize, function() {
+		window.requestFileSystem(window.PERSISTENT, filesize, function(localstorage) {
+			console.log('here');
+			console.log(localstorage);
+			localstorage.root.getFile('info.txt', {create: true}, function(file) {
+				console.log('here not');
+				file.createWriter(function(content) {
+					content.write(data);
+
+					console.log('ready');
+				});
+			});
+		});
+	});
+
+	// http://www.noupe.com/design/html5-filesystem-api-create-files-store-locally-using-javascript-webkit.html
 }
 
 //-----------------------------------------------------------------------
