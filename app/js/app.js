@@ -147,7 +147,7 @@ function loadCards()
 		});
 	}
 
-	if(config.loaded < cityConfig.cards.length) {
+	if((typeof cityConfig.cards != 'undefined') && (config.loaded < cityConfig.cards.length)) {
 		var url = cityConfig.cards[config.loaded];
 		$.ajax(url)
 		.done(function(json){
@@ -157,7 +157,7 @@ function loadCards()
 		.fail(function(jqXHR, textStatus){
 			if('parsererror'==textStatus) {
 				var data = jQuery.parseJSON(jqXHR.responseText);
-				if( typeof data.location != 'undefined') {
+				if(typeof data.location != 'undefined') {
 					createCard(data);
 					return;
 				}
@@ -319,6 +319,7 @@ function installNavigation()
 		city: '',
 		cityId: 0,
 		page: '',
+		useFileSystem: false,
 		replaceURI: function() {
 			saveNavigation(false);
 		},
@@ -360,6 +361,7 @@ function installNavigation()
 	};
 
 	loadNavigation();
+	window.navigation.useFileSystem = (0 == location.href.indexOf('file://'));
 	window.navigation.replaceURI();
 }
 
@@ -369,7 +371,12 @@ function installCity(callbackFunc)
 {
 	cityConfig = {};
 
-	var url = window.navigation.city + '/cityConfig.json';
+	var url = window.navigation.city;
+//	if(window.navigation.useFileSystem) {
+//		url = location.href.substr(0, location.href.lastIndexOf('/')) + '/' + url;
+//	}
+
+	url += '/cityConfig.json';
 	$.ajax(url)
 		.done(function(json){
 			var data = jQuery.parseJSON(json);
@@ -378,7 +385,7 @@ function installCity(callbackFunc)
 	.fail(function(jqXHR, textStatus){
 		if('parsererror'==textStatus) {
 			var data = jQuery.parseJSON(jqXHR.responseText);
-			if( typeof data.location != 'undefined') {
+			if(typeof data.meta != 'undefined') {
 				cityConfig = data;
 				return;
 			}
@@ -403,55 +410,89 @@ function installMenu()
 
 	str = '';
 	str += '<ul class="nav navbar-nav">';
-	str += '<li><a id="menuPageCards" href="#">Daten</a></li>';
-//	str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
-//	str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
-	str += '<li class="disabled"><a id="menuPageAbout" href="#">Über</a></li>';
 
-	if(cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
-		var citylist = '';
-		var portallist = '';
-		for(var i = 0; i < config.cities.length; ++i) {
-			var citydata = config.cities[i];
-			var badge = '';
-			if('' != citydata.badge) {
-				badge = ' <span class="label label-success">' + citydata.badge + '</span>';
+	var strMail = '';
+	var strTwitter = '';
+	var strGithub = '';
+	if(typeof cityConfig.meta == 'undefined') {
+		strMail = 'thomas@tursics.de';
+		strTwitter = 'https://twitter.com/tursics/';
+		strGithub = 'https://github.com/tursics/data-dashboard/';
+
+		$('.container .alert')
+		.html('Das hätte nicht passieren dürfen. Irgendwas funktioniert hier nicht. Bitte kontaktiere mich.')
+		.addClass('alert-danger')
+		.css('display','');
+	} else {
+		str += '<li><a id="menuPageCards" href="#">Daten</a></li>';
+//		str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
+//		str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
+		str += '<li class="disabled"><a id="menuPageAbout" href="#">Über</a></li>';
+
+		if(cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
+			var citylist = '';
+			var portallist = '';
+			for(var i = 0; i < config.cities.length; ++i) {
+				var citydata = config.cities[i];
+				var badge = '';
+				if('' != citydata.badge) {
+					badge = ' <span class="label label-success">' + citydata.badge + '</span>';
+				}
+				if('city' == citydata.group) {
+					citylist += '<li><a href="./index.html?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
+				} else if('portal' == citydata.group) {
+					portallist += '<li><a href="./index.html?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
+				}
 			}
-			if('city' == citydata.group) {
-				citylist += '<li><a href="./?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
-			} else if('portal' == citydata.group) {
-				portallist += '<li><a href="./?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
+
+			str += '<li class="dropdown">';
+			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.navigation.cityId].name + ' <span class="caret"></span></a>';
+			str += '<ul class="dropdown-menu">';
+			if(citylist.length > 0) {
+				str += '<li class="dropdown-header">Verfügbare Städte</li>';
+				str += citylist;
 			}
+			if(portallist.length > 0) {
+				str += '<li role="separator" class="divider"></li>';
+				str += '<li class="dropdown-header">Andere Portale</li>';
+				str += portallist;
+			}
+			str += '</ul>';
+			str += '</li>';
+
+			strMail = cityConfig.meta.mail;
+			strTwitter = cityConfig.meta.twitter;
+			strGithub = cityConfig.meta.github;
 		}
 
-		str += '<li class="dropdown">';
-		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.navigation.cityId].name + ' <span class="caret"></span></a>';
-		str += '<ul class="dropdown-menu">';
-		if(citylist.length > 0) {
-			str += '<li class="dropdown-header">Verfügbare Städte</li>';
-			str += citylist;
+		var badge = config.cities[window.navigation.cityId].badge;
+		if('Alpha' == badge) {
+			$('.container .alert')
+			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Das Daten-Dashboard befindet sich noch in einer sehr frühen Entwicklungsphase. Es ist noch nicht für die große Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.')
+			.addClass('alert-warning')
+			.css('display','');
+		} else if('Beta' == badge) {
+			$('.container .alert')
+			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Die Testphase für das Daten-Dashboard hat begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.')
+			.addClass('alert-info')
+			.css('display','');
 		}
-		if(portallist.length > 0) {
-			str += '<li role="separator" class="divider"></li>';
-			str += '<li class="dropdown-header">Andere Portale</li>';
-			str += portallist;
-		}
-		str += '</ul>';
-		str += '</li>';
 	}
 
 	str += '</ul>';
 
 	str += '<ul class="nav navbar-nav navbar-right">';
-	str += '<li><a href="mailto:' + cityConfig.meta.mail + '">E-Mail</a></li>';
-	str += '<li><a href="' + cityConfig.meta.twitter + '" target="_blank">Twitter</a></li>';
-	str += '<li class="dropdown">';
-	str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mithelfen <span class="caret"></span></a>';
-	str += '<ul class="dropdown-menu">';
-	str += '<li><a href="' + cityConfig.meta.github + '" target="_blank">Github</a></li>';
-	str += '<li><a id="menuPageBuild" href="#">Bearbeiten</a></li>';
-	str += '</ul>';
-	str += '</li>';
+	str += '<li><a href="mailto:' + strMail + '">E-Mail</a></li>';
+	str += '<li><a href="' + strTwitter + '" target="_blank">Twitter</a></li>';
+	if(typeof cityConfig.meta != 'undefined') {
+		str += '<li class="dropdown">';
+		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mithelfen <span class="caret"></span></a>';
+		str += '<ul class="dropdown-menu">';
+		str += '<li><a href="' + strGithub + '" target="_blank">Github</a></li>';
+		str += '<li><a id="menuPageBuild" href="#">Bearbeiten</a></li>';
+		str += '</ul>';
+		str += '</li>';
+	}
 	str += '</ul>';
 
 	$('#navbar').html(str);
