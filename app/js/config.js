@@ -4,18 +4,21 @@ var config = config || {
 	cities: [
 		{
 			name: 'Berlin',
+			country: 'Germany',
 			path: 'berlin',
-			badge: 'Beta',
+			badge: 'Alpha',
 			group: 'city'
 		},
 		{
 			name: 'Wien',
+			country: 'Austria',
 			path: 'vienna',
 			badge: 'Alpha',
 			group: 'city'
 		},
 		{
 			name: 'Open Data Portal Österreich',
+			country: 'Austria',
 			path: 'odp.at',
 			badge: 'Alpha',
 			group: 'portal'
