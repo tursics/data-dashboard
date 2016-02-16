@@ -239,10 +239,13 @@ function showUpdateTable()
 
 		str += '<td>' + config.feed[i].title + '</td>';
 
-		if(config.feed[i].description.length>200) {
-			str += '<td>' + config.feed[i].description.substr(0, 200) + '...</td>';
+		var elemDesc = document.createElement('div');
+		elemDesc.innerHTML = config.feed[i].description.trim();
+		var desc = elemDesc.textContent || elemDesc.innerText || '';
+		if(desc.length>200) {
+			str += '<td>' + desc.substr(0, 200) + '...</td>';
 		} else {
-			str += '<td>' + config.feed[i].description + '</td>';
+			str += '<td>' + desc + '</td>';
 		}
 
 		var days = parseInt((Date.now() - new Date(config.feed[i].pubDate)) / 1000 / 60 / 60 / 24);
