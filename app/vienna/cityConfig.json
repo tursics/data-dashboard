@@ -9,9 +9,20 @@
 		"ckan": "https://www.data.gv.at/katalog/api/3/action/organization_activity_list?id=stadt-wien"
 	},
 	"cards": [
+		"vienna/data.wien.gv.at.json",
 		"vienna/code-for-berlin.json",
 		"vienna/help.json",
 
-		"vienna/9c977b93-4c8a-4bae-8839-ccd45c5be6a2.json"
+		"vienna/9c977b93-4c8a-4bae-8839-ccd45c5be6a2.json",
+		"vienna/5fc523d5-c299-4d97-889f-01ed247b10fa.json",
+		"vienna/13500481-27e7-4a39-99fb-e129cbeea9b5.json",
+		"vienna/6b49f1c1-0264-4c42-b7b1-9f36a60b82e2.json",
+		"vienna/75691bc7-2bce-40d9-a477-7d60e2ddc708.json",
+		"vienna/c91a4635-8b7d-43fe-9b27-d95dec8392a7.json",
+		"vienna/fc21780d-bbb0-4ec9-9cb2-8687fd28ebc2.json",
+		"vienna/eec2fb76-3b7b-4f64-a8d1-2f9778a57adb.json",
+		"vienna/d025f670-5719-417e-8750-07b9178e7d92.json",
+		"vienna/b411c576-e81b-490b-9c5b-8ef36f4f542d.json",
+		"vienna/1d5c2411-9719-4c8f-b99d-57a5f4a4ae41.json"
 	]
 }

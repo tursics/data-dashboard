@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/fc21780d-bbb0-4ec9-9cb2-8687fd28ebc2",
+		"title": "Orthofoto Wien 2015",
+		"description": "Orthofoto Wien (Entzerrtes Luftbild) ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung ",
+		"author": "post@ma41.wien.gv.at",
+		"created": "2012-04-11",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Fliege über Luftbilder mit",
+		"textButton": "Auflösung (Juni 2015)",
+		"value": "15",
+		"unit": "cm",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Jährlich gibt es neue Orthofotos (entzerrtes Luftbilder) von Wien.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
