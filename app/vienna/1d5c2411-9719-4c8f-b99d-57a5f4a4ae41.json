@@ -21,8 +21,8 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
-		"color": "#ffffff"
+		"background": "img/house.svg",
+		"color": "#000000"
 	},
 	"back": {
 		"text": "Enthalten sind Adressbezeichnung, Koordinaten und Gebäudezugänge.",

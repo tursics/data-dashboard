@@ -26,6 +26,18 @@ var config = config || {
 	],
 	templates: [
 		{
+			'frontBackground': 'img/health.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/house.svg',
+			'frontColor': '#000000',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/template.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',

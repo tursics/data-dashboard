@@ -7,8 +7,8 @@
 		"url": "https://www.data.gv.at/katalog/dataset/5fc523d5-c299-4d97-889f-01ed247b10fa",
 		"title": "Kaufpreissammlung Liegenschaften - Wien",
 		"description": "Sammlung von Liegenschaftstransaktionsdaten aus dem Grundbuch inkl. Auswertung, Flächenwidmungs- und Bebauungsbestimmungen, örtliche Besichtigung etc.",
-		"license": "",
-		"licenseURL": "",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Magistratsabteilung 69 - Immobilienmanagement",
 		"author": "post@ma69.wien.gv.at",
 		"created": "2015-09-24",
@@ -21,8 +21,8 @@
 		"unit": "€",
 		"changePerDay": "",
 		"format": "euro",
-		"background": "img/template.svg",
-		"color": "#ffffff"
+		"background": "img/house.svg",
+		"color": "#000000"
 	},
 	"back": {
 		"text": "Mehr Kaufverträge stehen in der Sammlung der Liegenschafts-Transaktionsdaten.",

@@ -21,7 +21,7 @@
 		"unit": "€",
 		"changePerDay": "",
 		"format": "euro",
-		"background": "img/template.svg",
+		"background": "img/health.svg",
 		"color": "#ffffff"
 	},
 	"back": {
