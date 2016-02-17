@@ -40,7 +40,7 @@ function getUpdates(feedUrl, ckanUrl)
 					title: node.data.package.title.trim(),
 					link: datasetUrl,
 					description: node.data.package.notes.trim(),
-					pubDate: node.timestamp.trim(),
+					pubDate: node.timestamp.trim().split('T')[0],
 					author: node.data.package.maintainer.trim(),
 					json: '',
 					status: 'new'
