@@ -450,6 +450,8 @@ function fillBuildCardWithMetadata()
 
 		if('cc-by'==data.result.license_id) {
 			$('#inputMetaLicenseCCBY').click();
+		} else if('cc-by-at-30'==data.result.license_id) {
+			$('#inputMetaLicenseCCBY').click();
 		} else if('cc-by-sa'==data.result.license_id) {
 			$('#inputMetaLicenseCCBYSA').click();
 		} else {
