@@ -74,7 +74,11 @@
 .icon-doc:    before { content: '\e809'; }
 
 body {
-	background-color: #848;
+	background: url('../berlin/fotolia_63850867.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 	color: #fff;
 	font-family: 'judsonmedium', Arial, sans-serif;
 	font-size: 12pt;
@@ -196,7 +200,7 @@ body.build {
 .cardwrapper .front div, .cardwrapper .back div {
 	height: 100%;
 	overflow: hidden;
-	margin: 0 .5em 0 .5em;
+	margin: 0 .2em 0 .2em;
 	text-align: center;
 }
 .cardwrapper .back div {
