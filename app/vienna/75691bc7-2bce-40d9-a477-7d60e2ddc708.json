@@ -21,7 +21,7 @@
 		"unit": "l",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
+		"background": "img/water.svg",
 		"color": "#ffffff"
 	},
 	"back": {

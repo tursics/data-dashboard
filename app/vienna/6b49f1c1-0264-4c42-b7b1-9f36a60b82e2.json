@@ -21,7 +21,7 @@
 		"unit": "m²",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
+		"background": "img/sun.svg",
 		"color": "#ffffff"
 	},
 	"back": {
