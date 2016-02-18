@@ -32,6 +32,18 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/sun.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/water.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/house.svg',
 			'frontColor': '#000000',
 			'backColor': '#000000',
@@ -44,34 +56,10 @@ var config = config || {
 			'backClass': ''
 		},
 		{
-			'frontBackground': 'img/template2.svg',
-			'frontColor': '#ffffff',
-			'backColor': '#000000',
-			'backClass': ''
-		},
-		{
-			'frontBackground': 'img/template3.svg',
-			'frontColor': '#ffffff',
-			'backColor': '#000000',
-			'backClass': ''
-		},
-		{
 			'frontBackground': 'img/refugees.svg',
 			'frontColor': '#fecb32',
 			'backColor': '#000000',
 			'backClass': 'refugees'
-		},
-		{
-			'frontBackground': 'img/codeforberlin.svg',
-			'frontColor': '',
-			'backColor': '#000000',
-			'backClass': ''
-		},
-		{
-			'frontBackground': 'img/berlinopendata.svg',
-			'frontColor': '',
-			'backColor': '#000000',
-			'backClass': ''
 		},
 		{
 			'frontBackground': 'img/blueprintcard.svg',
