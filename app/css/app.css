@@ -74,7 +74,7 @@
 .icon-doc:    before { content: '\e809'; }
 
 body {
-	background: url('../berlin/fotolia_63850867.jpg') no-repeat center center fixed;
+	background: no-repeat center center fixed;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 	     -o-background-size: cover;
@@ -87,7 +87,7 @@ body {
 }
 
 body.build {
-	background: #2c71b8 url('../img/blueprintbackground.svg');
+	background: #2c71b8 url('../img/blueprintbackground.svg') !important;
 }
 
 #board {

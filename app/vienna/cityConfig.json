@@ -3,7 +3,8 @@
 		"mail": "thomas@tursics.de",
 		"twitter": "https://twitter.com/tursics/",
 		"github": "https://github.com/tursics/data-dashboard/",
-		"showMenuCity": true
+		"showMenuCity": true,
+		"background": "vienna/fotolia_90442602.jpg"
 	},
 	"data": {
 		"ckan": "https://www.data.gv.at/katalog/api/3/action/organization_activity_list?id=stadt-wien"

@@ -399,6 +399,15 @@ function installCity(callbackFunc)
 
 //-----------------------------------------------------------------------
 
+function installBackground()
+{
+	if(typeof cityConfig.meta.background != 'undefined') {
+		$('body').css('background-image', 'url(' + cityConfig.meta.background + ')');
+	}
+}
+
+//-----------------------------------------------------------------------
+
 function installMenu()
 {
 	var brandTitle = 'Daten-Dashboard';
@@ -594,6 +603,7 @@ function resetCards()
 $(document).ready(function() {
 	installNavigation();
 	installCity(function() {
+		installBackground();
 		installMenu();
 		installEvents();
 		installTimer();
