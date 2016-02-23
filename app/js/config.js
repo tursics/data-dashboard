@@ -50,6 +50,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/book.svg',
+			'frontColor': '#57006c',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/template.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
