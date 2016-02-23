@@ -209,12 +209,17 @@ function buildCards(cardObj)
 	}
 	{ // action buttons
 		str += '<div class="panel panel-info">';
-		str += '<div class="panel-body" style="text-align:center;">';
+		str += '<div class="panel-body dropup" style="text-align:left;">';
 		{ // content
-			str += '<button class="btn btn-primary" type="button" id="inputButtonDownloadJSON">JSON herunterladen</button>';
+			str += '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="inputButtonDownload" aria-haspopup="true" aria-expanded="false">';
+			str += 'Speichern <span class="caret"></span></button>';
+			str += '<ul class="dropdown-menu">';
+			str += '<li><a href="#inputButtonDownload" id="inputButtonUploadJSON">Im Internet speichern</a></li>';
+			str += '<li><a href="#inputButtonDownload" id="inputButtonDownloadJSON">JSON herunterladen</a></li>';
+//			str += '<li><a href="#inputButtonDownload" id="inputButtonSaveJSON">Lokal speichern</a></li>';
+			str += '</ul>';
+
 			str += '&nbsp;&nbsp;&nbsp;';
-//			str += '<button class="btn btn-primary" type="button" id="inputButtonSaveJSON">Lokal speichern</button>';
-//			str += '&nbsp;&nbsp;&nbsp;';
 			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">Schließen</button>';
 		}
 		str += '</div>';
@@ -293,18 +298,22 @@ function buildCards(cardObj)
 	$('#inputButtonDownloadJSON').click(function() {
 		downloadBuildCardToJSON();
 	});
-	$('#inputButtonSaveJSON').click(function() {
-		saveBuildCardToJSON();
+	$('#inputButtonUploadJSON').click(function() {
+//		downloadBuildCardToJSON();
+		alert('geht noch nicht');
 	});
+//	$('#inputButtonSaveJSON').click(function() {
+//		saveBuildCardToJSON();
+//	});
 	$('#inputButtonCancel').click(function() {
 		resetCards();
-		getUpdates(cityConfig.data.feed);
+		getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
 	});
 
-	window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
-	if(typeof window.requestFileSystem  == 'undefined') {
-		$('#inputButtonSaveJSON').addClass('disabled');
-	}
+//	window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+//	if(typeof window.requestFileSystem  == 'undefined') {
+//		$('#inputButtonSaveJSON').addClass('disabled');
+//	}
 
 	fillBuildCard(cardObj);
 }
@@ -618,7 +627,7 @@ function downloadBuildCardToJSON()
 }
 
 //-----------------------------------------------------------------------
-
+/*
 function saveBuildCardToJSON()
 {
 	window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
@@ -646,5 +655,5 @@ function saveBuildCardToJSON()
 
 	// http://www.noupe.com/design/html5-filesystem-api-create-files-store-locally-using-javascript-webkit.html
 }
-
+*/
 //-----------------------------------------------------------------------
