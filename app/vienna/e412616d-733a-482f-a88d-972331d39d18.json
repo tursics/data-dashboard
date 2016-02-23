@@ -15,14 +15,14 @@
 		"updated": "2016-02-10"
 	},
 	"front": {
-		"textTop": "Es gibt 40 Büchereien und",
-		"textButton": "Bücherbus in Wien",
+		"textTop": "40 Büchereien und",
+		"textButton": "Bücherbus",
 		"value": "1",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
-		"color": "#ffffff"
+		"background": "img/book.svg",
+		"color": "#57006c"
 	},
 	"back": {
 		"text": "Dieser Datensatz listet die Schlüssel zur Umwandlung der Büchereinummer in eine Adresse.",

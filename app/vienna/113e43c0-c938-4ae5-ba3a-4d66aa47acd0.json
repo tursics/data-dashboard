@@ -4,9 +4,9 @@
 		"city": "Wien"
 	},
 	"portal": {
-		"url": "https://www.data.gv.at/katalog/dataset/82d985c7-245f-4fd7-810f-b961edbc51cd",
-		"title": "Büchereien Wien - Besuche mit Ausleihe",
-		"description": "Statistik der Besuche mit Ausleihen der Bücherien Wien nach Zweigstellen ",
+		"url": "https://www.data.gv.at/katalog/dataset/113e43c0-c938-4ae5-ba3a-4d66aa47acd0",
+		"title": "Büchereien Wien - Neuanmeldungen",
+		"description": "Statistik der Neuanmeldungen bei den Büchereien Wien nach Zweigstellen ",
 		"license": "Creative Commons Namensnennung",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Magistratsabteilung 13 - Büchereien Wien",
@@ -15,17 +15,17 @@
 		"updated": "2016-02-10"
 	},
 	"front": {
-		"textTop": "Aus Büchereien leihen",
-		"textButton": "Besucher gerade aus",
-		"value": "",
+		"textTop": "Die Büchereien melden",
+		"textButton": "neue Bücherwürmer",
+		"value": "40243",
 		"unit": "",
-		"changePerDay": "28052",
+		"changePerDay": "",
 		"format": "int",
 		"background": "img/book.svg",
 		"color": "#57006c"
 	},
 	"back": {
-		"text": "Mehr über die Statistik der Besuche mit Ausleihen der Büchereien Wien nach Zweigstellen:",
+		"text": "Das sagt die Statistik der Neuanmeldungen bei den Büchereien Wien nach Zweigstellen.",
 		"color": "#000000",
 		"cssClass": ""
 	}

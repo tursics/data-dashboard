@@ -4,9 +4,9 @@
 		"city": "Wien"
 	},
 	"portal": {
-		"url": "https://www.data.gv.at/katalog/dataset/82d985c7-245f-4fd7-810f-b961edbc51cd",
-		"title": "Büchereien Wien - Besuche mit Ausleihe",
-		"description": "Statistik der Besuche mit Ausleihen der Bücherien Wien nach Zweigstellen ",
+		"url": "https://www.data.gv.at/katalog/dataset/c92101b1-0a81-4454-9306-e5c231b5d728",
+		"title": "Büchereien Wien - Jahresbestleiher",
+		"description": "Meistgeliehene Titel der Büchereien Wien im vergangenen Jahr ",
 		"license": "Creative Commons Namensnennung",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Magistratsabteilung 13 - Büchereien Wien",
@@ -15,17 +15,17 @@
 		"updated": "2016-02-10"
 	},
 	"front": {
-		"textTop": "Aus Büchereien leihen",
-		"textButton": "Besucher gerade aus",
-		"value": "",
+		"textTop": "Jeff Kinney schrieb die",
+		"textButton": "meistgeliehenen Bücher",
+		"value": "8",
 		"unit": "",
-		"changePerDay": "28052",
+		"changePerDay": "",
 		"format": "int",
 		"background": "img/book.svg",
 		"color": "#57006c"
 	},
 	"back": {
-		"text": "Mehr über die Statistik der Besuche mit Ausleihen der Büchereien Wien nach Zweigstellen:",
+		"text": "... der Büchereien Wien im vergangenen Jahr. \"Geht's noch?\" und \"Keine Panik!\" waren die Toptitel.",
 		"color": "#000000",
 		"cssClass": ""
 	}

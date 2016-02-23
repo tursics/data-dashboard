@@ -15,14 +15,14 @@
 		"updated": "2016-02-10"
 	},
 	"front": {
-		"textTop": "In den Büchereien werden",
-		"textButton": "Medien gerade ausgeliehen",
+		"textTop": "Gerade werden",
+		"textButton": "Bücher ausgeliehen",
 		"value": "",
 		"unit": "",
 		"changePerDay": "107088",
 		"format": "int",
-		"background": "img/template.svg",
-		"color": "#ffffff"
+		"background": "img/book.svg",
+		"color": "#57006c"
 	},
 	"back": {
 		"text": "Die gesamte Statistik der Ausleihen der Büchereien nach Zweigstellen befindet sich hier:",
