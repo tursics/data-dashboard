@@ -209,13 +209,14 @@ function buildCards(cardObj)
 	}
 	{ // action buttons
 		str += '<div class="panel panel-info">';
+		str += '<div class="" role="alert" id="saveAlert"></div>';
 		str += '<div class="panel-body dropup" style="text-align:left;">';
 		{ // content
 			str += '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="inputButtonDownload" aria-haspopup="true" aria-expanded="false">';
 			str += 'Speichern <span class="caret"></span></button>';
 			str += '<ul class="dropdown-menu">';
-			str += '<li><a href="#inputButtonDownload" id="inputButtonUploadJSON">Im Internet speichern</a></li>';
-			str += '<li><a href="#inputButtonDownload" id="inputButtonDownloadJSON">JSON herunterladen</a></li>';
+			str += '<li><a href="#inputButtonDownload" id="inputButtonUploadJSON">Im Internet veröffentlichen</a></li>';
+			str += '<li><a href="#inputButtonDownload" id="inputButtonDownloadJSON">Als JSON herunterladen</a></li>';
 //			str += '<li><a href="#inputButtonDownload" id="inputButtonSaveJSON">Lokal speichern</a></li>';
 			str += '</ul>';
 
@@ -299,14 +300,13 @@ function buildCards(cardObj)
 		downloadBuildCardToJSON();
 	});
 	$('#inputButtonUploadJSON').click(function() {
-//		downloadBuildCardToJSON();
-		alert('geht noch nicht');
+		uploadBuildCard();
 	});
 //	$('#inputButtonSaveJSON').click(function() {
 //		saveBuildCardToJSON();
 //	});
 	$('#inputButtonCancel').click(function() {
-		resetCards();
+		resetCards(false);
 		getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
 	});
 
@@ -615,7 +615,7 @@ function downloadBuildCardToJSON()
 
 	var str = JSON.stringify(data, null, '\t');
 	str = unescape(encodeURIComponent(str));
-	var uri = 'data:text/csv;charset=utf-8;base64,' + btoa(str);
+	var uri = 'data:text/json;charset=utf-8;base64,' + btoa(str);
 
 	var link = document.createElement('a');
 	link.download = filename;
@@ -624,6 +624,60 @@ function downloadBuildCardToJSON()
 	link.click();
 	document.body.removeChild(link);
 	delete link;
+}
+
+//-----------------------------------------------------------------------
+
+function uploadBuildCard()
+{
+	function showMessage(success)
+	{
+		if(success) {
+			$('#saveAlert')
+			.html('Die Daten wurden gespeichert und werden nach einer kurzen (manuellen) Überprüfung für alle freigeschaltet.')
+			.addClass('alert')
+			.addClass('alert-success')
+			.removeClass('alert-danger');
+		} else {
+			$('#saveAlert')
+			.html('Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden. Lade dir die JSON-Datei herunter und schicke sie mir bitte per E-Mail.')
+			.addClass('alert')
+			.removeClass('alert-success')
+			.addClass('alert-danger');
+		}
+	}
+
+	var data = composeBuildCardData();
+
+	var filename = data.portal.url.split('/');
+	filename = filename[filename.length - 1];
+	filename = filename.replace(/%C3%A4/g, 'ae');
+	filename = filename.replace(/%C3%B6/g, 'oe');
+	filename = filename.replace(/%C3%BC/g, 'ue');
+	filename = filename.replace(/%C3%9F/g, 'ss');
+	filename += '.json';
+
+	var str = JSON.stringify(data, null, '\t');
+
+	var url = 'scripts/mail.php';
+	url += '?city=' + config.cities[window.navigation.cityId].path;
+	url += '&filename=' + filename;
+	url += '&file=' + encodeURIComponent(str);
+	$.ajax(url)
+	.done(function(json){
+		var data = jQuery.parseJSON(json);
+		showMessage('success' == data.status);
+	})
+	.fail(function(jqXHR, textStatus){
+		if('parsererror'==textStatus) {
+			var data = jQuery.parseJSON(jqXHR.responseText);
+			if(typeof data.location != 'undefined') {
+				showMessage('success' == data.status);
+				return;
+			}
+		}
+		showMessage(false);
+	});
 }
 
 //-----------------------------------------------------------------------
