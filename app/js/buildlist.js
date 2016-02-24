@@ -22,6 +22,11 @@ function getUpdates(feedUrl, ckanUrl)
 
 	$('#build').html( str);
 
+	if(config.feed.length > 0) {
+		parseFeed();
+		return;
+	}
+
 	var ckan = false;
 	var url = feedUrl;
 	if( typeof ckanUrl != 'undefined') {
@@ -291,7 +296,7 @@ function showUpdateTable()
 	$('#datasettable').on('click', 'button', function() {
 		var obj = config.feed[$(this).data('feedidx')];
 
-		resetCards();
+		resetCards(false);
 		buildCards(obj);
 	});
 }

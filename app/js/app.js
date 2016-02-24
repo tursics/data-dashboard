@@ -347,12 +347,12 @@ function installNavigation()
 			if('cards' == pageName) {
 				window.navigation.replaceURI();
 
-				resetCards();
+				resetCards(true);
 				loadCards();
 			} else if('build' == pageName) {
 				window.navigation.replaceURI();
 
-				resetCards();
+				resetCards(true);
 				getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
 			} else {
 				console.log('Page "'+pageName+'" does not exist');
@@ -581,7 +581,7 @@ function recalcBoard()
 
 //-----------------------------------------------------------------------
 
-function resetCards()
+function resetCards(clearFeed)
 {
 	$('#build').html('');
 
@@ -595,7 +595,10 @@ function resetCards()
 	config.loaded = 0;
 	config.elements = new Array();
 	config.updates = new Array();
-	config.feed = new Array();
+
+	if(clearFeed) {
+		config.feed = new Array();
+	}
 }
 
 //-----------------------------------------------------------------------
