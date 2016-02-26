@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Der Untergrund wird bis zu",
-		"textButton": "angebohrt und untersucht",
+		"textBottom": "angebohrt und untersucht",
 		"value": "99.2",
 		"unit": "m",
 		"changePerDay": "",

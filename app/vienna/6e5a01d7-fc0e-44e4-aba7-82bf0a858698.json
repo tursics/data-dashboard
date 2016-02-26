@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Gerade werden",
-		"textButton": "Bücher ausgeliehen",
+		"textBottom": "Bücher ausgeliehen",
 		"value": "",
 		"unit": "",
 		"changePerDay": "107088",

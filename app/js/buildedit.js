@@ -343,7 +343,7 @@ function fillBuildCardByOldValues(url)
 		data = data || {};
 		data.front = data.front || {};
 		data.front.textTop = data.front.textTop || '';
-		data.front.textButton = data.front.textButton || '';
+		data.front.textBottom = data.front.textBottom || '';
 		data.front.value = data.front.value || '';
 		data.front.unit = data.front.unit || '';
 		data.front.changePerDay = data.front.changePerDay || '';
@@ -370,7 +370,7 @@ function fillBuildCardByOldValues(url)
 		$('#inputFrontUnit').val(data.front.unit).change();
 		$('#inputFrontChange').val(data.front.changePerDay).change();
 		$('#inputFrontTop').val(data.front.textTop).change();
-		$('#inputFrontBottom').val(data.front.textButton).change();
+		$('#inputFrontBottom').val(data.front.textBottom).change();
 		$('#inputBackTop').val(data.back.text).change();
 		$('#buttonOpen').attr('href', data.portal.url);
 		$('#inputMetaLink').val(data.portal.url).change();
@@ -561,7 +561,7 @@ function composeBuildCardData()
 		},
 		'front':{
 			'textTop':$('#inputFrontTop').val(),
-			'textButton':$('#inputFrontBottom').val(),
+			'textBottom':$('#inputFrontBottom').val(),
 			'value':$('#inputFrontMiddle').val(),
 			'unit':$('#inputFrontUnit').val(),
 			'changePerDay':$('#inputFrontChange').val(),

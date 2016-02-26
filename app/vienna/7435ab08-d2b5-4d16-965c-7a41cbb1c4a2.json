@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "In 8 Jahren leben in Wien",
-		"textButton": "Babies und Kleinkinder",
+		"textBottom": "Babies und Kleinkinder",
 		"value": "59388",
 		"unit": "",
 		"changePerDay": "",

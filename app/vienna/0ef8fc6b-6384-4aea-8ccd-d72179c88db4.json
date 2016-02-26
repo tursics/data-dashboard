@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Die Stadtvermesser haben",
-		"textButton": "Orientierungspunkte",
+		"textBottom": "Orientierungspunkte",
 		"value": "3921",
 		"unit": "",
 		"changePerDay": "",

@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "40 Büchereien und",
-		"textButton": "Bücherbus",
+		"textBottom": "Bücherbus",
 		"value": "1",
 		"unit": "",
 		"changePerDay": "",

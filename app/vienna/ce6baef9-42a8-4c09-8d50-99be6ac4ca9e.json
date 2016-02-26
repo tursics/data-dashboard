@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Der Vermählungsbrunnen:",
-		"textButton": "erbaut von Corradini",
+		"textBottom": "erbaut von Corradini",
 		"value": "1732",
 		"unit": "",
 		"changePerDay": "",

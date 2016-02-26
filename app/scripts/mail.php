@@ -51,7 +51,7 @@
 //		$message .=       '<img src="cid:' . $cid . '" style="border:0;vertical-align:middle;position:absolute;left:0;top:-3.6em;width:100%;z-index:-1;">';
 		$message .=       '<img src="' . $baseUrl . '/' . $data['front']['background'] . '" style="border:0;vertical-align:middle;position:absolute;left:0;top:-3.6em;width:100%;z-index:-1;">';
 		$message .=       '<div style="color:' . $data['front']['color'] . ';line-height:1.2em;padding-top:1.1em;white-space:nowrap;height:100%;overflow:hidden;margin:0 .2em 0 .2em;text-align:center;">';
-		$message .=         $data['front']['textTop'] . '<br><span style="font-family:\'judsonmedium\',Arial,sans-serif;font-size:2.8em;line-height:1em;">' . $data['front']['value'] . ' ' . $data['front']['unit'] . '</span><br>' . $data['front']['textButton'];
+		$message .=         $data['front']['textTop'] . '<br><span style="font-family:\'judsonmedium\',Arial,sans-serif;font-size:2.8em;line-height:1em;">' . $data['front']['value'] . ' ' . $data['front']['unit'] . '</span><br>' . $data['front']['textBottom'];
 		$message .=       '</div>';
 		$message .=     '</figure>';
 		$message .=   '</div>';

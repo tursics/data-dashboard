@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "In 18 Jahren lernen",
-		"textButton": "Schüler in Volksschulen",
+		"textBottom": "Schüler in Volksschulen",
 		"value": "79434",
 		"unit": "",
 		"changePerDay": "",

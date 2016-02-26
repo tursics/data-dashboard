@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Wien bezuschusst",
-		"textButton": "Solarenergie-Anlagen",
+		"textBottom": "Solarenergie-Anlagen",
 		"value": "93980.3",
 		"unit": "m²",
 		"changePerDay": "",

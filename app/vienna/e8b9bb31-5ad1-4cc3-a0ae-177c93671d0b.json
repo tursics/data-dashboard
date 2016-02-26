@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Gut verteilt stehen",
-		"textButton": "Feuerhydranten",
+		"textBottom": "Feuerhydranten",
 		"value": "12838",
 		"unit": "",
 		"changePerDay": "",

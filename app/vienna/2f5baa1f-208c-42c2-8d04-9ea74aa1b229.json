@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Über die Stadt verteilt sind",
-		"textButton": "militärische Anlagen",
+		"textBottom": "militärische Anlagen",
 		"value": "21",
 		"unit": "",
 		"changePerDay": "",

@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Fliege über Luftbilder mit",
-		"textButton": "Auflösung (April 1956)",
+		"textBottom": "Auflösung (April 1956)",
 		"value": "50",
 		"unit": "cm",
 		"changePerDay": "",

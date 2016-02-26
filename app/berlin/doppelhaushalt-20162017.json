@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Berlin bekommt gerade",
-		"textButton": "Länderfinanzausgleich",
+		"textBottom": "Länderfinanzausgleich",
 		"value": "0",
 		"unit": "€",
 		"changePerDay": "9920765.02",

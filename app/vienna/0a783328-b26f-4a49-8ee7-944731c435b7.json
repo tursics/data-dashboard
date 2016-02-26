@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Tetanus wird bereits im",
-		"textButton": "bei Babies geimpft",
+		"textBottom": "bei Babies geimpft",
 		"value": "3.",
 		"unit": "Monat",
 		"changePerDay": "",

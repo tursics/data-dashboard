@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Ein Kunstherz kostet",
-		"textButton": "in den Krankenhäusern",
+		"textBottom": "in den Krankenhäusern",
 		"value": "179397",
 		"unit": "€",
 		"changePerDay": "",

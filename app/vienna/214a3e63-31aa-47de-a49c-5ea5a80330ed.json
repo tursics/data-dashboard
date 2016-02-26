@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Noch immer stehen",
-		"textButton": "Telefonzellen in Wien",
+		"textBottom": "Telefonzellen in Wien",
 		"value": "1162",
 		"unit": "",
 		"changePerDay": "",

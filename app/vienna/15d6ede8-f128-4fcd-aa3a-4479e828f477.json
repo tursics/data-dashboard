@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Geschlechtergerecht:",
-		"textButton": "statt Kaufmänner",
+		"textBottom": "statt Kaufmänner",
 		"value": "Kaufleute",
 		"unit": "",
 		"changePerDay": "",

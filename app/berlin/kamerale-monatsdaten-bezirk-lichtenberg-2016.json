@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Jeder Bezirk bearbeitet",
-		"textButton": "Buchungen pro Tag",
+		"textBottom": "Buchungen pro Tag",
 		"value": "ca. 210",
 		"unit": "",
 		"changePerDay": "",

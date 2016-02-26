@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Für Berlin sind",
-		"textButton": "Arbeitslose wenig",
+		"textBottom": "Arbeitslose wenig",
 		"value": "11,1",
 		"unit": "%",
 		"changePerDay": "",

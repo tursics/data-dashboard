@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Recycle dein Glas! Nutze",
-		"textButton": "Altglascontainer",
+		"textBottom": "Altglascontainer",
 		"value": "348",
 		"unit": "",
 		"changePerDay": "",

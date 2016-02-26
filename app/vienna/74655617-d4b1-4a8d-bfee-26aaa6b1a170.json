@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Passe deine Karten durch",
-		"textButton": "individuelle Malstile an",
+		"textBottom": "individuelle Malstile an",
 		"value": "110",
 		"unit": "",
 		"changePerDay": "",

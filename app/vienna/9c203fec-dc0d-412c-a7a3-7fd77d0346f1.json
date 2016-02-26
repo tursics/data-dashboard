@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Die Wiener Linien fahren",
-		"textButton": "Haltestellen an",
+		"textBottom": "Haltestellen an",
 		"value": "2031",
 		"unit": "",
 		"changePerDay": "",

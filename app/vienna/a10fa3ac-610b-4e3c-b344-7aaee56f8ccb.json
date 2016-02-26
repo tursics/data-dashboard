@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "50 Dinge, die ein",
-		"textButton": "getan haben muss",
+		"textBottom": "getan haben muss",
 		"value": "Wiener",
 		"unit": "",
 		"changePerDay": "",

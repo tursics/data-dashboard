@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "In ganz Wien stehen",
-		"textButton": "Kioske und Würstelstände",
+		"textBottom": "Kioske und Würstelstände",
 		"value": "167",
 		"unit": "",
 		"changePerDay": "",

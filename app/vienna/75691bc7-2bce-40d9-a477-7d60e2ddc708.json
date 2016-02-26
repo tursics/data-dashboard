@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Die Elefanten verbrauchen",
-		"textButton": "warmes Wasser zum duschen",
+		"textBottom": "warmes Wasser zum duschen",
 		"value": "150000",
 		"unit": "l",
 		"changePerDay": "",

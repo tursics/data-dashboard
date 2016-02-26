@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Mädchentreff, Tischtennis,",
-		"textButton": "Hausaufgabenhilfe, ...",
+		"textBottom": "Hausaufgabenhilfe, ...",
 		"value": "Billard",
 		"unit": "",
 		"changePerDay": "",

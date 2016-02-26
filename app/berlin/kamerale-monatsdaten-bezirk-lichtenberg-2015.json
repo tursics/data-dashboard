@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Auch ein Betrag von",
-		"textButton": "steht in der Buchhaltung",
+		"textBottom": "steht in der Buchhaltung",
 		"value": "0.31",
 		"unit": "€",
 		"changePerDay": "",

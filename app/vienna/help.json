@@ -16,7 +16,7 @@
 	},
 	"front":{
 		"textTop":"Du brauchst",
-		"textButton":"> Klicke hier <",
+		"textBottom":"> Klicke hier <",
 		"value":"Hilfe?",
 		"unit":"",
 		"changePerDay":0,

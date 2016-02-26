@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Marzahn-Hellersdorf hat",
-		"textButton": "Angebote für Kinder",
+		"textBottom": "Angebote für Kinder",
 		"value": "625",
 		"unit": "",
 		"changePerDay": "",

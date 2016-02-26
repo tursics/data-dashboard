@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Automatisch gezählt werden",
-		"textButton": "Fahrräder im Stadtgebiet",
+		"textBottom": "Fahrräder im Stadtgebiet",
 		"value": "",
 		"unit": "",
 		"changePerDay": "18812",

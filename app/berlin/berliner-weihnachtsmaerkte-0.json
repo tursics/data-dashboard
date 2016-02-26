@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Glühwein gibt es wieder in",
-		"textButton": "auf den Weihnachtsmärkten",
+		"textBottom": "auf den Weihnachtsmärkten",
 		"value": "2016-11-21",
 		"unit": "Tagen",
 		"changePerDay": "",

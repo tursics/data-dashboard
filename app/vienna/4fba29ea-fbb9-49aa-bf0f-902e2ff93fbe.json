@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Dein digitales Wien?",
-		"textButton": "Ideen wurden gesammelt",
+		"textBottom": "Ideen wurden gesammelt",
 		"value": "172",
 		"unit": "",
 		"changePerDay": "",

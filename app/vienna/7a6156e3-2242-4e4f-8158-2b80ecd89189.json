@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Die Wiener sind zu",
-		"textButton": "in Österreich geboren",
+		"textBottom": "in Österreich geboren",
 		"value": "66.01",
 		"unit": "%",
 		"changePerDay": "°",

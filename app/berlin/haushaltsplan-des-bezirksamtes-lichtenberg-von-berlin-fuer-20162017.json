@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Alles für die Lütten:",
-		"textButton": "fließen in die Kitas",
+		"textBottom": "fließen in die Kitas",
 		"value": "",
 		"unit": "€",
 		"changePerDay": "321472.677",

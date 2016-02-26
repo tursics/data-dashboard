@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Es gibt über",
-		"textButton": "Bäume in Wien",
+		"textBottom": "Bäume in Wien",
 		"value": "180022",
 		"unit": "",
 		"changePerDay": "",

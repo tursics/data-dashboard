@@ -102,7 +102,7 @@ function loadCards()
 		data = data || {};
 		data.front = data.front || {};
 		data.front.textTop = data.front.textTop || '';
-		data.front.textButton = data.front.textButton || '';
+		data.front.textBottom = data.front.textBottom || '';
 		data.front.value = data.front.value || '';
 		data.front.unit = data.front.unit || '';
 		data.front.changePerDay = data.front.changePerDay || '';
@@ -130,7 +130,7 @@ function loadCards()
 			valueFormatter = intValueFormatter;
 			value = valueFormatter(data.front.value,0,data.front.unit,0);
 		}
-		var front = data.front.textTop+'<br><span>'+value+'</span><br>'+data.front.textButton;
+		var front = data.front.textTop+'<br><span>'+value+'</span><br>'+data.front.textBottom;
 		var frontTextColor = 'color:'+data.front.color+';';
 		var frontBGImage = data.front.background;
 		var frontCSSClass = data.front.cssClass;

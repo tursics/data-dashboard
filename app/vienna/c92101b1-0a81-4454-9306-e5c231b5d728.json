@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Jeff Kinney schrieb die",
-		"textButton": "meistgeliehenen Bücher",
+		"textBottom": "meistgeliehenen Bücher",
 		"value": "8",
 		"unit": "",
 		"changePerDay": "",

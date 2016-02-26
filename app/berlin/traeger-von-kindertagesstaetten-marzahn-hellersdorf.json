@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Marzahn-Hellersdorf hat",
-		"textButton": "selbstkochende Kitas",
+		"textBottom": "selbstkochende Kitas",
 		"value": "51",
 		"unit": "",
 		"changePerDay": "",

@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Keinen Flughafen, aber",
-		"textButton": "Bauarbeiter haben",
+		"textBottom": "Bauarbeiter haben",
 		"value": "81580",
 		"unit": "",
 		"changePerDay": "",

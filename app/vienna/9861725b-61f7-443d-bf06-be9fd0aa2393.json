@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Open Data soll unter",
-		"textButton": "lizensiert werden",
+		"textBottom": "lizensiert werden",
 		"value": "CC-BY",
 		"unit": "",
 		"changePerDay": "",

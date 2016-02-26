@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Drucker-Toner, noch",
-		"textButton": "ausgeschrieben",
+		"textBottom": "ausgeschrieben",
 		"value": "2016-05-02",
 		"unit": "",
 		"changePerDay": "",

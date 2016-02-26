@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "In 18 Jahren leben",
-		"textButton": "Männer in Wien",
+		"textBottom": "Männer in Wien",
 		"value": "979120",
 		"unit": "",
 		"changePerDay": "",

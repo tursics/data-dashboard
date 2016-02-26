@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Schlendern sie über",
-		"textButton": "Wochen- und Trödelmärkte",
+		"textBottom": "Wochen- und Trödelmärkte",
 		"value": "184",
 		"unit": "",
 		"changePerDay": "",

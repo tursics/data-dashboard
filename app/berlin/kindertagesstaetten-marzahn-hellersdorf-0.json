@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Wir haben Platz für",
-		"textButton": "Kinder in den Kitas",
+		"textBottom": "Kinder in den Kitas",
 		"value": "11577",
 		"unit": "",
 		"changePerDay": "",

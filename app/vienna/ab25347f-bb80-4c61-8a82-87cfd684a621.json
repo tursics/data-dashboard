@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Es gibt ein",
-		"textButton": "über Open Data",
+		"textBottom": "über Open Data",
 		"value": "Gedicht",
 		"unit": "",
 		"changePerDay": "",

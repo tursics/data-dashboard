@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Die teuerste Immobilie hat",
-		"textButton": "gekostet (Göllnergasse)",
+		"textBottom": "gekostet (Göllnergasse)",
 		"value": "119500000",
 		"unit": "€",
 		"changePerDay": "",

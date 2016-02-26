@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Fliege über Luftbilder mit",
-		"textButton": "Auflösung (Juni 2014)",
+		"textBottom": "Auflösung (Juni 2014)",
 		"value": "15",
 		"unit": "cm",
 		"changePerDay": "",

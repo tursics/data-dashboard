@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Über die Stadt verteilt sind",
-		"textButton": "Botschaften und Konsulate",
+		"textBottom": "Botschaften und Konsulate",
 		"value": "174",
 		"unit": "",
 		"changePerDay": "",

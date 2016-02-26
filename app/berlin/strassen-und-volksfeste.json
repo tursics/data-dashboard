@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Dieses Jahr gibt es",
-		"textButton": "Straßen- und Volksfeste",
+		"textBottom": "Straßen- und Volksfeste",
 		"value": "352",
 		"unit": "",
 		"changePerDay": "",

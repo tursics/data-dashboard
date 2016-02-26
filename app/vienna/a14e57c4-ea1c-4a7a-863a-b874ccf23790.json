@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Eingeteilt ist Wien in",
-		"textButton": "statistische Zähleinheiten",
+		"textBottom": "statistische Zähleinheiten",
 		"value": "11206",
 		"unit": "",
 		"changePerDay": "",

@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Geeignet für",
-		"textButton": "sind viele Grundstücke",
+		"textBottom": "sind viele Grundstücke",
 		"value": "Erdwärme",
 		"unit": "",
 		"changePerDay": "",

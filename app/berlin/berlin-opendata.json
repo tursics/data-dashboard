@@ -16,7 +16,7 @@
 },
 "front":{
 	"textTop":"",
-	"textButton":"",
+	"textBottom":"",
 	"value":"",
 	"unit":"",
 	"changePerDay":0,

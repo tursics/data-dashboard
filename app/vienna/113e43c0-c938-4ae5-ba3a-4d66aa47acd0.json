@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Die Büchereien melden",
-		"textButton": "neue Bücherwürmer",
+		"textBottom": "neue Bücherwürmer",
 		"value": "40243",
 		"unit": "",
 		"changePerDay": "",

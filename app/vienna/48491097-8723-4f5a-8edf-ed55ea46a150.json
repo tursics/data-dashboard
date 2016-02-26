@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Der Wiener Stadtplan bietet",
-		"textButton": "zuschaltbare Ebenen an",
+		"textBottom": "zuschaltbare Ebenen an",
 		"value": "218",
 		"unit": "",
 		"changePerDay": "",

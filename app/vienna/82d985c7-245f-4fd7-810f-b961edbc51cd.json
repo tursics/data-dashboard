@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Aus Büchereien leihen",
-		"textButton": "Besucher gerade aus",
+		"textBottom": "Besucher gerade aus",
 		"value": "",
 		"unit": "",
 		"changePerDay": "28052",

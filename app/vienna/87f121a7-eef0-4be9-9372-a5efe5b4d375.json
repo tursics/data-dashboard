@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "In den Kindergärten können",
-		"textButton": "Kinder sich austoben",
+		"textBottom": "Kinder sich austoben",
 		"value": "104382",
 		"unit": "",
 		"changePerDay": "",

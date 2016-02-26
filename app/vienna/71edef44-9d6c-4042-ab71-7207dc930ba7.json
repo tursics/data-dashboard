@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Affenpinscher? Zwergspitz?",
-		"textButton": "Hunde leben in Wien",
+		"textBottom": "Hunde leben in Wien",
 		"value": "55896",
 		"unit": "",
 		"changePerDay": "",

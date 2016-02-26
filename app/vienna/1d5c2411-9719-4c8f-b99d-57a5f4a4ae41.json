@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "In Wien gibt es",
-		"textButton": "Gebäude",
+		"textBottom": "Gebäude",
 		"value": "282313",
 		"unit": "",
 		"changePerDay": "",

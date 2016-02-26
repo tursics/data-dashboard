@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Treptow-Köpenick stellt",
-		"textButton": "neue Leute ein",
+		"textBottom": "neue Leute ein",
 		"value": "46¼",
 		"unit": "",
 		"changePerDay": "",

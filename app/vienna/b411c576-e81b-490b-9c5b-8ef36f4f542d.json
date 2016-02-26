@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Fliege über Luftbilder mit",
-		"textButton": "Auflösung (Oktober 1938)",
+		"textBottom": "Auflösung (Oktober 1938)",
 		"value": "50",
 		"unit": "cm",
 		"changePerDay": "",
