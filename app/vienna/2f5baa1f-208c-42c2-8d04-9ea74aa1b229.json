@@ -21,7 +21,7 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
+		"background": "img/military.svg",
 		"color": "#ffffff"
 	},
 	"back": {

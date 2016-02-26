@@ -26,12 +26,6 @@ var config = config || {
 	],
 	templates: [
 		{
-			'frontBackground': 'img/health.svg',
-			'frontColor': '#ffffff',
-			'backColor': '#000000',
-			'backClass': ''
-		},
-		{
 			'frontBackground': 'img/sun.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
@@ -39,6 +33,24 @@ var config = config || {
 		},
 		{
 			'frontBackground': 'img/water.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/health.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/refugees.svg',
+			'frontColor': '#fecb32',
+			'backColor': '#000000',
+			'backClass': 'refugees'
+		},
+		{
+			'frontBackground': 'img/military.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
@@ -60,12 +72,6 @@ var config = config || {
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
-		},
-		{
-			'frontBackground': 'img/refugees.svg',
-			'frontColor': '#fecb32',
-			'backColor': '#000000',
-			'backClass': 'refugees'
 		},
 		{
 			'frontBackground': 'img/blueprintcard.svg',
