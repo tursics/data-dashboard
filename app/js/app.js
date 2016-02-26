@@ -401,7 +401,7 @@ function installCity(callbackFunc)
 
 function installBackground()
 {
-	if(typeof cityConfig.meta.background != 'undefined') {
+	if((typeof cityConfig.meta != 'undefined') && (typeof cityConfig.meta.background != 'undefined')) {
 		$('body').css('background-image', 'url(' + cityConfig.meta.background + ')');
 	}
 }
