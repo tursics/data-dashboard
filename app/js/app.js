@@ -294,7 +294,7 @@ function installNavigation()
 		if(typeof params['page'] !== 'undefined') {
 			window.navigation.page = params['page'];
 		}
-		if(-1 == $.inArray(window.navigation.page, ['cards','build'])) {
+		if(-1 == $.inArray(window.navigation.page, ['cards','about','build'])) {
 			window.navigation.page = 'cards';
 		}
 	}
@@ -338,6 +338,12 @@ function installNavigation()
 				$('#menuPageCards').parent().removeClass('active');
 			}
 
+			if('about' == pageName) {
+				$('#menuPageAbout').parent().addClass('active');
+			} else {
+				$('#menuPageAbout').parent().removeClass('active');
+			}
+
 			if('build' == pageName) {
 				$('body').addClass('build');
 			} else {
@@ -349,6 +355,11 @@ function installNavigation()
 
 				resetCards(true);
 				loadCards();
+			} else if('about' == pageName) {
+				window.navigation.replaceURI();
+
+				resetCards(true);
+				about();
 			} else if('build' == pageName) {
 				window.navigation.replaceURI();
 
@@ -436,7 +447,7 @@ function installMenu()
 		str += '<li><a id="menuPageCards" href="#">Daten</a></li>';
 //		str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
 //		str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
-		str += '<li class="disabled"><a id="menuPageAbout" href="#">Über</a></li>';
+		str += '<li><a id="menuPageAbout" href="#">Info</a></li>';
 
 		if(cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
 			var citylist = '';
