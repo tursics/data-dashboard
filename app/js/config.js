@@ -38,6 +38,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/tree.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/health.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
