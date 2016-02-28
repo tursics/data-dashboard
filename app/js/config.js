@@ -56,6 +56,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/data.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/house.svg',
 			'frontColor': '#000000',
 			'backColor': '#000000',
