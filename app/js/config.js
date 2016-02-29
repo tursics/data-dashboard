@@ -44,6 +44,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/map.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/health.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
