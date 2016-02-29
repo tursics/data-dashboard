@@ -21,7 +21,7 @@
 		"unit": "m",
 		"changePerDay": "",
 		"format": "euro",
-		"background": "img/template.svg",
+		"background": "img/ground.svg",
 		"color": "#ffffff"
 	},
 	"back": {
