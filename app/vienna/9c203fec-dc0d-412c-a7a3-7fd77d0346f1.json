@@ -21,8 +21,8 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
-		"color": "#ffffff"
+		"background": "img/busstop.svg",
+		"color": "#008033"
 	},
 	"back": {
 		"text": "Und dafür gibt es ein Routingsystem, welches Fahrplandaten auch der S-Bahnen beinhaltet.",
