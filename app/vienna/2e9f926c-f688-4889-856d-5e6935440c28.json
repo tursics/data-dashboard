@@ -21,7 +21,7 @@
 		"unit": "",
 		"changePerDay": "18812",
 		"format": "int",
-		"background": "img/template.svg",
+		"background": "img/bicycle.svg",
 		"color": "#ffffff"
 	},
 	"back": {
