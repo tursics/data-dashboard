@@ -13,7 +13,7 @@ var config = config || {
 			name: 'Wien',
 			country: 'Austria',
 			path: 'vienna',
-			badge: 'Alpha',
+			badge: 'Beta',
 			group: 'city'
 		},
 		{
@@ -56,13 +56,61 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/bicycle.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/busstop.svg',
+			'frontColor': '#008033',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/animals.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/family.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/gender.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/refugees.svg',
 			'frontColor': '#fecb32',
 			'backColor': '#000000',
 			'backClass': 'refugees'
 		},
 		{
+			'frontBackground': 'img/phone.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/sausage.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/military.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/ground.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
@@ -82,12 +130,6 @@ var config = config || {
 		{
 			'frontBackground': 'img/book.svg',
 			'frontColor': '#57006c',
-			'backColor': '#000000',
-			'backClass': ''
-		},
-		{
-			'frontBackground': 'img/template.svg',
-			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
 		},
