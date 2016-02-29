@@ -21,7 +21,7 @@
 		"unit": "%",
 		"changePerDay": "°",
 		"format": "int",
-		"background": "img/template.svg",
+		"background": "img/family.svg",
 		"color": "#ffffff"
 	},
 	"back": {
