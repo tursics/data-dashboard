@@ -421,7 +421,7 @@ function installBackground()
 
 function installMenu()
 {
-	var brandTitle = 'Daten-Strauß';
+	var brandTitle = 'Daten-Waben';
 	document.title = brandTitle;
 
 	var str = $('.navbar-header').html();
@@ -488,13 +488,18 @@ function installMenu()
 		var badge = config.cities[window.navigation.cityId].badge;
 		if('Alpha' == badge) {
 			$('.container .alert')
-			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Der Daten-Strauß befindet sich noch in einer sehr frühen Entwicklungsphase. Es ist noch nicht für die große Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.')
+			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Die Daten-Waben befinden sich noch in einer sehr frühen Entwicklungsphase. Es ist noch nicht für die große Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.')
 			.addClass('alert-warning')
 			.css('display','');
 		} else if('Beta' == badge) {
 			$('.container .alert')
-			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Die Testphase für den Daten-Strauß hat begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.')
+			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Die Testphase für die Daten-Waben haben begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.')
 			.addClass('alert-info')
+			.css('display','');
+		} else {
+			$('.container .alert')
+			.html('Welche Daten stecken in deinem Datenportal? Die Daten-Waben zeigen für jeden Datensatz ein Sechseck mit einer kurzen Info an.')
+			.addClass('alert-warning')
 			.css('display','');
 		}
 	}
