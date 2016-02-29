@@ -21,11 +21,11 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/template.svg",
+		"background": "img/animals.svg",
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Anzahl der Hunde pro Bezirk und Rasse",
+		"text": "Die Tablle zählt alle Hunde in Wien pro Bezirk und Rasse:",
 		"color": "#000000",
 		"cssClass": ""
 	}
