@@ -13,7 +13,7 @@ var config = config || {
 			name: 'Wien',
 			country: 'Austria',
 			path: 'vienna',
-			badge: 'Beta',
+			badge: 'Released',
 			group: 'city'
 		},
 		{
