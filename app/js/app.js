@@ -444,6 +444,10 @@ function installMenu()
 		.addClass('alert-danger')
 		.css('display','');
 	} else {
+		strMail = cityConfig.meta.mail;
+		strTwitter = cityConfig.meta.twitter;
+		strGithub = cityConfig.meta.github;
+
 		str += '<li><a id="menuPageCards" href="#">Daten</a></li>';
 //		str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
 //		str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
@@ -479,10 +483,6 @@ function installMenu()
 			}
 			str += '</ul>';
 			str += '</li>';
-
-			strMail = cityConfig.meta.mail;
-			strTwitter = cityConfig.meta.twitter;
-			strGithub = cityConfig.meta.github;
 		}
 
 		var badge = config.cities[window.navigation.cityId].badge;
@@ -498,7 +498,7 @@ function installMenu()
 			.css('display','');
 		} else {
 			$('.container .alert')
-			.html('Welche Daten stecken in deinem Datenportal? Die Daten-Waben zeigen für jeden Datensatz ein Sechseck mit einer kurzen Info an.')
+			.html('Welche Daten stecken in meinem Datenportal? Die Daten-Waben zeigen für jeder Datensatz ein Sechseck an.')
 			.addClass('alert-warning')
 			.css('display','');
 		}
