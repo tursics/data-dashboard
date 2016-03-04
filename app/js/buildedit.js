@@ -2,16 +2,16 @@
 
 function buildCards(cardObj)
 {
-	var front = 'Ein Text<br><span>Text</span><br>Ein Text';
+	var front = dict['editDummyLongText']+'<br><span>'+dict['editDummyShortText']+'</span><br>'+dict['editDummyLongText'];
 	var frontTextColor = 'color:white;';
 	var frontBGImage = 'img/blueprintcard.svg';
 	var frontCSSClass = '';
 	createNewCard({
 		front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
-		data:{value:'Text',unit:'',change:1,formatter:stringValueFormatter},
+		data:{value:dict['editDummyShortText'],unit:'',change:1,formatter:stringValueFormatter},
 	});
 
-	var back = 'Beschreibungstext';
+	var back = dict['editDummyDescription'];
 	var backTextColor = 'color:white;';
 	var backBGImage = '';
 	var backCSSClass = 'blueprint';
@@ -25,7 +25,7 @@ function buildCards(cardObj)
 
 	{ // template themes
 		str += '<div class="panel panel-info">';
-		str += '<div class="panel-heading"><h3 class="panel-title">Aussehen</h3></div>';
+		str += '<div class="panel-heading"><h3 class="panel-title">'+dict['editTemplates']+'</h3></div>';
 		str += '<div class="panel-body">';
 		{ // content
 			str += '<div class="row row-horizon">';
@@ -47,12 +47,12 @@ function buildCards(cardObj)
 	{ // left 'front card side'
 		str += '<div class="col-sm-6">';
 		str += '<div class="panel panel-info">';
-		str += '<div class="panel-heading"><h3 class="panel-title">Vorderseite</h3></div>';
+		str += '<div class="panel-heading"><h3 class="panel-title">'+dict['editFace']+'</h3></div>';
 		str += '<div class="panel-body">';
 		{ // top
 			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Oben</span>';
-			str += '<input type="text" class="form-control" id="inputFrontTop" placeholder="Ein Text" aria-describedby="basic-addon1">';
+			str += '<span class="input-group-addon" id="basic-addon1">'+dict['editTextTop']+'</span>';
+			str += '<input type="text" class="form-control" id="inputFrontTop" placeholder="'+dict['editDummyLongText']+'" aria-describedby="basic-addon1">';
 			str += '</div>';
 			str += '<br>';
 		}
@@ -64,23 +64,23 @@ function buildCards(cardObj)
 
 			str += '<div class="input-group-btn">';
 			str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputFrontFormat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-			str += 'Text <span class="caret"></span></button>';
+			str += dict['formatTitleString']+' <span class="caret"></span></button>';
 			str += '<ul class="dropdown-menu">';
-			str += '<li><a href="#" id="inputFrontFormatText">Text</a></li>';
-			str += '<li><a href="#" id="inputFrontFormatInt">Ganzzahl</a></li>';
-			str += '<li><a href="#" id="inputFrontFormatEuro">Euro-Betrag</a></li>';
-			str += '<li><a href="#" id="inputFrontFormatDate">Datum</a></li>';
+			str += '<li><a href="#" id="inputFrontFormatText">'+dict['formatTitleString']+'</a></li>';
+			str += '<li><a href="#" id="inputFrontFormatInt">'+dict['formatTitleInt']+'</a></li>';
+			str += '<li><a href="#" id="inputFrontFormatEuro">'+dict['formatTitleCurrency']+'</a></li>';
+			str += '<li><a href="#" id="inputFrontFormatDate">'+dict['formatTitleDate']+'</a></li>';
 			str += '</ul>';
 			str += '</div>';
 
-			str += '<input type="text" class="form-control" id="inputFrontMiddle" placeholder="Text" aria-describedby="basic-addon1">';
+			str += '<input type="text" class="form-control" id="inputFrontMiddle" placeholder="'+dict['editDummyShortText']+'" aria-describedby="basic-addon1">';
 
 			str += '</div>';
 			str += '</div>';
 
 			str += '<div class="col-sm-4">';
 			str += '<div class="input-group">';
-			str += '<input type="text" class="form-control" id="inputFrontUnit" placeholder="Einheit" aria-describedby="basic-addon1">';
+			str += '<input type="text" class="form-control" id="inputFrontUnit" placeholder="'+dict['editTextUnit']+'" aria-describedby="basic-addon1">';
 			str += '</div>';
 			str += '</div>';
 
@@ -88,15 +88,15 @@ function buildCards(cardObj)
 		}
 		{ // middle (second line)
 			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Änderung pro Tag</span>';
-			str += '<input type="text" class="form-control" id="inputFrontChange" placeholder="Eine Zahl" aria-describedby="basic-addon1">';
+			str += '<span class="input-group-addon" id="basic-addon1">'+dict['editTextChange']+'</span>';
+			str += '<input type="text" class="form-control" id="inputFrontChange" placeholder="'+dict['editDummyLongNumber']+'" aria-describedby="basic-addon1">';
 			str += '</div>';
 			str += '<br>';
 		}
 		{ // bottom
 			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Unten</span>';
-			str += '<input type="text" class="form-control" id="inputFrontBottom" placeholder="Ein Text" aria-describedby="basic-addon1">';
+			str += '<span class="input-group-addon" id="basic-addon1">'+dict['editTextBottom']+'</span>';
+			str += '<input type="text" class="form-control" id="inputFrontBottom" placeholder="'+dict['editDummyLongText']+'" aria-describedby="basic-addon1">';
 			str += '</div>';
 		}
 		str += '</div>';
@@ -106,26 +106,26 @@ function buildCards(cardObj)
 	{ // right 'back card side'
 		str += '<div class="col-sm-6">';
 		str += '<div class="panel panel-info">';
-		str += '<div class="panel-heading"><h3 class="panel-title">Datenquelle</h3></div>';
+		str += '<div class="panel-heading"><h3 class="panel-title">'+dict['editSource']+'</h3></div>';
 		str += '<div class="panel-body" style="text-align:center;">';
 		{ // content
 			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Link</span>';
-			str += '<input type="text" class="form-control" id="inputMetaLink" placeholder="Link zur Datenportal-Seite" aria-describedby="basic-addon1">';
+			str += '<span class="input-group-addon" id="basic-addon1">'+dict['editLink']+'</span>';
+			str += '<input type="text" class="form-control" id="inputMetaLink" placeholder="'+dict['editTextLink']+'" aria-describedby="basic-addon1">';
 			str += '<span class="input-group-btn">';
-			str += '<a href="#" class="btn btn-primary" type="button" id="buttonOpen" target="_blank">Öffnen</a>';
+			str += '<a href="#" class="btn btn-primary" type="button" id="buttonOpen" target="_blank">'+dict['editButtonLink']+'</a>';
 			str += '</span>';
 			str += '</div>';
   		}
 		str += '</div>';
 		str += '</div>';
 		str += '<div class="panel panel-info">';
-		str += '<div class="panel-heading"><h3 class="panel-title">Rückseite</h3></div>';
+		str += '<div class="panel-heading"><h3 class="panel-title">'+dict['editBack']+'</h3></div>';
 		str += '<div class="panel-body">';
 		{ // content
 			str += '<div class="input-group">';
-			str += '<span class="input-group-addon" id="basic-addon1">Text</span>';
-			str += '<input type="text" class="form-control" id="inputBackTop" placeholder="Beschreibungstext" aria-describedby="basic-addon1">';
+			str += '<span class="input-group-addon" id="basic-addon1">'+dict['editTextBack']+'</span>';
+			str += '<input type="text" class="form-control" id="inputBackTop" placeholder="'+dict['editTextBackLong']+'" aria-describedby="basic-addon1">';
 			str += '</div>';
 		}
 		str += '</div>';
@@ -135,7 +135,7 @@ function buildCards(cardObj)
 	str += '</div>';
 	{ // metadata
 		str += '<div class="panel panel-info">';
-		str += '<div class="panel-heading"><h3 class="panel-title">Metadaten</h3></div>';
+		str += '<div class="panel-heading"><h3 class="panel-title">'+dict['editMetadata']+'</h3></div>';
 		str += '<div class="panel-body">';
 		{ // content
 			str += '<div class="row">';
@@ -143,14 +143,14 @@ function buildCards(cardObj)
 				str += '<div class="col-sm-6">';
 
 				str += '<div class="input-group">';
-				str += '<span class="input-group-addon" id="basic-addon1">Titel</span>';
-				str += '<input type="text" class="form-control" id="inputMetaTitle" placeholder="Titel des Datensatzes" aria-describedby="basic-addon1">';
+				str += '<span class="input-group-addon" id="basic-addon1">'+dict['editTitle']+'</span>';
+				str += '<input type="text" class="form-control" id="inputMetaTitle" placeholder="'+dict['editTitleLong']+'" aria-describedby="basic-addon1">';
 				str += '</div>';
 				str += '<br>';
 
 				str += '<div class="input-group">';
-				str += '<span class="input-group-addon" id="basic-addon1">Text</span>';
-				str += '<input type="text" class="form-control" id="inputMetaDescription" placeholder="Beschreibung zum Datensatz" aria-describedby="basic-addon1">';
+				str += '<span class="input-group-addon" id="basic-addon1">'+dict['editDescription']+'</span>';
+				str += '<input type="text" class="form-control" id="inputMetaDescription" placeholder="'+dict['editDescriptionLong']+'" aria-describedby="basic-addon1">';
 				str += '</div>';
 				str += '<br>';
 
@@ -158,14 +158,14 @@ function buildCards(cardObj)
 				str += '<div class="col-sm-7">';
 
 				str += '<div class="input-group">';
-				str += '<span class="input-group-addon" id="basic-addon1">Urheber</span>';
-				str += '<input type="text" class="form-control" id="inputMetaAttribution" placeholder="Name" aria-describedby="basic-addon1">';
+				str += '<span class="input-group-addon" id="basic-addon1">'+dict['editAuthor']+'</span>';
+				str += '<input type="text" class="form-control" id="inputMetaAttribution" placeholder="'+dict['editAuthorLong']+'" aria-describedby="basic-addon1">';
 				str += '</div>';
 
 				str += '</div>';
 				str += '<div class="col-sm-5">';
 
-				str += '<input type="text" class="form-control" id="inputMetaMail" placeholder="E-Mail-Adresse" aria-describedby="basic-addon1">';
+				str += '<input type="text" class="form-control" id="inputMetaMail" placeholder="'+dict['editTextMail']+'" aria-describedby="basic-addon1">';
 
 				str += '</div>';
 				str += '</div>';
@@ -176,28 +176,28 @@ function buildCards(cardObj)
 				str += '<div class="col-sm-6">';
 
 				str += '<div class="input-group">';
-				str += '<span class="input-group-addon" id="basic-addon1">Lizenz</span>';
+				str += '<span class="input-group-addon" id="basic-addon1">'+dict['editLicense']+'</span>';
 				str += '<div class="input-group-btn">';
 				str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputMetaLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
-				str += 'Andere Lizenz <span class="caret"></span></button>';
+				str += dict['licenseOther']+' <span class="caret"></span></button>';
 				str += '<ul class="dropdown-menu">';
-				str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, Creative Commons Namensnennung</a></li>';
-				str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, Creative Commons Namensnennung unter gleichen Bedingungen</a></li>';
-				str += '<li><a href="#" id="inputMetaLicenseOther">Andere Lizenz</a></li>';
+				str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, '+dict['licenseCCBY']+'</a></li>';
+				str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, '+dict['licenseCCBYSA']+'</a></li>';
+				str += '<li><a href="#" id="inputMetaLicenseOther">'+dict['licenseOther']+'</a></li>';
 				str += '</ul>';
 				str += '</div>';
 				str += '</div>';
 				str += '<br>';
 
 				str += '<div class="input-group">';
-				str += '<span class="input-group-addon" id="basic-addon1">Erzeugt</span>';
-				str += '<input type="text" class="form-control" id="inputMetaCreated" placeholder="Datum der Erzeugung des Datensatzes" aria-describedby="basic-addon1">';
+				str += '<span class="input-group-addon" id="basic-addon1">'+dict['editCreated']+'</span>';
+				str += '<input type="text" class="form-control" id="inputMetaCreated" placeholder="'+dict['editCreatedLong']+'" aria-describedby="basic-addon1">';
 				str += '</div>';
 				str += '<br>';
 
 				str += '<div class="input-group">';
-				str += '<span class="input-group-addon" id="basic-addon1">Geändert</span>';
-				str += '<input type="text" class="form-control" id="inputMetaUpdated" placeholder="Datum der letzten Änderung des Datensatzes" aria-describedby="basic-addon1">';
+				str += '<span class="input-group-addon" id="basic-addon1">'+dict['editModified']+'</span>';
+				str += '<input type="text" class="form-control" id="inputMetaUpdated" placeholder="'+dict['editModifiedLong']+'" aria-describedby="basic-addon1">';
 				str += '</div>';
 
 				str += '</div>';
@@ -213,15 +213,15 @@ function buildCards(cardObj)
 		str += '<div class="panel-body dropup" style="text-align:left;">';
 		{ // content
 			str += '<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="inputButtonDownload" aria-haspopup="true" aria-expanded="false">';
-			str += 'Speichern <span class="caret"></span></button>';
+			str += dict['editButtonSave']+' <span class="caret"></span></button>';
 			str += '<ul class="dropdown-menu">';
-			str += '<li><a href="#inputButtonDownload" id="inputButtonUploadJSON">Im Internet veröffentlichen</a></li>';
-			str += '<li><a href="#inputButtonDownload" id="inputButtonDownloadJSON">Als JSON herunterladen</a></li>';
+			str += '<li><a href="#inputButtonDownload" id="inputButtonUploadJSON">'+dict['editButtonSaveInternet']+'</a></li>';
+			str += '<li><a href="#inputButtonDownload" id="inputButtonDownloadJSON">'+dict['editButtonSaveJSON']+'</a></li>';
 //			str += '<li><a href="#inputButtonDownload" id="inputButtonSaveJSON">Lokal speichern</a></li>';
 			str += '</ul>';
 
 			str += '&nbsp;&nbsp;&nbsp;';
-			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">Schließen</button>';
+			str += '<button class="btn btn-default" type="button" id="inputButtonCancel">'+dict['editButtonClose']+'</button>';
 		}
 		str += '</div>';
 		str += '</div>';
@@ -246,16 +246,16 @@ function buildCards(cardObj)
 		config.updates[0].change = $(this).val();
 	});
 	$('#inputFrontFormatText').click(function() {
-		setFormat('Text', 'Text', stringValueFormatter);
+		setFormat(dict['formatTitleString'], dict['editDummyShortText'], stringValueFormatter);
 	});
 	$('#inputFrontFormatInt').click(function() {
-		setFormat('Ganzzahl', 'Zahl', intValueFormatter);
+		setFormat(dict['formatTitleInt'], dict['editDummyShortNumber'], intValueFormatter);
 	});
 	$('#inputFrontFormatEuro').click(function() {
-		setFormat('Euro-Betrag', 'Zahl', euroValueFormatter);
+		setFormat(dict['formatTitleCurrency'], dict['editDummyShortCurrency'], euroValueFormatter);
 	});
 	$('#inputFrontFormatDate').click(function() {
-		setFormat('Datum', 'JJJJ-MM-TT', dateValueFormatter);
+		setFormat(dict['formatTitleDate'], dict['editDummyShortDate'], dateValueFormatter);
 	});
 	$('#inputFrontTop').change(function() {
 		var elem = config.updates[0].dom.parent();
@@ -294,7 +294,7 @@ function buildCards(cardObj)
 		$('#inputMetaLicense').html('CC BY-SA <span class="caret"></span>');
 	});
 	$('#inputMetaLicenseOther').click(function() {
-		$('#inputMetaLicense').html('Andere Lizenz <span class="caret"></span>');
+		$('#inputMetaLicense').html(dict['licenseOther']+' <span class="caret"></span>');
 	});
 	$('#inputButtonDownloadJSON').click(function() {
 		downloadBuildCardToJSON();
@@ -401,11 +401,11 @@ function fillBuildCardByOldValues(url)
 			}
 		}
 
-		$('#inputFrontTop').val('Es ist ein').change();
+		$('#inputFrontTop').val(dict['editErrorTop']).change();
 		$('#inputFrontFormatText').click();
-		$('#inputFrontMiddle').val('Fehler').change();
-		$('#inputFrontBottom').val('aufgetreten').change();
-		$('#inputBackTop').val('Error in reading ' + url).change();
+		$('#inputFrontMiddle').val(dict['editErrorMiddle']).change();
+		$('#inputFrontBottom').val(dict['editErrorBottom']).change();
+		$('#inputBackTop').val(dict['errorReadingCard']+' '+url).change();
 	})
 	.always(function(){
 		fillBuildCardWithMetadata();
@@ -511,11 +511,11 @@ function fillBuildCardWithMetadata()
 			}
 		}
 
-		$('#inputFrontTop').val('Es ist ein').change();
+		$('#inputFrontTop').val(dict['editErrorTop']).change();
 		$('#inputFrontFormatText').click();
-		$('#inputFrontMiddle').val('Fehler').change();
-		$('#inputFrontBottom').val('aufgetreten').change();
-		$('#inputBackTop').val('Error in reading ' + url).change();
+		$('#inputFrontMiddle').val(dict['editErrorMiddle']).change();
+		$('#inputFrontBottom').val(dict['editErrorBottom']).change();
+		$('#inputBackTop').val(dict['errorReadingCard']+' '+url).change();
 	})
 	.always(function(){
 	});
@@ -578,21 +578,21 @@ function composeBuildCardData()
 
 	var license = $('#inputMetaLicense').html().split('<span')[0].trim();
 	if('CC BY' == license) {
-		data.portal.license = 'Creative Commons Namensnennung';
+		data.portal.license = dict['licenseCCBY'];
 		data.portal.licenseURL = 'http://creativecommons.org/licenses/by/3.0/de/';
 	} else if('CC BY-SA' == license) {
-		data.portal.license = 'Creative Commons Namensnennung unter gleichen Bedingungen';
+		data.portal.license = dict['licenseCCBYSA'];
 		data.portal.licenseURL = 'http://creativecommons.org/licenses/by-sa/3.0/de/';
 	}
 
 	var format = $('#inputFrontFormat').html().split('<span')[0].trim();
-	if('Datum' == format) {
+	if(dict['formatTitleDate'] == format) {
 		data.front.format = 'date';
-	} else if('Euro-Betrag' == format) {
+	} else if(dict['formatTitleCurrency'] == format) {
 		data.front.format = 'euro';
-	} else if('Ganzzahl' == format) {
+	} else if(dict['formatTitleInt'] == format) {
 		data.front.format = 'int';
-	} else if('Text' == format) {
+	} else if(dict['formatTitleString'] == format) {
 		data.front.format = 'string';
 	}
 
@@ -634,13 +634,13 @@ function uploadBuildCard()
 	{
 		if(success) {
 			$('#saveAlert')
-			.html('Die Daten wurden gespeichert und werden nach einer kurzen (manuellen) Überprüfung für alle freigeschaltet.')
+			.html(dict['alertSavedInternet'])
 			.addClass('alert')
 			.addClass('alert-success')
 			.removeClass('alert-danger');
 		} else {
 			$('#saveAlert')
-			.html('Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden. Lade dir die JSON-Datei herunter und schicke sie mir bitte per E-Mail.')
+			.html(dict['alertErrorInternet'])
 			.addClass('alert')
 			.removeClass('alert-success')
 			.addClass('alert-danger');

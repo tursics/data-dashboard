@@ -9,11 +9,11 @@ function stringValueFormatter(startValue,changePerDay,unit,seconds)
 
 function dateValueFormatter(startValue,changePerDay,unit,seconds)
 {
-	var usedUnit = 'Tage';
+	var usedUnit = dict['formatUnitDays'];
 	if('Tagen' == unit) {
-		usedUnit = unit;
+		usedUnit = dict['formatUnitOnDays'];
 	} else if('Tage' == unit) {
-		usedUnit = unit;
+		usedUnit = dict['formatUnitDays'];
 	}
 
 	var d1 = new Date();
@@ -21,11 +21,11 @@ function dateValueFormatter(startValue,changePerDay,unit,seconds)
 	var diff = (d2-d1)/1000/60/60/24;
 
 	if(diff<1) {
-		value = '- ' + usedUnit;
+		value = '- '+usedUnit;
 	} else if(diff<2) {
-		value = '1 Tag';
+		value = '1 '+dict['formatUnitDays'];
 	} else {
-		value = parseInt(diff)+' ' + usedUnit;
+		value = parseInt(diff)+' '+usedUnit;
 	}
 
 	return value;
@@ -36,7 +36,7 @@ function dateValueFormatter(startValue,changePerDay,unit,seconds)
 function intValueFormatter(startValue,changePerDay,unit,seconds)
 {
 	var value = startValue;
-	if(''==value) {
+	if('' == value) {
 		value = 0;
 	}
 	if(0<parseInt(changePerDay)) {
@@ -46,7 +46,7 @@ function intValueFormatter(startValue,changePerDay,unit,seconds)
 
 	if(value>1000) {
 		value = value.toString();
-		value = value.substr(0,value.length-3)+'.'+value.substr(-3);
+		value = value.substr(0,value.length - 3)+dict['formatThousandDot']+value.substr(-3);
 	}
 	return value+' '+unit;
 }
@@ -66,28 +66,28 @@ function euroValueFormatter(startValue,changePerDay,unit,seconds)
 		while(value.length<3) {
 			value = '0'+value;
 		}
-		value = value.substr(0,value.length-2)+','+value.substr(-2);
+		value = value.substr(0,value.length-2)+dict['formatDecimal']+value.substr(-2);
 	} else {
 		value = parseInt(value).toString();
 		if(value.length>3) {
-			value = value.substr(0,value.length-3)+'.'+value.substr(-3);
+			value = value.substr(0,value.length-3)+dict['formatThousandDot']+value.substr(-3);
 		}
 		if(value.length>11) {
 			value = parseInt(parseInt(value.substr(0,value.length-4))/1000000);
 			value = value.toString();
-			value = value+' Mrd ';
+			value = value+' '+dict['formatBillionsShort']+' ';
 		} else if(value.length>10) {
 			value = parseInt(parseInt(value.substr(0,value.length-4))/100000);
 			value = value.toString();
-			value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mrd ';
+			value = value.substr(0,value.length-1)+dict['formatDecimal']+value.substr(-1)+' '+dict['formatBillionsShort']+' ';
 		} else if(value.length>8) {
 			value = parseInt(parseInt(value.substr(0,value.length-4))/1000);
 			value = value.toString();
-			value = value+' Mio ';
+			value = value+' '+dict['formatMillionShort']+' ';
 		} else if(value.length>7) {
 			value = parseInt(parseInt(value.substr(0,value.length-4))/100);
 			value = value.toString();
-			value = value.substr(0,value.length-1)+','+value.substr(-1)+' Mio ';
+			value = value.substr(0,value.length-1)+dict['formatDecimal']+value.substr(-1)+' '+dict['formatMillionShort']+' ';
 		}
 	}
 	return value+' '+unit;
@@ -164,7 +164,7 @@ function loadCards()
 			}
 			createNewCard({
 				front:{text:textStatus,css:'card1line'},
-				back:{text:'Error in reading '+url,css:''},
+				back:{text:dict['errorReadingCard']+' '+url,css:''},
 			});
 		})
 		.always(function(){
@@ -262,6 +262,13 @@ function createNewCard(card)
 			formatter: card.data.formatter,
 		});
 	}
+}
+
+//-----------------------------------------------------------------------
+
+function installInternationalization()
+{
+	window.dict = window.dict || gDict['de'];
 }
 
 //-----------------------------------------------------------------------
@@ -401,7 +408,7 @@ function installCity(callbackFunc)
 				return;
 			}
 		}
-		console.log('Could not load "' + url + '"');
+		console.log(dict['errorReadingCard']+' "' + url + '"');
 	})
 	.always(function(){
 		callbackFunc();
@@ -421,7 +428,7 @@ function installBackground()
 
 function installMenu()
 {
-	var brandTitle = 'Daten-Waben';
+	var brandTitle = dict['brandTitle'];
 	document.title = brandTitle;
 
 	var str = $('.navbar-header').html();
@@ -440,7 +447,7 @@ function installMenu()
 		strGithub = 'https://github.com/tursics/data-dashboard/';
 
 		$('.container .alert')
-		.html('Das hätte nicht passieren dürfen. Irgendwas funktioniert hier nicht. Bitte kontaktiere mich.')
+		.html(dict['errorNoCityInfo'])
 		.addClass('alert-danger')
 		.css('display','');
 	} else {
@@ -448,10 +455,9 @@ function installMenu()
 		strTwitter = cityConfig.meta.twitter;
 		strGithub = cityConfig.meta.github;
 
-		str += '<li><a id="menuPageCards" href="#">Daten</a></li>';
+		str += '<li><a id="menuPageCards" href="#">'+dict['menuCards']+'</a></li>';
 //		str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
-//		str += '<li class="disabled"><a id="menuPageHelp" href="#help">Hilfe</a></li>';
-		str += '<li><a id="menuPageAbout" href="#">Info</a></li>';
+		str += '<li><a id="menuPageAbout" href="#">'+dict['menuInfo']+'</a></li>';
 
 		if(cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
 			var citylist = '';
@@ -459,7 +465,7 @@ function installMenu()
 			for(var i = 0; i < config.cities.length; ++i) {
 				var citydata = config.cities[i];
 				var badge = '';
-				if('' != citydata.badge) {
+				if(('' != citydata.badge) && ('Released' != citydata.badge)) {
 					badge = ' <span class="label label-success">' + citydata.badge + '</span>';
 				}
 				if('city' == citydata.group) {
@@ -473,12 +479,12 @@ function installMenu()
 			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.navigation.cityId].name + ' <span class="caret"></span></a>';
 			str += '<ul class="dropdown-menu">';
 			if(citylist.length > 0) {
-				str += '<li class="dropdown-header">Verfügbare Städte</li>';
+				str += '<li class="dropdown-header">'+dict['menuCities']+'</li>';
 				str += citylist;
 			}
 			if(portallist.length > 0) {
 				str += '<li role="separator" class="divider"></li>';
-				str += '<li class="dropdown-header">Andere Portale</li>';
+				str += '<li class="dropdown-header">'+dict['menuPortals']+'</li>';
 				str += portallist;
 			}
 			str += '</ul>';
@@ -488,17 +494,17 @@ function installMenu()
 		var badge = config.cities[window.navigation.cityId].badge;
 		if('Alpha' == badge) {
 			$('.container .alert')
-			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Die Daten-Waben befinden sich noch in einer sehr frühen Entwicklungsphase. Es ist noch nicht für die große Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.')
+			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+dict['alertAlpha'])
 			.addClass('alert-warning')
 			.css('display','');
 		} else if('Beta' == badge) {
 			$('.container .alert')
-			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Die Testphase für die Daten-Waben haben begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.')
+			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+dict['alertBeta'])
 			.addClass('alert-info')
 			.css('display','');
 		} else {
 			$('.container .alert')
-			.html('Welche Daten stecken in meinem Datenportal? Die Daten-Waben zeigen für jeder Datensatz ein Sechseck an.')
+			.html(dict['alertReleased'])
 			.addClass('alert-warning')
 			.css('display','');
 		}
@@ -507,14 +513,14 @@ function installMenu()
 	str += '</ul>';
 
 	str += '<ul class="nav navbar-nav navbar-right">';
-	str += '<li><a href="mailto:' + strMail + '">E-Mail</a></li>';
-	str += '<li><a href="' + strTwitter + '" target="_blank">Twitter</a></li>';
+	str += '<li><a href="mailto:' + strMail + '">'+dict['menuMail']+'</a></li>';
+	str += '<li><a href="' + strTwitter + '" target="_blank">'+dict['menuTwitter']+'</a></li>';
 	if(typeof cityConfig.meta != 'undefined') {
 		str += '<li class="dropdown">';
-		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mithelfen <span class="caret"></span></a>';
+		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'+dict['menuAssist']+' <span class="caret"></span></a>';
 		str += '<ul class="dropdown-menu">';
-		str += '<li><a href="' + strGithub + '" target="_blank">Github</a></li>';
-		str += '<li><a id="menuPageBuild" href="#">Bearbeiten</a></li>';
+		str += '<li><a href="' + strGithub + '" target="_blank">'+dict['menuGithub']+'</a></li>';
+		str += '<li><a id="menuPageBuild" href="#">'+dict['menuEdit']+'</a></li>';
 		str += '</ul>';
 		str += '</li>';
 	}
@@ -620,6 +626,7 @@ function resetCards(clearFeed)
 //-----------------------------------------------------------------------
 
 $(document).ready(function() {
+	installInternationalization();
 	installNavigation();
 	installCity(function() {
 		installBackground();

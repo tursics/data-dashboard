@@ -4,7 +4,7 @@ function getUpdates(feedUrl, ckanUrl)
 {
 	var str = '';
 	str += '<div class="panel panel-info">';
-	str += '<div class="panel-heading"><h3 class="panel-title">Suche nach Updates</h3></div>';
+	str += '<div class="panel-heading"><h3 class="panel-title">'+dict['updateFetch']+'</h3></div>';
 	str += '<div class="panel-body">';
 
 	str += '<div class="progress">';
@@ -115,21 +115,21 @@ function parseFeed()
 		var sum = 0;
 
 		var err = (error*100/max);
-		$('#progressDanger').text((parseInt(err * 10) / 10) + '%' + (err > 20 ? ' fehlerhaft' : ''));
+		$('#progressDanger').text((parseInt(err * 10) / 10) + '%' + (err > 20 ? ' '+dict['progressCorrupt'] : ''));
 		if((0<err) && (err<3)) {
 			err = 3;
 		}
 		sum += err;
 
 		var fin = (fine*100/max);
-		$('#progressSuccess').text((parseInt(fin * 10) / 10) + '%' + (fin > 20 ? ' fertig' : ''));
+		$('#progressSuccess').text((parseInt(fin * 10) / 10) + '%' + (fin > 20 ? ' '+dict['progressDone'] : ''));
 		if((0<fin) && (fin<3)) {
 			fin = 3;
 		}
 		sum += fin;
 
 		var dir = (dirty*100/max);
-		$('#progressWarning').text((parseInt(dir * 10) / 10) + '%' + (dir > 20 ? ' verändert' : ''));
+		$('#progressWarning').text((parseInt(dir * 10) / 10) + '%' + (dir > 20 ? ' '+dict['progressDirty'] : ''));
 		if((0<dir) && (dir<3)) {
 			dir = 3;
 		}
@@ -137,7 +137,7 @@ function parseFeed()
 
 		var rec = (recent*100/max);
 		rec = Math.min(rec,100-sum);
-		$('#progressInfo').text((parseInt(rec * 10) / 10) + '%' + (rec > 20 ? ' neu' : ''));
+		$('#progressInfo').text((parseInt(rec * 10) / 10) + '%' + (rec > 20 ? ' '+dict['progressNew'] : ''));
 		if((0<rec) && (rec<3)) {
 			rec = 3;
 		}
@@ -217,14 +217,14 @@ function showUpdateTable()
 {
 	var str = '';
 	str += '<div class="panel panel-info">';
-	str += '<div class="panel-heading"><h3 class="panel-title">Gefundene Datensätze</h3></div>';
+	str += '<div class="panel-heading"><h3 class="panel-title">'+dict['updateCollected']+'</h3></div>';
 
 	str += '<table class="table table-striped">';
 	str += '<thead><tr>';
 	str += '<th></th>';
-	str += '<th>Name</th>';
-	str += '<th>Beschreibung</th>';
-	str += '<th>Datum</th>';
+	str += '<th>'+dict['updateHeadTitle']+'</th>';
+	str += '<th>'+dict['updateHeadDescription']+'</th>';
+	str += '<th>'+dict['updateHeadDate']+'</th>';
 	str += '<th></th>';
 	str += '</tr></thead><tbody>';
 
@@ -255,9 +255,9 @@ function showUpdateTable()
 
 		var days = parseInt((Date.now() - new Date(config.feed[i].pubDate)) / 1000 / 60 / 60 / 24);
 		if(0 == days) {
-			str += '<td>Heute</td>';
+			str += '<td>'+dict['formatToday']+'</td>';
 		} else if(1 == days) {
-			str += '<td>Gestern</td>';
+			str += '<td>'+dict['formatYesterday']+'</td>';
 		} else {
 			var pubDate = new Date(config.feed[i].pubDate);
 			var feedDate = '';
@@ -276,11 +276,11 @@ function showUpdateTable()
 		}
 
 		if('new' == config.feed[i].status) {
-			str += '<td><button type="button" class="btn btn-primary" data-feedidx="' + i + '">Hinzufügen</button></td>';
+			str += '<td><button type="button" class="btn btn-primary" data-feedidx="' + i + '">'+dict['updateButtonAdd']+'</button></td>';
 		} else if('dirty' == config.feed[i].status) {
-			str += '<td><button type="button" class="btn btn-primary" data-feedidx="' + i + '">Updaten</button></td>';
+			str += '<td><button type="button" class="btn btn-primary" data-feedidx="' + i + '">'+dict['updateButtonUpdate']+'</button></td>';
 		} else if('fine' == config.feed[i].status) {
-			str += '<td><button type="button" class="btn btn-default" data-feedidx="' + i + '">Bearbeiten</button></td>';
+			str += '<td><button type="button" class="btn btn-default" data-feedidx="' + i + '">'+dict['updateButtonEdit']+'</button></td>';
 		} else {
 			str += '<td></td>';
 		}
