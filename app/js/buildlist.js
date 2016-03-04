@@ -37,22 +37,34 @@ function getUpdates(feedUrl, ckanUrl)
 	.done(function(data){
 		config.feed = new Array();
 		if(ckan) {
+			var objList = new Array();
 			for(var i = 0; i < data.result.length; ++i) {
 				var node = data.result[i];
 				var datasetUrl = url.split('/api/')[0] + '/dataset/' + node.object_id.trim();
 
-				var item = {
-					title: node.data.package.title.trim(),
-					link: datasetUrl,
-					description: node.data.package.notes.trim(),
-					pubDate: node.timestamp.trim().split('T')[0],
-					author: node.data.package.maintainer.trim(),
-					json: '',
-					status: 'new'
-				};
+				var found = 0;
+				for(; found < objList.length; ++found) {
+					if(objList[found] == node.object_id) {
+						break;
+					}
+				}
 
-				config.feed.push(item);
-			};
+				if(found >= objList.length) {
+					objList.push(node.object_id);
+					var item = {
+						title: node.data.package.title.trim(),
+						link: datasetUrl,
+						description: node.data.package.notes.trim(),
+						pubDate: node.timestamp.trim().split('T')[0],
+						author: node.data.package.maintainer.trim(),
+						json: '',
+						status: 'new'
+					};
+
+					config.feed.push(item);
+				}
+			}
+			console.log(objList.length);
 		} else {
 			var xml = $(data);
 			xml.find('item').each(function() {
