@@ -15,12 +15,12 @@
 		"updated": "2016-03-04"
 	},
 	"front": {
-		"textTop": "Ein dunkles Blau, Pantone",
-		"textBottom": "benutzt das ASTax Logo",
-		"value": "2758 C",
+		"textTop": "Das ASTax Logo benutzt",
+		"textBottom": "Pantone-Farben",
+		"value": "2",
 		"unit": "",
 		"changePerDay": "",
-		"format": "string",
+		"format": "int",
 		"background": "img/busstop.svg",
 		"color": "#008033"
 	},
