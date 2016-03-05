@@ -41,12 +41,12 @@ gDict['de'] = {
 	'licenseOther': 'Andere Lizenz',
 
 	'aboutTitle': 'Infos über die Daten-Waben',
-	'aboutIntroduction': 'In vielen Städten und Kommunen sind in den letzten Jahren Open Data Portale entstanden. Für den Bürger sind die darin enthaltenen Daten abrufbar - aber nicht greifbar. Welche Informationen verbergen sich hinter CSV- oder SHP-Dateien? Um einen Eindruck von den Inhalten und der thematischen Vielfalt zu erhalten muss man die Inhalte auf einfache Weise visualisieren.',
-	'aboutHexagon': 'Jeder Datensatz aus dem Datenportal wird in einem Sechseck dargestellt. Manchmal sieht man nur einen interessanten Aspekt, manchmal Durchschnittszahlen und manchmal sich ändernde Werte. Diese zeigen die Veränderung an, die seit dem Aufruf der Grafik entstanden sind. Einen kleinen Beschreibungstext erhälst du, wenn du auf das Sechseck klickst. Auf der Rückseite findest du auch einen Link direkt zum Datensatz im Datenportal.',
-	'aboutFeedback': 'Die Daten-Waben sind eine Beta-Version. Noch sind nicht alle Datensätze visualisiert. Aber auch durch die ständige Aktualisierung und Erzeugung neuer Datensätze kann dieses Projekt nie abgeschlossen werden. Aufgrund des großen Datensatzanzahl kann es zu fehlerhaften Angaben kommen. Wer Auffälligkeifen entdeckt, kann uns jederzeit kontaktieren. Wir freuen uns auch über Feedback.',
-	'aboutLicense': 'Der Code der Anwendung ist öffentlich zugänglich und stehen unter einer Open Source-Lizenz.',
-	'aboutContribute': 'Du bist an weiteren Open Data Anwendungen interessiert oder möchtest selbst mitwirken? In Berlin treffen wir uns regelmäßig im Rahmen von <a href="http://codefor.berlin">Code for Berlin</a>, um gemeinsam Open Data Projekten umzusetzen - wir würden uns über deinen Besuch freuen!',
-	'aboutAttribution': 'Die Datensätze aus dem Open Data Portal stehen Jedem kostenlos und zu jeder Verwendung zur Verfügung. Es gibt nur minimale Einschränkungen, die man beachten muss. Das beschränkt sich meistens auf die Nennung des Datenbereitstellers. Das möchte ich an dieser Stelle auch gerne tun. Vielen Dank an:',
+	'aboutIntroduction': 'In vielen Städten und Kommunen sind in den letzten Jahren Open Data-Portale entstanden. Für den Bürger sind die darin enthaltenen Daten abrufbar - aber nicht greifbar. Welche Informationen verbergen sich hinter CSV- oder SHP-Dateien? Um einen Eindruck von den Inhalten und der thematischen Vielfalt zu erhalten, muss man die Inhalte auf einfache Weise visualisieren.',
+	'aboutHexagon': 'Jeder Datensatz aus dem Datenportal wird in einem Sechseck dargestellt. Manchmal sieht man nur einen interessanten Aspekt, manchmal Durchschnittszahlen und manchmal sich ändernde Werte (diese zeigen die Veränderungen an, die seit dem Aufruf der Grafik entstanden sind). Einen kleinen Beschreibungstext erhältst du, wenn du auf das Sechseck klickst. Auf der Rückseite findest du auch einen Link direkt zum Datensatz im Datenportal.',
+	'aboutFeedback': 'Die Daten-Waben sind eine Beta-Version. Noch sind nicht alle Datensätze visualisiert. Aber auch durch die ständige Aktualisierung und Erzeugung neuer Datensätze kann dieses Projekt nie abgeschlossen werden. Aufgrund des großen Datensatzanzahl kann es zu fehlerhaften Angaben kommen. Wer Auffälligkeiten entdeckt, kann uns jederzeit kontaktieren. Wir freuen uns auch über allgemeines Feedback.',
+	'aboutLicense': 'Der Code der Anwendung ist öffentlich zugänglich und steht unter einer Open Source-Lizenz.',
+	'aboutContribute': 'Du bist an weiteren Open Data-Anwendungen interessiert oder möchtest selbst mitwirken? In Berlin treffen wir uns regelmäßig im Rahmen von <a href="http://codefor.berlin">Code for Berlin</a>, um gemeinsam Open Data-Projekte umzusetzen - wir würden uns über deinen Besuch freuen!',
+	'aboutAttribution': 'Die Datensätze aus dem Open Data-Portal stehen jedem kostenlos und zu jeder Verwendung zur Verfügung. Es gibt nur minimale Einschränkungen, die man beachten muss. Meistens beschränkt sich das auf die Nennung des Datenbereitstellers. Genau das möchte ich an dieser Stelle auch gerne tun. Vielen Dank an:',
 	'aboutCreateAttributions': 'Erstelle Lizenz-Informationen',
 
 	'updateFetch': 'Suche nach Updates',
@@ -55,7 +55,7 @@ gDict['de'] = {
 	'updateHeadDescription': 'Beschreibung',
 	'updateHeadDate': 'Datum',
 	'updateButtonAdd': 'Hinzufügen',
-	'updateButtonUpdate': 'Updaten',
+	'updateButtonUpdate': 'Aktualisieren',
 	'updateButtonEdit': 'Bearbeiten',
 
 	'editDummyShortText': 'Text',
@@ -99,14 +99,14 @@ gDict['de'] = {
 	'editErrorMiddle': 'Fehler',
 	'editErrorBottom': 'aufgetreten',
 
-	'alertReleased': 'Welche Daten stecken in meinem Datenportal? Die Daten-Waben zeigen für jeder Datensatz ein Sechseck an.',
-	'alertBeta': 'Die Testphase für die Daten-Waben haben begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.',
-	'alertAlpha': 'Die Daten-Waben befinden sich noch in einer sehr frühen Entwicklungsphase. Es ist noch nicht für die große Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.',
+	'alertReleased': 'Welche Daten stecken in meinem Datenportal? Die Daten-Waben zeigen für jeden Datensatz ein Sechseck an.',
+	'alertBeta': 'Die Testphase für die Daten-Waben hat begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.',
+	'alertAlpha': 'Die Daten-Waben befinden sich noch in einer sehr frühen Entwicklungsphase. Sie sind noch nicht für die breite Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.',
 	'alertSavedInternet': 'Die Daten wurden gespeichert und werden nach einer kurzen (manuellen) Überprüfung für alle freigeschaltet.',
 	'alertErrorInternet': 'Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden. Lade dir die JSON-Datei herunter und schicke sie mir bitte per E-Mail.',
 
 	'errorReadingCard': 'Fehlerhaftes lesen von',
-	'errorNoCityInfo': 'Das hätte nicht passieren dürfen. Irgendwas funktioniert hier nicht. Bitte kontaktiere mich.',
+	'errorNoCityInfo': 'Das hätte nicht passieren dürfen. Irgendetwas funktioniert hier nicht. Bitte kontaktiere mich.',
 
 	'foo': '',
 };
