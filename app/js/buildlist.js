@@ -58,13 +58,15 @@ function getUpdates(feedUrl, ckanUrl)
 						pubDate: node.timestamp.trim().split('T')[0],
 						author: node.data.package.maintainer.trim(),
 						json: '',
+						background: '',
+						front: '',
 						status: 'new'
 					};
 
 					config.feed.push(item);
 				}
 			}
-			console.log(objList.length);
+//			console.log(objList.length);
 		} else {
 			var xml = $(data);
 			xml.find('item').each(function() {
@@ -82,6 +84,8 @@ function getUpdates(feedUrl, ckanUrl)
 					pubDate: node.find('pubDate').text().trim(),
 					author: node.find('author').text().trim(),
 					json: '',
+					background: '',
+					front: '',
 					status: 'new'
 				};
 				if(('' == item.link) && (typeof node.find('link')[0].nextSibling.data != 'undefined')) {
@@ -170,10 +174,18 @@ function parseFeed()
 			data.portal = data.portal || {};
 			data.portal.url = data.portal.url || '';
 			data.portal.updated = data.portal.updated || '';
+			data.front = data.front || {};
+			data.front.textTop = data.front.textTop || '';
+			data.front.value = data.front.value || '';
+			data.front.unit = data.front.unit || '';
+			data.front.textBottom = data.front.textBottom || '';
+			data.front.background = data.front.background || '';
 
 			for(var i = 0; i < config.feed.length; ++i) {
 				if(config.feed[i].link == data.portal.url) {
 					config.feed[i].json = url;
+					config.feed[i].front = data.front.textTop + ' '+ data.front.value + ' ' + data.front.unit + ' ' + data.front.textBottom;
+					config.feed[i].background = data.front.background;
 
 					if(config.feed[i].pubDate == data.portal.updated) {
 						config.feed[i].status = 'fine';
@@ -254,15 +266,19 @@ function showUpdateTable()
 			str += '<td></td>';
 		}
 
-		str += '<td>' + config.feed[i].title + '</td>';
-
-		var elemDesc = document.createElement('div');
-		elemDesc.innerHTML = config.feed[i].description.trim();
-		var desc = elemDesc.textContent || elemDesc.innerText || '';
-		if(desc.length>200) {
-			str += '<td>' + desc.substr(0, 200) + '...</td>';
+		if(config.feed[i].front != '') {
+			str += '<td style="padding:0;text-align:center;"><img src="' + config.feed[i].background + '" style="height:3em;"></td><td>' + config.feed[i].front + '</td>';
 		} else {
-			str += '<td>' + desc + '</td>';
+			str += '<td>' + config.feed[i].title + '</td>';
+
+			var elemDesc = document.createElement('div');
+			elemDesc.innerHTML = config.feed[i].description.trim();
+			var desc = elemDesc.textContent || elemDesc.innerText || '';
+			if(desc.length>200) {
+				str += '<td>' + desc.substr(0, 200) + '...</td>';
+			} else {
+				str += '<td>' + desc + '</td>';
+			}
 		}
 
 		var days = parseInt((Date.now() - new Date(config.feed[i].pubDate)) / 1000 / 60 / 60 / 24);
