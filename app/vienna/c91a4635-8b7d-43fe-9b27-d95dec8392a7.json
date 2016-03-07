@@ -7,17 +7,17 @@
 		"url": "https://www.data.gv.at/katalog/dataset/c91a4635-8b7d-43fe-9b27-d95dec8392a7",
 		"title": "Baumkataster der Stadt Wien",
 		"description": "Neben Bäumen in Straßenzügen umfasst der Baumkataster auch Bäume in Parks und waldähnlichen Flächen in Wien. Die Bäume in Straßenzügen sind komplett erfasst, da sie der MA 42 als Arbeitsbehelf dienen. Die Bäume in Parks und waldähnlichen Flächen sind hingegen nur teilweise erfasst.",
-		"license": "Creative Commons Namensnennung",
+		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Magistratsabteilung 42 - Wiener Stadtgärten",
-		"author": " post@ma42.wien.gv.at",
+		"author": "ogd@ma42.wien.gv.at",
 		"created": "2015-12-15",
-		"updated": "2016-02-10"
+		"updated": "2016-03-03"
 	},
 	"front": {
 		"textTop": "Es gibt über",
 		"textBottom": "Bäume in Wien",
-		"value": "180022",
+		"value": "186078",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
