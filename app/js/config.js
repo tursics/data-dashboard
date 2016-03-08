@@ -2,27 +2,27 @@
 
 var config = config || {
 	cities: [
-		{
+/*		{
 			name: 'Berlin',
 			country: 'Germany',
 			path: 'berlin',
 			badge: 'Alpha',
 			group: 'city'
-		},
+		},*/
 		{
 			name: 'Wien',
 			country: 'Austria',
 			path: 'vienna',
 			badge: 'Released',
 			group: 'city'
-		},
+		}/*,
 		{
 			name: 'Open Data Portal Österreich',
 			country: 'Austria',
 			path: 'odp.at',
 			badge: 'Alpha',
 			group: 'portal'
-		}
+		}*/
 	],
 	templates: [
 		{
@@ -39,12 +39,6 @@ var config = config || {
 		},
 		{
 			'frontBackground': 'img/tree.svg',
-			'frontColor': '#ffffff',
-			'backColor': '#000000',
-			'backClass': ''
-		},
-		{
-			'frontBackground': 'img/map.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
@@ -106,6 +100,12 @@ var config = config || {
 		{
 			'frontBackground': 'img/military.svg',
 			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/map.svg',
+			'frontColor': '#000000',
 			'backColor': '#000000',
 			'backClass': ''
 		},
