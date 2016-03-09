@@ -21,7 +21,7 @@
 	"unit":"",
 	"changePerDay":0,
 	"format":"",
-	"background":"img/berlinopendata.svg",
+	"background":"berlin/berlin-opendata.svg",
 	"color":"",
 	"cssClass":""
 },
