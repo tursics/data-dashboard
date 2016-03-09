@@ -3,17 +3,17 @@
 var config = config || {
 	cities: [
 		{
-			name: 'Berlin',
-			country: 'Germany',
-			path: 'berlin',
-			badge: 'Alpha',
-			group: 'city'
-		},
-		{
 			name: 'Wien',
 			country: 'Austria',
 			path: 'vienna',
 			badge: 'Released',
+			group: 'city'
+		},
+		{
+			name: 'Berlin',
+			country: 'Germany',
+			path: 'berlin',
+			badge: 'Alpha',
 			group: 'city'
 		}/*,
 		{
