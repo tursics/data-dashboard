@@ -22,7 +22,7 @@
 		"changePerDay": "",
 		"format": "int",
 		"background": "img/map.svg",
-		"color": "#000000"
+		"color": "#c83737"
 	},
 	"back": {
 		"text": "Verwendet wird ein Dienst, um Geodaten kartenbasiert direkt aus einer Geodatenquelle abzurufen.",

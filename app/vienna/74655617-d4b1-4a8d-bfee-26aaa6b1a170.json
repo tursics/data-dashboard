@@ -22,7 +22,7 @@
 		"changePerDay": "",
 		"format": "int",
 		"background": "img/map.svg",
-		"color": "#000000"
+		"color": "#c83737"
 	},
 	"back": {
 		"text": "Die digitalen Karten vom GeoServer können für eine alternative Darstellung angepasst werden.",

@@ -105,7 +105,7 @@ var config = config || {
 		},
 		{
 			'frontBackground': 'img/map.svg',
-			'frontColor': '#000000',
+			'frontColor': '#c83737',
 			'backColor': '#000000',
 			'backClass': ''
 		},

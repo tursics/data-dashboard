@@ -22,7 +22,7 @@
 		"changePerDay": "",
 		"format": "int",
 		"background": "img/map.svg",
-		"color": "#000000"
+		"color": "#c83737"
 	},
 	"back": {
 		"text": "Daten der Ausländischen Botschaften, Konsulate, Kulturinstituten und Ständigen Vertretungen...",

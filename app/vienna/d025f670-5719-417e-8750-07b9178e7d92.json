@@ -22,7 +22,7 @@
 		"changePerDay": "",
 		"format": "int",
 		"background": "img/map.svg",
-		"color": "#000000"
+		"color": "#c83737"
 	},
 	"back": {
 		"text": "Der Luftbildplan von Wien aus dem Jahr 1956 deckt das gesamte Wiener Stadtgebiet ab.",
