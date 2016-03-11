@@ -7,7 +7,7 @@
 		"background": "berlin/oberbaumbrucke-968607.jpg"
 	},
 	"data": {
-		"feed": "http://tursics.de/sample/data-dashboard/berlin/rss.php",
+		"feed": "http://daten-waben.tursics.de/berlin/rss.php",
 		"feed_but_send_no_CORS_header": "http://daten.berlin.de/datensaetze/rss.xml"
 	},
 	"cards": [
