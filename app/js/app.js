@@ -513,14 +513,14 @@ function installMenu()
 	str += '</ul>';
 
 	str += '<ul class="nav navbar-nav navbar-right">';
-	str += '<li><a href="mailto:' + strMail + '">'+dict['menuMail']+'</a></li>';
-	str += '<li><a href="' + strTwitter + '" target="_blank">'+dict['menuTwitter']+'</a></li>';
+	str += '<li><a href="mailto:' + strMail + '"><i class="dashboardicon">&#xe808;</i>'/*+dict['menuMail']*/+'</a></li>';
+	str += '<li><a href="' + strTwitter + '" target="_blank"><i class="dashboardicon">&#xe807;</i>'/*+dict['menuTwitter']*/+'</a></li>';
 	if(typeof cityConfig.meta != 'undefined') {
 		str += '<li class="dropdown">';
 		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'+dict['menuAssist']+' <span class="caret"></span></a>';
 		str += '<ul class="dropdown-menu">';
-		str += '<li><a href="' + strGithub + '" target="_blank">'+dict['menuGithub']+'</a></li>';
-		str += '<li><a id="menuPageBuild" href="#">'+dict['menuEdit']+'</a></li>';
+		str += '<li><a href="' + strGithub + '" target="_blank"><i class="dashboardicon">&#xe806;</i> '+dict['menuGithub']+'</a></li>';
+		str += '<li><a id="menuPageBuild" href="#"><i class="dashboardicon">&#xe804;</i> '+dict['menuEdit']+'</a></li>';
 		str += '</ul>';
 		str += '</li>';
 	}
