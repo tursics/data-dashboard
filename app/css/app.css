@@ -37,6 +37,7 @@
 	font-family: 'dashboardicons';
 	src: url('../fonts/dashboardicons.eot');
 	src: url('../fonts/dashboardicons.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/dashboardicons.woff2') format('woff2'),
 	     url('../fonts/dashboardicons.woff') format('woff'),
 	     url('../fonts/dashboardicons.ttf') format('truetype'),
 	     url('../fonts/dashboardicons.svg#dashboardicons') format('svg');
@@ -67,11 +68,11 @@
 .icon-spin:   before { content: '\e801'; }
 .icon-share:  before { content: '\e803'; }
 .icon-pencil: before { content: '\e804'; }
-.icon-arrows: before { content: '\e805'; }
+.icon-left:   before { content: '\e805'; }
 .icon-github: before { content: '\e806'; }
 .icon-twitter:before { content: '\e807'; }
 .icon-mail:   before { content: '\e808'; }
-.icon-doc:    before { content: '\e809'; }
+.icon-eye:    before { content: '\e809'; }
 
 body {
 	background: no-repeat center center fixed;
