@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/e5fd5fbc-c53e-4774-a42d-0028d7594b3e",
+		"title": "Wiener Linien: Statistik Betriebszweige - Straßenbahn",
+		"description": "Fahrzeug, Infrastruktur und Betriebsdaten - Strassenbahn ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Wiener Linien GmbH & CO KG",
+		"author": "post@wienerlinien.at ",
+		"created": "2013-06-26",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "In die Straßenbahn steigen",
+		"textBottom": "Fahrgäste ein",
+		"value": "",
+		"unit": "",
+		"changePerDay": "808493",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Im Jahr 2012 benutzten 295,1 Millionen Fahrgäste die Straßenbahn - der höchste Wert seid 11 Jahren.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
