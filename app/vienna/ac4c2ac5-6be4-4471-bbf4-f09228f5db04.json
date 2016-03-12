@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/ac4c2ac5-6be4-4471-bbf4-f09228f5db04",
+		"title": "Wiener Gewässernetz",
+		"description": "Gewässernetz der Fließenden Gewässer  Wiens ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 45 - Wiener Gewässer",
+		"author": "post@ma45.wien.gv.at",
+		"created": "2012-10-12",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Wien durchziehen",
+		"textBottom": "Flüsse und Gräben",
+		"value": "89",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/water.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Das gesamte Gewässernetz der Fließenden Gewässer Wiens findet man hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
