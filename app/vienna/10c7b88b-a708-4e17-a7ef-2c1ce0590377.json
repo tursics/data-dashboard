@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/10c7b88b-a708-4e17-a7ef-2c1ce0590377",
+		"title": "Wiener Grüngürtel",
+		"description": "Übersicht über die bestehenden und widmungsmäßig gesicherten Grüngebiete Wiens. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 18 - Stadtentwicklung und Stadtplanung",
+		"author": "post@ma18.wien.gv.at",
+		"created": "2012-07-06",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "In Wien existieren",
+		"textBottom": "Hektar Grüngebiete",
+		"value": "19885",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/tree.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Hier ist die Übersicht über die bestehenden und gesicherten Grüngebiete Wiens.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
