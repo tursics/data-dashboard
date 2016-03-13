@@ -1,0 +1,2 @@
+# Eine neue Wabe erstellen
+
