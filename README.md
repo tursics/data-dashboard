@@ -4,11 +4,11 @@ Show an #OpenData data dashboard of various cities. See the result of the [visua
 
 ## Redeployment
 
-- Eine neue [Stadt](../blob/master/doc/CreateCity.md) erstellen
-- Eine neue [Wabe](../blob/master/doc/CreateCard.md) erstellen
-- Einen neuen [Hintergrund für die Waben](../blob/master/doc/CreateBackground.md) erstellen
-- Eine neue [Übersetzung](../blob/master/doc/CreateTranslation.md) erzeugen
+- Eine neue [Stadt](../master/doc/CreateCity.md) erstellen
+- Eine neue [Wabe](../master/doc/CreateCard.md) erstellen
+- Einen neuen [Hintergrund für die Waben](../master/doc/CreateBackground.md) erstellen
+- Eine neue [Übersetzung](../master/doc/CreateTranslation.md) erzeugen
 
 ## Licence
 
-Copyright 2016 Thomas Tursics Licensed under the [MIT License](../blob/master/LICENSE).
+Copyright 2016 Thomas Tursics Licensed under the [MIT License](../master/LICENSE).
