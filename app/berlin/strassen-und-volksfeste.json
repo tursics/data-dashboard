@@ -7,7 +7,7 @@
 		"url": "http://daten.berlin.de/datensaetze/stra%C3%9Fen-und-volksfeste",
 		"title": "Straßen- und Volksfeste",
 		"description": "Hier finden Sie die Berliner und Brandenburger Straßen- und    Volksfeste 2015",
-		"license": "Creative Commons Namensnennung",
+		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Senatsverwaltung für Wirtschaft, Technologie und Forschung",
 		"author": "ralf.eberhardt@senwtf.berlin.de",
@@ -21,7 +21,7 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "string",
-		"background": "img/template.svg",
+		"background": "img/market.svg",
 		"color": "#ffffff"
 	},
 	"back": {

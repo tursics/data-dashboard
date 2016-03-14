@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/aab0a0be-89e6-442e-8cf9-e762bd18f76b",
+		"title": "Wiener Märkte - Standorte",
+		"description": "Gebiete der 17 Wiener Detailmärkte ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 59 - Marktamt",
+		"author": "post@ma59.wien.gv.at",
+		"created": "2012-12-17",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Wien hat",
+		"textBottom": "Märkte",
+		"value": "24",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Finde alle Märkte: Naschmarkt, Brunnenmarkt, Flohmarkt - Linke Wienzeile, Rochusmarkt, ...",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
