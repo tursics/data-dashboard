@@ -33,42 +33,12 @@ function dateValueFormatter(startValue,changePerDay,unit,seconds)
 
 //-----------------------------------------------------------------------
 
-function intValueFormatter(startValue,changePerDay,unit,seconds)
+function largeValueFormatter( value)
 {
-	var value = startValue;
-	if('' == value) {
-		value = 0;
-	}
-	if(0<parseInt(changePerDay)) {
-		value = seconds*changePerDay/24/60/60;
-	}
 	value = parseInt(value);
 
 	if(value>1000) {
 		value = value.toString();
-		value = value.substr(0,value.length - 3)+dict['formatThousandDot']+value.substr(-3);
-	}
-	return value+' '+unit;
-}
-
-//-----------------------------------------------------------------------
-
-function euroValueFormatter(startValue,changePerDay,unit,seconds)
-{
-	var value = startValue;
-	if(0<changePerDay) {
-		value = seconds*changePerDay/24/60/60;
-	}
-
-	if(value<1000) {
-		value = parseInt(value*100);
-		value = value.toString();
-		while(value.length<3) {
-			value = '0'+value;
-		}
-		value = value.substr(0,value.length-2)+dict['formatDecimal']+value.substr(-2);
-	} else {
-		value = parseInt(value).toString();
 		if(value.length>3) {
 			value = value.substr(0,value.length-3)+dict['formatThousandDot']+value.substr(-3);
 		}
@@ -89,6 +59,44 @@ function euroValueFormatter(startValue,changePerDay,unit,seconds)
 			value = value.toString();
 			value = value.substr(0,value.length-1)+dict['formatDecimal']+value.substr(-1)+' '+dict['formatMillionShort']+' ';
 		}
+	}
+	return value;
+}
+
+//-----------------------------------------------------------------------
+
+function intValueFormatter(startValue,changePerDay,unit,seconds)
+{
+	var value = startValue;
+	if('' == value) {
+		value = 0;
+	}
+	if(0<parseInt(changePerDay)) {
+		value = seconds*changePerDay/24/60/60;
+	}
+	value = largeValueFormatter(parseInt(value));
+
+	return value+' '+unit;
+}
+
+//-----------------------------------------------------------------------
+
+function euroValueFormatter(startValue,changePerDay,unit,seconds)
+{
+	var value = startValue;
+	if(0<changePerDay) {
+		value = seconds*changePerDay/24/60/60;
+	}
+
+	if(value<1000) {
+		value = parseInt(value*100);
+		value = value.toString();
+		while(value.length<3) {
+			value = '0'+value;
+		}
+		value = value.substr(0,value.length-2)+dict['formatDecimal']+value.substr(-2);
+	} else {
+		value = largeValueFormatter(parseInt(value));
 	}
 	return value+' '+unit;
 }
