@@ -110,6 +110,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/coin.svg',
+			'frontColor': '#000000',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/market.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
