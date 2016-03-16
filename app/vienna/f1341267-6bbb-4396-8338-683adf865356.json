@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/f1341267-6bbb-4396-8338-683adf865356",
+		"title": "Tarife Wiener Linien",
+		"description": "Alle Tarife der Wiener Linien von 1975 bis 2013. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Wiener Linien",
+		"author": "post@wienerlinien.at ",
+		"created": "2014-09-23",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Ein Fahrschein kostete",
+		"textBottom": "vor 40 Jahren (8 öS)",
+		"value": ".44",
+		"unit": "€",
+		"changePerDay": "",
+		"format": "euro",
+		"background": "img/coin.svg",
+		"color": "#000000"
+	},
+	"back": {
+		"text": "Mehr Informationen zu den Tarifen der Wiener Linien von 1975 bis 2013 findet man hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
