@@ -135,7 +135,7 @@ var config = config || {
 		},
 		{
 			'frontBackground': 'img/house.svg',
-			'frontColor': '#000000',
+			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
 		},

@@ -22,7 +22,7 @@
 		"changePerDay": "",
 		"format": "string",
 		"background": "img/house.svg",
-		"color": "#000000"
+		"color": "#ffffff"
 	},
 	"back": {
 		"text": "Weitere Informationen zu den Gemeindebauten, deren Entstehung, Sanierung und historischer Einordnung:",

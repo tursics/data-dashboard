@@ -7,12 +7,12 @@
 		"url": "https://www.data.gv.at/katalog/dataset/1d5c2411-9719-4c8f-b99d-57a5f4a4ae41",
 		"title": "Adressdaten der Stadt Wien",
 		"description": "Adressdaten insbesonders enthaltend die Adressbezeichnung (Verkehrsfläche + Orientierungsnummer), sowie die Koordinaten der Zugangsadresse (Liegenschaftszugang) und der Gebäudeadresse (Lage der Gebäudezugänge)",
-		"license": "Creative Commons Namensnennung",
+		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Magistratsabteilung 37 - Baupolizei",
 		"author": " GWR-Referat@ma37.wien.gv.at",
 		"created": "2015-12-15",
-		"updated": "2016-02-10"
+		"updated": "2016-02-29"
 	},
 	"front": {
 		"textTop": "In Wien gibt es",
@@ -22,7 +22,7 @@
 		"changePerDay": "",
 		"format": "int",
 		"background": "img/house.svg",
-		"color": "#000000"
+		"color": "#ffffff"
 	},
 	"back": {
 		"text": "Enthalten sind Adressbezeichnung, Koordinaten und Gebäudezugänge.",
