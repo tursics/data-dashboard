@@ -12,17 +12,17 @@
 		"attribution": "Wiener Linien",
 		"author": "post@wienerlinien.at ",
 		"created": "2014-09-11",
-		"updated": "2016-03-04"
+		"updated": "2016-03-17"
 	},
 	"front": {
-		"textTop": "Das ASTax Logo benutzt",
-		"textBottom": "Pantone-Farben",
-		"value": "2",
+		"textTop": "",
+		"textBottom": "",
+		"value": "",
 		"unit": "",
 		"changePerDay": "",
-		"format": "int",
-		"background": "img/busstop.svg",
-		"color": "#008033"
+		"format": "string",
+		"background": "vienna/fd3b5bee-bef4-4acd-8ea8-fc9d24aa024f.svg",
+		"color": "#ffffff"
 	},
 	"back": {
 		"text": "Piktogramme und Farbdefinitionen für den öffentlichen Verkehr (Wiener Linien) befinden sich hier:",
