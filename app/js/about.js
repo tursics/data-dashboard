@@ -109,10 +109,13 @@ function about()
 			})
 			.fail(function(jqXHR, textStatus){
 				if('parsererror'==textStatus) {
-					var data = jQuery.parseJSON(jqXHR.responseText);
-					if( typeof data.location != 'undefined') {
-						colorizeCard(data);
-						return;
+					try {
+						var data = jQuery.parseJSON(jqXHR.responseText);
+						if( typeof data.location != 'undefined') {
+							colorizeCard(data);
+							return;
+						}
+					} catch(e) {
 					}
 				}
 				++error;
