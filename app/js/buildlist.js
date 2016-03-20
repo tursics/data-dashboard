@@ -112,7 +112,33 @@ function getUpdates(feedUrl, ckanUrl)
 		parseFeed();
 	})
 	.fail(function(jqXHR, textStatus){
-		console.log('fail');
+		var now = new Date(Date.now());
+		var date = now.getFullYear()+'-';
+		if(now.getMonth()<9) {
+			date += '0'+(now.getMonth()+1)+'-';
+		} else {
+			date += (now.getMonth()+1)+'-';
+		}
+		if(now.getDate()<10) {
+			date += '0'+now.getDate();
+		} else {
+			date += now.getDate();
+		}
+
+		var item = {
+			title: dict['errorReadingCard'],
+			link: url,
+			description: url,
+			pubDate: date,
+			author: '',
+			json: '',
+			background: '',
+			front: '',
+			status: 'error'
+		};
+		config.feed.push(item);
+
+		parseFeed();
 	});
 }
 
@@ -209,10 +235,13 @@ function parseFeed()
 			})
 			.fail(function(jqXHR, textStatus){
 				if('parsererror'==textStatus) {
-					var data = jQuery.parseJSON(jqXHR.responseText);
-					if( typeof data.location != 'undefined') {
-						colorizeCard(data, url);
-						return;
+					try {
+						var data = jQuery.parseJSON(jqXHR.responseText);
+						if( typeof data.location != 'undefined') {
+							colorizeCard(data, url);
+							return;
+						}
+					} catch(e) {
 					}
 				}
 				++error;
