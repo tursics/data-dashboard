@@ -12,12 +12,14 @@ function buildCards(cardObj)
 	});
 
 	var back = dict['editDummyDescription'];
-	var backTextColor = 'color:white;';
+	var backTextColor = 'color:black;';
 	var backBGImage = '';
-	var backCSSClass = 'blueprint';
+	var backCSSClass = '';
 	createNewCard({
-		front:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass},
+		back:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass,url:'foo'},
 	});
+	var elem = $('div', config.elements[config.elements.length-1]);
+	elem.addClass('flipped');
 
 	var str = '';
 
@@ -270,8 +272,8 @@ function buildCards(cardObj)
 		config.updates[0].dom = $('span',elem);
 	});
 	$('#inputBackTop').change(function() {
-		var elem = $('div figure.front div', config.elements[1]);
-		elem.html( $(this).val());
+		var elem = $('div figure.back div', config.elements[1]);
+		$(elem[0]).html( $(this).val());
 	});
 	$('a.thumbnail').click(function() {
 		var template = config.templates[$(this).data('template')];
@@ -511,11 +513,13 @@ function fillBuildCardWithMetadata()
 			}
 		}
 
-		$('#inputFrontTop').val(dict['editErrorTop']).change();
-		$('#inputFrontFormatText').click();
-		$('#inputFrontMiddle').val(dict['editErrorMiddle']).change();
-		$('#inputFrontBottom').val(dict['editErrorBottom']).change();
-		$('#inputBackTop').val(dict['errorReadingCard']+' '+url).change();
+		if(0==$('#inputFrontTop').val().length && 0==$('#inputFrontMiddle').val().length && 0==$('#inputFrontBottom').val().length) {
+			$('#inputFrontTop').val(dict['editErrorTop']).change();
+			$('#inputFrontFormatText').click();
+			$('#inputFrontMiddle').val(dict['editErrorMiddle']).change();
+			$('#inputFrontBottom').val(dict['editErrorBottom']).change();
+			$('#inputBackTop').val(dict['errorReadingCard']+' '+url).change();
+		}
 	})
 	.always(function(){
 	});

@@ -262,21 +262,27 @@ function createNewCard(card)
 	.children().first();
 
 	$('.front',cardwrapper).click(function() {
-		$(this).parent().toggleClass('flipped');
+		if(!$('body').hasClass('build')) {
+			$(this).parent().toggleClass('flipped');
+		}
 	});
 	$('.back .btn-flipp',cardwrapper).click(function() {
-		$(this).parent().parent().parent().toggleClass('flipped');
+		if(!$('body').hasClass('build')) {
+			$(this).parent().parent().parent().toggleClass('flipped');
+		}
 	});
 	$('.back .btn-data',cardwrapper).click(function() {
-		var url = $(this).data('url');
+		if(!$('body').hasClass('build')) {
+			var url = $(this).data('url');
 
-		var link = document.createElement('a');
-		link.href = url;
-		link.target = '_blank';
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-		delete link;
+			var link = document.createElement('a');
+			link.href = url;
+			link.target = '_blank';
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			delete link;
+		}
 	});
 
 	config.elements.push($( 'section:nth-last-child(2)'));
