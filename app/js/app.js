@@ -188,16 +188,18 @@ function loadCards()
 				elem.addClass('flipped');
 
 				window.setTimeout( function() {
-					++config.loaded;
-					loadCards();
-
-					window.setTimeout( function() {
-						elem.toggleClass('flipped');
+					if(config.loadCityCards) {
+						++config.loaded;
+						loadCards();
 
 						window.setTimeout( function() {
-							$('figure', elem).css('display', 'block');
+							elem.toggleClass('flipped');
+
+							window.setTimeout( function() {
+								$('figure', elem).css('display', 'block');
+							}, speed / 2);
 						}, speed / 2);
-					}, speed / 2);
+					}
 				}, speed / 2);
 			});
 		});
@@ -387,6 +389,7 @@ function installNavigation()
 
 				resetCards(true);
 				$('body').waitForImages(function() {
+					config.loadCityCards = true;
 					loadCards();
 				});
 			} else if('about' == pageName) {
@@ -394,6 +397,7 @@ function installNavigation()
 
 				resetCards(true);
 				$('body').waitForImages(function() {
+					config.loadLicenses = true;
 					about();
 				});
 			} else if('build' == pageName) {
@@ -401,6 +405,7 @@ function installNavigation()
 
 				resetCards(true);
 				$('body').waitForImages(function() {
+					config.loadBuildList = true;
 					getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
 				});
 			} else {
@@ -646,6 +651,9 @@ function resetCards(clearFeed)
 	}
 
 	config.loaded = 0;
+	config.loadCityCards = false;
+	config.loadLicenses = false;
+	config.loadBuildList = false;
 	config.elements = new Array();
 	config.updates = new Array();
 

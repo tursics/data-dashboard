@@ -121,9 +121,11 @@ function about()
 				++error;
 			})
 			.always(function(){
-				updateBars();
-				++config.loaded;
-				readCardInfos();
+				if(config.loadLicenses) {
+					updateBars();
+					++config.loaded;
+					readCardInfos();
+				}
 			});
 		} else {
 			fine = max;

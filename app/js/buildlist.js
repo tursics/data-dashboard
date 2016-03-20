@@ -247,9 +247,11 @@ function parseFeed()
 				++error;
 			})
 			.always(function(){
-				updateBars();
-				++config.loaded;
-				readCardInfos();
+				if(config.loadBuildList) {
+					updateBars();
+					++config.loaded;
+					readCardInfos();
+				}
 			});
 		} else {
 			recent = max;
