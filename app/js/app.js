@@ -164,10 +164,13 @@ function loadCards()
 		})
 		.fail(function(jqXHR, textStatus){
 			if('parsererror'==textStatus) {
-				var data = jQuery.parseJSON(jqXHR.responseText);
-				if(typeof data.location != 'undefined') {
-					createCard(data);
-					return;
+				try {
+					var data = jQuery.parseJSON(jqXHR.responseText);
+					if(typeof data.location != 'undefined') {
+						createCard(data);
+						return;
+					}
+				} catch(e) {
 				}
 			}
 			createNewCard({
