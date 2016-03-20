@@ -138,6 +138,27 @@ function getUpdates(feedUrl, ckanUrl)
 		};
 		config.feed.push(item);
 
+		var path = '';
+		if(typeof cityConfig.data.ckan != 'undefined') {
+			path = cityConfig.data.ckan.split('/api/')[0] + '/dataset/';
+		}
+
+		for(var i = 0; i < cityConfig.cards.length; ++i) {
+			var card = path + cityConfig.cards[i].split('/')[1].split('.')[0];
+			var item = {
+				title: dict['errorReadingCard'],
+				link: card,
+				description: card,
+				pubDate: date,
+				author: '',
+				json: '',
+				background: '',
+				front: '',
+				status: 'error'
+			};
+			config.feed.push(item);
+		}
+
 		parseFeed();
 	});
 }
