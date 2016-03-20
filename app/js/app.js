@@ -149,7 +149,7 @@ function loadCards()
 		var changePerDay = data.front.changePerDay;
 
 		createNewCard({
-			front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display'},
+			front:{text:front,image:frontBGImage,style:frontTextColor,css:frontCSSClass+' display',flipped:true},
 			back:{text:back,image:backBGImage,style:backTextColor,css:backCSSClass,url:data.portal.url},
 			data:{value:data.front.value,unit:data.front.unit,change:changePerDay,formatter:valueFormatter},
 		});
@@ -174,20 +174,32 @@ function loadCards()
 				}
 			}
 			createNewCard({
-				front:{text:textStatus,css:'card1line'},
+				front:{text:textStatus,css:'card1line',flipped:true},
 				back:{text:dict['errorReadingCard']+' '+url,css:''},
 			});
 		})
 		.always(function(){
-			// make the back of the card invisible
-			// show back
-			recalcBoard(); // re-calc all positions
-			// load all pending images
-			// flip card to front
-			// make the back of the card visible
+			var speed = 300;
+			var elem = $('div', config.elements[config.elements.length-1]);
 
-			++config.loaded;
-			loadCards();
+			recalcBoard();
+
+			$('body').waitForImages(function() {
+				elem.addClass('flipped');
+
+				window.setTimeout( function() {
+					++config.loaded;
+					loadCards();
+
+					window.setTimeout( function() {
+						elem.toggleClass('flipped');
+
+						window.setTimeout( function() {
+							$('figure', elem).css('display', 'block');
+						}, speed / 2);
+					}, speed / 2);
+				}, speed / 2);
+			});
 		});
 	}
 }
@@ -202,6 +214,7 @@ function createNewCard(card)
 	card.front.image = card.front.image || '';
 	card.front.style = card.front.style || '';
 	card.front.text = card.front.text || '';
+	card.front.flipped = card.front.flipped || false;
 	card.back = card.back || {};
 	card.back.css = card.back.css || '';
 	card.back.image = card.back.image || '';
@@ -236,7 +249,8 @@ function createNewCard(card)
 		card.back.text = '<div style="'+card.back.style+'">'+card.back.text+'</div>'+button;
 	}
 
-	var str = '<div class="cardwrapper"><figure class="front '+card.front.css+'">'+card.front.text+'</figure><figure class="back '+card.back.css+'">'+card.back.text+'</figure></div>';
+	var style = card.front.flipped ? ' style="display:none;" ' : '';
+	var str = '<div class="cardwrapper"><figure class="front '+card.front.css+'"'+style+'>'+card.front.text+'</figure><figure class="back '+card.back.css+'"'+style+'>'+card.back.text+'</figure></div>';
 
 	var cardwrapper = $( '<section>', {
 		class: 'card',
@@ -372,17 +386,23 @@ function installNavigation()
 				window.navigation.replaceURI();
 
 				resetCards(true);
-				loadCards();
+				$('body').waitForImages(function() {
+					loadCards();
+				});
 			} else if('about' == pageName) {
 				window.navigation.replaceURI();
 
 				resetCards(true);
-				about();
+				$('body').waitForImages(function() {
+					about();
+				});
 			} else if('build' == pageName) {
 				window.navigation.replaceURI();
 
 				resetCards(true);
-				getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
+				$('body').waitForImages(function() {
+					getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
+				});
 			} else {
 				console.log('Page "'+pageName+'" does not exist');
 			}
