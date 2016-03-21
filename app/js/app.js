@@ -638,6 +638,68 @@ function installTimer()
 
 //-----------------------------------------------------------------------
 
+function installSlideshow()
+{
+	var flipElem = null;
+	var flipTimer = null;
+	var startSpeed = 10000;
+	var flipSpeed = 1500;
+	var waitSpeed = 5000;
+
+	function flipCard()
+	{
+		var pos = Math.floor(Math.random() * config.elements.length);
+		flipElem = $('div', config.elements[pos]);
+		flipElem.toggleClass('flipped');
+
+		window.setTimeout( function() {
+			if(flipElem) {
+				resetCard();
+
+				flipTimer = window.setTimeout( function() {
+					flipCard();
+				}, waitSpeed);
+			}
+		}, flipSpeed);
+	}
+
+	function resetCard()
+	{
+		if(flipElem) {
+			flipElem.toggleClass('flipped');
+			flipElem = null;
+		}
+		if(flipTimer) {
+			window.clearTimeout(flipTimer);
+			flipTimer = null;
+		}
+	}
+
+	var onAwayCallback = function() {
+		if(!$('body').hasClass('build')) {
+			flipCard();
+		}
+	};
+	var onAwayBackCallback = function() {
+		resetCard();
+	};
+
+	var onVisibleCallback = function() {
+	};
+	var onHiddenCallback = function() {
+	};
+
+	var idle = new Idle({
+		onHidden: onHiddenCallback,
+		onVisible: onVisibleCallback,
+		onAway: onAwayCallback,
+		onAwayBack: onAwayBackCallback,
+		awayTimeout: startSpeed
+	}).start();
+}
+
+//-----------------------------------------------------------------------
+
 function recalcBoard()
 {
 	$(window).trigger('resize');
@@ -678,6 +740,7 @@ $(document).ready(function() {
 		installMenu();
 		installEvents();
 		installTimer();
+		installSlideshow();
 		recalcBoard();
 
 		window.navigation.showPage(window.navigation.page);
