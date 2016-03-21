@@ -309,6 +309,7 @@ function buildCards(cardObj)
 //	});
 	$('#inputButtonCancel').click(function() {
 		resetCards(false);
+		config.loadBuildList = true;
 		getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
 	});
 
