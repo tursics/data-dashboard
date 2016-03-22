@@ -642,7 +642,7 @@ function installSlideshow()
 {
 	var flipElem = null;
 	var flipTimer = null;
-	var startSpeed = 10000;
+	var startSpeed = 20000;
 	var flipSpeed = 1500;
 	var waitSpeed = 5000;
 
