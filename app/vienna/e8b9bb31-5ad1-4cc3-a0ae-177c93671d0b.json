@@ -7,12 +7,12 @@
 		"url": "https://www.data.gv.at/katalog/dataset/e8b9bb31-5ad1-4cc3-a0ae-177c93671d0b",
 		"title": "Feuerhydranten - Standorte - Wien",
 		"description": "Feuerhydranten Standorte in Wien ",
-		"license": "Creative Commons Namensnennung",
+		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Magistratsabteilung 31 - Wiener Wasser",
 		"author": "post@ma31.wien.gv.at",
 		"created": "2013-04-02",
-		"updated": "2016-02-10"
+		"updated": "2016-02-29"
 	},
 	"front": {
 		"textTop": "Gut verteilt stehen",
@@ -21,8 +21,8 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/water.svg",
-		"color": "#ffffff"
+		"background": "img/fire.svg",
+		"color": "#c83737"
 	},
 	"back": {
 		"text": "Alle Standorte der Feuerhydranten in Wien stehen in einem Datensatz.",

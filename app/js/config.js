@@ -56,6 +56,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/livingstreet.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/busstop.svg',
 			'frontColor': '#008033',
 			'backColor': '#000000',
@@ -105,6 +111,12 @@ var config = config || {
 		},
 		{
 			'frontBackground': 'img/map.svg',
+			'frontColor': '#c83737',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/fire.svg',
 			'frontColor': '#c83737',
 			'backColor': '#000000',
 			'backClass': ''
