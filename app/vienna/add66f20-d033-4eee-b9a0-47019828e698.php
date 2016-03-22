@@ -15,6 +15,7 @@
 		"updated": "2016-02-29"
 	},
 	"front": {
+	"textTop": "Treppen laufen!",
 <?php
 	$keyDebug = 'Ow2xzSXEjv';
 	$keyRelease = 'f8qseeIyK7';
@@ -29,14 +30,11 @@
 		$count = count($data);
 	}
 
+	echo '"value": "'.$count.'",';
 	if(1 == $count) {
-		echo '"textTop": "Außer Betrieb ist",';
-		echo '"textBottom": "Aufzug",';
-		echo '"value": "'.$count.'",';
+		echo '"textBottom": "Aufzug ist außer Betrieb",';
 	} else {
-		echo '"textTop": "Außer Betrieb sind",';
-		echo '"textBottom": "Aufzüge",';
-		echo '"value": "'.$count.'",';
+		echo '"textBottom": "Aufzüge sind außer Betrieb",';
 	}
 ?>
 		"unit": "",
