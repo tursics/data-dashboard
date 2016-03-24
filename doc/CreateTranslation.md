@@ -10,4 +10,4 @@ and copy the folder
 
 Name the folder like ISO language code. Then edit the i18n.js file.
 
-Currently only German translation is loaded.
+Currently only German translation is loaded. This could be changed in future. The i18n.js file is loaded in the /app/index.html file. The file /app/js/app.js use hard coded German language in the function installInternationalization().
