@@ -9,8 +9,8 @@ Show an #OpenData data dashboard of various cities. See the result of the [visua
 - Eine neue [Stadt](../master/doc/CreateCity.md) erstellen
 - Eine neue [Wabe](../master/doc/CreateCard.md) erstellen
 - Einen neuen [Hintergrund für die Waben](../master/doc/CreateBackground.md) erstellen
-- Eine neue [Übersetzung](../master/doc/CreateTranslation.md) erzeugen
+- Create a [new translation](../master/doc/CreateTranslation.md)
 
 ## Licence
 
-Copyright 2016 Thomas Tursics Licensed under the [MIT License](../master/LICENSE).
+Copyright 2016 Thomas Tursics. Licensed under the [MIT License](../master/LICENSE).
