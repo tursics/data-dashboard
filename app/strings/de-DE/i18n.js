@@ -1,4 +1,4 @@
-gDict = gDict || [];
+var gDict = gDict || [];
 
 gDict.de = {
 	'appLang': 'de-DE',
