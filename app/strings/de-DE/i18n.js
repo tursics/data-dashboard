@@ -1,6 +1,6 @@
-﻿if( typeof gDict === "undefined") gDict = new Array();
+gDict = gDict || [];
 
-gDict['de'] = {
+gDict.de = {
 	'appLang': 'de-DE',
 	'brandTitle': 'Daten-Waben',
 
@@ -108,5 +108,5 @@ gDict['de'] = {
 	'errorReadingCard': 'Fehlerhaftes lesen von',
 	'errorNoCityInfo': 'Das hätte nicht passieren dürfen. Irgendetwas funktioniert hier nicht. Bitte kontaktiere mich.',
 
-	'foo': '',
+	'foo': ''
 };
