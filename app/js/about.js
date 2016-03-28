@@ -1,9 +1,11 @@
 /*jslint browser: true*/
-/*global $,config,dict*/
+/*global $,config,dict,cityConfig*/
 
 //-----------------------------------------------------------------------
 
 function about() {
+	'use strict';
+
 	var max = (0 === cityConfig.cards.length ? 1 : cityConfig.cards.length),
 		fine = 0,
 		error = 0,
