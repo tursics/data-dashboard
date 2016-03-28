@@ -21,13 +21,13 @@ function about() {
 			err = (error * 100 / max),
 			fin = (fine * 100 / max);
 
-		$('#progressDanger').text((parseInt(err * 10) / 10) + '%' + (err > 20 ? ' ' + dict.progressCorrupt : ''));
+		$('#progressDanger').text((parseInt(err * 10, 10) / 10) + '%' + (err > 20 ? ' ' + dict.progressCorrupt : ''));
 		if ((0 < err) && (err < 3)) {
 			err = 3;
 		}
 		sum += err;
 
-		$('#progressSuccess').text((parseInt(fin * 10) / 10) + '%');
+		$('#progressSuccess').text((parseInt(fin * 10, 10) / 10) + '%');
 		if ((0 < fin) && (fin < 3)) {
 			fin = 3;
 		}
