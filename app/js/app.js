@@ -698,9 +698,9 @@ function installSlideshow()
 {
 	var flipElem = null;
 	var flipTimer = null;
-	var startSpeed = 20000;
-	var flipSpeed = 1500;
-	var waitSpeed = 5000;
+	var startSpeed = 1 * 60 * 1000;
+	var waitSpeed = 10 * 1000;
+	var flipSpeed = 1.5 * 1000;
 
 	function flipCard()
 	{
