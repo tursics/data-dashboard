@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global console,$,config,dict,cityConfig*/
+/*global console,$,Idle,config,dict,cityConfig*/
 
 //-----------------------------------------------------------------------
 
@@ -483,8 +483,9 @@ function installNavigation() {
 
 //-----------------------------------------------------------------------
 
-function installCity(callbackFunc)
-{
+function installCity(callbackFunc) {
+//	'use strict';
+
 	cityConfig = {};
 
 	var url = window.navigation.city;
@@ -494,81 +495,88 @@ function installCity(callbackFunc)
 
 	url += '/cityConfig.json';
 	$.ajax(url)
-		.done(function(json){
-			var data = jQuery.parseJSON(json);
+		.done(function (json) {
+			var data = $.parseJSON(json);
 			cityConfig = data;
-	})
-	.fail(function(jqXHR, textStatus){
-		if('parsererror'==textStatus) {
-			var data = jQuery.parseJSON(jqXHR.responseText);
-			if(typeof data.meta != 'undefined') {
-				cityConfig = data;
-				return;
+		})
+		.fail(function (jqXHR, textStatus) {
+			if ('parsererror' === textStatus) {
+				var data = $.parseJSON(jqXHR.responseText);
+				if (typeof data.meta !== 'undefined') {
+					cityConfig = data;
+					return;
+				}
 			}
-		}
-		console.log(dict['errorReadingCard']+' "' + url + '"');
-	})
-	.always(function(){
-		callbackFunc();
-	});
+			console.log(dict.errorReadingCard + ' "' + url + '"');
+		})
+		.always(function () {
+			callbackFunc();
+		});
 }
 
 //-----------------------------------------------------------------------
 
-function installBackground()
-{
-	if((typeof cityConfig.meta != 'undefined') && (typeof cityConfig.meta.background != 'undefined')) {
+function installBackground() {
+	'use strict';
+
+	if ((typeof cityConfig.meta !== 'undefined') && (typeof cityConfig.meta.background !== 'undefined')) {
 		$('body').css('background-image', 'url(' + cityConfig.meta.background + ')');
 	}
 }
 
 //-----------------------------------------------------------------------
 
-function installMenu()
-{
-	var brandTitle = dict['brandTitle'];
+function installMenu() {
+	'use strict';
+
+	var brandTitle = dict.brandTitle,
+		str = '',
+		strMail = '',
+		strTwitter = '',
+		strGithub = '',
+		citylist = '',
+		portallist = '',
+		i = 0,
+		citydata = {},
+		badge = '';
+
 	document.title = brandTitle;
 
-	var str = $('.navbar-header').html();
-	str += '<span class="navbar-brand">'+brandTitle+'</span>';
+	str = $('.navbar-header').html();
+	str += '<span class="navbar-brand">' + brandTitle + '</span>';
 	$('.navbar-header').html(str);
 
 	str = '';
 	str += '<ul class="nav navbar-nav">';
 
-	var strMail = '';
-	var strTwitter = '';
-	var strGithub = '';
-	if(typeof cityConfig.meta == 'undefined') {
+	if (typeof cityConfig.meta === 'undefined') {
 		strMail = 'thomas@tursics.de';
 		strTwitter = 'https://twitter.com/tursics/';
 		strGithub = 'https://github.com/tursics/data-dashboard/';
 
 		$('.container .alert')
-		.html(dict['errorNoCityInfo'])
-		.addClass('alert-danger')
-		.css('display','');
+			.html(dict.errorNoCityInfo)
+			.addClass('alert-danger')
+			.css('display', '');
 	} else {
 		strMail = cityConfig.meta.mail;
 		strTwitter = cityConfig.meta.twitter;
 		strGithub = cityConfig.meta.github;
 
-		str += '<li><a id="menuPageCards" href="#">'+dict['menuCards']+'</a></li>';
+		str += '<li><a id="menuPageCards" href="#">' + dict.menuCards + '</a></li>';
 //		str += '<li class="disabled"><a id="menuPageSpread" href="#spread">Verteilung</a></li>';
-		str += '<li><a id="menuPageAbout" href="#">'+dict['menuInfo']+'</a></li>';
+		str += '<li><a id="menuPageAbout" href="#">' + dict.menuInfo + '</a></li>';
 
-		if(cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
-			var citylist = '';
-			var portallist = '';
-			for(var i = 0; i < config.cities.length; ++i) {
-				var citydata = config.cities[i];
-				var badge = '';
-				if(('' != citydata.badge) && ('Released' != citydata.badge)) {
+		if (cityConfig.meta.showMenuCity && (config.cities.length > 1)) {
+			for (i = 0; i < config.cities.length; ++i) {
+				citydata = config.cities[i];
+				badge = '';
+				if (('' !== citydata.badge) && ('Released' !== citydata.badge)) {
 					badge = ' <span class="label label-success">' + citydata.badge + '</span>';
 				}
-				if('city' == citydata.group) {
+				if ('city' === citydata.group) {
 					citylist += '<li><a href="./index.html?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
-				} else if('portal' == citydata.group) {
+				} else if ('portal' === citydata.group) {
 					portallist += '<li><a href="./index.html?city=' + citydata.path + '">' + citydata.name + badge + '</a></li>';
 				}
 			}
@@ -576,49 +584,49 @@ function installMenu()
 			str += '<li class="dropdown">';
 			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.navigation.cityId].name + ' <span class="caret"></span></a>';
 			str += '<ul class="dropdown-menu">';
-			if(citylist.length > 0) {
-				str += '<li class="dropdown-header">'+dict['menuCities']+'</li>';
+			if (citylist.length > 0) {
+				str += '<li class="dropdown-header">' + dict.menuCities + '</li>';
 				str += citylist;
 			}
-			if(portallist.length > 0) {
+			if (portallist.length > 0) {
 				str += '<li role="separator" class="divider"></li>';
-				str += '<li class="dropdown-header">'+dict['menuPortals']+'</li>';
+				str += '<li class="dropdown-header">' + dict.menuPortals + '</li>';
 				str += portallist;
 			}
 			str += '</ul>';
 			str += '</li>';
 		}
 
-		var badge = config.cities[window.navigation.cityId].badge;
-		if('Alpha' == badge) {
+		badge = config.cities[window.navigation.cityId].badge;
+		if ('Alpha' === badge) {
 			$('.container .alert')
-			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+dict['alertAlpha'])
-			.addClass('alert-warning')
-			.css('display','');
-		} else if('Beta' == badge) {
+				.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + dict.alertAlpha)
+				.addClass('alert-warning')
+				.css('display', '');
+		} else if ('Beta' === badge) {
 			$('.container .alert')
-			.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+dict['alertBeta'])
-			.addClass('alert-info')
-			.css('display','');
+				.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + dict.alertBeta)
+				.addClass('alert-info')
+				.css('display', '');
 		} else {
 			$('.container .alert')
-			.html(dict['alertReleased'])
-			.addClass('alert-warning')
-			.css('display','');
+				.html(dict.alertReleased)
+				.addClass('alert-warning')
+				.css('display', '');
 		}
 	}
 
 	str += '</ul>';
 
 	str += '<ul class="nav navbar-nav navbar-right">';
-	str += '<li><a href="mailto:' + strMail + '"><i class="dashboardicon">&#xe808;</i>'/*+dict['menuMail']*/+'</a></li>';
-	str += '<li><a href="' + strTwitter + '" target="_blank"><i class="dashboardicon">&#xe807;</i>'/*+dict['menuTwitter']*/+'</a></li>';
-	if(typeof cityConfig.meta != 'undefined') {
+	str += '<li><a href="mailto:' + strMail + '"><i class="dashboardicon">&#xe808;</i>'/* + dict['menuMail']*/ + '</a></li>';
+	str += '<li><a href="' + strTwitter + '" target="_blank"><i class="dashboardicon">&#xe807;</i>'/* + dict['menuTwitter']*/ + '</a></li>';
+	if (typeof cityConfig.meta !== 'undefined') {
 		str += '<li class="dropdown">';
-		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'+dict['menuAssist']+' <span class="caret"></span></a>';
+		str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + dict.menuAssist + ' <span class="caret"></span></a>';
 		str += '<ul class="dropdown-menu">';
-		str += '<li><a href="' + strGithub + '" target="_blank"><i class="dashboardicon">&#xe806;</i> '+dict['menuGithub']+'</a></li>';
-		str += '<li><a id="menuPageBuild" href="#"><i class="dashboardicon">&#xe804;</i> '+dict['menuEdit']+'</a></li>';
+		str += '<li><a href="' + strGithub + '" target="_blank"><i class="dashboardicon">&#xe806;</i> ' + dict.menuGithub + '</a></li>';
+		str += '<li><a id="menuPageBuild" href="#"><i class="dashboardicon">&#xe804;</i> ' + dict.menuEdit + '</a></li>';
 		str += '</ul>';
 		str += '</li>';
 	}
@@ -626,15 +634,15 @@ function installMenu()
 
 	$('#navbar').html(str);
 
-	$('#menuPageCards').click(function() {
+	$('#menuPageCards').click(function () {
 		window.navigation.showPage('cards');
 //		return false;
 	});
-	$('#menuPageAbout').click(function() {
+	$('#menuPageAbout').click(function () {
 		window.navigation.showPage('about');
 //		return false;
 	});
-	$('#menuPageBuild').click(function() {
+	$('#menuPageBuild').click(function () {
 		window.navigation.showPage('build');
 //		return false;
 	});
@@ -642,47 +650,57 @@ function installMenu()
 
 //-----------------------------------------------------------------------
 
-function installEvents()
-{
+function installEvents() {
+	'use strict';
+
 	var resizeTimer;
-	$(window).resize(function() {
+
+	function recalcPositions() {
+		var elements = $('#board').children(),
+			lastTop,
+			e = null,
+			i = 0,
+			top = 0,
+			y = 0;
+
+		for (i = 0; i < (elements.length - 1); ++i) {
+			e = $(elements[i]);
+			top = parseInt(e.position().top, 10);
+			if ((0 === i) || (lastTop === top)) {
+				e.css('margin-left', '0');
+			} else {
+				++y;
+				e.css('margin-left', y % 2 ? '6.55em' : '0');
+			}
+			lastTop = top;
+		}
+	}
+
+	$(window).resize(function () {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(recalcPositions, 50);
 	});
-
-	function recalcPositions() {
-		var elements = $('#board').children();
-		var lastTop;
-		var y = 0;
-		for(var i = 0; i < (elements.length-1); ++i) {
-			var e = $(elements[i]);
-			var top = parseInt(e.position().top);
-			if((0===i) || (lastTop === top)) {
-				e.css('margin-left','0');
-			} else {
-				++y;
-				e.css('margin-left',y%2?'6.55em':'0');
-			}
-			lastTop = top;
-		};
-	};
 }
 
 //-----------------------------------------------------------------------
 
-function installTimer()
-{
-	var startTime = (new Date()).getTime();
-	var delay = 100;
+function installTimer() {
+	'use strict';
+
+	var startTime = (new Date()).getTime(),
+		delay = 100;
 
 	function timerFunc() {
 		try {
-			var diffTime = parseInt(((new Date()).getTime() - startTime) / 1000);
-			for(var i = 0; i < config.updates.length; ++i) {
-				var update = config.updates[i];
-				update.dom.text( update.formatter(update.value,update.change,update.unit,diffTime));
+			var diffTime = parseInt(((new Date()).getTime() - startTime) / 1000, 10),
+				i = 0,
+				update = {};
+
+			for (i = 0; i < config.updates.length; ++i) {
+				update = config.updates[i];
+				update.dom.text(update.formatter(update.value, update.change, update.unit, diffTime));
 			}
-		} catch(e) {
+		} catch (e) {
 //			console.log(e);
 		}
 
@@ -694,58 +712,57 @@ function installTimer()
 
 //-----------------------------------------------------------------------
 
-function installSlideshow()
-{
-	var flipElem = null;
-	var flipTimer = null;
-	var startSpeed = 1 * 60 * 1000;
-	var waitSpeed = 10 * 1000;
-	var flipSpeed = 1.5 * 1000;
+function installSlideshow() {
+	'use strict';
 
-	function flipCard()
-	{
+	var flipElem = null,
+		flipTimer = null,
+		startSpeed = 60 * 1000,
+		waitSpeed = 10 * 1000,
+		flipSpeed = 1.5 * 1000,
+		onAwayCallback = function () {},
+		onAwayBackCallback = function () {},
+		onVisibleCallback = function () {},
+		onHiddenCallback = function () {},
+		idle = null;
+
+	function resetCard() {
+		if (flipElem) {
+			flipElem.toggleClass('flipped');
+			flipElem = null;
+		}
+		if (flipTimer) {
+			window.clearTimeout(flipTimer);
+			flipTimer = null;
+		}
+	}
+
+	function flipCard() {
 		var pos = Math.floor(Math.random() * config.elements.length);
 		flipElem = $('div', config.elements[pos]);
 		flipElem.toggleClass('flipped');
 
-		window.setTimeout( function() {
-			if(flipElem) {
+		window.setTimeout(function () {
+			if (flipElem) {
 				resetCard();
 
-				flipTimer = window.setTimeout( function() {
+				flipTimer = window.setTimeout(function () {
 					flipCard();
 				}, waitSpeed);
 			}
 		}, flipSpeed);
 	}
 
-	function resetCard()
-	{
-		if(flipElem) {
-			flipElem.toggleClass('flipped');
-			flipElem = null;
-		}
-		if(flipTimer) {
-			window.clearTimeout(flipTimer);
-			flipTimer = null;
-		}
-	}
-
-	var onAwayCallback = function() {
-		if(!$('body').hasClass('build')) {
+	onAwayCallback = function () {
+		if (!$('body').hasClass('build')) {
 			flipCard();
 		}
 	};
-	var onAwayBackCallback = function() {
+	onAwayBackCallback = function () {
 		resetCard();
 	};
 
-	var onVisibleCallback = function() {
-	};
-	var onHiddenCallback = function() {
-	};
-
-	var idle = new Idle({
+	idle = new Idle({
 		onHidden: onHiddenCallback,
 		onVisible: onVisibleCallback,
 		onAway: onAwayCallback,
@@ -756,10 +773,12 @@ function installSlideshow()
 
 //-----------------------------------------------------------------------
 
-$(document).ready(function() {
+$(document).ready(function () {
+	'use strict';
+
 	installInternationalization();
 	installNavigation();
-	installCity(function() {
+	installCity(function () {
 		installBackground();
 		installMenu();
 		installEvents();
