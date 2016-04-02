@@ -8,7 +8,7 @@ Show an #OpenData data dashboard of various cities. See the result of the [visua
 
 - Eine neue [Stadt](../master/doc/CreateCity.md) erstellen
 - Eine neue [Wabe](../master/doc/CreateCard.md) erstellen
-- Einen neuen [Hintergrund für die Waben](../master/doc/CreateBackground.md) erstellen
+- Create a [new background image](../master/doc/CreateBackground.md)
 - Create a [new translation](../master/doc/CreateTranslation.md)
 
 ## Licence
