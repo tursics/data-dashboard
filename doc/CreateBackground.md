@@ -19,34 +19,47 @@ Use the scalable vector image format SVG.
 I use the free software [Inkscape](https://inkscape.org) to create and edit SVG files. 
 But pay attention: mobile devices render only a subset of SVG file format. 
 Too complex structured designed images will look scrappy. 
-Please avoid pattern and shapes, convert borders and texts to fill objects. 
+Please avoid pattern, transparency and shapes, convert borders and texts to fill objects. 
 No not use texts (except in city logos) - the interface should be multi-lingual.
 
-This visualisation use four different background designs. From a simple design to more complex ones.
+This visualisation use four different background designs. 
+From a simple design to more complex ones.
 
-###Design A
+###Simple Design
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/backgroundSimple.png "Simple background")
-- One background color
-- give it a visual deep and vary the hue
-- simple white icon on top
-- white icon, prepared for white text
 
-###Version 2
+This design based on a hexagonal single colored background. 
+E.g. use a green color for a tree background.
+Give this visual a deep and vary the luminosity: 
+Switch the displayed colorspace in Inkscape from RGB to HSL. 
+The tree background has the colors H 68, S 255 and L 85. 
+Change the L value to 80, 75 and 70 to make the background color darker. 
+The used hexagon background is splitted in six pieces and you can change the L value clock wise to 85, 80, 75, 70, 75 an 80.
+
+Use a background color that will match perfectly to a white text and icon. 
+Place a simple white icon on top of the background. 
+Use an icon height of 40px, a vertical position of 127px and center the icon horizontaly.
+
+###Pattern Design
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/backgroundPattern.png "Pattern background")
-- vary the background a little bit
 
-###Version 3
+This design is a modification of the first design above. 
+Add some darker elements to the background. 
+See some inspiration here.
+
+###Theme Design
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/backgroundTheme.png "Thene background")
-- create a unique background
-- theme related
-- add an icon on top
-- change the text color, use the same as the icon
-- pay attantion the text is fully readable
 
-###Version 4
+Create an unique background that display a theme. 
+Also add an icon on top. 
+You can also change the color of the text and the icon (but use the same for text and icon). 
+Pay attention that the text is fully readable (check the contrast to the background).
+
+###Full Design
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/backgroundFull.png "Full background")
-- plane unique background
-- without an icon
+
+Create an unique background like above but without the icon. 
+You can be most creative!
 
 ## Location
 
