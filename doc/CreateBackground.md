@@ -1,7 +1,5 @@
 # Create a new background image
 
-THIS TEXT IS UNDER CONSTRUCTION!!!
-
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/cardsOverview.png "Overview")
 
 Every displayed card has two sides, a front and a back. 
