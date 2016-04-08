@@ -76,31 +76,45 @@ And use this folder if you need to contribute to a special license.
 >```
 // icon of the city data portal
 /app/vienna/data.wien.gv.at.svg
+```
+>```
 // icon of the creator of the cards
 /app/berlin/codeforberlin.svg
+```
+>```
 // a CC-BY copyright image
 /app/vienna/fd3b5bee-bef4-4acd-8ea8-fc9d24aa024f.svg
 ```
 
 # Register new Background
 
-/js/config.js
+When you are finished with the creation of the new background file you must register it to the system. 
+All background images in the common ```/app/img``` folder are registered in the JSON file ```/app/js/config.js```.
+
+>```
+/app/js/config.js
+```
+
+>```
 var config = config || {
 	templates: [
 		{
-			'frontBackground': 'img/sun.svg',
+			'frontBackground': 'img/tree.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
 		}
 	]
 };
+```
 
-JSON file
-Only images in /img/
-White text (mostly)
+Create an entry (just copy an existing entry) in the ```config.templates``` array. 
+Enter your image path to the ```frontBackground``` property. 
+Leave all other values untouched. 
+If you want to change the text color from white to another color, change the property ```frontColor```.
 
 ## License
 
-CC-0
-Source in commit message
+Create a new background image with the CC-0 license. 
+If you use an existing icon or existing image elements these must also in CC-0 license (or equal). 
+Please document the used image sources in the git commit message.
