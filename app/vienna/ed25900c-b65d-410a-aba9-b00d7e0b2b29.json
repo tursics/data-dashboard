@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/ed25900c-b65d-410a-aba9-b00d7e0b2b29",
+		"title": "VIE-Migrationsströme seit 2002",
+		"description": "VIE-Migrationsströme gegenüber Wien nach Nationalität und Geschlecht seit 2002",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 23 - Wirtschaft, Arbeit und Statistik",
+		"author": "",
+		"created": "2016-04-01",
+		"updated": "2016-04-01"
+	},
+	"front": {
+		"textTop": "Der Frauenanteil liegt bei",
+		"textBottom": "(Zuzüge aus dem Ausland)",
+		"value": "~45",
+		"unit": "%",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/refugees.svg",
+		"color": "#fecb32"
+	},
+	"back": {
+		"text": "Die Migrationsströme aller An- und Abmeldungen von Wohnsitzen erfassen die Meldebehörden.",
+		"color": "#000000",
+		"cssClass": "refugees"
+	}
+}
