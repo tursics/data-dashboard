@@ -1,4 +1,4 @@
-# Daten-Waben
+# Datenwaben
 
 Show an #OpenData data dashboard of various cities. See the result of the [visualization](http://daten-waben.tursics.de/).
 
