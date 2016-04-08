@@ -63,15 +63,24 @@ You can be most creative!
 
 ## Location
 
-Common
-- /img/
+Most icons are located in the commons ```/app/img``` folder.
 
-Special
-- /city/
-  - city
-  - creator
-  - CC-BY protected city special
-    - icon of vienna
+>```
+/app/img/*.svg
+```
+
+Some special icons located in the ```/app/city``` subfolder. 
+Use this location if the icon should be used only once, in one city. 
+And use this folder if you need to contribute to a special license.
+
+>```
+// icon of the city data portal
+/app/vienna/data.wien.gv.at.svg
+// icon of the creator of the cards
+/app/berlin/codeforberlin.svg
+// a CC-BY copyright image
+/app/vienna/fd3b5bee-bef4-4acd-8ea8-fc9d24aa024f.svg
+```
 
 # Register new Background
 
