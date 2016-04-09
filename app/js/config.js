@@ -15,6 +15,13 @@ var config = config || {
 			path: 'berlin',
 			badge: 'Alpha',
 			group: 'city'
+		},
+		{
+			name: 'Moers',
+			country: 'Germany',
+			path: 'moers',
+			badge: 'Alpha',
+			group: 'city'
 		}/*,
 		{
 			name: 'Open Data Portal Österreich',

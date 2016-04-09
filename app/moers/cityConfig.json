@@ -1,0 +1,21 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "moers/oberbaumbrucke-968607.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/moers/ckan.php",
+		"ckan_but_send_no_CORS_header": "https://www.offenesdatenportal.de/api/3/action/organization_activity_list?id=moers"
+	},
+	"cards": [
+		"moers/berlin-opendata.json",
+		"moers/code-for-berlin.json",
+		"moers/help.json",
+
+		"moers/a7056a8a-ea10-41fd-afb2-62d022aec517.json",
+		"moers/ba4837c3-9e96-4260-aaaf-528af931ab04.json"
+	]
+}
