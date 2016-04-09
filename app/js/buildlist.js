@@ -313,10 +313,14 @@ function getUpdates(feedUrl, ckanUrl) {
 								status: 'new'
 							};
 						} else {
+							var description = node.description;
+							if (typeof description === 'undefined') {
+								description = node.notes;
+							}
 							item = {
 								title: node.title.trim(),
 								link: datasetUrl,
-								description: node.description.trim(),
+								description: description.trim(),
 								pubDate: node.metadata_modified.trim().split('T')[0],
 								author: node.author.trim(),
 								json: '',

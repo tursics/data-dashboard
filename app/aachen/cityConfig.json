@@ -1,0 +1,19 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "aachen/oberbaumbrucke-968607.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/aachen/ckan.php",
+		"ckan_but_send_no_CORS_header": "http://offenedaten.aachen.de/api/3/action/current_package_list_with_resources"
+	},
+	"cards": [
+		"aachen/berlin-opendata.json",
+		"aachen/code-for-berlin.json",
+		"aachen/help.json"
+
+	]
+}

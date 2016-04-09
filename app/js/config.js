@@ -17,6 +17,13 @@ var config = config || {
 			group: 'city'
 		},
 		{
+			name: 'Aachen',
+			country: 'Germany',
+			path: 'aachen',
+			badge: 'Alpha',
+			group: 'city'
+		},
+		{
 			name: 'Moers',
 			country: 'Germany',
 			path: 'moers',
