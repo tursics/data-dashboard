@@ -262,7 +262,12 @@ function getUpdates(feedUrl, ckanUrl) {
 
 	if (typeof ckanUrl !== 'undefined') {
 		ckan = true;
-		url = ckanUrl + '&limit=400';
+		if( 0 < ckanUrl.lastIndexOf('.php')) {
+			// it's a hack
+			url = ckanUrl;
+		} else {
+			url = ckanUrl + '&limit=400';
+		}
 	}
 	$.ajax(url)
 		.done(function (data) {
@@ -276,29 +281,50 @@ function getUpdates(feedUrl, ckanUrl) {
 
 			config.feed = [];
 			if (ckan) {
+				if (typeof data === 'string') {
+					data = $.parseJSON(data);
+				}
 				for (i = 0; i < data.result.length; ++i) {
 					node = data.result[i];
-					datasetUrl = url.split('/api/')[0] + '/dataset/' + node.object_id.trim();
+					var objectId = node.object_id;
+					if (typeof objectId === 'undefined') {
+						objectId = node.id;
+					}
+					datasetUrl = url.split('/api/')[0] + '/dataset/' + objectId.trim();
 
 					for (found = 0; found < objList.length; ++found) {
-						if (objList[found] === node.object_id) {
+						if (objList[found] === objectId) {
 							break;
 						}
 					}
 
 					if (found >= objList.length) {
-						objList.push(node.object_id);
-						item = {
-							title: node.data['package'].title.trim(),
-							link: datasetUrl,
-							description: node.data['package'].notes.trim(),
-							pubDate: node.timestamp.trim().split('T')[0],
-							author: node.data['package'].maintainer.trim(),
-							json: '',
-							background: '',
-							front: '',
-							status: 'new'
-						};
+						objList.push(objectId);
+						if (typeof node.object_id !== 'undefined') {
+							item = {
+								title: node.data['package'].title.trim(),
+								link: datasetUrl,
+								description: node.data['package'].notes.trim(),
+								pubDate: node.timestamp.trim().split('T')[0],
+								author: node.data['package'].maintainer.trim(),
+								json: '',
+								background: '',
+								front: '',
+								status: 'new'
+							};
+						} else {
+							item = {
+								title: node.title.trim(),
+								link: datasetUrl,
+								description: node.description.trim(),
+								pubDate: node.metadata_modified.trim().split('T')[0],
+								author: node.author.trim(),
+								json: '',
+								background: '',
+								front: '',
+								status: 'new'
+							};
+						}
 
 						config.feed.push(item);
 					}
