@@ -36,6 +36,7 @@ function fillBuildCardWithMetadata() {
 
 	function fillCKANData(data, link) {
 		data = data || {};
+		console.log(data.result);
 		data.result = data.result || {};
 		data.result.title = data.result.title || '';
 		data.result.notes = data.result.notes || '';
@@ -81,11 +82,14 @@ function fillBuildCardWithMetadata() {
 
 	$.ajax(url)
 		.done(function (json) {
+			if (typeof json === 'string') {
+				json = $.parseJSON(json);
+			}
+
 			if (isCKAN) {
 				fillCKANData(json, $('#inputMetaLink').val());
 			} else {
-				var data = $.parseJSON(json);
-				fillRSSData(data);
+				fillRSSData(json);
 			}
 		})
 		.fail(function (jqXHR, textStatus) {
@@ -168,8 +172,11 @@ function fillBuildCardByOldValues(url) {
 
 	$.ajax(url)
 		.done(function (json) {
-			var data = $.parseJSON(json);
-			fillData(data);
+			if (typeof json === 'string') {
+				json = $.parseJSON(json);
+			}
+
+			fillData(json);
 		})
 		.fail(function (jqXHR, textStatus) {
 			if ('parsererror' === textStatus) {
@@ -363,8 +370,11 @@ function buildCards(cardObj) {
 		url += '&file=' + encodeURIComponent(str);
 		$.ajax(url)
 			.done(function (json) {
-				var data = $.parseJSON(json);
-				showMessage('success' === data.status);
+				if (typeof json === 'string') {
+					json = $.parseJSON(json);
+				}
+
+				showMessage('success' === json.status);
 			})
 			.fail(function (jqXHR, textStatus) {
 				if ('parsererror' === textStatus) {
