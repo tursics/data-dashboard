@@ -1,0 +1,34 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin"
+},
+"portal":{
+	"url":"http://codefor.berlin",
+	"title":"Code for Germany, OK Lab Berlin",
+	"description":"Willkommen beim Berliner OK Lab! Wir arbeiten in verschiedenen Gruppen an Projekten rund um Open Data und Civic Tech. Wir kommen aus ganz verschiedenen Bereichen, entsprechend behandeln auch die Projekte an denen wir arbeiten ganz unterschiedliche Themen.",
+	"license":"",
+	"licenseURL":"",
+	"attribution":"",
+	"author":"",
+	"created":"2014-02",
+	"updated":"2016-01-25"
+},
+"front":{
+	"textTop":"",
+	"textBottom":"",
+	"value":"",
+	"unit":"",
+	"changePerDay":0,
+	"format":"",
+	"background":"img/codeforberlin.svg",
+	"color":"",
+	"cssClass":""
+},
+"back":{
+	"text":"Diese Grafik entstand bei Code for Berlin, der ehrenamtlichen Daten-Community.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}
