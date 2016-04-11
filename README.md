@@ -7,7 +7,7 @@ Show an #OpenData data dashboard of various cities. See the result of the [visua
 ## Redeployment
 
 - Eine neue [Stadt](../master/doc/CreateCity.md) erstellen
-- Eine neue [Wabe](../master/doc/CreateCard.md) erstellen
+- Create a [new card](../master/doc/CreateCard.md) erstellen
 - Create a [new background image](../master/doc/CreateBackground.md)
 - Create a [new translation](../master/doc/CreateTranslation.md)
 
