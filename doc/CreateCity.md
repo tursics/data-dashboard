@@ -12,7 +12,8 @@ Bis dahin arbeite ich an einer einfacheren Lösung - und an der Doku hier.
 
 |City name|Data portal links|Enable CORS|
 |:---|:---|:---|
-|Aachen |http://offenedaten.aachen.de/api/3/action/current_package_list_with_resources|No|
+|Aachen |http://offenedaten.aachen.de/|Yes|
+|       |[api/3/action/current_package_list_with_resources](http://offenedaten.aachen.de/api/3/action/current_package_list_with_resources)||
 |Cologne|http://offenedaten-koeln.de/|No|
 |       |[/api/3/action/current_package_list_with_resources](http://offenedaten-koeln.de/api/3/action/current_package_list_with_resources)||
 |       |[/api/3/action/package_show?id=**ID**](http://offenedaten-koeln.de/api/3/action/package_show?id=)||
