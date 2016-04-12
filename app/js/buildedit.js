@@ -36,15 +36,21 @@ function fillBuildCardWithMetadata() {
 
 	function fillCKANData(data, link) {
 		data = data || {};
-		console.log(data.result);
 		data.result = data.result || {};
+
+		if (typeof data.result['0'] !== 'undefined') {
+			data.result = data.result['0'];
+		}
+
 		data.result.title = data.result.title || '';
 		data.result.notes = data.result.notes || '';
 		data.result.license_id = data.result.license_id || '';
+		data.result.license_title = data.result.license_title || '';
 		data.result.metadata_created = data.result.metadata_created || '';
 		data.result.metadata_modified = data.result.metadata_modified || '';
 		data.result.maintainer = data.result.maintainer || '';
 		data.result.maintainer_email = data.result.maintainer_email || '';
+		data.result.url = data.result.url || link;
 
 		if ('cc-by' === data.result.license_id) {
 			$('#inputMetaLicenseCCBY').click();
@@ -52,17 +58,20 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBY').click();
 		} else if ('cc-by-sa' === data.result.license_id) {
 			$('#inputMetaLicenseCCBYSA').click();
+		} else if (('' === data.result.license_id) && ('cc-by' === data.result.license_title)) {
+			$('#inputMetaLicenseCCBY').click();
 		} else {
 			$('#inputMetaLicenseOther').click();
 		}
-		$('#inputMetaLink').val(link).change();
-		$('#buttonOpen').attr('href', link);
+		$('#inputMetaLink').val(data.result.url).change();
+		$('#buttonOpen').attr('href', data.result.url);
 		$('#inputMetaTitle').val(data.result.title).change();
 		$('#inputMetaDescription').val(data.result.notes).change();
 		$('#inputMetaAttribution').val(data.result.maintainer).change();
 		$('#inputMetaMail').val(data.result.maintainer_email).change();
 		$('#inputMetaCreated').val(data.result.metadata_created.split('T')[0]).change();
 		$('#inputMetaUpdated').val(data.result.metadata_modified.split('T')[0]).change();
+		$('#inputBackTop').val(data.result.notes).change();
 	}
 
 	var url = $('#inputMetaLink').val(),
@@ -75,7 +84,10 @@ function fillBuildCardWithMetadata() {
 		return;
 	}
 
-	if (typeof cityConfig.data.ckan !== 'undefined') {
+	if (typeof cityConfig.data.ckanPackageShow !== 'undefined') {
+		isCKAN = true;
+		url = cityConfig.data.ckanPackageShow + '?id=' + url.split('/dataset/')[1];
+	} else if (typeof cityConfig.data.ckan !== 'undefined') {
 		isCKAN = true;
 		url = url.split('/dataset/')[0] + '/api/3/action/package_show?id=' + url.split('/dataset/')[1];
 	}
