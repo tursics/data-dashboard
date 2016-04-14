@@ -1,0 +1,19 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "bonn/aachen-927531.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/bonn/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/bonn/ckanPackageShow.php"
+	},
+	"cards": [
+		"bonn/berlin-opendata.json",
+		"bonn/code-for-berlin.json",
+		"bonn/help.json"
+
+	]
+}
