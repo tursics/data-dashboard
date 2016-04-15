@@ -21,6 +21,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBY').click();
 		} else if ('http://creativecommons.org/licenses/by-sa/3.0/de/' === data.licenseUrl) {
 			$('#inputMetaLicenseCCBYSA').click();
+		} else if ('https://www.govdata.de/dl-de/by-2-0' === data.licenseUrl) {
+			$('#inputMetaLicenseDLDEBY20').click();
 		} else {
 			$('#inputMetaLicenseOther').click();
 		}
@@ -58,6 +60,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBY').click();
 		} else if ('cc-by-sa' === data.result.license_id) {
 			$('#inputMetaLicenseCCBYSA').click();
+		} else if ('dl-de-by-2.0' === data.result.license_id) {
+			$('#inputMetaLicenseDLDEBY20').click();
 		} else if (('' === data.result.license_id) && ('cc-by' === data.result.license_title)) {
 			$('#inputMetaLicenseCCBY').click();
 		} else {
@@ -609,6 +613,7 @@ function buildCards(cardObj) {
 	str += '<ul class="dropdown-menu">';
 	str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, ' + dict.licenseCCBY + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, ' + dict.licenseCCBYSA + '</a></li>';
+	str += '<li><a href="#" id="inputMetaLicenseDLDEBY20">DL-DE/BY-2.0, ' + dict.licenseDLDEBY20 + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseOther">' + dict.licenseOther + '</a></li>';
 	str += '</ul>';
 	str += '</div>';
@@ -716,6 +721,9 @@ function buildCards(cardObj) {
 	});
 	$('#inputMetaLicenseCCBYSA').click(function () {
 		$('#inputMetaLicense').html('CC BY-SA <span class="caret"></span>');
+	});
+	$('#inputMetaLicenseDLDEBY20').click(function () {
+		$('#inputMetaLicense').html('DL-DE/BY-2.0 <span class="caret"></span>');
 	});
 	$('#inputMetaLicenseOther').click(function () {
 		$('#inputMetaLicense').html(dict.licenseOther + ' <span class="caret"></span>');

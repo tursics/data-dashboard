@@ -50,6 +50,8 @@ function about() {
 					license = dict.licenseCCBY;
 				} else if ('http://creativecommons.org/licenses/by-sa/3.0/de/' === url) {
 					license = dict.licenseCCBYSA;
+				} else if ('https://www.govdata.de/dl-de/by-2-0' === url) {
+					license = dict.licenseDLDEBY20;
 				}
 				str += '<div class="panel-heading"><h3 class="panel-title">' + license + '</h3></div>';
 				str += '<div class="panel-body">';
