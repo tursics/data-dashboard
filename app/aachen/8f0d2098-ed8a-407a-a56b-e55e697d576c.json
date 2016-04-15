@@ -15,14 +15,14 @@
 		"updated": ""
 	},
 	"front": {
-		"textTop": "Die älteste Baustelle in Aachen ist ",
+		"textTop": "Die älteste Baustelle ist ",
 		"textBottom": "alt ",
 		"value": "1030",
 		"unit": "Tage ",
-		"changePerDay": "1",
+		"changePerDay": "",
 		"format": "int",
 		"background": "img/blueprintcard.svg",
-		"color": " none"
+		"color": "#fff"
 	},
 	"back": {
 		"text": "Seitdem erneuert die STAWAG in der Körbergasse  die Entsorgungsleitungen",

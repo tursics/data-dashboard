@@ -16,7 +16,7 @@
 	},
 	"front": {
 		"textTop": "Trocken bleibt man an ",
-		"textBottom": "Bushaltestellen ",
+		"textBottom": "der Bushaltestellen ",
 		"value": "50 ",
 		"unit": "% ",
 		"changePerDay": "0",
