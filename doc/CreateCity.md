@@ -14,7 +14,7 @@ Bis dahin arbeite ich an einer einfacheren Lösung - und an der Doku hier.
 |:---|:---|:---|
 |Aachen |http://offenedaten.aachen.de/|No|
 |       |[api/3/action/current_package_list_with_resources](http://offenedaten.aachen.de/api/3/action/current_package_list_with_resources)||
-|Bonn   |http://opendata.bonn.de/|?|
+|Bonn   |http://opendata.bonn.de/|No|
 |       |[/api/3/action/current_package_list_with_resources](http://opendata.bonn.de/api/3/action/current_package_list_with_resources)||
 |Cologne|http://offenedaten-koeln.de/|No|
 |       |[/api/3/action/current_package_list_with_resources](http://offenedaten-koeln.de/api/3/action/current_package_list_with_resources)||
@@ -24,6 +24,10 @@ Bis dahin arbeite ich an einer einfacheren Lösung - und an der Doku hier.
 |       |[/katalog/api/3/action/organization_activity_list?id=stadt-wien](https://www.data.gv.at/katalog/api/3/action/organization_activity_list?id=stadt-wien)||
 |       |[/katalog/api/3/action/package_show?id=**ID**](https://www.data.gv.at/katalog/api/3/action/package_show?id=)||
 |       |[/katalog/api/dataset/**ID**](https://www.data.gv.at/katalog/api/dataset/)||
+||||
+|NRW    |https://open.nrw/|Yes|
+|       |[/api/3/action/organization_activity_list?id=nrw](https://open.nrw/api/3/action/organization_activity_list?id=nrw)||
+||||
 |Berlin |http://daten.berlin.de/datensaetze/rss.xml|No|
 
 ?limit=400
