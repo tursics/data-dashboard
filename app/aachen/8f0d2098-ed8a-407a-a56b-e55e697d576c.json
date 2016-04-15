@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://daten-waben.tursics.de/aachen/ckan.php/dataset/8f0d2098-ed8a-407a-a56b-e55e697d576c",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Die älteste Baustelle in Aachen ist ",
+		"textBottom": "alt ",
+		"value": "1030",
+		"unit": "Tage ",
+		"changePerDay": "1",
+		"format": "int",
+		"background": "img/blueprintcard.svg",
+		"color": " none"
+	},
+	"back": {
+		"text": "Seitdem erneuert die STAWAG in der Körbergasse  die Entsorgungsleitungen",
+		"color": "",
+		"cssClass": ""
+	}
+}

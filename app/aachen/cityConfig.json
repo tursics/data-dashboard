@@ -11,9 +11,14 @@
 		"ckan_but_send_no_CORS_header": "http://offenedaten.aachen.de/api/3/action/current_package_list_with_resources"
 	},
 	"cards": [
-		"aachen/berlin-opendata.json",
+		"aachen/offenedaten.aachen.json",
 		"aachen/code-for-berlin.json",
-		"aachen/help.json"
+		"aachen/help.json",
 
+		"aachen/34835389-9e6e-47fc-b1a9-deb5a42e8a9d.json",
+		"aachen/8f0d2098-ed8a-407a-a56b-e55e697d576c.json",
+		"aachen/8e381443-34a0-434f-9a0b-f668dce29f4d.json",
+		"aachen/0ad68a60-8c7f-4e75-8476-c672cd08e94d.json",
+		"aachen/8d6b6b7c-34dd-4207-b9b2-ce455b90144c.json"
 	]
 }

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://daten-waben.tursics.de/aachen/ckan.php/dataset/8d6b6b7c-34dd-4207-b9b2-ce455b90144c",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Das letzte Mal im Jahr ",
+		"textBottom": "gewachsen ",
+		"value": "1998",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Mehr interessante Fakten rund um Aachen im Statistischen Jahrbuch der Stadt Aachen 2012/13",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://daten-waben.tursics.de/aachen/ckan.php/dataset/0ad68a60-8c7f-4e75-8476-c672cd08e94d",
+		"title": "Aufstellung der Haltestellen und Fahrgastunterstände des Stadtgebietes",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Frau Lech ",
+		"author": "offenedaten@mail.aachen.de",
+		"created": "26.02.2016 ",
+		"updated": "18.09.2015"
+	},
+	"front": {
+		"textTop": "Trocken bleibt man an ",
+		"textBottom": "Bushaltestellen ",
+		"value": "50 ",
+		"unit": "% ",
+		"changePerDay": "0",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Wo man Bushaltestellen in Aachen mit und ohne Unterstand findet erfährt man hier.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
