@@ -290,7 +290,12 @@ function getUpdates(feedUrl, ckanUrl) {
 					if (typeof objectId === 'undefined') {
 						objectId = node.id;
 					}
-					datasetUrl = url.split('/api/')[0] + '/dataset/' + objectId.trim();
+
+					if (typeof cityConfig.data.ckanDataset !== 'undefined') {
+						datasetUrl = cityConfig.data.ckanDataset + objectId.trim();
+					} else {
+						datasetUrl = url.split('/api/')[0] + '/dataset/' + objectId.trim();
+					}
 
 					for (found = 0; found < objList.length; ++found) {
 						if (objList[found] === objectId) {

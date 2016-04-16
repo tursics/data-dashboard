@@ -52,7 +52,6 @@ function fillBuildCardWithMetadata() {
 		data.result.metadata_modified = data.result.metadata_modified || '';
 		data.result.maintainer = data.result.maintainer || '';
 		data.result.maintainer_email = data.result.maintainer_email || '';
-		data.result.url = data.result.url || link;
 
 		if ('cc-by' === data.result.license_id) {
 			$('#inputMetaLicenseCCBY').click();
@@ -67,8 +66,8 @@ function fillBuildCardWithMetadata() {
 		} else {
 			$('#inputMetaLicenseOther').click();
 		}
-		$('#inputMetaLink').val(data.result.url).change();
-		$('#buttonOpen').attr('href', data.result.url);
+		$('#inputMetaLink').val(link).change();
+		$('#buttonOpen').attr('href', link);
 		$('#inputMetaTitle').val(data.result.title).change();
 		$('#inputMetaDescription').val(data.result.notes).change();
 		$('#inputMetaAttribution').val(data.result.maintainer).change();

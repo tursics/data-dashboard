@@ -8,7 +8,8 @@
 	},
 	"data": {
 		"ckan": "http://daten-waben.tursics.de/aachen/ckan.php",
-		"ckan_but_send_no_CORS_header": "http://offenedaten.aachen.de/api/3/action/current_package_list_with_resources"
+		"ckanPackageShow": "http://daten-waben.tursics.de/aachen/ckanPackageShow.php",
+		"ckanDataset": "http://offenedaten.aachen.de/dataset/"
 	},
 	"cards": [
 		"aachen/offenedaten.aachen.json",
