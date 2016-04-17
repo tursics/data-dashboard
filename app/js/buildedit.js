@@ -55,6 +55,11 @@ function fillBuildCardWithMetadata() {
 		data.result.maintainer = data.result.maintainer || '';
 		data.result.maintainer_email = data.result.maintainer_email || '';
 
+		if ((typeof data.result.url !== 'undefined') && ((cityConfig.data.ckanDataset + encodeURIComponent(data.result.name)) == data.result.url)) {
+			// The url "/dataset/ID" does not work, use the url "/dataset/name".
+			link = data.result.url;
+		}
+
 		if ('cc-by' === data.result.license_id) {
 			$('#inputMetaLicenseCCBY').click();
 		} else if ('cc-by-at-30' === data.result.license_id) {
