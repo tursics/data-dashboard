@@ -34,6 +34,8 @@ Version 2: Common CKAN with multiple cities
 |       |[/dataset/**ID**](http://offenesdatenportal.de/dataset/)||
 |NRW    |https://open.nrw/|Yes|
 |       |[/api/3/action/organization_activity_list?id=nrw](https://open.nrw/api/3/action/organization_activity_list?id=nrw)||
+|       |[/api/3/action/package_show?id=**ID**](https://open.nrw/api/3/action/package_show?id=)||
+|       |[/dataset/**ID**](https://open.nrw/dataset/)||
 |Vienna |https://www.data.gv.at/|Yes|
 |       |[/katalog/api/3/action/organization_activity_list?id=stadt-wien](https://www.data.gv.at/katalog/api/3/action/organization_activity_list?id=stadt-wien)||
 |       |[/katalog/api/3/action/package_show?id=**ID**](https://www.data.gv.at/katalog/api/3/action/package_show?id=)||
