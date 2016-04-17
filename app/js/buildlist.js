@@ -281,6 +281,7 @@ function getUpdates(feedUrl, ckanUrl) {
 				objectId = '',
 				ckanTitle = '',
 				ckanDescription = '',
+				ckanDate = '',
 				ckanAuthor = '';
 
 			config.feed = [];
@@ -316,50 +317,42 @@ function getUpdates(feedUrl, ckanUrl) {
 
 							ckanTitle = node.data['package'].title;
 							ckanDescription = node.data['package'].notes;
+							ckanDate = node.timestamp;
 							ckanAuthor = node.data['package'].maintainer;
-
-							if (ckanTitle === 'undefined') {
-								ckanTitle = '';
-							}
-							if (ckanDescription === 'undefined') {
-								ckanDescription = '';
-							}
-							if ((ckanAuthor === 'undefined') || (ckanAuthor === null)) {
-								ckanAuthor = '';
-							}
-
-							item = {
-								title: ckanTitle.trim(),
-								link: datasetUrl,
-								description: ckanDescription.trim(),
-								pubDate: node.timestamp.trim().split('T')[0],
-								author: ckanAuthor.trim(),
-								json: '',
-								background: '',
-								front: '',
-								status: 'new'
-							};
 						} else {
 							ckanTitle = node.title;
 							ckanDescription = node.description;
-							if (ckanTitle === 'undefined') {
-								ckanTitle = '';
-							}
 							if (typeof ckanDescription === 'undefined') {
 								ckanDescription = node.notes;
 							}
-							item = {
-								title: ckanTitle.trim(),
-								link: datasetUrl,
-								description: ckanDescription.trim(),
-								pubDate: node.metadata_modified.trim().split('T')[0],
-								author: node.author.trim(),
-								json: '',
-								background: '',
-								front: '',
-								status: 'new'
-							};
+							ckanDate = node.metadata_modified;
+							ckanAuthor = node.author;
 						}
+
+						if ((ckanTitle === 'undefined') || (ckanTitle === null)) {
+							ckanTitle = '';
+						}
+						if ((ckanDescription === 'undefined') || (ckanDescription === null)) {
+							ckanDescription = '';
+						}
+						if ((ckanDate === 'undefined') || (ckanDate === null)) {
+							ckanDate = '';
+						}
+						if ((ckanAuthor === 'undefined') || (ckanAuthor === null)) {
+							ckanAuthor = '';
+						}
+
+						item = {
+							title: ckanTitle.trim(),
+							link: datasetUrl,
+							description: ckanDescription.trim(),
+							pubDate: ckanDate.trim().split('T')[0],
+							author: ckanAuthor.trim(),
+							json: '',
+							background: '',
+							front: '',
+							status: 'new'
+						};
 
 						config.feed.push(item);
 					}
