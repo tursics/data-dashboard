@@ -46,7 +46,9 @@ function about() {
 				license = url;
 
 			if (attributions.length > 0) {
-				if ('http://creativecommons.org/licenses/by/3.0/de/' === url) {
+				if ('https://creativecommons.org/publicdomain/zero/1.0/' === url) {
+					license = dict.licenseCCZero;
+				} else if ('http://creativecommons.org/licenses/by/3.0/de/' === url) {
 					license = dict.licenseCCBY;
 				} else if ('http://creativecommons.org/licenses/by-sa/3.0/de/' === url) {
 					license = dict.licenseCCBYSA;

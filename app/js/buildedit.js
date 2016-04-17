@@ -17,7 +17,9 @@ function fillBuildCardWithMetadata() {
 		data.attribution = data.attribution || '';
 		data.mail = data.mail || '';
 
-		if ('http://creativecommons.org/licenses/by/3.0/de/' === data.licenseUrl) {
+		if ('https://creativecommons.org/publicdomain/zero/1.0/' === data.licenseUrl) {
+			$('#inputMetaLicenseCCZero').click();
+		} else if ('http://creativecommons.org/licenses/by/3.0/de/' === data.licenseUrl) {
 			$('#inputMetaLicenseCCBY').click();
 		} else if ('http://creativecommons.org/licenses/by-sa/3.0/de/' === data.licenseUrl) {
 			$('#inputMetaLicenseCCBYSA').click();
@@ -70,6 +72,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseDLDEBY20').click();
 		} else if ('dl-de-zero-2.0' === data.result.license_id) {
 			$('#inputMetaLicenseDLDEZero20').click();
+		} else if (('' === data.result.license_id) && ('cc-zero' === data.result.license_title)) {
+			$('#inputMetaLicenseCCZero').click();
 		} else if (('' === data.result.license_id) && ('cc-by' === data.result.license_title)) {
 			$('#inputMetaLicenseCCBY').click();
 		} else {
@@ -303,7 +307,10 @@ function composeBuildCardData() {
 	};
 
 	license = $('#inputMetaLicense').html().split('<span')[0].trim();
-	if ('CC BY' === license) {
+	if ('CC 0' === license) {
+		data.portal.license = dict.licenseCCZero;
+		data.portal.licenseURL = 'https://creativecommons.org/publicdomain/zero/1.0/';
+	} else if ('CC BY' === license) {
 		data.portal.license = dict.licenseCCBY;
 		data.portal.licenseURL = 'http://creativecommons.org/licenses/by/3.0/de/';
 	} else if ('CC BY-SA' === license) {
@@ -619,6 +626,7 @@ function buildCards(cardObj) {
 	str += '<button class="btn btn-default dropdown-toggle" type="button" id="inputMetaLicense" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
 	str += dict.licenseOther + ' <span class="caret"></span></button>';
 	str += '<ul class="dropdown-menu">';
+	str += '<li><a href="#" id="inputMetaLicenseCCZero">CC 0, ' + dict.licenseCCZero + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, ' + dict.licenseCCBY + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, ' + dict.licenseCCBYSA + '</a></li>';
 	str += '<li role="separator" class="divider"></li>';
@@ -726,6 +734,9 @@ function buildCards(cardObj) {
 		elem.removeClass().addClass('front').addClass(template.backClass);
 
 		return false;
+	});
+	$('#inputMetaLicenseCCZero').click(function () {
+		$('#inputMetaLicense').html('CC 0 <span class="caret"></span>');
 	});
 	$('#inputMetaLicenseCCBY').click(function () {
 		$('#inputMetaLicense').html('CC BY <span class="caret"></span>');

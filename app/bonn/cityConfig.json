@@ -8,7 +8,8 @@
 	},
 	"data": {
 		"ckan": "http://daten-waben.tursics.de/bonn/ckan.php",
-		"ckanPackageShow": "http://daten-waben.tursics.de/bonn/ckanPackageShow.php"
+		"ckanPackageShow": "http://daten-waben.tursics.de/bonn/ckanPackageShow.php",
+		"ckanDataset": "http://opendata.bonn.de/dataset/"
 	},
 	"cards": [
 		"bonn/berlin-opendata.json",

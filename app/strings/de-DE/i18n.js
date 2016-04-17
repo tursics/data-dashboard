@@ -36,6 +36,7 @@ gDict.de = {
 	'progressDone': 'fertig',
 	'progressCorrupt': 'fehlerhaft',
 
+	'licenseCCZero': 'Creative Commons Gemeinfreiheit Lizenz',
 	'licenseCCBY': 'Creative Commons Namensnennung Lizenz',
 	'licenseCCBYSA': 'Creative Commons Namensnennung Lizenz - unter gleichen Bedingungen',
 	'licenseDLDEBY20': 'Datenlizenz Deutschland – Namensnennung – Version 2.0',
