@@ -277,7 +277,11 @@ function getUpdates(feedUrl, ckanUrl) {
 				node = null,
 				datasetUrl = '',
 				found = 0,
-				item = {};
+				item = {},
+				objectId = '',
+				ckanTitle = '',
+				ckanDescription = '',
+				ckanAuthor = '';
 
 			config.feed = [];
 			if (ckan) {
@@ -286,7 +290,7 @@ function getUpdates(feedUrl, ckanUrl) {
 				}
 				for (i = 0; i < data.result.length; ++i) {
 					node = data.result[i];
-					var objectId = node.object_id;
+					objectId = node.object_id;
 					if (typeof objectId === 'undefined') {
 						objectId = node.id;
 					}
@@ -306,26 +310,48 @@ function getUpdates(feedUrl, ckanUrl) {
 					if (found >= objList.length) {
 						objList.push(objectId);
 						if (typeof node.object_id !== 'undefined') {
+							if (typeof node.data['package'] === 'undefined') {
+								continue;
+							}
+
+							ckanTitle = node.data['package'].title;
+							ckanDescription = node.data['package'].notes;
+							ckanAuthor = node.data['package'].maintainer;
+
+							if (ckanTitle === 'undefined') {
+								ckanTitle = '';
+							}
+							if (ckanDescription === 'undefined') {
+								ckanDescription = '';
+							}
+							if ((ckanAuthor === 'undefined') || (ckanAuthor === null)) {
+								ckanAuthor = '';
+							}
+
 							item = {
-								title: node.data['package'].title.trim(),
+								title: ckanTitle.trim(),
 								link: datasetUrl,
-								description: node.data['package'].notes.trim(),
+								description: ckanDescription.trim(),
 								pubDate: node.timestamp.trim().split('T')[0],
-								author: node.data['package'].maintainer.trim(),
+								author: ckanAuthor.trim(),
 								json: '',
 								background: '',
 								front: '',
 								status: 'new'
 							};
 						} else {
-							var description = node.description;
-							if (typeof description === 'undefined') {
-								description = node.notes;
+							ckanTitle = node.title;
+							ckanDescription = node.description;
+							if (ckanTitle === 'undefined') {
+								ckanTitle = '';
+							}
+							if (typeof ckanDescription === 'undefined') {
+								ckanDescription = node.notes;
 							}
 							item = {
-								title: node.title.trim(),
+								title: ckanTitle.trim(),
 								link: datasetUrl,
-								description: description.trim(),
+								description: ckanDescription.trim(),
 								pubDate: node.metadata_modified.trim().split('T')[0],
 								author: node.author.trim(),
 								json: '',
