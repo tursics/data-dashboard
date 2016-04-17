@@ -8,7 +8,8 @@
 	},
 	"data": {
 		"ckan": "http://daten-waben.tursics.de/moers/ckan.php",
-		"ckan_but_send_no_CORS_header": "https://www.offenesdatenportal.de/api/3/action/organization_activity_list?id=moers"
+		"ckanPackageShow": "http://daten-waben.tursics.de/moers/ckanPackageShow.php",
+		"ckanDataset": "http://offenesdatenportal.de/dataset/"
 	},
 	"cards": [
 		"moers/opendata-moers.json",

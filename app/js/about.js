@@ -52,6 +52,8 @@ function about() {
 					license = dict.licenseCCBYSA;
 				} else if ('https://www.govdata.de/dl-de/by-2-0' === url) {
 					license = dict.licenseDLDEBY20;
+				} else if ('https://www.govdata.de/dl-de/zero-2-0' === url) {
+					license = dict.licenseDLDEZero20;
 				}
 				str += '<div class="panel-heading"><h3 class="panel-title">' + license + '</h3></div>';
 				str += '<div class="panel-body">';

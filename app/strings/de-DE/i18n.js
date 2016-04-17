@@ -39,6 +39,7 @@ gDict.de = {
 	'licenseCCBY': 'Creative Commons Namensnennung Lizenz',
 	'licenseCCBYSA': 'Creative Commons Namensnennung Lizenz - unter gleichen Bedingungen',
 	'licenseDLDEBY20': 'Datenlizenz Deutschland – Namensnennung – Version 2.0',
+	'licenseDLDEZero20': 'Datenlizenz Deutschland – Zero – Version 2.0',
 	'licenseOther': 'Andere Lizenz',
 
 	'aboutTitle': 'Infos über die Datenwaben',

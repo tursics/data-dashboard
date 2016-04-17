@@ -23,6 +23,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBYSA').click();
 		} else if ('https://www.govdata.de/dl-de/by-2-0' === data.licenseUrl) {
 			$('#inputMetaLicenseDLDEBY20').click();
+		} else if ('https://www.govdata.de/dl-de/zero-2-0' === data.licenseUrl) {
+			$('#inputMetaLicenseDLDEZero20').click();
 		} else {
 			$('#inputMetaLicenseOther').click();
 		}
@@ -61,6 +63,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBYSA').click();
 		} else if ('dl-de-by-2.0' === data.result.license_id) {
 			$('#inputMetaLicenseDLDEBY20').click();
+		} else if ('dl-de-zero-2.0' === data.result.license_id) {
+			$('#inputMetaLicenseDLDEZero20').click();
 		} else if (('' === data.result.license_id) && ('cc-by' === data.result.license_title)) {
 			$('#inputMetaLicenseCCBY').click();
 		} else {
@@ -612,7 +616,10 @@ function buildCards(cardObj) {
 	str += '<ul class="dropdown-menu">';
 	str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, ' + dict.licenseCCBY + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, ' + dict.licenseCCBYSA + '</a></li>';
+	str += '<li role="separator" class="divider"></li>';
+	str += '<li><a href="#" id="inputMetaLicenseDLDEZero20">DL-DE/Zero-2.0, ' + dict.licenseDLDEZero20 + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseDLDEBY20">DL-DE/BY-2.0, ' + dict.licenseDLDEBY20 + '</a></li>';
+	str += '<li role="separator" class="divider"></li>';
 	str += '<li><a href="#" id="inputMetaLicenseOther">' + dict.licenseOther + '</a></li>';
 	str += '</ul>';
 	str += '</div>';
@@ -723,6 +730,9 @@ function buildCards(cardObj) {
 	});
 	$('#inputMetaLicenseDLDEBY20').click(function () {
 		$('#inputMetaLicense').html('DL-DE/BY-2.0 <span class="caret"></span>');
+	});
+	$('#inputMetaLicenseDLDEZero20').click(function () {
+		$('#inputMetaLicense').html('DL-DE/Zero-2.0 <span class="caret"></span>');
 	});
 	$('#inputMetaLicenseOther').click(function () {
 		$('#inputMetaLicense').html(dict.licenseOther + ' <span class="caret"></span>');
