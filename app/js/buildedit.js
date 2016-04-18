@@ -57,7 +57,7 @@ function fillBuildCardWithMetadata() {
 		data.result.maintainer = data.result.maintainer || '';
 		data.result.maintainer_email = data.result.maintainer_email || '';
 
-		if ((typeof data.result.url !== 'undefined') && ((cityConfig.data.ckanDataset + encodeURIComponent(data.result.name)) == data.result.url)) {
+		if ((typeof data.result.url !== 'undefined') && ((cityConfig.data.ckanDataset + encodeURIComponent(data.result.name)) === data.result.url)) {
 			// The url "/dataset/ID" does not work, use the url "/dataset/name".
 			link = data.result.url;
 		}
@@ -87,7 +87,10 @@ function fillBuildCardWithMetadata() {
 		$('#inputMetaMail').val(data.result.maintainer_email).change();
 		$('#inputMetaCreated').val(data.result.metadata_created.split('T')[0]).change();
 		$('#inputMetaUpdated').val(data.result.metadata_modified.split('T')[0]).change();
-		$('#inputBackTop').val(data.result.notes).change();
+
+		if ('' === $('#inputBackTop').val()) {
+			$('#inputBackTop').val(data.result.notes).change();
+		}
 	}
 
 	var url = $('#inputMetaLink').val(),
