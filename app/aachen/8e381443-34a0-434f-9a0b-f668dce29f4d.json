@@ -4,15 +4,15 @@
 		"city": "Aachen"
 	},
 	"portal": {
-		"url": "http://daten-waben.tursics.de/aachen/ckan.php/dataset/8e381443-34a0-434f-9a0b-f668dce29f4d",
-		"title": "Parkscheinautomaten 2015 ",
-		"description": "Parkscheinautomaten inkl. Zonenzuordnung (falls vorhanden); jährliche Akutalisierung",
+		"url": "http://offenedaten.aachen.de/dataset/8e381443-34a0-434f-9a0b-f668dce29f4d",
+		"title": "Parkscheinautomaten 2015",
+		"description": "Parkscheinautomaten inkl. Zonenzuordnung (falls vorhanden); jährliche Akutalisierung; letzte Aktualisierung: 26.02.2015",
 		"license": "",
 		"licenseURL": "",
-		"attribution": "Frau Lech ",
+		"attribution": "Frau Lech",
 		"author": "offenedaten@mail.aachen.de",
-		"created": "26. Februar 2015 ",
-		"updated": "26. Februar 2016 "
+		"created": "2015-02-26",
+		"updated": "2016-02-26"
 	},
 	"front": {
 		"textTop": "Ein Ticket kann man an ",
@@ -21,12 +21,12 @@
 		"unit": "",
 		"changePerDay": "0",
 		"format": "int",
-		"background": "img/blueprintcard.svg",
-		"color": "#ffffff"
+		"background": "img/map.svg",
+		"color": "#c83737"
 	},
 	"back": {
-		"text": "Die Daten zu Parkscheinautomaten und ihrer Zonenzuordnung wird jährlich aktualisiert. ",
-		"color": "#ffffff",
-		"cssClass": "blueprint"
+		"text": "Die Daten zu Parkscheinautomaten und ihrer Zonenzuordnung wird jährlich aktualisiert.",
+		"color": "#000000",
+		"cssClass": ""
 	}
 }
