@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Bonn"
+	},
+	"portal": {
+		"url": "http://opendata.bonn.de/dataset/uno-bonn",
+		"title": "Uno in Bonn",
+		"description": "Informationsdienst - Medientext zum UN-Standort Bonn",
+		"license": "Creative Commons Gemeinfreiheit Lizenz",
+		"licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+		"attribution": "Offene Daten Bonn",
+		"author": "opendata@bonn.de",
+		"created": "2014-06-12",
+		"updated": "2015-08-17"
+	},
+	"front": {
+		"textTop": "Für Fledermäuse hat die",
+		"textBottom": "extra eine Sekretärin",
+		"value": "UNO",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/animals.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Weitere Sekretariate und Programme der Vereinten Nationen in der UNO-Stadt stehen hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

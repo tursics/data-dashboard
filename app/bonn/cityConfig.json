@@ -14,7 +14,8 @@
 	"cards": [
 		"bonn/berlin-opendata.json",
 		"bonn/code-for-berlin.json",
-		"bonn/help.json"
+		"bonn/help.json",
 
+		"bonn/uno-bonn.json"
 	]
 }
