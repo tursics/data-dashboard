@@ -4,7 +4,7 @@
 	"city":"Moers"
 },
 "portal":{
-	"url":"https://www.offenesdatenportal.de/organization/moers",
+	"url":"http://offenesdatenportal.de/organization/moers",
 	"title":"Datenportal der Moerser Stadtverwaltung",
 	"description":"Im Moerser Datenportal stellt die Stadtverwaltung Datensätze der öffentlichen Verwaltung zur Verfügung.",
 	"license":"",
