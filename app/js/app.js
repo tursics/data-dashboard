@@ -26,6 +26,10 @@ function dateValueFormatter(startValue, changePerDay, unit, seconds) {
 		usedUnit = dict.formatUnitDays;
 	}
 
+	if (diff < 0) {
+		diff = -diff;
+	}
+
 	if (diff < 1) {
 		value = '- ' + usedUnit;
 	} else if (diff < 2) {

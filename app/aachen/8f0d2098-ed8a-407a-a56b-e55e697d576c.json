@@ -16,11 +16,11 @@
 	},
 	"front": {
 		"textTop": "Die älteste Baustelle ist ",
-		"textBottom": "Tage alt ",
-		"value": "1030",
+		"textBottom": "alt",
+		"value": "2013-06-17",
 		"unit": "",
 		"changePerDay": "",
-		"format": "int",
+		"format": "date",
 		"background": "img/map.svg",
 		"color": "#c83737"
 	},
