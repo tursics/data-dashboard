@@ -296,7 +296,9 @@ function getUpdates(feedUrl, ckanUrl) {
 						objectId = node.id;
 					}
 
-					if (typeof cityConfig.data.ckanDataset !== 'undefined') {
+					if ((typeof cityConfig.data.ckanPrettyURL !== 'undefined') && cityConfig.data.ckanPrettyURL) {
+						datasetUrl = node.url.trim();
+					} else if (typeof cityConfig.data.ckanDataset !== 'undefined') {
 						datasetUrl = cityConfig.data.ckanDataset + objectId.trim();
 					} else {
 						datasetUrl = url.split('/api/')[0] + '/dataset/' + objectId.trim();
@@ -357,7 +359,6 @@ function getUpdates(feedUrl, ckanUrl) {
 						config.feed.push(item);
 					}
 				}
-//				console.log(objList.length);
 			} else {
 				xml = $(data);
 				xml.find('item').each(function () {

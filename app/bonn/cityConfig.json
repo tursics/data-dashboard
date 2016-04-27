@@ -9,13 +9,15 @@
 	"data": {
 		"ckan": "http://daten-waben.tursics.de/bonn/ckan.php",
 		"ckanPackageShow": "http://daten-waben.tursics.de/bonn/ckanPackageShow.php",
-		"ckanDataset": "http://opendata.bonn.de/dataset/"
+		"ckanDataset": "http://opendata.bonn.de/dataset/",
+		"ckanPrettyURL": true
 	},
 	"cards": [
 		"bonn/berlin-opendata.json",
 		"bonn/code-for-berlin.json",
 		"bonn/help.json",
 
+		"bonn/wochenmaerkte.json",
 		"bonn/uno-bonn.json"
 	]
 }
