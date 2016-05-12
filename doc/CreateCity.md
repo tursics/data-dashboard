@@ -24,7 +24,16 @@ Version 1: City CKAN
 |       |[/api/3/action/current_package_list_with_resources](http://offenedaten-koeln.de/api/3/action/current_package_list_with_resources)||
 |       |[/api/3/action/package_show?id=**ID**](http://offenedaten-koeln.de/api/3/action/package_show?id=)||
 
-Version 2: Common CKAN with multiple cities
+Version 2: Subset CKAN
+
+|City name|Data portal links|Enable CORS|
+|:---|:---|:---|
+|Amsterdam  |http://data.amsterdam.nl/|No|
+|       |[/api/3/action/package_list](http://data.amsterdam.nl/api/3/action/package_list)||
+|       |[/api/3/action/package_show?id=**ID**](http://data.amsterdam.nl/api/3/action/package_show?id=)||
+|       |[/dataset/**ID**](http://data.amsterdam.nl/dataset/)||
+
+Version 3: Common CKAN with multiple cities
 
 |City name|Data portal links|Enable CORS|
 |:---|:---|:---|
@@ -41,7 +50,7 @@ Version 2: Common CKAN with multiple cities
 |       |[/katalog/api/3/action/package_show?id=**ID**](https://www.data.gv.at/katalog/api/3/action/package_show?id=)||
 |       |[/katalog/api/dataset/**ID**](https://www.data.gv.at/katalog/api/dataset/)||
 
-Version 3: Hidden CKAN
+Version 4: Hidden CKAN
 
 |City name|Data portal links|Enable CORS|
 |:---|:---|:---|
