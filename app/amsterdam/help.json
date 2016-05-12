@@ -1,0 +1,32 @@
+{
+	"location":{
+		"country":"Germany",
+		"city":"Berlin"
+	},
+	"portal":{
+		"url":"",
+		"title":"Hilfe",
+		"description":"",
+		"license":"",
+		"licenseURL":"",
+		"attribution":"",
+		"author":"",
+		"created":"",
+		"updated":""
+	},
+	"front":{
+		"textTop":"Du brauchst",
+		"textBottom":"> Klicke hier <",
+		"value":"Hilfe?",
+		"unit":"",
+		"changePerDay":0,
+		"format":"text",
+		"background":"img/lifebelt.svg",
+		"color":"#000000"
+	},
+	"back":{
+		"text":"Du kannst auf jedes Sechseck klicken - für mehr Informationen. Mit <button type='button' class='btn btn-default btn-xs btn-flipp'><i class='dashboardicon'>&#xe805;</i></button> kommst du wieder zurück.",
+		"color":"#000000",
+		"cssClass":""
+	}
+}
