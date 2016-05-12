@@ -56,7 +56,9 @@ function showUpdateTable() {
 		}
 
 		days = parseInt((Date.now() - new Date(config.feed[i].pubDate)) / 1000 / 60 / 60 / 24, 10);
-		if (0 === days) {
+		if (isNaN(days)) {
+			str += '<td>-</td>';
+		} else if (0 === days) {
 			str += '<td>' + dict.formatToday + '</td>';
 		} else if (1 === days) {
 			str += '<td>' + dict.formatYesterday + '</td>';
@@ -295,6 +297,9 @@ function getUpdates(feedUrl, ckanUrl) {
 					if (typeof objectId === 'undefined') {
 						objectId = node.id;
 					}
+					if ((typeof objectId === 'undefined') && (typeof node === 'string')) {
+						objectId = node;
+					}
 
 					if ((typeof cityConfig.data.ckanPrettyURL !== 'undefined') && cityConfig.data.ckanPrettyURL) {
 						datasetUrl = node.url.trim();
@@ -321,7 +326,7 @@ function getUpdates(feedUrl, ckanUrl) {
 							ckanDescription = node.data['package'].notes;
 							ckanDate = node.timestamp;
 							ckanAuthor = node.data['package'].maintainer;
-						} else {
+						} else if (typeof node.title !== 'undefined') {
 							ckanTitle = node.title;
 							ckanDescription = node.description;
 							if (typeof ckanDescription === 'undefined') {
@@ -329,6 +334,11 @@ function getUpdates(feedUrl, ckanUrl) {
 							}
 							ckanDate = node.metadata_modified;
 							ckanAuthor = node.author;
+						} else {
+							ckanTitle = node;
+							ckanDescription = '';
+							ckanDate = '';
+							ckanAuthor = '';
 						}
 
 						if ((ckanTitle === 'undefined') || (ckanTitle === null)) {
