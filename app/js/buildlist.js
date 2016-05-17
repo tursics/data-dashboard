@@ -264,7 +264,7 @@ function getUpdates(feedUrl, ckanUrl) {
 
 	if (typeof ckanUrl !== 'undefined') {
 		ckan = true;
-		if( 0 < ckanUrl.lastIndexOf('.php')) {
+		if (0 < ckanUrl.lastIndexOf('.php')) {
 			// it's a hack
 			url = ckanUrl;
 		} else {
