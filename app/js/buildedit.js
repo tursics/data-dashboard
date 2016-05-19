@@ -68,6 +68,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBY').click();
 		} else if ('cc-by-sa' === data.result.license_id) {
 			$('#inputMetaLicenseCCBYSA').click();
+		} else if ('cc-nc' === data.result.license_id) {
+			$('#inputMetaLicenseCCBYNC').click();
 		} else if ('dl-de-by-2.0' === data.result.license_id) {
 			$('#inputMetaLicenseDLDEBY20').click();
 		} else if ('dl-de-zero-2.0' === data.result.license_id) {
@@ -319,6 +321,9 @@ function composeBuildCardData() {
 	} else if ('CC BY-SA' === license) {
 		data.portal.license = dict.licenseCCBYSA;
 		data.portal.licenseURL = 'http://creativecommons.org/licenses/by-sa/3.0/de/';
+	} else if ('CC BY-NC' === license) {
+		data.portal.license = dict.licenseCCBYNC;
+		data.portal.licenseURL = 'http://creativecommons.org/licenses/by-nc/4.0/';
 	}
 
 	format = $('#inputFrontFormat').html().split('<span')[0].trim();
@@ -632,6 +637,7 @@ function buildCards(cardObj) {
 	str += '<li><a href="#" id="inputMetaLicenseCCZero">CC 0, ' + dict.licenseCCZero + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseCCBY">CC BY, ' + dict.licenseCCBY + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseCCBYSA">CC BY-SA, ' + dict.licenseCCBYSA + '</a></li>';
+	str += '<li><a href="#" id="inputMetaLicenseCCBYNC">CC BY-NC, ' + dict.licenseCCBYNC + '</a></li>';
 	str += '<li role="separator" class="divider"></li>';
 	str += '<li><a href="#" id="inputMetaLicenseDLDEZero20">DL-DE/Zero-2.0, ' + dict.licenseDLDEZero20 + '</a></li>';
 	str += '<li><a href="#" id="inputMetaLicenseDLDEBY20">DL-DE/BY-2.0, ' + dict.licenseDLDEBY20 + '</a></li>';
@@ -746,6 +752,9 @@ function buildCards(cardObj) {
 	});
 	$('#inputMetaLicenseCCBYSA').click(function () {
 		$('#inputMetaLicense').html('CC BY-SA <span class="caret"></span>');
+	});
+	$('#inputMetaLicenseCCBYNC').click(function () {
+		$('#inputMetaLicense').html('CC BY-NC <span class="caret"></span>');
 	});
 	$('#inputMetaLicenseDLDEBY20').click(function () {
 		$('#inputMetaLicense').html('DL-DE/BY-2.0 <span class="caret"></span>');
