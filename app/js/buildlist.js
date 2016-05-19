@@ -124,18 +124,21 @@ function parseFeed() {
 			rec = (recent * 100 / max);
 
 		$('#progressDanger').text((parseInt(err * 10, 10) / 10) + '%' + (err > 20 ? ' ' + dict.progressCorrupt : ''));
+		$('#statisticDanger .badge').text(error);
 		if ((0 < err) && (err < 3)) {
 			err = 3;
 		}
 		sum += err;
 
 		$('#progressSuccess').text((parseInt(fin * 10, 10) / 10) + '%' + (fin > 20 ? ' ' + dict.progressDone : ''));
+		$('#statisticSuccess .badge').text(fine);
 		if ((0 < fin) && (fin < 3)) {
 			fin = 3;
 		}
 		sum += fin;
 
 		$('#progressWarning').text((parseInt(dir * 10, 10) / 10) + '%' + (dir > 20 ? ' ' + dict.progressDirty : ''));
+		$('#statisticWarning .badge').text(dirty);
 		if ((0 < dir) && (dir < 3)) {
 			dir = 3;
 		}
@@ -143,10 +146,13 @@ function parseFeed() {
 
 		rec = Math.min(rec, 100 - sum);
 		$('#progressInfo').text((parseInt(rec * 10, 10) / 10) + '%' + (rec > 20 ? ' ' + dict.progressNew : ''));
+		$('#statisticInfo .badge').text(recent);
 		if ((0 < rec) && (rec < 3)) {
 			rec = 3;
 		}
 		sum += rec;
+
+		$('#statisticSum .badge').text(error + fine + dirty + recent);
 
 		$('#progressInfo').css('width', rec + '%');
 		$('#progressBar').css('width', (100 - Math.max(sum, 100)) + '%');
@@ -248,6 +254,14 @@ function getUpdates(feedUrl, ckanUrl) {
 	str += '<div id="progressInfo" class="progress-bar progress-bar-info" style="width:0%;"></div>';
 	str += '<div id="progressDanger" class="progress-bar progress-bar-danger" style="width:0%;"></div>';
 	str += '<div id="progressBar" class="progress-bar progress-bar-striped active" style="width:100%;"></div>';
+	str += '</div>';
+
+	str += '<div class="statistic">';
+	str += '<span id="statisticSum" class="label label-default">' + dict.updateCollected + ' <span class="badge">0</span></span> ';
+	str += '<span id="statisticSuccess" class="label label-success">' + dict.progressDone + ' <span class="badge">0</span></span> ';
+	str += '<span id="statisticWarning" class="label label-warning">' + dict.progressDirty + ' <span class="badge">0</span></span> ';
+	str += '<span id="statisticInfo" class="label label-info">' + dict.progressNew + ' <span class="badge">0</span></span> ';
+	str += '<span id="statisticDanger" class="label label-danger">' + dict.progressCorrupt + ' <span class="badge">0</span></span> ';
 	str += '</div>';
 
 	str += '</div>';
