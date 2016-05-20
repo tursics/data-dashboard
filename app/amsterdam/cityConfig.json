@@ -12,6 +12,8 @@
 		"ckanDataset": "http://data.amsterdam.nl/dataset/"
 	},
 	"cards": [
+		"amsterdam/data.amsterdam.json",
+		"amsterdam/code-for-berlin.json",
 		"amsterdam/help.json",
 
 		"amsterdam/activiteiten.php"
