@@ -39,6 +39,7 @@ gDict.de = {
 	'licenseCCZero': 'Creative Commons Gemeinfreiheit Lizenz',
 	'licenseCCBY': 'Creative Commons Namensnennung Lizenz',
 	'licenseCCBYSA': 'Creative Commons Namensnennung Lizenz - unter gleichen Bedingungen',
+	'licenseCCBYNC': 'Creative Commons Namensnennung Lizenz - nicht kommerziell',
 	'licenseDLDEBY20': 'Datenlizenz Deutschland – Namensnennung – Version 2.0',
 	'licenseDLDEZero20': 'Datenlizenz Deutschland – Zero – Version 2.0',
 	'licenseOther': 'Andere Lizenz',
@@ -110,6 +111,11 @@ gDict.de = {
 
 	'errorReadingCard': 'Fehlerhaftes lesen von',
 	'errorNoCityInfo': 'Das hätte nicht passieren dürfen. Irgendetwas funktioniert hier nicht. Bitte kontaktiere mich.',
+
+	'helpcardTextTop': 'Du brauchst',
+	'helpcardTextMiddle': 'Hilfe?',
+	'helpcardTextBottom': '> Klicke hier <',
+	'helpcardTextBack': 'Du kannst auf jedes Sechseck klicken - für mehr Informationen. Mit %%backButton%% kommst du wieder zurück.',
 
 	'foo': ''
 };
