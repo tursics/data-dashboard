@@ -286,6 +286,33 @@ figure.blueprint:after {
 	border-top-color: #2c71b8;
 }
 
+.statistic .label .badge {
+	background-color: #fff;
+	color: #777;
+	line-height: .6em;
+	margin-left: .3em;
+}
+
+.statistic .label-danger .badge {
+	color: #d9534f;
+}
+
+.statistic .label-info .badge {
+	color: #5bc0de;
+}
+
+.statistic .label-warning .badge {
+	color: #f0ad4e;
+}
+
+.statistic .label-success .badge {
+	color: #5cb85c;
+}
+
+.statistic .label-default .badge {
+	color: #777;
+}
+
 .animate-spin {
 	-webkit-animation: spin 2s infinite linear;
 	   -moz-animation: spin 2s infinite linear;
