@@ -15,6 +15,11 @@ function about() {
 		if (left.licenseURL === right.licenseURL) {
 			return (left.attribution > right.attribution) ? 1 : -1;
 		}
+		if ('' === left.licenseURL) {
+			return 1;
+		} else if ('' === right.licenseURL) {
+			return -1;
+		}
 		return left.licenseURL > right.licenseURL ? 1 : -1;
 	}
 
@@ -52,10 +57,14 @@ function about() {
 					license = dict.licenseCCBY;
 				} else if ('http://creativecommons.org/licenses/by-sa/3.0/de/' === url) {
 					license = dict.licenseCCBYSA;
+				} else if ('http://creativecommons.org/licenses/by-nc/4.0/' === url) {
+					license = dict.licenseCCBYNC;
 				} else if ('https://www.govdata.de/dl-de/by-2-0' === url) {
 					license = dict.licenseDLDEBY20;
 				} else if ('https://www.govdata.de/dl-de/zero-2-0' === url) {
 					license = dict.licenseDLDEZero20;
+				} else {
+					license = dict.licenseOther;
 				}
 				str += '<div class="panel-heading"><h3 class="panel-title">' + license + '</h3></div>';
 				str += '<div class="panel-body">';
@@ -79,11 +88,20 @@ function about() {
 				str += addLicense(currectLicence, attribution);
 				currectLicence = config.feed[i].licenseURL;
 				currentAttribution = config.feed[i].attribution;
-				attribution = '"' + config.feed[i].attribution + '"';
+				if ('' !== config.feed[i].attribution) {
+					attribution = '"' + config.feed[i].attribution + '"';
+				} else {
+					attribution = '';
+				}
 			} else {
 				if (currentAttribution !== config.feed[i].attribution) {
 					currentAttribution = config.feed[i].attribution;
-					attribution += ', "' + config.feed[i].attribution + '"';
+					if ('' !== attribution) {
+						attribution += ', ';
+					}
+					if ('' !== config.feed[i].attribution) {
+						attribution += '"' + config.feed[i].attribution + '"';
+					}
 				}
 			}
 		}
@@ -126,7 +144,15 @@ function about() {
 								colorizeCard(data);
 								return;
 							}
-						} catch (e) {
+						} catch (e1) {
+							try {
+								if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
+									cityConfig.cards[config.loaded] = cityConfig.meta.uri + url;
+									--config.loaded;
+									return;
+								}
+							} catch (e2) {
+							}
 						}
 					}
 					++error;
