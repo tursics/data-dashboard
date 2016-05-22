@@ -289,7 +289,15 @@ function loadCards() {
 							createCard(data);
 							return;
 						}
-					} catch (e) {
+					} catch (e1) {
+						try {
+							if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
+								cityConfig.cards[config.loaded] = cityConfig.meta.uri + url;
+								--config.loaded;
+								return;
+							}
+						} catch (e2) {
+						}
 					}
 				}
 				createNewCard({
@@ -312,7 +320,7 @@ function loadCards() {
 							loadCards();
 
 							window.setTimeout(function () {
-								elem.toggleClass('flipped');
+								elem.removeClass('flipped');
 
 								window.setTimeout(function () {
 									$('figure', elem).css('display', 'block');

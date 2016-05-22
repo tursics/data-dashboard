@@ -210,7 +210,15 @@ function parseFeed() {
 								colorizeCard(data, url);
 								return;
 							}
-						} catch (e) {
+						} catch (e1) {
+							try {
+								if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
+									cityConfig.cards[config.loaded] = cityConfig.meta.uri + url;
+									--config.loaded;
+									return;
+								}
+							} catch (e2) {
+							}
 						}
 					}
 					++error;
