@@ -2,7 +2,7 @@ var gDict = gDict || [];
 
 gDict.en = {
 	'appLang': 'en-US',
-	'brandTitle': 'Datenwaben',
+	'brandTitle': 'Data Honeycombs',
 
 	'formatDecimal': '.',
 	'formatThousandDot': ',',
@@ -18,7 +18,7 @@ gDict.en = {
 
 	'formatTitleString': 'Text',
 	'formatTitleInt': 'Integer',
-	'formatTitleCurrency': 'Euro sum',
+	'formatTitleCurrency': 'Euro',
 	'formatTitleDate': 'Date',
 
 	'menuCards': 'Data',
@@ -36,17 +36,18 @@ gDict.en = {
 	'progressDone': 'ready',
 	'progressCorrupt': 'incorrect',
 
-	'licenseCCZero': 'Creative Commons Gemeinfreiheit Lizenz',
+	'licenseCCZero': 'Creative Commons "No Rights Reserved" license',
 	'licenseCCBY': 'Creative Commons Attribution license',
 	'licenseCCBYSA': 'Creative Commons Attribution-ShareAlike license',
+	'licenseCCBYNC': 'Creative Commons Attribution-NonCommercial license',
 	'licenseDLDEBY20': 'Data licence Germany – Attribution – Version 2.0',
 	'licenseDLDEZero20': 'Data licence Germany - Zero - Version 2.0',
 	'licenseOther': 'Other license',
 
-	'aboutTitle': 'Info about Datenwaben',
+	'aboutTitle': 'Info about Data Honeycombs',
 	'aboutIntroduction': 'In many cities and communes, open data portals developed over the last years. The contained data are accessible for citizens - but hard to grasp. Which information is hidden inside CSV or SHP files? To get an impression of the contents and the thematic diversity, the contents need to be visualized in a simple way.',
 	'aboutHexagon': 'Each data record of the data portal is visualized in a hexagon. Sometimes you will only see one interesting aspect, sometimes average figures and sometimes dynamically changing values (showing the changes since the display of the graphic). By clicking on the hexagon, you will get a small description. On the back, you will also find a direct link to the data record in the data portal.',
-	'aboutFeedback': 'Datenwaben is a beta version. Not all data records are visualized yet. But also due to the constant updating and creation of new data records, this project can never be concluded. Because of the great amount of data records, incorrect information may appear. If you spot any irregularities, please get in touch with us at any time. We also highly appreciate general feedback.',
+	'aboutFeedback': 'Data Honeycombs is a beta version. Not all data records are visualized yet. But also due to the constant updating and creation of new data records, this project can never be concluded. Because of the great amount of data records, incorrect information may appear. If you spot any irregularities, please get in touch with us at any time. We also highly appreciate general feedback.',
 	'aboutLicense': 'The code of the application is accessible to the public and licensed as open source.',
 	'aboutContribute': 'You are interested in more open data applications or want to contribute yourself? In Berlin, we regularly meet at <a href="http://codefor.berlin">Code for Berlin</a>, to realize open data projects together - we look forward to your visit!',
 	'aboutAttribution': 'The data records from the open data portal are available to everyone for free and for any usage. There are only minimal restrictions you have to respect. Usually, this is restricted to the mentioning of the data supplier. And this is exactly what I would like to do now. Many thanks to:',
@@ -102,9 +103,9 @@ gDict.en = {
 	'editErrorMiddle': 'error',
 	'editErrorBottom': 'occurred',
 
-	'alertReleased': 'Which data are available in my data portal? Datenwaben shows a hexagon for each data record.',
-	'alertBeta': 'The test phase for Datenwaben has started. Feel free to send me an e-mail with errors or improvement requests.',
-	'alertAlpha': 'Datenwaben still is in a very early development state. They are not yet meant for the general public. If you want to be kept up to date, please send me an e-mail.',
+	'alertReleased': 'Which data are available in my data portal? Data Honeycombs shows a hexagon for each data record.',
+	'alertBeta': 'The test phase for Data Honeycombs has started. Feel free to send me an e-mail with errors or improvement requests.',
+	'alertAlpha': 'Data Honeycombs still is in a very early development state. They are not yet meant for the general public. If you want to be kept up to date, please send me an e-mail.',
 	'alertSavedInternet': 'The data have been saved and will be released for everyone after a short (manual) review.',
 	'alertErrorInternet': 'An error has occurred and the data could not be saved. Please download the JSON file and send it to me via e-mail.',
 
@@ -118,4 +119,3 @@ gDict.en = {
 
 	'foo': ''
 };
-
