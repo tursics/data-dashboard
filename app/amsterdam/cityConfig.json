@@ -4,7 +4,8 @@
 		"twitter": "https://twitter.com/tursics/",
 		"github": "https://github.com/tursics/data-dashboard/",
 		"showMenuCity": true,
-		"background": "amsterdam/amsterdam-1269462.jpg"
+		"background": "amsterdam/amsterdam-1269462.jpg",
+		"uri": "http://daten-waben.tursics.de/"
 	},
 	"data": {
 		"ckan": "http://daten-waben.tursics.de/amsterdam/ckan.php",
@@ -16,6 +17,9 @@
 		"amsterdam/code-for-berlin.json",
 		"amsterdam/help.json",
 
-		"amsterdam/activiteiten.php"
+		"amsterdam/rijksmuseum-SK-C-5.json",
+		"amsterdam/activiteiten.php",
+		"amsterdam/rijksmuseum-api.php",
+		"amsterdam/rijksmuseum-SK-A-1718.json"
 	]
 }
