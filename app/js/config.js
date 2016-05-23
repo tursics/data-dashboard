@@ -10,6 +10,20 @@ var config = config || {
 			group: 'city'
 		},
 		{
+			name: 'Aachen',
+			country: 'Germany',
+			path: 'aachen',
+			badge: 'Alpha',
+			group: 'city'
+		},
+		{
+			name: 'Amsterdam',
+			country: 'Netherlands',
+			path: 'amsterdam',
+			badge: 'Alpha',
+			group: 'city'
+		},
+		{
 			name: 'Berlin',
 			country: 'Germany',
 			path: 'berlin',
@@ -17,9 +31,16 @@ var config = config || {
 			group: 'city'
 		},
 		{
-			name: 'Aachen',
+			name: 'Bonn',
 			country: 'Germany',
-			path: 'aachen',
+			path: 'bonn',
+			badge: 'Alpha',
+			group: 'city'
+		},
+		{
+			name: 'Köln',
+			country: 'Germany',
+			path: 'cologne',
 			badge: 'Alpha',
 			group: 'city'
 		},
@@ -29,7 +50,7 @@ var config = config || {
 			path: 'moers',
 			badge: 'Alpha',
 			group: 'city'
-		}/*,
+		} /*,
 		{
 			name: 'Open Data Portal Österreich',
 			country: 'Austria',
@@ -37,6 +58,13 @@ var config = config || {
 			badge: 'Alpha',
 			group: 'portal'
 		}*/
+		,{
+			name: 'NRW',
+			country: 'Germany',
+			path: 'nrw',
+			badge: 'Alpha',
+			group: 'portal'
+		}
 	],
 	templates: [
 		{
@@ -46,13 +74,19 @@ var config = config || {
 			'backClass': ''
 		},
 		{
-			'frontBackground': 'img/water.svg',
+			'frontBackground': 'img/museum.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''
 		},
 		{
 			'frontBackground': 'img/tree.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
+			'frontBackground': 'img/water.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
 			'backClass': ''

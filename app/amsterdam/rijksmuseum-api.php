@@ -31,12 +31,12 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/blueprintcard.svg",
+		"background": "img/museum.svg",
 		"color": "#ffffff"
 	},
 	"back": {
 		"text": "Dazu gibt es noch viele Infos und jede Menge Bilder. Das alles wird über eine API zur Verfügung gestellt.",
-		"color": "#ffffff",
-		"cssClass": "blueprint"
+		"color": "#000000",
+		"cssClass": ""
 	}
 }
