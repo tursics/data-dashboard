@@ -5,7 +5,7 @@
 		"city": "Amsterdam"
 	},
 	"portal": {
-		"url": "http://data.amsterdam.nl/dataset/rijksmuseum-api",
+		"url": "http://data.amsterdam.nl/dataset/a96b7a70-e44e-4dca-8664-a67b357ad499",
 		"title": "Rijksmuseum API",
 		"description": "Ontwikkelaars krijgen automatisch toegang tot de basiscollectie van het Rijksmuseum, ruim 100.000 objecten. Waaronder de Nachtwacht! Van alle objecten is digitaal beeldmateriaal beschikbaar. De datasets in de API komen uit het collectieregistratiesysteem van het Rijksmuseum. Alle informatie wordt dagelijks bijgewerkt en geüpdate. Als er nieuw of beter beeldmateriaal van objecten beschikbaar komt, dan wordt deze ook gelijk via de API beschikbaar gemaakt.",
 		"license": "Creative Commons Namensnennung Lizenz",

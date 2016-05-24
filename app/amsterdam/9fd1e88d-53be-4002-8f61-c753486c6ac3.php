@@ -5,7 +5,7 @@
 		"city": "Amsterdam"
 	},
 	"portal": {
-		"url": "http://data.amsterdam.nl/dataset/actuele_beschikbaarheid_parkeergarages",
+		"url": "http://data.amsterdam.nl/dataset/9fd1e88d-53be-4002-8f61-c753486c6ac3",
 		"title": "Actuele beschikbaarheid Parkeergarages",
 		"description": "<p>Deze feed geeft real-time de actuele beschikbaarheid van parkeergarages en P R-terreinen in Amsterdam.</p>",
 		"license": "Creative Commons Namensnennung Lizenz",

@@ -5,7 +5,7 @@
 		"city": "Amsterdam"
 	},
 	"portal": {
-		"url": "http://data.amsterdam.nl/dataset/actuele_verkeersgegevens_nationaal",
+		"url": "http://data.amsterdam.nl/dataset/f0672be5-5416-46e1-b4a4-e71add4a920b",
 		"title": "Actuele verkeersgegevens (Nationaal)",
 		"description": "<p>De NDW-databank biedt inzicht in de actuele verkeerssituatie op snelwegen, provinciale wegen en doorgaande stedelijke wegen van de deelnemende overheden.De data over actuele verkeersgegevens (intensiteit, snelheid, reistijden, voertuigcategorie&euml;n) en statusgegevens (files, wergwerkzaamheden, etc.) zijn beschikbaar in DATEXII (XML)</p>",
 		"license": "",

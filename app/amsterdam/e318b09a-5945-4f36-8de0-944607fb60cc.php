@@ -5,7 +5,7 @@
 		"city": "Amsterdam"
 	},
 	"portal": {
-		"url": "http://data.amsterdam.nl/dataset/activiteiten",
+		"url": "http://data.amsterdam.nl/dataset/e318b09a-5945-4f36-8de0-944607fb60cc",
 		"title": "Activiteiten",
 		"description": "<p>Alle activiteiten in Amsterdam en omgeving zoals deze door Amsterdam Marketing worden beheerd. Dit bestand wordt dagelijks vernieuwd en bevat steeds de activiteiten vanaf vandaag. Titels en toelichtingen in Nederlands en Engels.</p>",
 		"license": "",

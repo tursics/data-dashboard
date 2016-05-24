@@ -4,7 +4,7 @@
 		"city": "Amsterdam"
 	},
 	"portal": {
-		"url": "http://data.amsterdam.nl/dataset/afvalbakken_stadsdeel_centrum",
+		"url": "http://data.amsterdam.nl/dataset/fbb092f4-a3c1-4cab-91ff-a6e48b74bc50",
 		"title": "Afvalbakken Stadsdeel Centrum",
 		"description": "<p>Overzicht val alle afvalbakken in stadsdeel Centrum. Deze data is ook beschikbaar via CitySDK (api). Eenmalige status quo.</p>",
 		"license": "Creative Commons Namensnennung Lizenz",
