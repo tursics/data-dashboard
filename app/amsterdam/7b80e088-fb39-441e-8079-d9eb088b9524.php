@@ -58,5 +58,14 @@
 		"text": "Die aktuellen und geplanten Baustellen für Fußwege, Straßen, Brücken, Radwegen und so weiter...",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Sidewalks are repaired at",
+			"textBottom": "locations"
+		},
+		"back": {
+			"text": "The current and planned construction of sidewalks, roads, bridges, bike paths, and so on ..."
+		}
 	}
 }
