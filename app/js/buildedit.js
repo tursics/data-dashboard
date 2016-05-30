@@ -172,6 +172,14 @@ function fillBuildCardByOldValues(url) {
 		data.back.background = data.back.background || '';
 		data.back.cssClass = data.back.cssClass || '';
 
+		if (typeof data[dict.appLang] !== 'undefined') {
+			var local = data[dict.appLang];
+			data.front.textTop = local.front.textTop || data.front.textTop;
+			data.front.textBottom = local.front.textBottom || data.front.textBottom;
+			data.front.value = local.front.value || data.front.value;
+			data.back.text = local.back.text || data.back.text;
+		}
+
 		if ('date' === data.front.format) {
 			$('#inputFrontFormatDate').click();
 		} else if ('euro' === data.front.format) {

@@ -118,6 +118,7 @@ function parseFeed() {
 
 	function updateBars() {
 		var sum = 0,
+			datasets = error + fine + dirty + recent,
 			err = (error * 100 / max),
 			fin = (fine * 100 / max),
 			dir = (dirty * 100 / max),
@@ -152,7 +153,7 @@ function parseFeed() {
 		}
 		sum += rec;
 
-		$('#statisticSum .badge').text(error + fine + dirty + recent);
+		$('#statisticSum .badge').text(datasets);
 
 		$('#progressInfo').css('width', rec + '%');
 		$('#progressBar').css('width', (100 - Math.max(sum, 100)) + '%');
@@ -175,6 +176,14 @@ function parseFeed() {
 			data.front.unit = data.front.unit || '';
 			data.front.textBottom = data.front.textBottom || '';
 			data.front.background = data.front.background || '';
+
+			if (typeof data[dict.appLang] !== 'undefined') {
+				var local = data[dict.appLang];
+				data.front.textTop = local.front.textTop || data.front.textTop;
+				data.front.textBottom = local.front.textBottom || data.front.textBottom;
+				data.front.value = local.front.value || data.front.value;
+				data.back.text = local.back.text || data.back.text;
+			}
 
 			for (i = 0; i < config.feed.length; ++i) {
 				if (config.feed[i].link === data.portal.url) {

@@ -243,6 +243,14 @@ function loadCards() {
 		data.portal = data.portal || {};
 		data.portal.url = data.portal.url || '';
 
+		if (typeof data[dict.appLang] !== 'undefined') {
+			var local = data[dict.appLang];
+			data.front.textTop = local.front.textTop || data.front.textTop;
+			data.front.textBottom = local.front.textBottom || data.front.textBottom;
+			data.front.value = local.front.value || data.front.value;
+			data.back.text = local.back.text || data.back.text;
+		}
+
 		var value = data.front.value + ' ' + data.front.unit,
 			valueFormatter = stringValueFormatter,
 			front = '',
@@ -339,6 +347,8 @@ function installInternationalization() {
 	'use strict';
 
 	window.dict = window.dict || gDict.de;
+//	window.dict = window.dict || gDict.en;
+//	window.dict = window.dict || gDict.nl;
 }
 
 //-----------------------------------------------------------------------
@@ -513,10 +523,13 @@ function installCity(callbackFunc) {
 		})
 		.fail(function (jqXHR, textStatus) {
 			if ('parsererror' === textStatus) {
-				var data = $.parseJSON(jqXHR.responseText);
-				if (typeof data.meta !== 'undefined') {
-					cityConfig = data;
-					return;
+				try {
+					var data = $.parseJSON(jqXHR.responseText);
+					if (typeof data.meta !== 'undefined') {
+						cityConfig = data;
+						return;
+					}
+				} catch (e) {
 				}
 			}
 			console.log(dict.errorReadingCard + ' "' + url + '"');
