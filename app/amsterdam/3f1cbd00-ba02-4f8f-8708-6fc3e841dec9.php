@@ -37,5 +37,14 @@
 		"text": "Alle Restaurants und Cafés in Amsterdam und Umgebung, mit Name, Ort, Öffnungszeiten, ...",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Find delicious food",
+			"textBottom": "in and around Amsterdam"
+		},
+		"back": {
+			"text": "All restaurants and cafes in Amsterdam and the surrounding area, including opening hours."
+		}
 	}
 }

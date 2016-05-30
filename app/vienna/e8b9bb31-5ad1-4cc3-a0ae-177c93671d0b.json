@@ -28,5 +28,14 @@
 		"text": "Alle Standorte der Feuerhydranten in Wien stehen in einem Datensatz.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Well spread are",
+			"textBottom": "fire hydrants"
+		},
+		"back": {
+			"text": "All locations of the fire hydrants in Vienna listed in one record."
+		}
 	}
 }

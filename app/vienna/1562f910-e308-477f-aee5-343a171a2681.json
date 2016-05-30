@@ -28,5 +28,14 @@
 		"text": "Es wird die Badewasserqualität von natürlichen Badestellen zur Verfügung gestellt.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "The water quality at",
+			"textBottom": "bathing sites is measured"
+		},
+		"back": {
+			"text": "Vienna provided the water quality of natural bathing sites."
+		}
 	}
 }

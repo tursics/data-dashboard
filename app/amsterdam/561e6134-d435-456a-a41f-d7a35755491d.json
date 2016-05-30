@@ -28,5 +28,14 @@
 		"text": "Experimentelle APIs und APIs im Betatest (inklusive Swagger-Dokumentation) findet man hier:",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Developers will love the",
+			"textBottom": "available Live APIs"
+		},
+		"back": {
+			"text": "Experimental APIs and APIs in the beta test (including Swagger documentation) can be found here:"
+		}
 	}
 }

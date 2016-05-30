@@ -28,5 +28,14 @@
 		"text": "... über eine eigene Solarthermieanlage. Weitere innovative Bauten zum Thema \"Energie\" gibt es hier:",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "The elephants consume",
+			"textBottom": "of warm water for showers"
+		},
+		"back": {
+			"text": "... its own solar thermal system. More innovative buildings on \"Energy\" is available here:"
+		}
 	}
 }

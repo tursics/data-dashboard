@@ -38,5 +38,14 @@
 		"text": "Dazu gibt es noch viele Infos und jede Menge Bilder. Das alles wird über eine API zur Verfügung gestellt.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Everything is online:",
+			"textBottom": "works from Rijksmuseum"
+		},
+		"back": {
+			"text": "Plus, there's lots of information and lots of pictures. All this is provided via an API."
+		}
 	}
 }

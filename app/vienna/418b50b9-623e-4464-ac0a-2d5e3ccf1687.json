@@ -15,7 +15,7 @@
 		"updated": "2016-02-29"
 	},
 	"front": {
-		"textTop": "Ließ ein Buch von",
+		"textTop": "Lies ein Buch von",
 		"textBottom": "kostenlos im Internet",
 		"value": "1678",
 		"unit": "",
@@ -28,5 +28,14 @@
 		"text": "Weitere urheberrechtsfreie Bücher und Handschriften stehen aus der Wienbibliothek bereit.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Read a book of",
+			"textBottom": "for free on the Internet"
+		},
+		"back": {
+			"text": "More books and handwritings in free domain are available from the Vienna Library."
+		}
 	}
 }

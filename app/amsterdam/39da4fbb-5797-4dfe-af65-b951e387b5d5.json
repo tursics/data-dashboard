@@ -28,5 +28,14 @@
 		"text": "Am Hauptbahnhof stehen 16 Plätze für Taxen zur Verfügung. Wo noch? Steht alles  hier:",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Hey, taxi! There are",
+			"textBottom": "taxi stands"
+		},
+		"back": {
+			"text": "At the central station 16 places for taxis are available. Where else? It's all here:"
+		}
 	}
 }

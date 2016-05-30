@@ -43,5 +43,14 @@
 		"text": "Die NDW bietet Live-Daten für Brücken, Fahrstreifen, Baustellen, Unfälle und vieles mehr an.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Currently",
+			"textBottom": "bridges are open"
+		},
+		"back": {
+			"text": "The NDW offers live data for bridges, lanes, road works, accidents and more."
+		}
 	}
 }

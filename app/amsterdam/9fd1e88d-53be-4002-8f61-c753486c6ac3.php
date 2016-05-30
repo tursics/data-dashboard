@@ -51,5 +51,14 @@
 		"text": "Die Echtzeit-Auslastungen der anderen Parkplätze, Parkhäuser und PR-Stellen gibt es hier:",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "At Museumplein",
+			"textBottom": "of parking are free"
+		},
+		"back": {
+			"text": "The live loads of other parking lots, parking garages and PR sites can be found here:"
+		}
 	}
 }

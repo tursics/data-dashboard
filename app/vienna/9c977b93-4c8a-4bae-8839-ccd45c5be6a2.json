@@ -28,5 +28,14 @@
 		"text": "Das steht im Landesgesetzblatt für Wien, Jahrgang 2016, 6. Verordnung.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "An artificial heart will cost",
+			"textBottom": "in public hospitals"
+		},
+		"back": {
+			"text": "This is recorded in the Official Gazette for Vienna, Year 2016, 6. Regulation."
+		}
 	}
 }

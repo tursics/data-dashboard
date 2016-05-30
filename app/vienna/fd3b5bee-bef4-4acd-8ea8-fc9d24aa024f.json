@@ -28,5 +28,14 @@
 		"text": "Piktogramme und Farbdefinitionen für den öffentlichen Verkehr (Wiener Linien) befinden sich hier:",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "",
+			"textBottom": ""
+		},
+		"back": {
+			"text": "Pictograms and color definitions for public transportation (Wiener Linien) are here:"
+		}
 	}
 }

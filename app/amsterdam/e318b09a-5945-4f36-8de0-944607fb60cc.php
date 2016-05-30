@@ -36,5 +36,14 @@
 		"text": "Amsterdam-Marketing aktualisiert diese Liste täglich mit den neusten Angeboten.",
 		"color": "#000000",
 		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Any plans for today?",
+			"textBottom": "offers are available"
+		},
+		"back": {
+			"text": "Amsterdam Marketing update this list daily with the latest offerings."
+		}
 	}
 }
