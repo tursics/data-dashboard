@@ -1,3 +1,4 @@
+<?php header( 'Access-Control-Allow-Origin: *'); ?>
 {
 	"location": {
 		"country": "Austria",
