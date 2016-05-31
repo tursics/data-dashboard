@@ -416,11 +416,20 @@ function installNavigation() {
 		if (-1 === $.inArray(window.navigation.page, ['cards', 'about', 'build'])) {
 			window.navigation.page = 'cards';
 		}
+
+		if ((typeof params.lang !== 'undefined') && (2 === params.lang.length)) {
+			window.navigation.lang = params.lang;
+			window.dict = gDict[params.lang] || window.dict;
+		}
 	}
 
 	function saveNavigation(pushHistory) {
 		var url = '?city=' + window.navigation.city;
 		url += '&page=' + window.navigation.page;
+
+		if (typeof window.navigation.lang !== 'undefined') {
+			url += '&lang=' + window.navigation.lang;
+		}
 
 		try {
 			if (pushHistory) {
