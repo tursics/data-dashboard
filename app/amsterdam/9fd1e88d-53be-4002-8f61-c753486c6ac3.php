@@ -55,7 +55,7 @@
 	"en-US": {
 		"front": {
 			"textTop": "At Museumplein",
-			"textBottom": "of parking are free"
+			"textBottom": "of parking lots are free"
 		},
 		"back": {
 			"text": "The live loads of other parking lots, parking garages and PR sites can be found here:"
