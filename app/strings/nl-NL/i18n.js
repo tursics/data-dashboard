@@ -103,21 +103,19 @@ gDict.nl = {
 	'editErrorMiddle': 'fout',
 	'editErrorBottom': 'optreden',
 
-// todo:
+	'alertReleased': 'Welke data zijn in mijn data portal? De data zeshoeken laten voor elke dataset een zeshoek zien.',
+	'alertBeta': 'De test fase voor de data zeshoeken is begonen. Je kan me een mailtje sturen als je een fout find of een idee heeft.',
+	'alertAlpha': 'De data zeskhoeken is nog in een heel vroeg ontwikkelingsfase. Ze zijn nog niet voor een breed publiek gedacht. Je kan me een mailtje sturen als je een fout find of een idee heeft.',
+	'alertSavedInternet': 'De data is opgeslagen en zal worden vrijgegeven na een korte beoordeling voor iedereen.',
+	'alertErrorInternet': 'Er is een fout opgetreden en de gegevens konden niet worden opgeslagen. Laad de JSON-bestand naar beneden en stuur ze mij via e-mail.',
 
-	'alertReleased': 'Welche Daten stecken in meinem Datenportal? Die Datenwaben zeigen für jeden Datensatz ein Sechseck an.',
-	'alertBeta': 'Die Testphase für die Datenwaben hat begonnen. Du kannst mir gerne eine E-Mail mit Fehlern oder Verbesserungswünschen schicken.',
-	'alertAlpha': 'Die Datenwaben befinden sich noch in einer sehr frühen Entwicklungsphase. Sie sind noch nicht für die breite Öffentlichkeit gedacht. Du kannst mir aber gerne eine E-Mail schicken, damit ich dich auf dem Laufenden halten kann.',
-	'alertSavedInternet': 'Die Daten wurden gespeichert und werden nach einer kurzen (manuellen) Überprüfung für alle freigeschaltet.',
-	'alertErrorInternet': 'Es ist ein Fehler aufgetreten und die Daten konnten nicht gespeichert werden. Lade dir die JSON-Datei herunter und schicke sie mir bitte per E-Mail.',
+	'errorReadingCard': 'Foutieve laden van',
+	'errorNoCityInfo': 'Dat had niet mogen gebeuren. Iets werkt hier niet. Neem dan contact met mij op via email.',
 
-	'errorReadingCard': 'Fehlerhaftes lesen von',
-	'errorNoCityInfo': 'Das hätte nicht passieren dürfen. Irgendetwas funktioniert hier nicht. Bitte kontaktiere mich.',
-
-	'helpcardTextTop': 'Du brauchst',
-	'helpcardTextMiddle': 'Hilfe?',
-	'helpcardTextBottom': '> Klicke hier <',
-	'helpcardTextBack': 'Du kannst auf jedes Sechseck klicken - für mehr Informationen. Mit %%backButton%% kommst du wieder zurück.',
+	'helpcardTextTop': 'Je hoeft',
+	'helpcardTextMiddle': 'Hulp?',
+	'helpcardTextBottom': '> Klik hier <',
+	'helpcardTextBack': 'Je kan op ieder zeshoek voor meer informatie klikken. Met %%backButton%% kom je dan weer terug.',
 
 	'foo': ''
 };
