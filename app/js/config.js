@@ -59,6 +59,13 @@ var config = config || {
 			group: 'portal'
 		}*/
 		,{
+			name: 'Deutsche Bahn',
+			country: 'Germany',
+			path: 'deutschebahn',
+			badge: 'Alpha',
+			group: 'portal'
+		}
+		,{
 			name: 'NRW',
 			country: 'Germany',
 			path: 'nrw',
