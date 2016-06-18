@@ -4,9 +4,9 @@
 		"city": "Deutsche Bahn"
 	},
 	"portal": {
-		"url": "http://data.deutschebahn.com/dataset/85346bea-1758-4b99-881b-70182246d3be",
-		"title": "Serviceeinrichtungen",
-		"description": "Serviceeinrichtungen sind z.B. Abstell- und Zugbildungsanlagen.",
+		"url": "http://data.deutschebahn.com/dataset/22bc997f-67ca-46ed-87b6-1dbda923cc41",
+		"title": "Streckennetz",
+		"description": "Schienenverkehrsnetz gemäß INSPIRE der DB Netz AG.",
 		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Michael Binzen",
@@ -15,17 +15,17 @@
 		"updated": "2016-06-15"
 	},
 	"front": {
-		"textTop": "In Deutschlang gibt es",
-		"textBottom": "Abstellanlagen",
-		"value": "13135",
+		"textTop": "Warst du schon an allen",
+		"textBottom": "Bahnhöfen der Bahn?",
+		"value": "7915",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/train.svg",
-		"color": "#ffffff"
+		"background": "img/busstop.svg",
+		"color": "#008033"
 	},
 	"back": {
-		"text": "Weitere Servieceinrichtung, mit ihrer Länge, den Weichen und Oberleitungen findest du hier:",
+		"text": "Hier findest du alle Bahnhöfe mit ihren Positionen. Aber auch das komplette Streckennetz...",
 		"color": "#000000",
 		"cssClass": ""
 	}

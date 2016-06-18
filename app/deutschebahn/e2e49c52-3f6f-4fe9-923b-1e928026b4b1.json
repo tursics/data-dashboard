@@ -4,9 +4,9 @@
 		"city": "Deutsche Bahn"
 	},
 	"portal": {
-		"url": "http://data.deutschebahn.com/dataset/85346bea-1758-4b99-881b-70182246d3be",
-		"title": "Serviceeinrichtungen",
-		"description": "Serviceeinrichtungen sind z.B. Abstell- und Zugbildungsanlagen.",
+		"url": "http://data.deutschebahn.com/dataset/e2e49c52-3f6f-4fe9-923b-1e928026b4b1",
+		"title": "Aufzugsdaten",
+		"description": "Übersicht Aufzüge DB Station&Service AG.",
 		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Michael Binzen",
@@ -15,17 +15,17 @@
 		"updated": "2016-06-15"
 	},
 	"front": {
-		"textTop": "In Deutschlang gibt es",
-		"textBottom": "Abstellanlagen",
-		"value": "13135",
-		"unit": "",
+		"textTop": "Der schnellste Fahrstuhl fährt",
+		"textBottom": "im Bahnhof Essen-Steele",
+		"value": "151",
+		"unit": "km/h",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/train.svg",
+		"background": "img/health.svg",
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Weitere Servieceinrichtung, mit ihrer Länge, den Weichen und Oberleitungen findest du hier:",
+		"text": "Viele Metadaten zu den Fahrstühlen auf den Bahnhöfen gibt es hier:",
 		"color": "#000000",
 		"cssClass": ""
 	}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/332086f2-b39a-463e-875f-9a2168b8e22c",
+		"title": "Stationsdaten",
+		"description": "Die Stationsdaten enthalten eine Liste der Bahnhöfe inkl. Adressen, Aufgabenträger und Link zu Betriebsstellen.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Gerhard Welter",
+		"author": "gerhard.welter@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2016-06-15"
+	},
+	"front": {
+		"textTop": "Ohne Nahverkehr sind",
+		"textBottom": "Fernbahnhöfe angebunden",
+		"value": "2",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Mehr Bahnhofsdaten zu den Anbindungen, Verkehrsverbünden und Aufgbenträger...",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
