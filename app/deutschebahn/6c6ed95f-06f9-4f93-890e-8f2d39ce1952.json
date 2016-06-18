@@ -21,8 +21,8 @@
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/sun.svg",
-		"color": "#ffffff"
+		"background": "img/moon.svg",
+		"color": "#dce56b"
 	},
 	"back": {
 		"text": "Mehr zu den Zügen und allen Wagenreihungsplänen stellt DB Station & Service bereit.",

@@ -141,6 +141,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/moon.svg',
+			'frontColor': '#dce56b',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/refugees.svg',
 			'frontColor': '#fecb32',
 			'backColor': '#000000',
