@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/6c6ed95f-06f9-4f93-890e-8f2d39ce1952",
+		"title": "Wagenreihungsplan Soll-Daten",
+		"description": "Ein Wagenreihungsplan ist die grafische Darstellung  der Fern- und Nahverkehrszüge eines Bahnhofes, die an einem Gleis ankommen bzw. abfahren. Der Plan gibt detailliert Auskunft über die einzelnen Wagen und an welcher Bahnsteigposition diese halten werden. Der Wagenreihungsplan ist eine große Hilfe für Bahnreisende jeglicher Art.  ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2016-06-14",
+		"updated": "2016-06-17"
+	},
+	"front": {
+		"textTop": "Im Zug schlafen? Deluxe?",
+		"textBottom": "Züge fahren am Berliner Hbf",
+		"value": "16",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/sun.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Mehr zu den Zügen und allen Wagenreihungsplänen stellt DB Station & Service bereit.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
