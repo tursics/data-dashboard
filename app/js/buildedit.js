@@ -61,6 +61,12 @@ function fillBuildCardWithMetadata() {
 			// The url "/dataset/ID" does not work, use the url "/dataset/name".
 			link = data.result.url;
 		}
+		if ((data.result.maintainer === '') && (typeof data.result.author !== 'undefined')) {
+			data.result.maintainer = data.result.author;
+		}
+		if ((data.result.maintainer_email === '') && (typeof data.result.author_email !== 'undefined')) {
+			data.result.maintainer_email = data.result.author_email;
+		}
 
 		if ('cc-by' === data.result.license_id) {
 			$('#inputMetaLicenseCCBY').click();
