@@ -99,6 +99,12 @@ var config = config || {
 			'backClass': ''
 		},
 		{
+			'frontBackground': 'img/train.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
+		},
+		{
 			'frontBackground': 'img/health.svg',
 			'frontColor': '#ffffff',
 			'backColor': '#000000',
