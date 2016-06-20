@@ -147,13 +147,13 @@ function parseFeed() {
 
 		rec = Math.min(rec, 100 - sum);
 		$('#progressInfo').text((parseInt(rec * 10, 10) / 10) + '%' + (rec > 20 ? ' ' + dict.progressNew : ''));
-		$('#statisticInfo .badge').text(recent);
+		$('#statisticInfo .badge').text(recent + max - datasets);
 		if ((0 < rec) && (rec < 3)) {
 			rec = 3;
 		}
 		sum += rec;
 
-		$('#statisticSum .badge').text(datasets);
+		$('#statisticSum .badge').text(max);
 
 		$('#progressInfo').css('width', rec + '%');
 		$('#progressBar').css('width', (100 - Math.max(sum, 100)) + '%');
