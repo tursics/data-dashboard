@@ -76,6 +76,8 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCBYSA').click();
 		} else if ('cc-nc' === data.result.license_id) {
 			$('#inputMetaLicenseCCBYNC').click();
+		} else if ('cc-zero' === data.result.license_id) {
+			$('#inputMetaLicenseCCZero').click();
 		} else if ('dl-de-by-2.0' === data.result.license_id) {
 			$('#inputMetaLicenseDLDEBY20').click();
 		} else if ('dl-de-zero-2.0' === data.result.license_id) {
