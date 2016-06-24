@@ -21,8 +21,6 @@ The quote above I've seen in a magazine. So if you want to illustrate data why n
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/mediaMagazineVienna.jpg "A magazine illustrated with data honeycombs")
 
-### Cities
-
 ## Redeployment
 
 ### Requirements
