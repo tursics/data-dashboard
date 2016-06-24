@@ -1,8 +1,8 @@
-# Create a new card
+# Create a new honeycomb
 
 THIS TEXT IS UNDER CONSTRUCTION!!!
 
-Creating a new card is very easy. 
+Creating a new honeycomb is very easy. 
 The most steps can be done in your browser. 
 
 ###To Do

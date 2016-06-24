@@ -1,8 +1,16 @@
-# Datenwaben
+# Data honeycombs (Datenwaben)
 
 Show an #OpenData data dashboard of various cities. See the result of the [visualization](http://daten-waben.tursics.de/).
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/previewVienna.png "Vienna")
+
+## Current state
+
+### Brief
+
+### Cities
+
+### Integration
 
 ## Redeployment
 
@@ -16,7 +24,7 @@ I will work on a better solution.
 ### Instructions
 
 - Create a [new city](../master/doc/CreateCity.md)
-- Create a [new card](../master/doc/CreateCard.md)
+- Create a [new honeycomb](../master/doc/CreateCard.md)
 - Create a [new background image](../master/doc/CreateBackground.md)
 - Create a [new translation](../master/doc/CreateTranslation.md)
 

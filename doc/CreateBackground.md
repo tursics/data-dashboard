@@ -2,13 +2,13 @@
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/cardsOverview.png "Overview")
 
-Every displayed card has two sides, a front and a back. 
+Every displayed honeycomb has two sides, a front and a back. 
 The front shows you the text and numbers and a background image. 
 You can change and create a new background.
 
 ## Design
 
-All cards are designed with a hexagon background. 
+All honeycombs are designed with a hexagon background. 
 The background can be viewed on desktop computers and on mobile devices. 
 It will always look good and sharp (independend of the used display resolution depth). 
 This is possible if every background image fulfill minimum requirements. 
