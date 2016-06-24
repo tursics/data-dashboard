@@ -35,11 +35,11 @@ But you can add some lines in the honeycomb ```.js``` file like this:
 {
 	"en-US": {
 		"front": {
-			"textTop": "Sidewalks are repaired at",
-			"textBottom": "locations"
+			"textTop": "July 17, 1943, 8:55 p.m.",
+			"textBottom": "killed in an airstrike"
 		},
 		"back": {
-			"text": "The current and planned construction of sidewalks, roads, bridges, bike paths, and so on ..."
+			"text": "On the topic 'Amsterdam under fire in World War II' you can empathize with the history."
 		}
 	}
 }
