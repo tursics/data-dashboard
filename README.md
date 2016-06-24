@@ -6,11 +6,22 @@ Show an #OpenData data dashboard of various cities. See the result of the [visua
 
 ## Current state
 
-### Brief
+>The 'Datenwaben' online portal aims to visualize the contents of the so far 300 datasets of the 'Open Government Data' initiative in an easy-to-understand manner.
+
+That's a nice summery of this project. 
+I collect many honeycombs from many cities on my [website](http://daten-waben.tursics.de/) to show the wide range of available datasets. 
+Some people fork this project and create an own version e.g. for [Chemnitz, Germany](https://github.com/CodeforChemnitz/data-dashboard). 
+
+The good guys from Berlin forked this project and build a [Drupal 7 module](https://github.com/berlinonline/data_dashboard) on top of this. 
+As a second step they integrated the data honeycombs project in the front page of the [offical Open Data portal of Berlin](http://daten.berlin.de/).
+
+![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/mediaPortalBerlin.png "Open Data Portal Berlin")
+
+The quote above I've seen in a magazine. So if you want to illustrate data why not this way ;)
+
+![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/mediaMagazineVienna.jpg "A magazine illustrated with data honeycombs")
 
 ### Cities
-
-### Integration
 
 ## Redeployment
 
@@ -29,6 +40,10 @@ I will work on a better solution.
 - Create a [new translation](../master/doc/CreateTranslation.md)
 
 Since this project only uses .HTML file, you can deploy your copy using gh-pages.
+
+## Contact
+
+If you have question, ideas, found a bug or just want to hug: [mail me](mailto:thomas@tursics.de), [follow me](https://github.com/tursics) or [tweet me](https://twitter.com/tursics/).
 
 ## Licence
 
