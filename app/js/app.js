@@ -43,6 +43,25 @@ function dateValueFormatter(startValue, changePerDay, unit, seconds) {
 
 //-----------------------------------------------------------------------
 
+function dateTimeValueFormatter(startValue, changePerDay, unit, seconds) {
+	'use strict';
+
+	var d1 = new Date(),
+		d2 = new Date(startValue),
+		diff = (d2 - d1) / 1000 / 60,
+		value = '';
+
+	if (diff < 0) {
+		diff = -diff;
+	}
+
+	value = parseInt(diff, 10) + ' ' + unit;
+
+	return value;
+}
+
+//-----------------------------------------------------------------------
+
 function largeValueFormatter(value) {
 	'use strict';
 
@@ -266,6 +285,9 @@ function loadCards() {
 		if ('date' === data.front.format) {
 			valueFormatter = dateValueFormatter;
 			value = valueFormatter(data.front.value, 0, data.front.unit, 0);
+		} else if ('datetime' === data.front.format) {
+			valueFormatter = dateTimeValueFormatter;
+			value = valueFormatter(data.front.value, 0, data.front.unit, 0);
 		} else if ('euro' === data.front.format) {
 			valueFormatter = euroValueFormatter;
 			value = valueFormatter(data.front.value, 0, data.front.unit, 0);
@@ -286,8 +308,25 @@ function loadCards() {
 		var url = cityConfig.cards[config.loaded];
 		$.ajax(url)
 			.done(function (json) {
-				var data = $.parseJSON(json);
-				createCard(data);
+				try {
+					var data = $.parseJSON(json);
+					createCard(data);
+				} catch (e1) {
+					try {
+						if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
+							cityConfig.cards[config.loaded] = cityConfig.meta.uri + url;
+							--config.loaded;
+							return;
+						}
+					} catch (e2) {
+					}
+
+					console.log(e1.message);
+					createNewCard({
+						front: {text: e1.message, css: 'card1line', flipped: true},
+						back: {text: dict.errorReadingCard + ' ' + url, css: ''}
+					});
+				}
 			})
 			.fail(function (jqXHR, textStatus) {
 				if ('parsererror' === textStatus) {
