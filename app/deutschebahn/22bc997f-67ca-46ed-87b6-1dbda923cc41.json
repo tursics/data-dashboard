@@ -12,12 +12,12 @@
 		"attribution": "Michael Binzen",
 		"author": "DBOpenData@deutschebahn.com",
 		"created": "2016-06-13",
-		"updated": "2016-06-15"
+		"updated": "2016-06-21"
 	},
 	"front": {
 		"textTop": "Warst du schon an allen",
 		"textBottom": "Bahnhöfen der Bahn?",
-		"value": "7915",
+		"value": "6478",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
