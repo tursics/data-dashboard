@@ -4,7 +4,8 @@
 		"twitter": "https://twitter.com/tursics/",
 		"github": "https://github.com/tursics/data-dashboard/",
 		"showMenuCity": true,
-		"background": "deutschebahn/3496_1.jpg"
+		"background": "deutschebahn/3496_1.jpg",
+		"uri": "http://daten-waben.tursics.de/"
 	},
 	"data": {
 		"ckan": "http://daten-waben.tursics.de/deutschebahn/ckan.php",
@@ -14,6 +15,9 @@
 	"cards": [
 		"deutschebahn/help.json",
 
+		"deutschebahn/12049d7f-f807-420e-ac66-2faaf96bea2b.php",
+		"deutschebahn/fe68e74c-f2d2-4645-b789-015f204f2df6.php",
+		"deutschebahn/1cc0f0c6-f0fd-45a6-97f7-ca2061dc0eef.php",
 		"deutschebahn/e2e49c52-3f6f-4fe9-923b-1e928026b4b1.json",
 		"deutschebahn/332086f2-b39a-463e-875f-9a2168b8e22c.json",
 		"deutschebahn/e223032a-b898-41e5-83c3-ad6c8479c399.json",
