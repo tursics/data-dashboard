@@ -208,8 +208,20 @@ function parseFeed() {
 			var url = cityConfig.cards[config.loaded];
 			$.ajax(url)
 				.done(function (json) {
-					var data = $.parseJSON(json);
-					colorizeCard(data, url);
+					try {
+						var data = $.parseJSON(json);
+						colorizeCard(data, url);
+					} catch (e1) {
+						try {
+							if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
+								cityConfig.cards[config.loaded] = cityConfig.meta.uri + url;
+								--config.loaded;
+								return;
+							}
+						} catch (e2) {
+						}
+						++error;
+					}
 				})
 				.fail(function (jqXHR, textStatus) {
 					if ('parsererror' === textStatus) {
