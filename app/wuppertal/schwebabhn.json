@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "wuppertal"
+	},
+	"portal": {
+		"url": "https://www.schwebebahn.de/geschichte-technik/daten-fakten/",
+		"title": "Schwebabhn",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Schwebabahn",
+		"textBottom": "Passagiere",
+		"value": "",
+		"unit": "",
+		"changePerDay": "80000",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "In Wuppertal nutzen 80.000 Menschen täglich die Schwebebahn",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "wuppertal"
+	},
+	"portal": {
+		"url": "http://www.wuppertal.de/denkmalliste-online/",
+		"title": "Denkmal Liste Wuppertal",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Wuppertal hat",
+		"textBottom": "Denkmal geschützte Gebäude",
+		"value": "6970",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/house.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "In Wuppertal stehen auch viele Wohnhäuser unter Denkmalschutz",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
