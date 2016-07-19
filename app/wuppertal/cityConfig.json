@@ -12,6 +12,7 @@
 		"wuppertal/parkinfo.json",
 		"wuppertal/freifunk.json",
 		"wuppertal/denkmal.json",
+		"wuppertal/einwohnermeldeamt.json",
 		"wuppertal/schwebabhn.json"
 	]
 }

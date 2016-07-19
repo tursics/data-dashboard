@@ -22,7 +22,7 @@
 		"changePerDay": "80000",
 		"format": "int",
 		"background": "img/busstop.svg",
-		"color": "#ffffff"
+		"color": "#008033"
 	},
 	"back": {
 		"text": "In Wuppertal nutzen 80.000 Menschen täglich die Schwebebahn",
