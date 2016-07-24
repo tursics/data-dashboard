@@ -5,7 +5,7 @@
 	},
 	"portal": {
 		"url": "https://www.schwebebahn.de/geschichte-technik/daten-fakten/",
-		"title": "Schwebabhn",
+		"title": "Schwebebahn",
 		"description": "",
 		"license": "",
 		"licenseURL": "",
@@ -15,7 +15,7 @@
 		"updated": ""
 	},
 	"front": {
-		"textTop": "Schwebabahn",
+		"textTop": "Schwebebahn",
 		"textBottom": "Passagiere",
 		"value": "",
 		"unit": "",
