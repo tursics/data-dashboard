@@ -50,6 +50,13 @@ var config = config || {
 			path: 'moers',
 			badge: 'Alpha',
 			group: 'city'
+		},
+		{
+			name: 'Wuppertal',
+			country: 'Germany',
+			path: 'wuppertal',
+			badge: 'Alpha',
+			group: 'city'
 		} /*,
 		{
 			name: 'Open Data Portal Österreich',
@@ -157,6 +164,12 @@ var config = config || {
 			'frontColor': '#fecb32',
 			'backColor': '#000000',
 			'backClass': 'refugees'
+		},
+		{
+			'frontBackground': 'img/parking.svg',
+			'frontColor': '#ffffff',
+			'backColor': '#000000',
+			'backClass': ''
 		},
 		{
 			'frontBackground': 'img/phone.svg',

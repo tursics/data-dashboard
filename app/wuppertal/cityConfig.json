@@ -1,0 +1,19 @@
+{
+	"meta": {
+		"mail": "ex@devtal.de",
+		"twitter": "https://twitter.com/opendatal/",
+		"github": "https://github.com/opendatal/data-dashboard/",
+		"showMenuCity": true,
+		"background": "wuppertal/background.jpg"
+	},
+	"cards": [
+		"wuppertal/help.json",
+		"wuppertal/wo-ist-markt.json",
+		"wuppertal/parkinfo.json",
+		"wuppertal/freifunk.json",
+		"wuppertal/denkmal.json",
+		"wuppertal/einwohnermeldeamt.json",
+		"wuppertal/straßenverkehrsamt.json",
+		"wuppertal/schwebabhn.json"
+	]
+}

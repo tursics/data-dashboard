@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "wuppertal"
+	},
+	"portal": {
+		"url": "http://statistik.freifunk-wuppertal.net/",
+		"title": "Freifunk Router in Wuppertal",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Es gibt aktuell",
+		"textBottom": "Router im Freifunk Netz",
+		"value": "362",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Der Vreein Freifunk bietet kostenlosen Internetzugang an",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

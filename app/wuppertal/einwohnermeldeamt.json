@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "wuppertal"
+	},
+	"portal": {
+		"url": "https://terminvergabe2.wuppertal.de/wartezeit/",
+		"title": "Stadt Wuppertal - Wartezeiten",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Einwohnermeldeamt",
+		"textBottom": "wartende Personen",
+		"value": "27",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die aktuellen Wartezeit im Einwohnermeldeamt sind online einsehbar.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
