@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/fd3b5bee-bef4-4acd-8ea8-fc9d24aa024f",
+		"title": "Wiener Linien Piktogramme",
+		"description": "Piktogramme für den öffentlichen Verkehr (Wiener Linien) ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Wiener Linien",
+		"author": "post@wienerlinien.at ",
+		"created": "2014-09-11",
+		"updated": "2016-03-17"
+	},
+	"front": {
+		"textTop": "",
+		"textBottom": "",
+		"value": "",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "vienna/fd3b5bee-bef4-4acd-8ea8-fc9d24aa024f.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Piktogramme und Farbdefinitionen für den öffentlichen Verkehr (Wiener Linien) befinden sich hier:",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "",
+			"textBottom": ""
+		},
+		"back": {
+			"text": "Pictograms and color definitions for public transportation (Wiener Linien) are here:"
+		}
+	}
+}

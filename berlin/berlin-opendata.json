@@ -1,0 +1,34 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin"
+},
+"portal":{
+	"url":"http://daten.berlin.de",
+	"title":"Berliner Datenportal",
+	"description":"Im Berliner Datenportal stellt das Land Berlin Datensätze der öffentlichen Verwaltung zur Verfügung.",
+	"license":"",
+	"licenseURL":"",
+	"attribution":"",
+	"author":"",
+	"created":"",
+	"updated":""
+},
+"front":{
+	"textTop":"",
+	"textBottom":"",
+	"value":"",
+	"unit":"",
+	"changePerDay":0,
+	"format":"",
+	"background":"berlin/berlin-opendata.svg",
+	"color":"",
+	"cssClass":""
+},
+"back":{
+	"text":"Alle Daten kommen aus dem Berliner Datenportal. Im <a href='http://fbinter.stadt-berlin.de/fb/' target='_blank'>FIS-Broker</a> gibt es zusätzlich Daten.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}

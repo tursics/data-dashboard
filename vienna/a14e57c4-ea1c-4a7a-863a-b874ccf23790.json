@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/a14e57c4-ea1c-4a7a-863a-b874ccf23790",
+		"title": "Baublöcke - Wien",
+		"description": "Baublöcke (Blöcke) sind eine in der Regel von Verkehrsflächen bzw. Straßenabschnitten umschlossene statistische Zähleinheit.  ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 21 - Stadtteilplanung und Flächennutzung",
+		"author": "post@ma22.wien.gv.at",
+		"created": "2012-10-12",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Eingeteilt ist Wien in",
+		"textBottom": "statistische Zähleinheiten",
+		"value": "11206",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Blöcke sind von Straßenabschnitten umschlossene statistische Zähleinheit.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

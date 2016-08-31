@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/d76da033-3a89-4535-9aeb-e5fc76244f74",
+		"title": "Straßenliste",
+		"description": "Liste aller aktuell vergebenen Straßennamen innerhalb der Stadt Aachen",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Geoservice der Stadt Aachen",
+		"author": "geoservice@mail.aachen.de",
+		"created": "2014-10-27",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Strassennamen enthalten zu ",
+		"textBottom": "das Wort Strasse ",
+		"value": "43,6",
+		"unit": "%",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Strassennamen in Aachen enthalten auch die Wörter Weg, Allee, Gasse oder Platz.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/0ef8fc6b-6384-4aea-8ccd-d72179c88db4",
+		"title": "Gabelpunkte Mehrzweckkarte - Wien",
+		"description": "Im Zuge der Vermessung des Straßenraumes für die Mehrzweckkarte werden von der Stadtvermessung Wien (MA 41) eigene Festpunkte geschaffen. Sie sind in der Natur als Gabelpunkte mit zwei Metalllaschen vermarkt. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung",
+		"author": " post@ma41.wien.gv.at",
+		"created": "2014-09-18",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Die Stadtvermesser haben",
+		"textBottom": "Orientierungspunkte",
+		"value": "3921",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/house.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Für die Vermessung des Straßenraumes werden von der Stadt Wien eigene Festpunkte geschaffen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

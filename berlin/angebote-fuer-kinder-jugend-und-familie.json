@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/angebote-f%C3%BCr-kinder-jugend-und-familie",
+		"title": "Angebote für &quot;KINDER, JUGEND und FAMILIE&quot;",
+		"description": "Angebote für Kinder, Jugend und Familie",
+		"license": "Creative Commons Namensnennung unter gleichen Bedingungen",
+		"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+		"attribution": "Bezirksamt Marzahn-Hellersdorf von Berlin Jugendamt",
+		"author": "angelika.herda@ba-mh.berlin.de",
+		"created": "2015-02-26",
+		"updated": "2016-01-15"
+	},
+	"front": {
+		"textTop": "Marzahn-Hellersdorf hat",
+		"textBottom": "Angebote für Kinder",
+		"value": "625",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Das Jugendamt des Bezirkes präsentiert die Angebote für Kinder, Jugend und Familie.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

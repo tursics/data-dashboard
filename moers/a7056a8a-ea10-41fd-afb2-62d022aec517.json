@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/a7056a8a-ea10-41fd-afb2-62d022aec517",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Einzigartige Namen haben",
+		"textBottom": "der Neugeborenen 2015",
+		"value": "⅓",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Mehrheit der Neugeborenen hat trotz großer Namensvielfalt einen gewöhnlichen Vornamen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

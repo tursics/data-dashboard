@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/stra%C3%9Fen-und-volksfeste",
+		"title": "Straßen- und Volksfeste",
+		"description": "Hier finden Sie die Berliner und Brandenburger Straßen- und    Volksfeste 2015",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Senatsverwaltung für Wirtschaft, Technologie und Forschung",
+		"author": "ralf.eberhardt@senwtf.berlin.de",
+		"created": "2014-04-15",
+		"updated": "2016-02-02"
+	},
+	"front": {
+		"textTop": "Dieses Jahr gibt es",
+		"textBottom": "Straßen- und Volksfeste",
+		"value": "352",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Es wird niemals langweilig auf den Berliner und Brandenburger Straßen- und Volksfesten.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

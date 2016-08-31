@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/a5508172-f55e-4d11-8838-9d6a93ad1191",
+		"title": "Bohrungen Baugrundkataster - Wien",
+		"description": "Profile von Bohrungen und anderen Untergrunderkundungen",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 29 - Brückenbau und Grundbau",
+		"author": " post@ma29.wien.gv.at",
+		"created": "2015-06-25",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Der Untergrund wird bis zu",
+		"textBottom": "angebohrt und untersucht",
+		"value": "99.2",
+		"unit": "m",
+		"changePerDay": "",
+		"format": "euro",
+		"background": "img/ground.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Tausende Profile von Bohrungen und anderen Untergrunderkundungen befinden sich hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

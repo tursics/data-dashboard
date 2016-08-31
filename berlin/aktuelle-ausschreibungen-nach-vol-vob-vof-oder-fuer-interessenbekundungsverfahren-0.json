@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/aktuelle-ausschreibungen-nach-vol-vob-vof-oder-f%C3%BCr-interessenbekundungsverfahren-0",
+		"title": "Aktuelle Ausschreibungen nach VOL, VOB, VOF oder für Interessenbekundungsverfahren",
+		"description": "Sie interessieren sich für Ausschreibungen nach VOL, VOB, VOF oder für Interessenbekundungsverfahren    beziehungsweise sonstige Wettbewerbe? Hier finden Sie    Informationen zu den aktuellen Ausschreibungen in Lichtenberg.",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Facility Management Lichtenberg",
+		"author": "Manuela.Maedge@lichtenberg.berlin.de",
+		"created": "2015-06-29",
+		"updated": "2016-01-25"
+	},
+	"front": {
+		"textTop": "Drucker-Toner, noch",
+		"textBottom": "ausgeschrieben",
+		"value": "2016-05-02",
+		"unit": "",
+		"changePerDay": "",
+		"format": "date",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Informationen zu Drucker-Toner und den anderen Ausschreibungen in Lichtenberg:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

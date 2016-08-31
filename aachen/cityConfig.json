@@ -1,0 +1,30 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "aachen/aachen-927531.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/aachen/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/aachen/ckanPackageShow.php",
+		"ckanDataset": "http://offenedaten.aachen.de/dataset/"
+	},
+	"cards": [
+		"aachen/offenedaten.aachen.json",
+		"aachen/code-for-berlin.json",
+		"aachen/help.json",
+
+		"aachen/5f85fd95-3a59-452d-9dbf-964cdd4b40d0.json",
+		"aachen/aab1ab6e-c766-4d49-ac6d-7a225d348dd5.json",
+		"aachen/7e1adbd1-6738-477a-8685-980fc8dead85.json",
+		"aachen/d76da033-3a89-4535-9aeb-e5fc76244f74.json",
+		"aachen/81650028-ef21-4f1b-a991-9e3a3f01c729.json",
+		"aachen/34835389-9e6e-47fc-b1a9-deb5a42e8a9d.json",
+		"aachen/8f0d2098-ed8a-407a-a56b-e55e697d576c.json",
+		"aachen/8e381443-34a0-434f-9a0b-f668dce29f4d.json",
+		"aachen/0ad68a60-8c7f-4e75-8476-c672cd08e94d.json",
+		"aachen/8d6b6b7c-34dd-4207-b9b2-ce455b90144c.json"
+	]
+}

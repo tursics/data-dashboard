@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/113e43c0-c938-4ae5-ba3a-4d66aa47acd0",
+		"title": "Büchereien Wien - Neuanmeldungen",
+		"description": "Statistik der Neuanmeldungen bei den Büchereien Wien nach Zweigstellen ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 13 - Büchereien Wien",
+		"author": "bib.auskunft@buechereien.wien.at",
+		"created": "2015-03-06",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Die Büchereien melden",
+		"textBottom": "neue Bücherwürmer",
+		"value": "40243",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "Das sagt die Statistik der Neuanmeldungen bei den Büchereien Wien nach Zweigstellen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/34835389-9e6e-47fc-b1a9-deb5a42e8a9d",
+		"title": "Signalanlagen",
+		"description": "Inkl. Angabe der Knotennummer. Jährliche Aktualisierung. Letzte Aktualisierung 26.02.2015.",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Frau Lech",
+		"author": "offenedaten@mail.aachen.de",
+		"created": "2015-02-26",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Grüne Männchen kann man ",
+		"textBottom": "Mal treffen ",
+		"value": "215",
+		"unit": "",
+		"changePerDay": "0",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "So viele Ampeln gibt es insgesamt in Aachen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

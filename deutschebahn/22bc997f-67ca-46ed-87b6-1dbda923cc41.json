@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/22bc997f-67ca-46ed-87b6-1dbda923cc41",
+		"title": "Streckennetz",
+		"description": "Schienenverkehrsnetz gemäß INSPIRE der DB Netz AG.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2016-06-21"
+	},
+	"front": {
+		"textTop": "Warst du schon an allen",
+		"textBottom": "Bahnhöfen der Bahn?",
+		"value": "6478",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Hier findest du alle Bahnhöfe mit ihren Positionen. Aber auch das komplette Streckennetz...",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

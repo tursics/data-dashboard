@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/angebote-zur-unterst%C3%BCtzung-von-fl%C3%BCchtlingen",
+		"title": "Angebote zur Unterstützung von Flüchtlingen",
+		"description": "Angebote von Trägern zur Unterstützung von Flüchtlingen im    Bezirk Friedrichshain-Kreuzberg",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Bezirksamt Friedrichshain-Kreuzberg/ Bezirksbürgermeisterbüro",
+		"author": "Katrin.Becker@ba-fk.verwalt-berlin.de",
+		"created": "2015-10-12",
+		"updated": "2016-01-25"
+	},
+	"front": {
+		"textTop": "",
+		"textBottom": "Angebote für Flüchtlinge",
+		"value": "121",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/refugees.svg",
+		"color": "#fecb32"
+	},
+	"back": {
+		"text": "Und dies sind nur die Angebote für Flüchtlinge aus dem Bezirk Friedrichshain-Kreuzberg.",
+		"color": "#000000",
+		"cssClass": "refugees"
+	}
+}

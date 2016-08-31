@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/ab25347f-bb80-4c61-8a82-87cfd684a621",
+		"title": "OGD - Gedicht - Wien",
+		"description": "Open Government Data in Österreich",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistrat Wien - Magistratsabteilung 14",
+		"author": "open@post.wien.gv.at",
+		"created": "2015-07-17",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Es gibt ein",
+		"textBottom": "über Open Data",
+		"value": "Gedicht",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "\"... Ja, frei diese Daten wir dürfen nutzen nur ohne die Prinzipien und die Idee zu beschmutzen ...\"",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

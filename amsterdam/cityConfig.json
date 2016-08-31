@@ -1,0 +1,33 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "amsterdam/amsterdam-1269462.jpg",
+		"uri": "http://daten-waben.tursics.de/"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/amsterdam/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/amsterdam/ckanPackageShow.php",
+		"ckanDataset": "http://data.amsterdam.nl/dataset/"
+	},
+	"cards": [
+		"amsterdam/data.amsterdam.json",
+		"amsterdam/code-for-berlin.json",
+		"amsterdam/help.json",
+
+		"amsterdam/561e6134-d435-456a-a41f-d7a35755491d.json",
+		"amsterdam/39da4fbb-5797-4dfe-af65-b951e387b5d5.json",
+		"amsterdam/3f1cbd00-ba02-4f8f-8708-6fc3e841dec9.php",
+		"amsterdam/rijksmuseum-SK-C-5.json",
+		"amsterdam/7b80e088-fb39-441e-8079-d9eb088b9524.php",
+		"amsterdam/dc2ca96e-8578-4461-ac09-897f473b84cb.json",
+		"amsterdam/fbb092f4-a3c1-4cab-91ff-a6e48b74bc50.json",
+		"amsterdam/f0672be5-5416-46e1-b4a4-e71add4a920b.php",
+		"amsterdam/9fd1e88d-53be-4002-8f61-c753486c6ac3.php",
+		"amsterdam/rijksmuseum-SK-A-1718.json",
+		"amsterdam/e318b09a-5945-4f36-8de0-944607fb60cc.php",
+		"amsterdam/a96b7a70-e44e-4dca-8664-a67b357ad499.php"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/9861725b-61f7-443d-bf06-be9fd0aa2393",
+		"title": "Open Data Umsetzung in Wien",
+		"description": "Evaluation der Open Data Umsetzung der Stadt Wien",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistrat Wien - Magistratsabteilung 14 - Automationsunterstützte Datenverarbeitung, Informations- und Kommunikationstechnologie",
+		"author": "post@ma14.wien.gv.at",
+		"created": "2015-04-17",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Open Data soll unter",
+		"textBottom": "lizensiert werden",
+		"value": "CC-BY",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "... fordert der Punkt \"Empfehlung 13\" in der Evaluation der Open Data Umsetzung der Stadt Wien.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/2f5baa1f-208c-42c2-8d04-9ea74aa1b229",
+		"title": "Realnutzungskartierung ab 2007/08 - Wien",
+		"description": "Dieser Datenbestand bildet die tatsächliche Flächennutzung Wiens in generalisierter Form ab. Die Datenbasis ist eine Luftbildinterpretation unter Hinzunahme ergänzender Sachdaten. Es gibt 32 Nutzungskategorien aus den Bereichen Wohnen, Grünflächen, Verkehr, etc. Die Nutzungskategorien sind hierarchisch in 3 Levels gegliedert. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 18 - Stadtentwicklung und Stadtplanung",
+		"author": "post@ma18.wien.gv.at",
+		"created": "2012-07-06",
+		"updated": "2016-02-18"
+	},
+	"front": {
+		"textTop": "Über die Stadt verteilt sind",
+		"textBottom": "militärische Anlagen",
+		"value": "21",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/military.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Alle tatsächlichen Flächennutzungen Wiens, gegliedert in 32 Nutzungskategorien:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

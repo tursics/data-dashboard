@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/927a0e9b-22ae-423e-9fc0-a6d362c2f2cf",
+		"title": "Wohnstraßen - Wien",
+		"description": "Übersicht über behördlich verordnete Wohnstraßen in Wien. Wohnstraßen zählen zu den verkehrsberuhigten Bereichen, wo lediglich das Zu- und Abfahren sowie Schrittgeschwindigkeit erlaubt ist. Ausnahme: der Radverkehr darf durch Wohnstraßen durchfahren und gegen die Einbahn fahren. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 46 - Verkehrsorganisation und technische Verkehrsangelegenheiten",
+		"author": "post@ma46.wien.gv.at",
+		"created": "2013-12-10",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Erlaubt sind nur",
+		"textBottom": "auf der Jasomirgottstraße",
+		"value": "5",
+		"unit": "km/h",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/livingstreet.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "In den Wohnstraßen ist nur das Zu- und Abfahren sowie Schrittgeschwindigkeit erlaubt.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

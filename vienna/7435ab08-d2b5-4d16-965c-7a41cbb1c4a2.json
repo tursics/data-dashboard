@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/7435ab08-d2b5-4d16-965c-7a41cbb1c4a2",
+		"title": "Bevölkerungsprognose für Wien: Zählbezirke nach Geschlecht und Altersgruppen",
+		"description": "Kleinräumige Bevölkerungsprognose nach Geschlecht und ausgewählten Altersgruppen für 250 Wiener Zählbezirke für den Zeitraum 2014 bis 2024. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 23 - Wirtschaft, Arbeit und Statistik",
+		"author": "post@ma23.wien.gv.at",
+		"created": "2014-09-23",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "In 8 Jahren leben in Wien",
+		"textBottom": "Babies und Kleinkinder",
+		"value": "59388",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Weitere kleinräumige Bevölkerungsprognosen für 250 Wiener Zählbezirke für den Zeitraum bis 2024:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

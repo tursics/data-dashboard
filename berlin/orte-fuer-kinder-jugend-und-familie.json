@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/orte-f%C3%BCr-kinder-jugend-und-familie",
+		"title": "Orte für &quot;KINDER, JUGEND und FAMILIE&quot;",
+		"description": "Orte für Kinder, Jugendliche, Familie, Jugendeinrichtungen,    Kindertagesstätten, Kinder-, Jugend- und Familienzentren,    Beratungsstellen, Museum, Leseorte",
+		"license": "Creative Commons Namensnennung unter gleichen Bedingungen",
+		"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+		"attribution": "Bezirksamt Marzahn-Hellersdorf von Berlin, Jugendamt",
+		"author": "angelika.herda@ba-mh.berlin.de",
+		"created": "2015-02-26",
+		"updated": "2016-02-08"
+	},
+	"front": {
+		"textTop": "Mädchentreff, Tischtennis,",
+		"textBottom": "Hausaufgabenhilfe, ...",
+		"value": "Billard",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Es gibt so viele Orte für Kinder, Jugendliche und Familien. Eine Liste gibt es hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

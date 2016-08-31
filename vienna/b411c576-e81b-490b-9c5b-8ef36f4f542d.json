@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/b411c576-e81b-490b-9c5b-8ef36f4f542d",
+		"title": "Luftbildplan Wien 1938",
+		"description": "Der Luftbildplan von Wien aus dem Jahr 1938 deckt das gesamte Wiener Stadtgebiet in einer Auflösung von 50 Zentimeter ab. Die Luftbildbefliegung fand im Oktober und November 1938 statt. <a href=\"https://www.wien.gv.at/stadtentwicklung/stadtvermessung/service/luftarchiv.html\">https://www.wien.gv.at/stadtentwicklung/stadtvermessung/service/luftarchiv.html</a>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung ",
+		"author": "post@ma41.wien.gv.at",
+		"created": "2015-12-14",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Fliege über Luftbilder mit",
+		"textBottom": "Auflösung (Oktober 1938)",
+		"value": "50",
+		"unit": "cm",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Der Luftbildplan von Wien aus dem Jahr 1938 deckt das gesamte Wiener Stadtgebiet ab.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

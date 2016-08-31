@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/214a3e63-31aa-47de-a49c-5ea5a80330ed",
+		"title": "Baukörpermodell Dreiecksvermaschung - Wien",
+		"description": "Dreiecksvermaschung des Baukörpermodells von Wien: <a href=\"http://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/bkm/index.html\">http://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/bkm/index.html</a> ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung",
+		"author": "post@ma41.wien.gv.at",
+		"created": "2015-03-09",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Noch immer stehen",
+		"textBottom": "Telefonzellen in Wien",
+		"value": "1162",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/phone.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Wo sie stehen, und wie sie in 3D aussehen (Baukörpermodelle) steht in diesem Datensatz:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

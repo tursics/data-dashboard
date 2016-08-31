@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/76c2e577-268f-4a93-bccd-7d5b43b14efd",
+		"title": "Baukörpermodell Grunddaten aus der Flächen-MZK Vektordaten - Wien",
+		"description": "Baukörpermodell Grunddaten aus der Flächen-Mehrzweckkarte (FMZK) - der digitalen Stadtkarte von Wien - als Vektordaten:   <a href=\"http://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/fmzk/index.html\">http://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/fmzk/index.html</a> ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung",
+		"author": "post@ma41.wien.gv.at",
+		"created": "2015-03-09",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "In ganz Wien stehen",
+		"textBottom": "Kioske und Würstelstände",
+		"value": "167",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/sausage.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Flächen-Mehrzweckkarte zeigt die Umrisse aller Gebäude, Telefonzellen und Würstelstände an.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

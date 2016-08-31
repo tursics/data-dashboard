@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/e412616d-733a-482f-a88d-972331d39d18",
+		"title": "Büchereien Wien - Interne Nummer zu Büchereiadresse",
+		"description": "Schlüssel zur Umwandlung der internen Büchereinummer in die entsprechende Adresse ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 13 - Büchereien Wien",
+		"author": "bib.auskunft@buechereien.wien.at",
+		"created": "2015-03-06",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "40 Büchereien und",
+		"textBottom": "Bücherbus",
+		"value": "1",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "Dieser Datensatz listet die Schlüssel zur Umwandlung der Büchereinummer in eine Adresse.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

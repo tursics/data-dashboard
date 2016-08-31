@@ -1,0 +1,15 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "nrw/castle-1004838.jpg"
+	},
+	"data": {
+		"ckan": "https://open.nrw/api/3/action/organization_activity_list?id=nrw"
+	},
+	"cards": [
+		"nrw/help.json"
+	]
+}

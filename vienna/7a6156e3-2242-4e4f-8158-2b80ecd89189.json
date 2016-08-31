@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/7a6156e3-2242-4e4f-8158-2b80ecd89189",
+		"title": "Bevölkerungsprognose für Wien: Zählbezirke nach Geschlecht und Geburtsland",
+		"description": "Kleinräumige Bevölkerungsprognose nach Geschlecht und Geburtsland für 250 Wiener Zählbezirke für den Zeitraum 2014 bis 2024. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 23 - Wirtschaft, Arbeit und Statistik",
+		"author": "post@ma23.wien.gv.at",
+		"created": "2014-09-23",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Die Wiener sind zu",
+		"textBottom": "in Österreich geboren",
+		"value": "66.01",
+		"unit": "%",
+		"changePerDay": "°",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die kleinräumige Bevölkerungsprognose für 250 Wiener Zählbezirke verrät noch mehr.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

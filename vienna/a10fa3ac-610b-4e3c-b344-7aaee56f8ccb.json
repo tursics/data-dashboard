@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/a10fa3ac-610b-4e3c-b344-7aaee56f8ccb",
+		"title": "Büchereien Wien - Neuzugänge der Virtuellen Bücherei",
+		"description": "RSS-Feed über die Neuzugänge der Virtuellen Bücherei der Büchereien Wien ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 13 - Bildung und außerschulische Jugendbetreuung",
+		"author": "bib.auskunft@buechereien.wien.at",
+		"created": "2015-03-23",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "50 Dinge, die ein",
+		"textBottom": "getan haben muss",
+		"value": "Wiener",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "Dieser und weitere Neuzugänge der Virtuellen Bücherei der Büchereien Wien im RSS-Feed:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

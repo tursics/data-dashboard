@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/4fba29ea-fbb9-49aa-bf0f-902e2ff93fbe",
+		"title": "Digitale Agenda Wien - Ideensammlung",
+		"description": "Sammlung der Ideen der Phase 1 der Digitalen Agenda Wien:  <a href=\"https://digitaleagenda.wien/\">www.digitaleagenda.wien</a>  ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsdirektion, Geschäftsbereich Organisation und Sicherheit; Gruppe Prozessmanagement und IKT-Strategie",
+		"author": " post-pikt@md-os.wien.gv.at",
+		"created": "2014-11-18",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Dein digitales Wien?",
+		"textBottom": "Ideen wurden gesammelt",
+		"value": "172",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Ideen-Sammlung der 1. Phase der Digitalen Agenda Wien kann man hier anrufen:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

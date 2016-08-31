@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-f%C3%BCr-20162017",
+		"title": "Haushaltsplan des Bezirksamtes Lichtenberg von Berlin für 2016/2017",
+		"description": "",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Bezirksamt Lichtenberg",
+		"author": "dagmar.haenisch@lichtenberg.berlin.de",
+		"created": "2016-01-14",
+		"updated": "2016-01-14"
+	},
+	"front": {
+		"textTop": "Alles für die Lütten:",
+		"textBottom": "fließen in die Kitas",
+		"value": "",
+		"unit": "€",
+		"changePerDay": "321472.677",
+		"format": "euro",
+		"background": "img/coin.svg",
+		"color": "#000000"
+	},
+	"back": {
+		"text": "Mehr Informationen zum Haushaltsplan des Bezirkes Lichtenberg stehen hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

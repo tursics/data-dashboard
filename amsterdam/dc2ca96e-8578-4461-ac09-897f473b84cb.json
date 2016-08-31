@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Netherlands",
+		"city": "Amsterdam"
+	},
+	"portal": {
+		"url": "http://data.amsterdam.nl/dataset/dc2ca96e-8578-4461-ac09-897f473b84cb",
+		"title": "Amsterdam onder vuur in WOII",
+		"description": "Het Stadsarchief Amsterdam heeft dit bestand gemaakt om inzichtelijk te maken waar en wanneer er in de periode 1940-1945 bommen op Amsterdam zijn gevallen. Op de kaart zijn niet alleen door vliegtuigen afgeworpen bommen te vinden, maar ook neergestorte vliegtuigen, neergekomen luchtafweergranaten, afgeworpen lege benzinetanks etc.De informatie bij de inslagen is afkomstig uit de rapporten van de luchtbeschermingsdienst, de dagrapporten van de politie en brandweerarchieven.De lijst pretendeert zeker niet volledig te zijn. Van de duizenden bommen die op en rond Amsterdam zijn neergekomen is lang niet altijd terug te vinden waar ze precies zijn terechtgekomen. Door de beknopte verslaglegging is vaak ook niet te herleiden hoeveel bommen er bij een bepaald incident zijn gevallen.De politie dagrapporten bieden het publiek wel een mooie bron om verder te gaan met onderzoek naar wat er zich  bij hun in de buurt heeft afgespeeld in de periode van de Tweede Wereldoorlog.",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Eric Heijselaar",
+		"author": "eheijselaar@stadsarchief.amsterdam.nl",
+		"created": "2014-05-12",
+		"updated": "2015-08-05"
+	},
+	"front": {
+		"textTop": "17. Juli 1943, 20:55 Uhr",
+		"textBottom": "Tote bei einem Luftangriff",
+		"value": "158",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/health.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Unter dem Titel \"Amsterdam unter Feuer im Zweiten Weltkrieg\" kann man Geschichte nachempfinden.",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "July 17, 1943, 8:55 p.m.",
+			"textBottom": "killed in an airstrike"
+		},
+		"back": {
+			"text": "On the topic 'Amsterdam under fire in World War II' you can empathize with the history."
+		}
+	}
+}

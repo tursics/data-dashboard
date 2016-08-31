@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/daten-zur-arbeitslosigkeit-f%C3%BCr-opendata",
+		"title": "Daten zur Arbeitslosigkeit für OpenData",
+		"description": "Arbeitsmarktdaten 1995 – 2015",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "SenWTF",
+		"author": "ralf.eberhardt@senwtf.berlin.de",
+		"created": "2015-01-30",
+		"updated": "2016-01-11"
+	},
+	"front": {
+		"textTop": "Für Berlin sind",
+		"textBottom": "Arbeitslose wenig",
+		"value": "11,1",
+		"unit": "%",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Arbeitslosenzahlen der letzten 20 Jahre für ganz Berlin gibt es hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/1562f910-e308-477f-aee5-343a171a2681",
+		"title": "Wasserqualität EU-Badestellen - Wien",
+		"description": "Es wird die Badewasserqualität von Wiens natürlichen Badestellen zur Verfügung gestellt. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 39 - Prüf-, Überwachungs- und Zertifizierungsstelle der Stadt Wien",
+		"author": "post@ma39.wien.gv.at",
+		"created": "2013-08-28",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Die Wasserqualität wird an",
+		"textBottom": "Badestellen gemessen",
+		"value": "28",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/water.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Es wird die Badewasserqualität von natürlichen Badestellen zur Verfügung gestellt.",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "The water quality at",
+			"textBottom": "bathing sites is measured"
+		},
+		"back": {
+			"text": "Vienna provided the water quality of natural bathing sites."
+		}
+	}
+}

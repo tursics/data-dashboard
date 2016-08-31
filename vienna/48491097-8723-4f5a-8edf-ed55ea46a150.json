@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/48491097-8723-4f5a-8edf-ed55ea46a150",
+		"title": "Web Map Service (WMS) - Wien",
+		"description": "Darstellungsdienst GIS-Inhalte nach OGC-Standard WMS 1.1.1Das Web Map Service ist ein Dienst, um Geodaten kartenbasiert direkt aus einer Geodatenquelle abzurufen. Mit Hilfe der vielfältigen WMS Parameter steuert Anwender/Programmierer, welche Geodaten in welcher Auflösung und welchem Kartenausschnitt abgerufen werden. Ebenso festgelegt wird Zielformat und Zielkartenprojektion. Der WMS ist demzufolge sehr flexibel und ermöglicht daher sehr hohe Gestaltungsfreiheiten. Der Vorteil liegt auch darin, dass die mittels WMS abgerufenen Kartenausschnitte immer auf der Aktualität der Originaldatenquelle basieren. Das Ergebnis eines WMS ist immer ein Rasterbild, auch wenn die Ausgangsdaten originär im Vektorformat vorliegen. Zu beachten ist, dass der WMS Zugriff aufgrund der Berechnung des Ergebnisbildes in Echtzeit, relativ hohe Anforderungen an die Webservice Infrastruktur und die vorgelagerten Geodatenbanken stellt und daher nur bedingt für hoch performante Massenzugriffe geeignet ist. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 14 - Automationsunterstützte Datenverarbeitung, Informations- und Kommunikationstechnologie",
+		"author": "post@ma14.wien.gv.at",
+		"created": "2013-08-27",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Der Wiener Stadtplan bietet",
+		"textBottom": "zuschaltbare Ebenen an",
+		"value": "218",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Verwendet wird ein Dienst, um Geodaten kartenbasiert direkt aus einer Geodatenquelle abzurufen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

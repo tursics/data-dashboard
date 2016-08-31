@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/6b49f1c1-0264-4c42-b7b1-9f36a60b82e2",
+		"title": "Geförderte Solarthermieanlagen - Wien",
+		"description": "Die Karte zeigt die Verteilung sämtlicher von der Stadt Wien geförderter Solarthermieanlagen im Stadtgebiet von Wien, ergänzt durch Informationen bzgl. ihrer Kollektorenfläche und das Errichtungsdatum.",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 20 - Energieplanung",
+		"author": "post@ma20.wien.gv.at",
+		"created": "2015-09-23",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Wien bezuschusst",
+		"textBottom": "Solarenergie-Anlagen",
+		"value": "93980.3",
+		"unit": "m²",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/sun.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Eine Karte zeigt die Verteilung sämtlicher von der Stadt Wien geförderter Solarthermieanlagen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

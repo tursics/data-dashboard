@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Netherlands",
+		"city": "Amsterdam"
+	},
+	"portal": {
+		"url": "http://data.amsterdam.nl/dataset/561e6134-d435-456a-a41f-d7a35755491d",
+		"title": "DataPunt APIs",
+		"description": "<p>Vanuit het Datalab Amsterdam worden er diverse API's ontwikkeld. Deze API's worden individueel ook vermeld op data.amsterdam.nl, maar op onderstaande link is het overzicht en bijbehorende documentatie ook te vinden.<br />Nieuwe experimentele API's kun je hier dan ook direct vinden!</p>",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Gemeente Amsterdam, Onderzoek, Informatie en Statistiek",
+		"author": "datalab@amsterdam.nl",
+		"created": "2016-03-16",
+		"updated": "2016-03-16"
+	},
+	"front": {
+		"textTop": "Entwickler werden die",
+		"textBottom": "Live-APIs lieben",
+		"value": "10",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Experimentelle APIs und APIs im Betatest (inklusive Swagger-Dokumentation) findet man hier:",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Developers will love the",
+			"textBottom": "available Live APIs"
+		},
+		"back": {
+			"text": "Experimental APIs and APIs in the beta test (including Swagger documentation) can be found here:"
+		}
+	}
+}

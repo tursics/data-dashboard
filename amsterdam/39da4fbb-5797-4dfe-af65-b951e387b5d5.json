@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Netherlands",
+		"city": "Amsterdam"
+	},
+	"portal": {
+		"url": "http://data.amsterdam.nl/dataset/39da4fbb-5797-4dfe-af65-b951e387b5d5",
+		"title": "Taxistandplaatsen",
+		"description": "<p>In onderstaand JSON-bestand zijn de taxistandplaatsen in Amsterdam opgenomen, als  parkeerlocaties met type \"Taxistandplaats\"</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Gemeente Amsterdam, afdeling Verkeer en Openbare Ruimte",
+		"author": "info.vor@amsterdam.nl",
+		"created": "2013-05-16",
+		"updated": "2016-05-26"
+	},
+	"front": {
+		"textTop": "Hey, Taxi! Es gibt",
+		"textBottom": "Taxistandsplätze",
+		"value": "352",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Am Hauptbahnhof stehen 16 Plätze für Taxen zur Verfügung. Wo noch? Steht alles  hier:",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Hey, taxi! There are",
+			"textBottom": "taxi stands"
+		},
+		"back": {
+			"text": "At the central station 16 places for taxis are available. Where else? It's all here:"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/52e1f251-cb70-4e61-90ae-f1ed033bf7eb",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Bildungsniveau steigt:",
+		"textBottom": "erlangen das Abitur",
+		"value": "53,79",
+		"unit": "%",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/house.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Immer mehr Schüler beenden ihre Schullaufbahn mit der allgemeinen Hochschulreife.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

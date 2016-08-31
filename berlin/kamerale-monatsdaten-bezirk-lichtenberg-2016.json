@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/kamerale-monatsdaten-bezirk-lichtenberg-2016",
+		"title": "Kamerale Monatsdaten Bezirk Lichtenberg 2016",
+		"description": "Stand der Haushaltswirtschaft im laufenden Haushaltsjahr zum jeweiligen Monatsende im Bezirk Lichtenberg, Kapitel, Titel, Ansatz, Verfügbares Soll, Anordnungssoll, Festlegung, Verfügbare Mittel, Ist",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Bezirksamt Lichtenberg",
+		"author": "dagmar.haenisch@lichtenberg.berlin.de",
+		"created": "2016-02-09",
+		"updated": "2016-02-09"
+	},
+	"front": {
+		"textTop": "Jeder Bezirk bearbeitet",
+		"textBottom": "Buchungen pro Tag",
+		"value": "ca. 210",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/coin.svg",
+		"color": "#000000"
+	},
+	"back": {
+		"text": "Der aktuelle Stand der Haushaltswirtschaft im laufenden Haushaltsjahr im Bezirk Lichtenberg:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

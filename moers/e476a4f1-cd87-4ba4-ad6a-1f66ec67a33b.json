@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Momentan spielen",
+		"textBottom": "Kinder in Kindertagesstätten",
+		"value": "2903",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/livingstreet.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Immer mehr Kinder werden bereits in einem Alter unter 3 Jahren in Kitas angemeldet.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

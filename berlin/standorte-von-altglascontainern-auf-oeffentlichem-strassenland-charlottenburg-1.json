@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/standorte-von-altglascontainern-auf-%C3%B6ffentlichem-stra%C3%9Fenland-charlottenburg-1",
+		"title": "Standorte von Altglascontainern auf öffentlichem Straßenland in Charlottenburg-Wilmersdorf",
+		"description": "Das Altglasrecycling liefert einen wichtigen Beitrag zum    Umweltschutz. Für den Bezirk Charlottenburg-Wilmersdorf    können Sie sich hier über die öffentlichen Standorte in    Ihrer Nähe informieren. Wenn Sie auf ‘Suchen’    klicken, werden Ihnen sofort alle Standorte angezeigt, Sie    können die Suche aber auch nach PLZ,    Straßenname oder Glassorte verfeinern. Zur alternativen    Kartendarstellung der Standorte Bitte Lärmschutz beachten:    Einwurfzeiten 7-13 und 15-20 Uhr; Sonn- und Feiertags kein    Einwurf! Ergänzend finden Sie hier     Informationen zum Thema Recycling und bei Bedarf auchBerlinweite    Altglascontainerstandorte",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Bezirksamt Charlottenburg-Wilmersdorf von Berlin, Umwelt- und Naturschutzamt",
+		"author": "Michael.Richert@charlottenburg-wilmersdorf.de",
+		"created": "2014-05-12",
+		"updated": "2016-02-11"
+	},
+	"front": {
+		"textTop": "Recycle dein Glas! Nutze",
+		"textBottom": "Altglascontainer",
+		"value": "348",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Deinen Beitrag zum Umweltschutz kannst du im Bezirk Charlottenburg-Wilmersdorf leisten.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

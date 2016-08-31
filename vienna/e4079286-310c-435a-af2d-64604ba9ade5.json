@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/e4079286-310c-435a-af2d-64604ba9ade5",
+		"title": "Zählbezirksgrenzen - Wien",
+		"description": "Zählbezirke sind statistische Definitionen. Die 23 Bezirke werden in 250 Zählbezirke unterteilt. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 21 - Stadtteilplanung und Flächennutzung ",
+		"author": "post@ma21.wien.gv.at",
+		"created": "2012-04-11",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Statistisch ist Wien in",
+		"textBottom": "Zählbezirke unterteilt",
+		"value": "250",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Zählbezirke sind statistische Definitionen. Die 23 Bezirke werden in 250 Zählbezirke unterteilt.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

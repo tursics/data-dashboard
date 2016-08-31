@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/doppelhaushalt-20162017",
+		"title": "Doppelhaushalt 2016/2017",
+		"description": "Der Haushaltsplan dient der Feststellung und Deckung des Finanzbedarfs, der zur Erfüllung der Aufgaben Berlins im jeweiligen Zeitraum notwendig ist. Er bildet die Zweistufigkeit der Berliner Verwaltung ab.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Senatsverwaltung für Finanzen",
+		"author": "onlineredaktion@senfin.berlin.de",
+		"created": "2016-01-28",
+		"updated": "2016-01-28"
+	},
+	"front": {
+		"textTop": "Berlin bekommt gerade",
+		"textBottom": "Länderfinanzausgleich",
+		"value": "0",
+		"unit": "€",
+		"changePerDay": "9920765.02",
+		"format": "euro",
+		"background": "img/coin.svg",
+		"color": "#000000"
+	},
+	"back": {
+		"text": "Berlin bekommt dieses Jahr etwa 3,631 Milliarden Euro Ausgleichszuweisungen der anderen Bundesländer.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

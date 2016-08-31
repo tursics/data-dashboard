@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/8693308e-14c5-4351-8919-33d3b5b7e861",
+		"title": "Bevölkerungsprognose für Wien: Gemeindebezirke nach Geschlecht und Altersgruppen",
+		"description": "Kleinräumige Bevölkerungsprognose nach Geschlecht und ausgewählten Altersgruppen für 23 Wiener Gemeindebezirke für den Zeitraum 2014 bis 2034. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 23 - Wirtschaft, Arbeit und Statistik",
+		"author": "post@ma23.wien.gv.at",
+		"created": "2014-09-23",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "In 18 Jahren lernen",
+		"textBottom": "Schüler in Volksschulen",
+		"value": "79434",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Das steht in der kleinräumigen Bevölkerungsprognose für den Zeitraum bis 2034.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "krefeld/moers-625618.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/krefeld/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/krefeld/ckanPackageShow.php",
+		"ckanDataset": "http://offenesdatenportal.de/dataset/"
+	},
+	"cards": [
+		"krefeld/opendata-krefeld.json",
+		"krefeld/code-for-berlin.json",
+		"krefeld/help.json",
+
+		"krefeld/d47f349f-24d5-41a6-9b92-f0e40140cd3d.json",
+		"krefeld/4f94f449-f193-4134-a975-f159061eb6a9.json",
+		"krefeld/5688fc62-c306-488a-aa64-fc95d11e49ad.json",
+		"krefeld/05f9a91c-3526-477f-aeed-a28eaf3bd672.json",
+		"krefeld/9746d4c3-864e-44ee-aed1-48ebad660fc2.json",
+		"krefeld/f94c6ef3-37b5-47ef-bc2c-7ebfdb67b343.json"
+	]
+}

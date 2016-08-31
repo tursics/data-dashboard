@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Netherlands",
+		"city": "Amsterdam"
+	},
+	"portal": {
+		"url": "http://hdl.handle.net/10934/RM0001.COLLECT.5853",
+		"title": "Winterlandschap met schaatsers",
+		"description": "",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Was developed using the Rijksmuseum API",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "",
+		"textBottom": "",
+		"value": "",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "amsterdam/rijksmuseum-SK-A-1718.png",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Rijksmuseum Collection<br><br>Avercamp, ca. 1608",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

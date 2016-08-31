@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/71edef44-9d6c-4042-ab71-7207dc930ba7",
+		"title": "Anzahl der Hunde pro Bezirk der Stadt Wien",
+		"description": "Anzahl der Hunde pro Bezirk und Rasse",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 6 - Rechnungs- und Abgabenwesen",
+		"author": "post@ma06.wien.gv.at",
+		"created": "2015-12-15",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Affenpinscher? Zwergspitz?",
+		"textBottom": "Hunde leben in Wien",
+		"value": "55896",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/animals.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Tablle zählt alle Hunde in Wien pro Bezirk und Rasse:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

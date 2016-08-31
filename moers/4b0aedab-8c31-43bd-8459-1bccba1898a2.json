@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/4b0aedab-8c31-43bd-8459-1bccba1898a2",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Immer",
+		"textBottom": "Standorte ",
+		"value": "24",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/phone.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Egal ob O2, Vodafone oder T-Mobile: Alle vertreten die gleiche Anzahl an Mobilfunkmasten.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

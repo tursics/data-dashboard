@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/d025f670-5719-417e-8750-07b9178e7d92",
+		"title": "Luftbildplan Wien 1956",
+		"description": "Der Luftbildplan von Wien aus dem Jahr 1956 deckt das gesamte Wiener Stadtgebiet in einer Auflösung von 50 Zentimeter ab. Die Luftbildbefliegung fand im April 1956 statt.  <a href=\"https://www.wien.gv.at/stadtentwicklung/stadtvermessung/service/luftarchiv.html/\">https://www.wien.gv.at/stadtentwicklung/stadtvermessung/service/luftarchiv.html/</a>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung ",
+		"author": "post@ma41.wien.gv.at",
+		"created": "2015-12-15",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Fliege über Luftbilder mit",
+		"textBottom": "Auflösung (April 1956)",
+		"value": "50",
+		"unit": "cm",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Der Luftbildplan von Wien aus dem Jahr 1956 deckt das gesamte Wiener Stadtgebiet ab.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

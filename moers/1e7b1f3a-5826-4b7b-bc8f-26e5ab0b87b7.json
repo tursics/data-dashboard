@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Von den Geflüchteten haben",
+		"textBottom": "die Stadt wieder verlassen.",
+		"value": "68 %",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/refugees.svg",
+		"color": "#fecb32"
+	},
+	"back": {
+		"text": "Die Statistik bezieht sich auf die Flüchtlingszahlen in den Jahren 2007 bis 2014. ",
+		"color": "#000000",
+		"cssClass": "refugees"
+	}
+}

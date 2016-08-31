@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/ba4837c3-9e96-4260-aaaf-528af931ab04",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Bibliothekstief: nur",
+		"textBottom": "Besucher am Tag ",
+		"value": "33 ",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "Die Besucherzahlen der Bibliothek sinken jährlich um einen beunruhigenden Prozentsatz.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

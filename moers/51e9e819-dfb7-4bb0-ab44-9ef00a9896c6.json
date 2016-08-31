@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/51e9e819-dfb7-4bb0-ab44-9ef00a9896c6",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Die Bevölkerung ist zu",
+		"textBottom": "nicht hier geboren.",
+		"value": "70",
+		"unit": "%",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Jediglich ein Drittel der Bevölkerung stammt gebürtig aus Moers.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

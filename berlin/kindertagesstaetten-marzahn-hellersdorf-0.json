@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/kindertagesst%C3%A4tten-marzahn-hellersdorf-0",
+		"title": "Kindertagesstätten in Marzahn-Hellersdorf",
+		"description": "Kindertagesstätten in Marzahn-Hellersdorf",
+		"license": "Creative Commons Namensnennung Lizenz - unter gleichen Bedingungen",
+		"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+		"attribution": "Jugendamt Marzahn-Hellersdorf",
+		"author": "angelika.herda@ba-mh.berlin.de",
+		"created": "2014-12-29",
+		"updated": "2016-02-08"
+	},
+	"front": {
+		"textTop": "Wir haben Platz für",
+		"textBottom": "Kinder in den Kitas",
+		"value": "11577",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Natürlich gibt es mehr Plätze in Berlin. Diese Zahlen stammen aus Marzahn-Hellersdorf.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

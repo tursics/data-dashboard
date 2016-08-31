@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'judsonmedium';
+	src: url('../fonts/judson-regular-webfont.eot');
+	src: url('../fonts/judson-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/judson-regular-webfont.woff2') format('woff2'),
+	     url('../fonts/judson-regular-webfont.woff') format('woff'),
+	     url('../fonts/judson-regular-webfont.ttf') format('truetype'),
+	     url('../fonts/judson-regular-webfont.svg#judsonmedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'judsonbold';
+	src: url('../fonts/judson-bold-webfont.eot');
+	src: url('../fonts/judson-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/judson-bold-webfont.woff2') format('woff2'),
+	     url('../fonts/judson-bold-webfont.woff') format('woff'),
+	     url('../fonts/judson-bold-webfont.ttf') format('truetype'),
+	     url('../fonts/judson-bold-webfont.svg#judsonbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'judsonitalic';
+	src: url('../fonts/judson-italic-webfont.eot');
+	src: url('../fonts/judson-italic-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/judson-italic-webfont.woff2') format('woff2'),
+	     url('../fonts/judson-italic-webfont.woff') format('woff'),
+	     url('../fonts/judson-italic-webfont.ttf') format('truetype'),
+	     url('../fonts/judson-italic-webfont.svg#judsonitalic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'dashboardicons';
+	src: url('../fonts/dashboardicons.eot');
+	src: url('../fonts/dashboardicons.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/dashboardicons.woff2') format('woff2'),
+	     url('../fonts/dashboardicons.woff') format('woff'),
+	     url('../fonts/dashboardicons.ttf') format('truetype'),
+	     url('../fonts/dashboardicons.svg#dashboardicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.dashboardicon {
+	font-family: "dashboardicons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1em;
+	margin-left: .2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-spin:   before { content: '\e801'; }
+.icon-share:  before { content: '\e803'; }
+.icon-pencil: before { content: '\e804'; }
+.icon-left:   before { content: '\e805'; }
+.icon-github: before { content: '\e806'; }
+.icon-twitter:before { content: '\e807'; }
+.icon-mail:   before { content: '\e808'; }
+.icon-eye:    before { content: '\e809'; }
+
+body {
+	background: no-repeat center center fixed;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+	color: #fff;
+	font-family: 'judsonmedium', Arial, sans-serif;
+	font-size: 12pt;
+	margin: 0;
+	padding-top: 50px;
+}
+
+body.build {
+	background: #2c71b8 url('../img/blueprintbackground.svg') !important;
+}
+
+#board {
+	font-family: 'judsonitalic', Arial, sans-serif;
+	padding: 0 0.5em 3.6em 0.5em;
+}
+.build #board {
+	margin: 0 auto;
+	width: 28em;
+}
+
+.container {
+	color: #000;
+}
+
+.build .thumbnail {
+	background: #eee;
+}
+
+.card {
+	float:left;
+	height: 7.4em;
+	margin: 4.1em .5em 0 0;
+	-webkit-perspective: 1000;
+	   -moz-perspective: 1000;
+	     -o-perspective: 1000;
+	        perspective: 1000;
+	position: relative;
+	width: 12.6em;
+}
+
+.endcard {
+	clear:both;
+}
+
+.cardwrapper {
+	height: 100%;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	     -o-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transition: transform .3s;
+	   -moz-transition: transform .3s;
+	     -o-transition: transform .3s;
+	        transition: transform .3s;
+	width: 100%;
+}
+
+.cardwrapper.flipped {
+	-webkit-transform: rotateY( 180deg );
+	   -moz-transform: rotateY( 180deg );
+	     -o-transform: rotateY( 180deg );
+	        transform: rotateY( 180deg );
+}
+
+.cardwrapper figure {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	background: white;
+	color: black;
+	display: block;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.cardwrapper figure:before {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	border-bottom: 3.6em solid white;
+	border-left: 6.28em solid transparent;
+	border-right: 6.28em solid transparent;
+	content: '';
+	height: 0;
+	left: 0;
+	position: absolute;
+	top: -3.55em;
+	width: 0;
+}
+
+.cardwrapper figure:after {
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	     -o-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	border-left: 6.28em solid transparent;
+	border-right: 6.28em solid transparent;
+	border-top: 3.6em solid white;
+	bottom: -3.55em;
+	content: '';
+	height: 0;
+	left: 0;
+	position: absolute;
+	width: 0;
+}
+
+.cardwrapper .front {
+}
+
+.cardwrapper .back {
+	-webkit-transform: rotateY( 180deg );
+	   -moz-transform: rotateY( 180deg );
+	     -o-transform: rotateY( 180deg );
+	        transform: rotateY( 180deg );
+}
+
+.cardwrapper .front div, .cardwrapper .back div {
+	height: 100%;
+	overflow: hidden;
+	margin: 0 .2em 0 .2em;
+	text-align: center;
+}
+.cardwrapper .back div {
+	height: 5.8em;
+}
+
+.cardwrapper .front.card1line div, .cardwrapper .back.card1line div {
+	padding-top: 3.2em;
+	white-space: nowrap;
+}
+.cardwrapper .front.card2lines div, .cardwrapper .back.card2lines div {
+	padding-top: 2.7em;
+	white-space: nowrap;
+}
+.cardwrapper .front.card3lines div, .cardwrapper .back.card3lines div {
+	line-height: 1.5em;
+	padding-top: 1.45em;
+	white-space: nowrap;
+}
+.cardwrapper .front.display div {
+	line-height: 1.2em;
+	padding-top: 1.1em;
+	white-space: nowrap;
+}
+.cardwrapper .front.display div span {
+	font-family: 'judsonmedium', Arial, sans-serif;
+	font-size: 2.8em;
+	line-height: 1em;
+}
+
+.cardwrapper .back div.buttonbar {
+	height: 3em;
+	margin: 0;
+	position: absolute;
+	top: 5.8em;
+	width: 100%;
+	z-index: 1;
+}
+.cardwrapper .back div.buttonbar button {
+	margin: 0 1em 0 1em;
+}
+
+img.background {
+	left: 0;
+	position: absolute;
+	top: -3.6em;
+	width: 100%;
+	z-index: -1;
+}
+
+figure.transparent {
+	background: transparent;
+}
+figure.transparent:before {
+	border-bottom-color: transparent;
+}
+figure.transparent:after {
+	border-top-color: transparent;
+}
+
+figure.refugees {
+	background: #fecb32;
+}
+figure.refugees:before {
+	border-bottom-color: #fecb32;
+}
+figure.refugees:after {
+	border-top-color: #fecb32;
+}
+
+figure.blueprint {
+	background: #2c71b8;
+}
+figure.blueprint:before {
+	border-bottom-color: #2c71b8;
+}
+figure.blueprint:after {
+	border-top-color: #2c71b8;
+}
+
+.statistic .label .badge {
+	background-color: #fff;
+	color: #777;
+	line-height: .6em;
+	margin-left: .3em;
+}
+
+.statistic .label-danger .badge {
+	color: #d9534f;
+}
+
+.statistic .label-info .badge {
+	color: #5bc0de;
+}
+
+.statistic .label-warning .badge {
+	color: #f0ad4e;
+}
+
+.statistic .label-success .badge {
+	color: #5cb85c;
+}
+
+.statistic .label-default .badge {
+	color: #777;
+}
+
+.animate-spin {
+	-webkit-animation: spin 2s infinite linear;
+	   -moz-animation: spin 2s infinite linear;
+	     -o-animation: spin 2s infinite linear;
+	        animation: spin 2s infinite linear;
+	display: inline-block;
+}
+@-moz-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		   -moz-transform: rotate(359deg);
+		     -o-transform: rotate(359deg);
+		        transform: rotate(359deg);
+	}
+}
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		   -moz-transform: rotate(359deg);
+		     -o-transform: rotate(359deg);
+		        transform: rotate(359deg);
+	}
+}
+@-o-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		   -moz-transform: rotate(359deg);
+		     -o-transform: rotate(359deg);
+		        transform: rotate(359deg);
+	}
+}
+@-ms-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		   -moz-transform: rotate(359deg);
+		     -o-transform: rotate(359deg);
+		        transform: rotate(359deg);
+	}
+}
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		   -moz-transform: rotate(0deg);
+		     -o-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(359deg);
+		   -moz-transform: rotate(359deg);
+		     -o-transform: rotate(359deg);
+		        transform: rotate(359deg);
+	}
+}

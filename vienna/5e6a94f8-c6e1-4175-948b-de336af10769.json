@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/5e6a94f8-c6e1-4175-948b-de336af10769",
+		"title": "Wiener Linien: Statistik Betriebszweige - Autobus",
+		"description": "Fahrzeug, Infrastruktur und Betriebsdaten - Autobus ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Wiener Linien GmbH & CO KG",
+		"author": "post@wienerlinien.at ",
+		"created": "2013-06-26",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "In Busse steigen",
+		"textBottom": "Passagiere ein",
+		"value": "",
+		"unit": "",
+		"changePerDay": "457808",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Im Jahr 2012 benutzten 167,1 Millionen Passagiere die Autobusse der Wiener Linien.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

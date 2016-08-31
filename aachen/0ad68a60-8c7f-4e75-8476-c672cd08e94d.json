@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/0ad68a60-8c7f-4e75-8476-c672cd08e94d",
+		"title": "Haltestellen und Fahrgastunterstände_Stand 20150918",
+		"description": "Hier finden Sie eine Aufstellung der Haltestellen und Fahrgastunterstände des Stadtgebietes.",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Frau Lech",
+		"author": "offenedaten@mail.aachen.de",
+		"created": "2015-09-18",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Trocken bleibt man an ",
+		"textBottom": "der Bushaltestellen ",
+		"value": "50 ",
+		"unit": "% ",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Hier finden Sie eine Aufstellung der Haltestellen und Fahrgastunterstände des Stadtgebietes.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

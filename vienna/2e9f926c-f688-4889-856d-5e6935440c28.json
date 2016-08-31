@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/2e9f926c-f688-4889-856d-5e6935440c28",
+		"title": "Radverkehrszählungen der Stadt Wien",
+		"description": "Radverkehrszählungen auf ausgewählten Routen. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 46 - Verkehrsorganisation und technische Verkehrsangelegenheiten",
+		"author": "post@ma46.wien.gv.at",
+		"created": "2013-04-02",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Automatisch gezählt werden",
+		"textBottom": "Fahrräder im Stadtgebiet",
+		"value": "",
+		"unit": "",
+		"changePerDay": "18812",
+		"format": "int",
+		"background": "img/bicycle.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die 12 Dauerzählstellen für den Radverkehr erfassen täglich zwischen 11 zu 8229 Fahrräder.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/13500481-27e7-4a39-99fb-e129cbeea9b5",
+		"title": "Potenzialkarte Erdwärmesonden - Wien",
+		"description": "Diese Karte zeigt die konduktive Wärmeleitfähigkeit eingeteilt in 3 Klassen. Die Klassen geben Auskunft über die Fähigkeit Wärme weiterzuleiten und sind eingeteilt in mäßig (<1.8 W/m/K), durchschnittlich (1.8 – 1.99 W/m/K) und gut (>= 2 W/m/K)",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 20 - Energieplanung",
+		"author": "post@ma20.wien.gv.at",
+		"created": "2015-09-24",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Geeignet für",
+		"textBottom": "sind viele Grundstücke",
+		"value": "Erdwärme",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/ground.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Eine Karte zeigt die konduktive Wärmeleitfähigkeit für Erdwärmesonden.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

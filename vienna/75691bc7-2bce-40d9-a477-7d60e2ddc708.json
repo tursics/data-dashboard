@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/75691bc7-2bce-40d9-a477-7d60e2ddc708",
+		"title": "Innovative Energieprojekte - Wien",
+		"description": "Energieeffizientem Bauen in Großstädten wie Wien wird immer größere Bedeutung zukommen und verdient verstärkte Beachtung. Bauten zum Thema \"Energie\" in Wien, ausgewählt nach architektonischen Qualitäten und innovativen Ansätzen verdeutlichen den Stand der Thematik und werden hier gesammelt dargestellt.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 20 - Energieplanung",
+		"author": " post@ma20.wien.gv.at",
+		"created": "2015-09-23",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Die Elefanten verbrauchen",
+		"textBottom": "warmes Wasser zum Duschen",
+		"value": "150000",
+		"unit": "l",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/water.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "... über eine eigene Solarthermieanlage. Weitere innovative Bauten zum Thema \"Energie\" gibt es hier:",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "The elephants consume",
+			"textBottom": "of warm water for showers"
+		},
+		"back": {
+			"text": "... its own solar thermal system. More innovative buildings on \"Energy\" is available here:"
+		}
+	}
+}

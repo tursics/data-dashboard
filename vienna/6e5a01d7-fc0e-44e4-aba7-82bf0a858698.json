@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/6e5a01d7-fc0e-44e4-aba7-82bf0a858698",
+		"title": "Büchereien Wien - Jahresausleihen",
+		"description": "Statistik der Ausleihen der Büchereien nach Zweigstellen ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 13 - Büchereien Wien",
+		"author": "bib.auskunft@buechereien.wien.at",
+		"created": "2015-03-06",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Gerade werden",
+		"textBottom": "Bücher ausgeliehen",
+		"value": "",
+		"unit": "",
+		"changePerDay": "107088",
+		"format": "int",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "Die gesamte Statistik der Ausleihen der Büchereien nach Zweigstellen befindet sich hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

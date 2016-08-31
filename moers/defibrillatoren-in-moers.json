@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "An ",
+		"textBottom": "kannst du Leben retten!",
+		"value": "16 Orten",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/health.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Lebensrettende Informationen zu den Defibrillatoren in Moers kannst du hier sehen:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

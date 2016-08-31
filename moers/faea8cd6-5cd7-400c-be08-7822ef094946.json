@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Es gibt insgesamt ",
+		"textBottom": "Containersammelstellen",
+		"value": "53",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Auf der Karte kann man auf den ersten Blick den naheliegensten Container entdecken.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

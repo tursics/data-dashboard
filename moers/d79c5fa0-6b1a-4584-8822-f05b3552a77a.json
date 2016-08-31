@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Du kannst deine Stimme in",
+		"textBottom": "Wahllokalen abgeben",
+		"value": "123",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/phone.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die große Dichte der Wahllokale ermöglicht Bürgern eine hohe Mobilität bei den Kommunalwahlen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

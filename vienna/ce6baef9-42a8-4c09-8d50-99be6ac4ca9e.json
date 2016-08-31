@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/ce6baef9-42a8-4c09-8d50-99be6ac4ca9e",
+		"title": "Monumentalbrunnen - Standorte - Wien",
+		"description": "Die MA 31 - Wiener Wasser verwaltet einige Denkmal- und Monumental- sowiekünstlerisch gestaltete Trinkbrunnen der Stadt Wien. Diese Brunnen werten als Sehenswürdigkeiten das Stadtbild auf und dienen der Erfrischung.  ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 31 - Wiener Wasser",
+		"author": " post@ma31.wien.gv.at",
+		"created": "2014-09-18",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Der Vermählungsbrunnen:",
+		"textBottom": "erbaut von Corradini",
+		"value": "1732",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/water.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Wiener Wasser verwaltet einige wunderschöne Trinkbrunnen der Stadt Wien.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

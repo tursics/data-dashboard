@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/5fc523d5-c299-4d97-889f-01ed247b10fa",
+		"title": "Kaufpreissammlung Liegenschaften - Wien",
+		"description": "Sammlung von Liegenschaftstransaktionsdaten aus dem Grundbuch inkl. Auswertung, Flächenwidmungs- und Bebauungsbestimmungen, örtliche Besichtigung etc.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 69 - Immobilienmanagement",
+		"author": "post@ma69.wien.gv.at",
+		"created": "2015-09-24",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Die teuerste Immobilie hat",
+		"textBottom": "gekostet (Göllnergasse)",
+		"value": "119500000",
+		"unit": "€",
+		"changePerDay": "",
+		"format": "euro",
+		"background": "img/house.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Mehr Kaufverträge stehen in der Sammlung der Liegenschafts-Transaktionsdaten.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "berlin/oberbaumbrucke-968607.jpg"
+	},
+	"data": {
+		"feed": "http://daten-waben.tursics.de/berlin/rss.php",
+		"feed_but_send_no_CORS_header": "http://daten.berlin.de/datensaetze/rss.xml"
+	},
+	"cards": [
+		"berlin/berlin-opendata.json",
+		"berlin/code-for-berlin.json",
+		"berlin/help.json",
+
+		"berlin/standorte-von-altglascontainern-auf-oeffentlichem-strassenland-charlottenburg-1.json",
+		"berlin/kamerale-monatsdaten-bezirk-lichtenberg-2016.json",
+		"berlin/orte-fuer-kinder-jugend-und-familie.json",
+		"berlin/traeger-von-kindertagesstaetten-marzahn-hellersdorf.json",
+		"berlin/kindertagesstaetten-marzahn-hellersdorf-0.json",
+		"berlin/beschaeftigungsdaten-fuer-opendata.json",
+		"berlin/berliner-weihnachtsmaerkte-0.json",
+		"berlin/wochen-und-troedelmaerkte.json",
+		"berlin/strassen-und-volksfeste.json",
+
+		"berlin/doppelhaushalt-20162017.json",
+		"berlin/angebote-zur-unterstuetzung-von-fluechtlingen.json",
+		"berlin/aktuelle-ausschreibungen-nach-vol-vob-vof-oder-fuer-interessenbekundungsverfahren-0.json",
+		"berlin/bezirksamtsbeschluesse.json",
+		"berlin/angebote-fuer-kinder-jugend-und-familie.json",
+		"berlin/kamerale-monatsdaten-bezirk-lichtenberg-2015.json",
+		"berlin/haushaltsplan-des-bezirksamtes-lichtenberg-von-berlin-fuer-20162017.json",
+		"berlin/daten-zur-arbeitslosigkeit-fuer-opendata.json"
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/50165b17-837c-4898-a99f-ade4aaf44ce1",
+		"title": "Botschaften und Konsulate in Wien",
+		"description": "Daten der ausländischen Botschaften, Berufs- und Honorarkonsulate, Kulturinstitute sowie der Ständigen Vertretungen bei internationalen Organisationen in Wien. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 14 - Automationsunterstützte Datenverarbeitung, Informations- und Kommunikationstechnologie",
+		"author": " post@ma14.wien.gv.at",
+		"created": "2014-12-18",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Über die Stadt verteilt sind",
+		"textBottom": "Botschaften und Konsulate",
+		"value": "174",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Daten der Ausländischen Botschaften, Konsulate, Kulturinstituten und Ständigen Vertretungen...",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

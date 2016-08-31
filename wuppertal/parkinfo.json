@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "wuppertal"
+	},
+	"portal": {
+		"url": "http://parkinfo.wuppertal.de/",
+		"title": "Parkplätze in Wuppertal",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "In Elberfeld gibt es noch",
+		"textBottom": "freie Parkplätze",
+		"value": "216",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/parking.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Zeigt alle Parkplätze und Parkhäuser mit Öffnunszeiten und freien Plätzen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/c92101b1-0a81-4454-9306-e5c231b5d728",
+		"title": "Büchereien Wien - Jahresbestleiher",
+		"description": "Meistgeliehene Titel der Büchereien Wien im vergangenen Jahr ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 13 - Büchereien Wien",
+		"author": "bib.auskunft@buechereien.wien.at",
+		"created": "2015-03-06",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Jeff Kinney schrieb die",
+		"textBottom": "meistgeliehenen Bücher",
+		"value": "8",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "... der Büchereien Wien im vergangenen Jahr. \"Geht's noch?\" und \"Keine Panik!\" waren die Toptitel.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

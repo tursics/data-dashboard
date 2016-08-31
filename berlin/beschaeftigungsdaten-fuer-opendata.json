@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/besch%C3%A4ftigungsdaten-f%C3%BCr-opendata",
+		"title": "Beschäftigungsdaten für OpenData",
+		"description": "Erwerbstätige in Berlin nach Wirtschaftsbereichen",
+		"license": "Creative Commons Namensnennung unter gleichen Bedingungen",
+		"licenseURL": "http://creativecommons.org/licenses/by-sa/3.0/de/",
+		"attribution": "SenWiTechForsch",
+		"author": "ralf.eberhardt@senwtf.berlin.de",
+		"created": "2015-01-29",
+		"updated": "2016-02-04"
+	},
+	"front": {
+		"textTop": "Keinen Flughafen, aber",
+		"textBottom": "Bauarbeiter haben",
+		"value": "81580",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Beschäftigungszahlen der letzten Jahre aus Berlin verraten noch mehr...",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

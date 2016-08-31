@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/5f85fd95-3a59-452d-9dbf-964cdd4b40d0",
+		"title": "Dezernatsverteilungsplan Stand 01.02.2015",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "2015-07-31",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Aachen hat ",
+		"textBottom": "verschiedene Dezernate ",
+		"value": "6 ",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/blueprintcard.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Zuständigkeiten reichen von Finanzen bis zu Kultur. ",
+		"color": "#ffffff",
+		"cssClass": "blueprint"
+	}
+}

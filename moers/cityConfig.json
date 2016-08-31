@@ -1,0 +1,36 @@
+{
+	"meta": {
+		"mail": "thomas@tursics.de",
+		"twitter": "https://twitter.com/tursics/",
+		"github": "https://github.com/tursics/data-dashboard/",
+		"showMenuCity": true,
+		"background": "moers/moers-625618.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/moers/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/moers/ckanPackageShow.php",
+		"ckanDataset": "http://offenesdatenportal.de/dataset/"
+	},
+	"cards": [
+		"moers/opendata-moers.json",
+		"moers/code-for-berlin.json",
+		"moers/help.json",
+
+		"moers/4b0aedab-8c31-43bd-8459-1bccba1898a2.json",
+		"moers/a89bc109-9230-4db6-b05e-d72ffd32947c.json",
+		"moers/13013159-ad6b-4ceb-b598-91dc8c4357d5.json",
+		"moers/d79c5fa0-6b1a-4584-8822-f05b3552a77a.json",
+		"moers/52e1f251-cb70-4e61-90ae-f1ed033bf7eb.json",
+		"moers/8d851160-ace1-4761-9087-a3e6331d2009.json",
+		"moers/faea8cd6-5cd7-400c-be08-7822ef094946.json",
+		"moers/veranstaltungen-zur-weihnachtszeit.json",
+		"moers/51e9e819-dfb7-4bb0-ab44-9ef00a9896c6.json",
+		"moers/1e7b1f3a-5826-4b7b-bc8f-26e5ab0b87b7.json",
+		"moers/a5413176-635e-4b18-9e2c-abf3a3237de2.json",
+		"moers/defibrillatoren-in-moers.json",
+		"moers/fbf97aa4-ea70-42a5-829e-836c3dac3067.json",
+		"moers/e476a4f1-cd87-4ba4-ad6a-1f66ec67a33b.json",
+		"moers/a7056a8a-ea10-41fd-afb2-62d022aec517.json",
+		"moers/ba4837c3-9e96-4260-aaaf-528af931ab04.json"
+	]
+}

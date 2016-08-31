@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/8d6b6b7c-34dd-4207-b9b2-ce455b90144c",
+		"title": "Statistisches Jahrbuch der Stadt Aachen",
+		"description": "statistische Daten der Stadt Aachen  - Aachen Allgemein  - Bevölkerung  - Wirtschaft, Arbeit und Wissenschaft  - Verwaltung und Finanzen, Sicherheit und Soziales  - Gesundheit, Tourismus und Freizeit  - Bildung und Kultur  - Bau- und Wohnungswesen, Grundstücksmarkt  - Verkehr",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Stadt Aachen, FB02/3 Statistik und Stadtforschung",
+		"author": "statistik@mail.aachen.de",
+		"created": "2015-01-21",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Das letzte Mal ist im Jahr ",
+		"textBottom": "Aachen gewachsen ",
+		"value": "1998",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Mehr interessante Fakten rund um Aachen im Statistischen Jahrbuch der Stadt Aachen 2012/13",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

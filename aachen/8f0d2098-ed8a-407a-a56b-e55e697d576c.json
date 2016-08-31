@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/8f0d2098-ed8a-407a-a56b-e55e697d576c",
+		"title": "Baustellen Stadtgebiet Aachen",
+		"description": "Tagesaktueller Überblick über Baustellen und andere Verkehrsbehinderungen heute, in der kommenden Woche sowie in den kommenden drei Monaten.Dieser Datensatz umfasst die Standorte der amtlich erfassten Straßenbaustellen in Aachen mit Informationen zur genauen Lage, zu Art und Grund der Maßnahme, zu Beginn und Ende der Maßnahme sowie etwaigen Bemerkungen. Die Ressourcen werden in der Regel im folgenden Zeitabstand aktualisiert: 1 Tag ",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Geoservice der Stadt Aachen",
+		"author": "geoservice@mail.aachen.de",
+		"created": "2014-08-21",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Die älteste Baustelle ist ",
+		"textBottom": "alt",
+		"value": "2013-06-17",
+		"unit": "",
+		"changePerDay": "",
+		"format": "date",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Seitdem erneuert die STAWAG in der Körbergasse  die Entsorgungsleitungen",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

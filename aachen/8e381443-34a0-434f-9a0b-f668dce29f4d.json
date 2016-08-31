@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/8e381443-34a0-434f-9a0b-f668dce29f4d",
+		"title": "Parkscheinautomaten 2015",
+		"description": "Parkscheinautomaten inkl. Zonenzuordnung (falls vorhanden); jährliche Akutalisierung; letzte Aktualisierung: 26.02.2015",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Frau Lech",
+		"author": "offenedaten@mail.aachen.de",
+		"created": "2015-02-26",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Ein Ticket kann man an ",
+		"textBottom": "Parkscheinautomaten ziehen",
+		"value": "307",
+		"unit": "",
+		"changePerDay": "0",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Die Daten zu Parkscheinautomaten und ihrer Zonenzuordnung wird jährlich aktualisiert.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

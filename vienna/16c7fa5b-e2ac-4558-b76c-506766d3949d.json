@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/16c7fa5b-e2ac-4558-b76c-506766d3949d",
+		"title": "Weihnachtsmärkte und Silvesterstände - Wien",
+		"description": "Inhalte der Veranstaltungsdatenbank auf wien.at. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 53 - Presse- und Informationsdienst, Magistratsabteilung 55 - Bürgerdienst - Stadtservice für alle Wienerinnen und Wiener",
+		"author": "post@ma53.wien.gv.at",
+		"created": "2013-12-10",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Glühwein gibt es wieder in",
+		"textBottom": "auf den Weihnachtsmärkten",
+		"value": "2016-11-05",
+		"unit": "Tagen",
+		"changePerDay": "",
+		"format": "date",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die ersten Weihnachtsmärkte öffnen auch dieses Jahr wieder Anfang November.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

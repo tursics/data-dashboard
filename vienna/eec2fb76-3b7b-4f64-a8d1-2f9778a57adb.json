@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/eec2fb76-3b7b-4f64-a8d1-2f9778a57adb",
+		"title": "Orthofoto Wien 2014",
+		"description": "Das Orthofoto von Wien aus dem Jahr 2014 deckt das gesamte Wiener Stadtgebiet in einer Auflösung von 15 Zentimeter ab. Die Luftbildbefliegung fand am 6. und 7. Juni 2014 statt.  <a href=\"https://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/orthofoto/index.html\">https://www.wien.gv.at/stadtentwicklung/stadtvermessung/geodaten/orthofoto/index.html</a>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 41 - Stadtvermessung",
+		"author": "post@ma41.wien.gv.at",
+		"created": "2015-12-15",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Fliege über Luftbilder mit",
+		"textBottom": "Auflösung (Juni 2014)",
+		"value": "15",
+		"unit": "cm",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Jährlich gibt es neue Orthofotos (entzerrtes Luftbilder) von Wien.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/827fb7fd-09ac-4c5f-a241-4cc35cc09366",
+		"title": "Wohnen in Wien - Gemeindebauten",
+		"description": "Informationen zu den Wiener Gemeindebauten und den dazugehörigen Sanierungsinformationen. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Wiener Wohnen Kundenservice GmbH",
+		"author": "post@wrw.wien.gv.at",
+		"created": "2014-03-17",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Ein barockes Bürgerhaus von",
+		"textBottom": "steht in der Auerspergstr. 19",
+		"value": "1762",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/house.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Weitere Informationen zu den Gemeindebauten, deren Entstehung, Sanierung und historischer Einordnung:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

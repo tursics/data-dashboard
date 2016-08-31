@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/81650028-ef21-4f1b-a991-9e3a3f01c729",
+		"title": "Einwohnerstatistik",
+		"description": "Die Datei hat die folgenden Merkmale:  - Statistischer Bezirk Nr.  - Statistischer Bezirk Name  - Personenanzahl  - Haupt-/Nebenwohnsitz Anzahl  - Männlich/Weiblich Anzahl  - Ledig / Verheiratet / Verwitwet / Geschieden Anzahl  - Altersklassen Anzahl  - Deutsch / Ausländer Anzahl  ",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Stadt Aachen, FB 02/3 Statistik und Stadtforschung",
+		"author": "statistik@mail.aachen.de",
+		"created": "2014-08-31",
+		"updated": "2016-03-15"
+	},
+	"front": {
+		"textTop": "Keine Lust auf Heiraten? ",
+		"textBottom": "haben hier ja gesagt ",
+		"value": "17,5% ",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/gender.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Das trifft auf den Bezirk 14 Lindenplatz zu. In anderen Bezirken sind gut die Hälfte der Aachener verheiratet. ",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

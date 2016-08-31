@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/a89bc109-9230-4db6-b05e-d72ffd32947c",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Im Jahr 2015 lebten",
+		"textBottom": "Hunde in unserer Stadt",
+		"value": "6403",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/animals.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Trotz erhöhter Hundesteuer verzichten nur wenige Moerser auf ihren Vierbeiner.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"meta": {
+		"mail": "codeforcologne@gmail.com",
+		"twitter": "https://twitter.com/codeforcologne/",
+		"github": "https://github.com/codeforcologne/data-dashboard",
+		"showMenuCity": true,
+		"background": "cologne/cologne.jpg"
+	},
+	"data": {
+		"ckan": "http://daten-waben.tursics.de/cologne/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/cologne/ckanPackageShow.php",
+		"ckanDataset": "http://offenedaten-koeln.de/dataset/"
+	},
+	"cards": [
+		"cologne/cologne-opendata.json",
+		"cologne/code-for-cologne.json",
+		"cologne/help.json",
+		"cologne/standorte-fahrradverleih-koeln-kvb-rad.json",
+		"cologne/bevoelkerungsbewegung.json",
+		"cologne/gruenflaechenkataster-koeln-flaechentypen.json",
+		"cologne/sags-uns-anliegenmanagement-koeln.json",
+		"cologne/b6bb9aaf-73a2-4509-9055-5a9c005f3e20.json",
+		"cologne/monitoring-offene-daten-koeln-2015.json",
+		"cologne/einsatzgeschehen-feuerwehr-koeln.json",
+		"cologne/8ea02fcd-7b32-4557-8b92-764df6f9edb8.json",
+		"cologne/4bab19f6-726b-4cc6-8284-f81ec45c61b2.json",
+		"cologne/4934a917-4321-4bbf-a409-4e51e05cb873.json",
+		"cologne/c7f3093a-fde8-440e-b5b6-7bf2fa644290.json",
+		"cologne/schuelerinnen-und-schueler.json",
+		"cologne/oeffentliche-toiletten-koeln.json",
+		"cologne/wochenmaerkte-koeln.json",
+		"cologne/wohnen-koeln.json"
+	]
+}

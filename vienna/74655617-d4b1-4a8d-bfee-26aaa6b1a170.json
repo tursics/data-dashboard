@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/74655617-d4b1-4a8d-bfee-26aaa6b1a170",
+		"title": "Styled Layer Descriptor (SLD) für GeoServer WMS - Wien",
+		"description": "Darstellungsvorschriften der Default Styles aller GeoServer WMS Layer. Diese können für eine alternative Darstellung angepasst werden. Wenn beim Aufruf von GetMap auf einen angepassten SLD verwiesen wird, wird die Ergebniskarte entsprechend den neuen Darstellungsvorschriften ausgegeben. Siehe OGC Standard Style Layer Descriptor 1.0. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 14 - Automationsunterstützte Datenverarbeitung, Informations- und Kommunikationstechnologie",
+		"author": "post@ma14.wien.gv.at",
+		"created": "2012-12-17",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Passe deine Karten durch",
+		"textBottom": "individuelle Malstile an",
+		"value": "110",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Die digitalen Karten vom GeoServer können für eine alternative Darstellung angepasst werden.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

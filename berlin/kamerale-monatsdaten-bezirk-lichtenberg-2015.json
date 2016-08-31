@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/kamerale-monatsdaten-bezirk-lichtenberg-2015",
+		"title": "Kamerale Monatsdaten Bezirk Lichtenberg 2015",
+		"description": "Stand der Haushaltswirtschaft im laufenden Haushaltsjahr zum jeweiligen Monatsende im Bezirk Lichtenberg, Kapitel, Titel, Ansatz, Verfügbares Soll, Anordnungssoll, Festlegung, Verfügbare Mittel, Ist",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Bezirksamt Lichtenberg",
+		"author": "dagmar.haenisch@lichtenberg.berlin.de",
+		"created": "2015-07-08",
+		"updated": "2016-01-14"
+	},
+	"front": {
+		"textTop": "Auch ein Betrag von",
+		"textBottom": "steht in der Buchhaltung",
+		"value": "0.31",
+		"unit": "€",
+		"changePerDay": "",
+		"format": "euro",
+		"background": "img/coin.svg",
+		"color": "#000000"
+	},
+	"back": {
+		"text": "Kleine aber auch große Beträge werden jeden Monat in Lichtenberg ausgegeben.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Bonn"
+	},
+	"portal": {
+		"url": "http://opendata.bonn.de/dataset/wochenm%C3%A4rkte",
+		"title": "Wochenmärkte",
+		"description": "Liste der Wochenmärkte im Stadtgebiet Bonn unterteilt nach Stadtbezirk, Platz, Wochentag und Öffnungszeiten. <br /><br />Als ergänzenden Datensatz mit Informationen zu Antik- und Trödelmärkten, Kunstmärkten, Gewerbeschauen usw. ist der Veranstaltungskalender verfügbar. Der Datensatz steht mit der eigenen Rubrik Märkte ebenfalls als Open Data zur Verfügung: http://opendata.bonn.de/dataset/veranstaltungskalender-komplett%C3%BCbersicht",
+		"license": "Creative Commons Gemeinfreiheit Lizenz",
+		"licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+		"attribution": "Offene Daten Bonn",
+		"author": "opendata@bonn.de",
+		"created": "2016-04-11",
+		"updated": "2016-04-11"
+	},
+	"front": {
+		"textTop": "Schlendern sie über",
+		"textBottom": "Wochenmärkte",
+		"value": "10",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Fast jeden Tag ist ein Wochenmarkt im Stadtgebiet von Bonn geöffnet. Hier die komplette Liste:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

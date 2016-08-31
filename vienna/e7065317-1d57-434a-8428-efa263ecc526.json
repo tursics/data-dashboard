@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/e7065317-1d57-434a-8428-efa263ecc526",
+		"title": "Wohn- und Pflegehäuser - Standorte - Wien",
+		"description": "Wohn- und Pflegehäuser, Standorte, Wien ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Fonds Soziales Wien",
+		"author": "kontakt@fsw.at",
+		"created": "2012-04-11",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Pflegehäuser gibt es in",
+		"textBottom": "Wiener Bezirken",
+		"value": "22 von 23",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/house.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "In nur einem Bezirk stehen weder Pensionisten-Wohnhäuser noch Pflegehäuser.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

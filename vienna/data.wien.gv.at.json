@@ -1,0 +1,34 @@
+{
+	"location":{
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal":{
+		"url":"http://data.wien.gv.at",
+		"title":"Open Government Wien",
+		"description":"",
+		"license":"",
+		"licenseURL":"",
+		"attribution":"",
+		"author":"",
+		"created":"",
+		"updated":""
+	},
+	"front":{
+		"textTop":"",
+		"textBottom":"",
+		"value":"",
+		"unit":"",
+		"changePerDay":0,
+		"format":"",
+		"background":"vienna/data.wien.gv.at.svg",
+		"color":"",
+		"cssClass":""
+	},
+	"back":{
+		"text":"Die Stadt Wien veröffentlicht Daten in maschinenlesbarer Form auf ihrem Datenportal.",
+		"background":"",
+		"color":"#000000",
+		"cssClass":""
+	}
+}

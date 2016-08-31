@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "An Weihnachten finden ca.",
+		"textBottom": "Veranstaltungen statt.",
+		"value": "58 ",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Auch wenn noch nicht alle Veranstaltungen stehen, wird an das Angebot der letzten Jahre angeknüpft.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

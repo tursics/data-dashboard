@@ -1,0 +1,33 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Moers"
+	},
+	"portal": {
+		"url": "http://offenesdatenportal.de/dataset/be718ee8-d31b-48fc-99bb-8633ae667e19",
+		"title": "",
+		"description": "",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "Die Stadt nimmt gerade",
+		"textBottom": "Bußgelder ein.",
+		"value": "",
+		"unit": "€",
+		"changePerDay": "1922.55",
+		"format": "euro",
+		"background": "img/coin.svg",
+		"color": " none"
+	},
+	"back": {
+		"text": "Diese Gelder beziehen sich auf den ruhenden Verkehr. Durchschnittlich zahlt jeder Bürger 7,51€ im Jahr.",
+		"color": "",
+		"cssClass": ""
+	}
+}
+

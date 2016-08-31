@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Netherlands",
+		"city": "Amsterdam"
+	},
+	"portal": {
+		"url": "http://data.amsterdam.nl/dataset/fbb092f4-a3c1-4cab-91ff-a6e48b74bc50",
+		"title": "Afvalbakken Stadsdeel Centrum",
+		"description": "<p>Overzicht val alle afvalbakken in stadsdeel Centrum. Deze data is ook beschikbaar via CitySDK (api). Eenmalige status quo.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Marc Schoneveld",
+		"author": "m.schoneveld@amsterdam.nl",
+		"created": "2013-06-27",
+		"updated": "2015-02-25"
+	},
+	"front": {
+		"textTop": "Im Zentrum stehen",
+		"textBottom": "Abfallbehälter rum",
+		"value": "1497",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "Im Stadtteil Centrum stehen Abfallbehälter von 55 bis 360 Liter Größe herrum. Die Liste gibt es hier:",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "At the center are",
+			"textBottom": "dumpsters"
+		},
+		"back": {
+			"text": "In the district Centrum are waste containers of sizes from 55 to 360 liters."
+		}
+	}
+}

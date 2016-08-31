@@ -1,0 +1,34 @@
+{
+"location":{
+	"country":"Netherlands",
+	"city":"Amsterdam"
+},
+"portal":{
+	"url":"http://data.amsterdam.nl/",
+	"title":"Welkom op data.amsterdam.nl",
+	"description":"Op deze website vind je een catalogus van alle beschikbare open data in de regio Amsterdam. Niet alleen de gemeente Amsterdam, maar ook van diverse andere organisaties, bedrijven en overheidsinstellingen. Klik op ‘Data‘ of gebruik het zoekveld rechtsboven om in deze catalogus te zoeken.",
+	"license":"",
+	"licenseURL":"",
+	"attribution":"",
+	"author":"",
+	"created":"",
+	"updated":""
+},
+"front":{
+	"textTop":"",
+	"textBottom":"",
+	"value":"",
+	"unit":"",
+	"changePerDay":0,
+	"format":"",
+	"background":"amsterdam/data.amsterdam.svg",
+	"color":"",
+	"cssClass":""
+},
+"back":{
+	"text":"Amsterdam veröffentlicht Daten in maschinenlesbarer Form auf ihrem Datenportal.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}

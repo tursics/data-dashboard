@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/15d6ede8-f128-4fcd-aa3a-4479e828f477",
+		"title": "Gendering-Wortkatalog der Stadt Wien",
+		"description": "Worttabelle für Gendering Add-In für Microsoft Office Word 2010 im Format xml. Das Gendering Add-In soll Unterstützung und Hinweise für die praktische und einheitliche Anwendung einer geschlechtergerechten Sprache bieten.Die Worttabelle zum Gendering Add-In wurde von der Stadt Wien umfassend erweitert und kann an den Wortschatz und die Bedürfnisse der jeweiligen Organisationen bzw. Nutzerinnen und Nutzer angepasst werden. Die Tabelle im Format csv wird zusätzlich für andere Anwendungen angeboten. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Dezernat Gender Mainstreaming",
+		"author": "gm@md-os.wien.gv.at",
+		"created": "2013-12-10",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Geschlechtergerecht:",
+		"textBottom": "statt Kaufmänner",
+		"value": "Kaufleute",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/gender.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Worttabelle für Microsoft Office Word soll eine geschlechtergerechte Sprache unterstützen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

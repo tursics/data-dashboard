@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/bezirksamtsbeschl%C3%BCsse",
+		"title": "Bezirksamtsbeschlüsse",
+		"description": "Zur Veröffentlichung freigegebene Bezirksamtsbeschlüsse des    Bezirksamts Treptow-Köpenick",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Bezirksamt Treptow-Köpenick, Büro des Bezirksbürgermeisters",
+		"author": "sabrina.kirmse@ba-tk.berlin.de",
+		"created": "2014-06-23",
+		"updated": "2016-01-20"
+	},
+	"front": {
+		"textTop": "Treptow-Köpenick stellt",
+		"textBottom": "neue Leute ein",
+		"value": "46¼",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/template.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Monatlich werden weitere Bezirksamtsbeschlüsse aus Treptow-Köpenick veröffentlicht.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

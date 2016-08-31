@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Aachen"
+	},
+	"portal": {
+		"url": "http://offenedaten.aachen.de/dataset/7e1adbd1-6738-477a-8685-980fc8dead85",
+		"title": "Aachen WiFi Koordinaten_19.08.2015",
+		"description": "•Die Stadt Aachen bietet Ihren Gästen in der Innenstadt ein kostenfreies, schnelles, öffentliches und drahtloses Internet an.•Jeder Nutzer kann darin 30 Minuten frei und ohne Zugangscode surfen.•Weitere 24 Stunden kann er anschließend weiterhin frei, aber nur mit Zugangscode surfen.Das Aachen WiFi wird realisiert durch eine Kooperation mit der netAachen.",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "",
+		"author": "",
+		"created": "2015-08-20",
+		"updated": "2016-02-26"
+	},
+	"front": {
+		"textTop": "Online gehen? Ganz einfach",
+		"textBottom": "in der Innenstadt. ",
+		"value": "24",
+		"unit": "x",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Stadt Aachen bietet in der Innenstadt kostenfreies, schnelles Wlan an. ",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

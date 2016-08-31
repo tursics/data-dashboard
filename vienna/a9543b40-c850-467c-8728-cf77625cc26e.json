@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/a9543b40-c850-467c-8728-cf77625cc26e",
+		"title": "Bevölkerungsprognose für Wien: Gemeindebezirke nach Geschlecht und Geburtsland",
+		"description": "Kleinräumige Bevölkerungsprognose nach Geschlecht und Geburtsland für 23 Wiener Gemeindebezirke für den Zeitraum 2014 bis 2034. ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 23 - Wirtschaft, Arbeit und Statistik",
+		"author": "post@ma23.wien.gv.at",
+		"created": "2014-09-17",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "In 18 Jahren leben",
+		"textBottom": "Männer in Wien",
+		"value": "979120",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Natürlich auch Frauen! Mehr steht in der kleinräumigen Bevölkerungsprognose für den Zeitraum bis 2034.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

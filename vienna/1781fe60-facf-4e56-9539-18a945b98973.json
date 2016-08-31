@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/1781fe60-facf-4e56-9539-18a945b98973",
+		"title": "Wiener Linien: Statistik Betriebszweige - U-Bahn",
+		"description": "Fahrzeug, Infrastruktur und Betriebsdaten - U-Bahn ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Wiener Linien GmbH & CO KG",
+		"author": "post@wienerlinien.at ",
+		"created": "2013-06-26",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "In die U-Bahn steigen",
+		"textBottom": "Fahrgäste ein",
+		"value": "",
+		"unit": "",
+		"changePerDay": "1217534",
+		"format": "int",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Im Jahr 2012 benutzten 444,4 Millionen Fahrgäste die U-Bahn. Im Jahr davor sogar 567,6 Millionen.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

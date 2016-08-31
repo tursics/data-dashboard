@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Berlin"
+	},
+	"portal": {
+		"url": "http://daten.berlin.de/datensaetze/berliner-weihnachtsm%C3%A4rkte-0",
+		"title": "Berliner Weihnachtsmärkte",
+		"description": "Berliner Weihnachtsmärkte",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Senatsverwaltung für Wirtschaft, Technologie und Forschung",
+		"author": "ralf.eberhardt@senwtf.berlin.de",
+		"created": "2014-10-17",
+		"updated": "2016-02-02"
+	},
+	"front": {
+		"textTop": "Glühwein gibt es wieder in",
+		"textBottom": "auf den Weihnachtsmärkten",
+		"value": "2016-11-21",
+		"unit": "Tagen",
+		"changePerDay": "",
+		"format": "date",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Liste der Berliner Weihnachtsmärkte ist noch kurz, wächst bis Anfang Dezember auf ca. 80 an.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

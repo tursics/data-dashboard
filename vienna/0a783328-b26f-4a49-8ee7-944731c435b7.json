@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/0a783328-b26f-4a49-8ee7-944731c435b7",
+		"title": "Impfkalender - Wien",
+		"description": "1) Allgemeiner Impfkalender für Säuglinge und Kleinkinder  2) Allgemeiner Impfkalender für Schulkinder  3) Allgemeiner Impfkalender für Erwachsene ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 15 - Gesundheitsdienst der Stadt Wien",
+		"author": " post@ma15.wien.gv.at",
+		"created": "2014-09-23",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "Tetanus wird bereits im",
+		"textBottom": "bei Babies geimpft",
+		"value": "3.",
+		"unit": "Monat",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/health.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Den allgemeinen Impfkalender für Säuglinge, Kleinkinder, Schulkinder und Erwachsene gibt es hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

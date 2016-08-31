@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/5000642e-f686-4211-b7c7-97a9c2c1e23a",
+		"title": "Call A Bike",
+		"description": "Reportingdaten zu Call-a-Bike, inkl. CaB-Daten von Konrad Kassel und Stadtrad Hamburg, exkl. Daten weiterer Partner.",
+		"license": "",
+		"licenseURL": "",
+		"attribution": "Call a Bike Reporting",
+		"author": "reporting@flinkster.de",
+		"created": "2016-06-11",
+		"updated": "2016-06-16"
+	},
+	"front": {
+		"textTop": "Werde aktiv an",
+		"textBottom": "Fahrradstationen",
+		"value": "1472",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/bicycle.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Eine Liste aller  Call a Bike-Fahrrradstationen findest du hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

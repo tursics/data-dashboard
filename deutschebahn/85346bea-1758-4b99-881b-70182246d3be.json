@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/85346bea-1758-4b99-881b-70182246d3be",
+		"title": "Serviceeinrichtungen",
+		"description": "Serviceeinrichtungen sind z.B. Abstell- und Zugbildungsanlagen.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2016-06-15"
+	},
+	"front": {
+		"textTop": "In Deutschlang gibt es",
+		"textBottom": "Abstellanlagen",
+		"value": "13135",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/train.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Weitere Servieceinrichtung, mit ihrer Länge, den Weichen und Oberleitungen findest du hier:",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/9c977b93-4c8a-4bae-8839-ccd45c5be6a2",
+		"title": "Landesgesetzblätter Wien",
+		"description": "Bei den Daten handelt es sich um die Landesgesetzblätter von Wien.",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistrat Wien - Magistratsdirektion",
+		"author": "open@post.wien.gv.at",
+		"created": "2016-02-10",
+		"updated": "2016-02-11"
+	},
+	"front": {
+		"textTop": "Ein Kunstherz kostet",
+		"textBottom": "in den Krankenhäusern",
+		"value": "179397",
+		"unit": "€",
+		"changePerDay": "",
+		"format": "euro",
+		"background": "img/health.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Das steht im Landesgesetzblatt für Wien, Jahrgang 2016, 6. Verordnung.",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "An artificial heart will cost",
+			"textBottom": "in public hospitals"
+		},
+		"back": {
+			"text": "This is recorded in the Official Gazette for Vienna, Year 2016, 6. Regulation."
+		}
+	}
+}

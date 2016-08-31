@@ -1,0 +1,41 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/418b50b9-623e-4464-ac0a-2d5e3ccf1687",
+		"title": "Wienbücher der Wienbibliothek",
+		"description": "Volltexte von Büchern und Handschriften aus der Wienbibliothek ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 9 - Wienbibliothek im Rathaus ",
+		"author": "post@wienbibliothek.at",
+		"created": "2013-06-26",
+		"updated": "2016-02-29"
+	},
+	"front": {
+		"textTop": "Lies ein Buch von",
+		"textBottom": "kostenlos im Internet",
+		"value": "1678",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/book.svg",
+		"color": "#57006c"
+	},
+	"back": {
+		"text": "Weitere urheberrechtsfreie Bücher und Handschriften stehen aus der Wienbibliothek bereit.",
+		"color": "#000000",
+		"cssClass": ""
+	},
+	"en-US": {
+		"front": {
+			"textTop": "Read a book of",
+			"textBottom": "for free on the Internet"
+		},
+		"back": {
+			"text": "More books and handwritings in free domain are available from the Vienna Library."
+		}
+	}
+}

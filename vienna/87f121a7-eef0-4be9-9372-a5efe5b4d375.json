@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Austria",
+		"city": "Wien"
+	},
+	"portal": {
+		"url": "https://www.data.gv.at/katalog/dataset/87f121a7-eef0-4be9-9372-a5efe5b4d375",
+		"title": "Kindergärten - Standorte Wien",
+		"description": "Kindergärten, Standorte, Wien ",
+		"license": "Creative Commons Namensnennung",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Magistratsabteilung 11 -  Amt für Jugend und Familie",
+		"author": "post@ma11.wien.gv.at",
+		"created": "2012-04-11",
+		"updated": "2016-02-10"
+	},
+	"front": {
+		"textTop": "In den Kindergärten können",
+		"textBottom": "Kinder sich austoben",
+		"value": "104382",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "So viele bewilligte Plätze gibt es in den privaten und städtischen Kindergärten in Wien.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
