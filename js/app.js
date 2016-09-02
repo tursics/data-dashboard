@@ -309,8 +309,10 @@ function loadCards() {
 		$.ajax(url)
 			.done(function (json) {
 				try {
-					var data = $.parseJSON(json);
-					createCard(data);
+					if (typeof json === 'string') {
+						json = $.parseJSON(json);
+					}
+					createCard(json);
 				} catch (e1) {
 					try {
 						if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
@@ -566,8 +568,10 @@ function installCity(callbackFunc) {
 	url += '/cityConfig.json';
 	$.ajax(url)
 		.done(function (json) {
-			var data = $.parseJSON(json);
-			cityConfig = data;
+			if (typeof json === 'string') {
+				json = $.parseJSON(json);
+			}
+			cityConfig = json;
 		})
 		.fail(function (jqXHR, textStatus) {
 			if ('parsererror' === textStatus) {
@@ -739,7 +743,7 @@ function installEvents() {
 		for (i = 0; i < (elements.length - 1); ++i) {
 			e = $(elements[i]);
 			top = parseInt(e.position().top, 10);
-			if ((0 === i) || (lastTop === top)) {
+			if ((0 === i) || (lastTop === top)) {
 				e.css('margin-left', '0');
 			} else {
 				++y;
