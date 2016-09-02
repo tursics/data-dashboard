@@ -309,8 +309,10 @@ function loadCards() {
 		$.ajax(url)
 			.done(function (json) {
 				try {
-					var data = $.parseJSON(json);
-					createCard(data);
+					if (typeof json === 'string') {
+						json = $.parseJSON(json);
+					}
+					createCard(json);
 				} catch (e1) {
 					try {
 						if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
@@ -566,8 +568,10 @@ function installCity(callbackFunc) {
 	url += '/cityConfig.json';
 	$.ajax(url)
 		.done(function (json) {
-			var data = $.parseJSON(json);
-			cityConfig = data;
+			if (typeof json === 'string') {
+				json = $.parseJSON(json);
+			}
+			cityConfig = json;
 		})
 		.fail(function (jqXHR, textStatus) {
 			if ('parsererror' === textStatus) {
