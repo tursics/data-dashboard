@@ -7,8 +7,8 @@
 		"background": "wuppertal/background.jpg"
 	},
 	"data": {
-		"ckan": "http://devtal.de/~ex/datenwaben/ckan.php",
-		"ckanPackageShow": "http://devtal.de/~ex/datenwaben/ckanPackageShow.php",
+		"ckan": "http://daten-waben.tursics.de/wuppertal/ckan.php",
+		"ckanPackageShow": "http://daten-waben.tursics.de/wuppertal/ckanPackageShow.php",
 		"ckanDataset": "http://offenedaten-wuppertal.de/dataset/",
 		"ckanPrettyURL": true
 	},
