@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/ladestationen-e-autos-wuppertal",
+		"title": "Ladestationen E-Autos Wuppertal",
+		"description": "<p>Der Datensatz umfasst die rund 20 kostenfreien, öffentlichen oder halböffentlichen Ladestationen für Elektro-Autos unterschiedlicher Betreiber im Wuppertaler Stadtgebiet. Die Daten wurden im Rahmen des Verbundprojektes EmoTal (http://www.emotal.de) erstmalig im Dezember 2014 erhoben. Die Standorte der Stationen wurden dabei als frei digitalisierte Punktgeometrien mit einer Lagegenauigkeit von einigen Metern erfasst. Die zeitnahe Fortführung des Datensatzes ist bis zum Ende des Projektes (31.07.2016) gewährleistet. Die Stadt Wuppertal plant, den Datensatz auch danach regelmäßig zu aktualisieren. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "geodatenzentrum@stadt.wuppertal.de",
+		"created": "2016-05-24",
+		"updated": "2016-07-25"
+	},
+	"front": {
+		"textTop": "E-Autos Wuppertal",
+		"textBottom": "Ladestationen",
+		"value": "20",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/parking.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "<p>Der Datensatz umfasst die rund 20 kostenfreien, öffentlichen oder halböffentlichen Ladestationen für Elektro-Autos unterschiedlicher Betreiber im Wuppertaler Stadtgebiet. Die Daten wurden im Rahmen des Verbundprojektes EmoTal (http://www.emotal.de) erstmalig im Dezember 2014 erhoben. Die Standorte der Stationen wurden dabei als frei digitalisierte Punktgeometrien mit einer Lagegenauigkeit von einigen Metern erfasst. Die zeitnahe Fortführung des Datensatzes ist bis zum Ende des Projektes (31.07.2016) gewährleistet. Die Stadt Wuppertal plant, den Datensatz auch danach regelmäßig zu aktualisieren. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/stadtgebiet-wuppertal",
+		"title": "Stadtgebiet Wuppertal",
+		"description": "<p>Der Datensatz beinhaltet das Wuppertaler Stadtgebiet als Polygon, wie es in der kleinräumigen Gliederung der Stadt Wuppertal geführt wird. Die kleinräumige Gliederung ist ein Knoten- und Kantenmodell der Stadt, das als Raumbezugsbasis der Wuppertaler Kommunalstatistik dient. Innerhalb dieses Systems wird das Stadtgebiet aus den Stadtbezirken aggregiert. Es handelt sich um keine flurstückscharfe Darstellung, hierfür muss auf Daten des Amtlichen Liegenschaftskatasterinformationssystems ALKIS zurückgegriffen werden. Die Abgrenzung des Wuppertaler Stadtgebiets ist langfristig konstant. Änderungen sind nur im Zusammenhang mit gesetzlich geregelten Gebietsreformen möglich und daher nicht vorhersehbar. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "geodatenzentrum@stadt.wuppertal.de",
+		"created": "2016-06-29",
+		"updated": "2016-07-11"
+	},
+	"front": {
+		"textTop": "Stadtgebiet Wuppertal",
+		"textBottom": " ",
+		"value": "168",
+		"unit": "km²",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/ground.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "<p>Der Datensatz beinhaltet das Wuppertaler Stadtgebiet als Polygon, wie es in der kleinräumigen Gliederung der Stadt Wuppertal geführt wird. Die kleinräumige Gliederung ist ein Knoten- und Kantenmodell der Stadt, das als Raumbezugsbasis der Wuppertaler Kommunalstatistik dient. Innerhalb dieses Systems wird das Stadtgebiet aus den Stadtbezirken aggregiert. Es handelt sich um keine flurstückscharfe Darstellung, hierfür muss auf Daten des Amtlichen Liegenschaftskatasterinformationssystems ALKIS zurückgegriffen werden. Die Abgrenzung des Wuppertaler Stadtgebiets ist langfristig konstant. Änderungen sind nur im Zusammenhang mit gesetzlich geregelten Gebietsreformen möglich und daher nicht vorhersehbar. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

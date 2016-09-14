@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/interessante-orte-wuppertal-poi",
+		"title": "Interessante Orte Wuppertal (POI)",
+		"description": "<p>Der Datensatz umfasst etwa 500 interessante Orte (Points of Interest, kurz POI) im Wuppertaler Stadtgebiet oder in dessen unmittelbarer Umgebung. Thematisch deckt er ca. 30 Kategorien aus den Themenfeldern Freizeit, Kultur, Tourismus, städtische Infrastruktur etc. ab. Die Datenmodellierung lehnt sich an die ISO19112 an und beinhaltet u. a. die Mehrfachkategorisierung bei Auszeichnung einer Hauptkategorie, die optionale Zuordnung mehrerer alternativer Namen sowie die Zuordnung zu übergeordneten Themenfeldern (Lebenslagen). Die Koordinaten der POI beziehen sich auf die Amtliche Stadtkarte Wuppertal, eine leicht generalisierte Karte im Maßstab 1:15.000. Bei der Nutzung der Daten mit grundrisstreuen Hintergrundkarten entstehen daher Lageabweichungen in der Größenordnung 10 Meter. Die laufende Aktualisierung der Daten erfolgt im Zusammenhang mit den Kartenredaktionsarbeiten für die Fortführung der Amtlichen Stadtkarte. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "geodatenzentrum@stadt.wuppertal.de",
+		"created": "2016-06-15",
+		"updated": "2016-07-20"
+	},
+	"front": {
+		"textTop": "POI",
+		"textBottom": " interessante Orte",
+		"value": "500",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "<p>Der Datensatz umfasst etwa 500 interessante Orte (Points of Interest, kurz POI) im Wuppertaler Stadtgebiet oder in dessen unmittelbarer Umgebung. Thematisch deckt er ca. 30 Kategorien aus den Themenfeldern Freizeit, Kultur, Tourismus, städtische Infrastruktur etc. ab. Die Datenmodellierung lehnt sich an die ISO19112 an und beinhaltet u. a. die Mehrfachkategorisierung bei Auszeichnung einer Hauptkategorie, die optionale Zuordnung mehrerer alternativer Namen sowie die Zuordnung zu übergeordneten Themenfeldern (Lebenslagen). Die Koordinaten der POI beziehen sich auf die Amtliche Stadtkarte Wuppertal, eine leicht generalisierte Karte im Maßstab 1:15.000. Bei der Nutzung der Daten mit grundrisstreuen Hintergrundkarten entstehen daher Lageabweichungen in der Größenordnung 10 Meter. Die laufende Aktualisierung der Daten erfolgt im Zusammenhang mit den Kartenredaktionsarbeiten für die Fortführung der Amtlichen Stadtkarte. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

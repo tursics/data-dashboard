@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/allgemein-bildende-schulen-am-1510-nach-schulformen-schulen-sch%C3%BCler-und-lehrerbestand",
+		"title": " Allgemein bildende Schulen am 15.10. nach Schulformen: Schulen, Schüler- und Lehrerbestand",
+		"description": "<p>Die Ergebnisse sind ab 1995 jährlich verfügbar.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "",
+		"created": "2016-06-06",
+		"updated": "2016-06-22"
+	},
+	"front": {
+		"textTop": "",
+		"textBottom": "Allgemein bildende Schulen",
+		"value": "102",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/museum.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "<p>Die Ergebnisse sind ab 1995 jährlich verfügbar.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
