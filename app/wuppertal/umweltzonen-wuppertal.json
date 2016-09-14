@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/umweltzonen-wuppertal",
+		"title": "Umweltzonen Wuppertal",
+		"description": "<p>Der Datensatz umfasst die Polygone der beiden seit dem 15.02.2009 gültigen Umweltzonen im Wuppertaler Stadtgebiet. Die Festlegung der Umweltzonen erfolgte als Maßnahme des Luftreinhalteplans, die Projektleitung lag bei der Bezirksregierung Düsseldorf. Seit dem 1. Juli 2014 dürfen die Wuppertaler Umweltzonen nur noch mit Kfz der Schadstoffgruppe 4 (grüne Plakette) oder mit einer Ausnahmegenehmigung befahren werden. Die Umringe der Umweltzonen wurden auf der Grundlage der Amtlichen Stadtkarte Wuppertal digitalisiert, einer leicht generalisierten Karte im Maßstab 1:15.000. Bei der Nutzung der Daten mit grundrisstreuen Hintergrundkarten entstehen daher Lageabweichungen in der Größenordnung 10 Meter. Änderungen in der Abgrenzung der Wuppertaler Umweltzonen sind langfristig nicht zu erwarten. Der Datensatz ist unter einer Open-Data-Lizenz (CC-BY 4.0) verfügbar.</p><div> </div>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "geodatenzentrum@stadt.wuppertal.de",
+		"created": "2016-08-22",
+		"updated": "2016-08-24"
+	},
+	"front": {
+		"textTop": "Umweltzonen Wuppertal",
+		"textBottom": " von 168 km²",
+		"value": "23",
+		"unit": "km²",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/tree.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "<p>Der Datensatz umfasst die Polygone der beiden seit dem 15.02.2009 gültigen Umweltzonen im Wuppertaler Stadtgebiet. Die Festlegung der Umweltzonen erfolgte als Maßnahme des Luftreinhalteplans, die Projektleitung lag bei der Bezirksregierung Düsseldorf. Seit dem 1. Juli 2014 dürfen die Wuppertaler Umweltzonen nur noch mit Kfz der Schadstoffgruppe 4 (grüne Plakette) oder mit einer Ausnahmegenehmigung befahren werden. Die Umringe der Umweltzonen wurden auf der Grundlage der Amtlichen Stadtkarte Wuppertal digitalisiert, einer leicht generalisierten Karte im Maßstab 1:15.000. Bei der Nutzung der Daten mit grundrisstreuen Hintergrundkarten entstehen daher Lageabweichungen in der Größenordnung 10 Meter. Änderungen in der Abgrenzung der Wuppertaler Umweltzonen sind langfristig nicht zu erwarten. Der Datensatz ist unter einer Open-Data-Lizenz (CC-BY 4.0) verfügbar.</p><div> </div>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

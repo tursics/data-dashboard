@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/verleih-e-fahrr%C3%A4der-wuppertal",
+		"title": "Verleih E-Fahrräder Wuppertal",
+		"description": "<p>Der Datensatz umfasst die rund 10 Standorte im Wuppertaler Stadtgebiet, an denen Elektro-Fahrräder (Pedelecs) verliehen werden. Die Daten wurden im Rahmen des Verbundprojektes EmoTal (http://www.emotal.de) erstmalig im Dezember 2014 erhoben. Die Standorte der Stationen wurden dabei als frei digitalisierte Punktgeometrien mit einer Lagegenauigkeit von einigen Metern erfasst. Die zeitnahe Fortführung des Datensatzes ist bis zum Ende des Projektes (31.07.2016) gewährleistet. Die Stadt Wuppertal plant, den Datensatz auch danach regelmäßig zu aktualisieren. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "geodatenzentrum@stadt.wuppertal.de",
+		"created": "2016-06-15",
+		"updated": "2016-07-11"
+	},
+	"front": {
+		"textTop": "Verleih E-Fahrräder",
+		"textBottom": "Stationen",
+		"value": "10",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/bicycle.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "<p>Der Datensatz umfasst die rund 10 Standorte im Wuppertaler Stadtgebiet, an denen Elektro-Fahrräder (Pedelecs) verliehen werden. Die Daten wurden im Rahmen des Verbundprojektes EmoTal (http://www.emotal.de) erstmalig im Dezember 2014 erhoben. Die Standorte der Stationen wurden dabei als frei digitalisierte Punktgeometrien mit einer Lagegenauigkeit von einigen Metern erfasst. Die zeitnahe Fortführung des Datensatzes ist bis zum Ende des Projektes (31.07.2016) gewährleistet. Die Stadt Wuppertal plant, den Datensatz auch danach regelmäßig zu aktualisieren. Der Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

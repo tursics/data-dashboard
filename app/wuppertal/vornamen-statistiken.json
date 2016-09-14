@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/vornamen-statistiken",
+		"title": "Vornamen-Statistiken",
+		"description": "<p>Die Vornamen-Statistiken können ab dem Jahr 2012 digital zur Verfügung gestellt werden.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "offenedaten@stadt.wuppertal.de",
+		"created": "2016-09-09",
+		"updated": "2016-09-09"
+	},
+	"front": {
+		"textTop": "Vornamen-Statistiken",
+		"textBottom": "ist am Beliebtesten",
+		"value": "Sophie",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/gender.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "<p>Die Vornamen-Statistiken können ab dem Jahr 2012 digital zur Verfügung gestellt werden.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
