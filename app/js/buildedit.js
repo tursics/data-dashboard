@@ -86,6 +86,10 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCZero').click();
 		} else if (('' === data.result.license_id) && ('cc-by' === data.result.license_title)) {
 			$('#inputMetaLicenseCCBY').click();
+		} else if (('' === data.result.license_id) && ('cc-by-4.0' === data.result.license_title)) {
+			$('#inputMetaLicenseCCBY').click();
+		} else if (('' === data.result.license_id) && ('dl-de-by-2.0' === data.result.license_title)) {
+			$('#inputMetaLicenseDLDEBY20').click();
 		} else {
 			$('#inputMetaLicenseOther').click();
 		}
