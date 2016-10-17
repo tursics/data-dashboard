@@ -132,8 +132,10 @@ function about() {
 		if (config.loaded < cityConfig.cards.length) {
 			var url = cityConfig.cards[config.loaded];
 			$.ajax(url)
-				.done(function (json) {
-					var data = $.parseJSON(json);
+				.done(function (data) {
+					if (typeof data === 'string') {
+						data = $.parseJSON(data);
+					}
 					colorizeCard(data);
 				})
 				.fail(function (jqXHR, textStatus) {
