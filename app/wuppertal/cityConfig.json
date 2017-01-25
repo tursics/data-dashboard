@@ -28,6 +28,7 @@
 		"wuppertal/umweltzonen-wuppertal.json",
 		"wuppertal/verleih-e-fahrraeder-wuppertal.json",
 		"wuppertal/vornamen-statistiken.json",
-		"wuppertal/wo-ist-markt.json"
+		"wuppertal/wo-ist-markt.json",
+		"wuppertal/schwebebahnhaltestellen-wuppertal"
 	]
 }

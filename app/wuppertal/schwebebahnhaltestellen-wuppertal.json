@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Wuppertal"
+	},
+	"portal": {
+		"url": "http://offenedaten-wuppertal.de/dataset/schwebebahnhaltestellen-wuppertal",
+		"title": "Schwebebahnhaltestellen Wuppertal",
+		"description": "<p>Der Datensatz umfasst die 19 Haltestellen der Wuppertaler Schwebebahn, die alle im Wuppertaler Stadtgebiet liegen. Bei den Haltestellen handelt es sich zum größten Teil um Überbauungen des Flusses \"Wupper\" der das Wuppertaler Stadtgebiet von Ost nach West durchquert. Nur die letzten 4 Haltestellen am westlichen Ende der Schwebebahntrasse (Vohwinkel) befinden sich nicht über der Wupper. Die geographische Lage der eigentlich flächenhaften Haltestellen wird vereinfacht durch Punkte repräsentiert, deren Lage nicht durch kartographische Generalisierung verändert wurde. Als Kartenhintergrund für die Visualisierung des Datensatzes kommen daher grundrisstreue Karten wie die Liegenschaftskarte und die Amtliche Basiskarte ABK sowie Orthofotomosaike mit hoher Auflösung in Betracht.Trasse und Haltestellen der Wuppertaler Schwebebahn unterliegen auch langfristig keinen Änderungen mehr, der Datensatz muss daher nicht fortgeschrieben werden. Er ist als ESRI-Shapefile und KML-Datei unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</p>",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Offene Daten Wuppertal",
+		"author": "geodatenzentrum@stadt.wuppertal.de",
+		"created": "2016-10-17",
+		"updated": "2016-10-17"
+	},
+	"front": {
+		"textTop": "",
+		"textBottom": "Schwebebahnhaltestellen <br/>im Stadtgebiet",
+		"value": "19",
+		"unit": "",
+		"changePerDay": "0",
+		"format": "int",
+		"background": "img/map.svg",
+		"color": "#c83737"
+	},
+	"back": {
+		"text": "<p>Der Datensatz umfasst die 19 Haltestellen der Wuppertaler Schwebebahn.</p>",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
