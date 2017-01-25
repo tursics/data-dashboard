@@ -7,8 +7,11 @@
 		"background": "berlin/oberbaumbrucke-968607.jpg"
 	},
 	"data": {
-		"feed": "http://daten-waben.tursics.de/berlin/rss.php",
-		"feed_but_send_no_CORS_header": "http://daten.berlin.de/datensaetze/rss.xml"
+		"ckan": "http://datenwaben.de/berlin/ckan.php",
+		"ckanPackageShow": "http://datenwaben.de/berlin/ckanPackageShow.php",
+		"ckanDataset": "https://daten.berlin.de/datensaetze/",
+		"NOT_USED_feed": "http://datenwaben.de/berlin/rss.php",
+		"NOT_USED_feed_but_send_no_CORS_header": "http://daten.berlin.de/datensaetze/rss.xml"
 	},
 	"cards": [
 		"berlin/berlin-opendata.json",

@@ -86,7 +86,13 @@ function fillBuildCardWithMetadata() {
 			$('#inputMetaLicenseCCZero').click();
 		} else if (('' === data.result.license_id) && ('cc-by' === data.result.license_title)) {
 			$('#inputMetaLicenseCCBY').click();
+		} else if (('' === data.result.license_id) && ('cc-by-4.0' === data.result.license_title)) {
+			$('#inputMetaLicenseCCBY').click();
+		} else if (('' === data.result.license_id) && ('dl-de-by-2.0' === data.result.license_title)) {
+			$('#inputMetaLicenseDLDEBY20').click();
 		} else {
+			console.log(data.result.license_id);
+			// geonutz-be-2013-10-01
 			$('#inputMetaLicenseOther').click();
 		}
 		$('#inputMetaLink').val(link).change();
@@ -106,21 +112,26 @@ function fillBuildCardWithMetadata() {
 	var url = $('#inputMetaLink').val(),
 		isCKAN = false;
 
-	if ('berlin' === config.cities[window.navigation.cityId].path) {
-		url = config.cities[window.navigation.cityId].path + '/metadata.php?url=' + encodeURI(url);
-	}
+//	if ('berlin' === config.cities[window.navigation.cityId].path) {
+//		url = config.cities[window.navigation.cityId].path + '/metadata.php?url=' + encodeURI(url);
+//	}
 	if ('' === url) {
 		return;
 	}
 
 	if (typeof cityConfig.data.ckanPackageShow !== 'undefined') {
 		isCKAN = true;
-		url = cityConfig.data.ckanPackageShow + '?id=' + url.split('/dataset/')[1];
+		if ((typeof cityConfig.data.ckanDataset !== 'undefined') && (url.split(cityConfig.data.ckanDataset).length > 1)) {
+			url = cityConfig.data.ckanPackageShow + '?id=' + url.split(cityConfig.data.ckanDataset)[1];
+		} else {
+			url = cityConfig.data.ckanPackageShow + '?id=' + url.split('/dataset/')[1];
+		}
 	} else if (typeof cityConfig.data.ckan !== 'undefined') {
 		isCKAN = true;
 		url = url.split('/dataset/')[0] + '/api/3/action/package_show?id=' + url.split('/dataset/')[1];
 	}
 
+//console.log(url);
 	$.ajax(url)
 		.done(function (json) {
 			if (typeof json === 'string') {
