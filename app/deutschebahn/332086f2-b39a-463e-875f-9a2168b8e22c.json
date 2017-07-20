@@ -12,12 +12,12 @@
 		"attribution": "Gerhard Welter",
 		"author": "gerhard.welter@deutschebahn.com",
 		"created": "2016-06-13",
-		"updated": "2016-06-15"
+		"updated": "2017-04-20"
 	},
 	"front": {
-		"textTop": "Ohne Nahverkehr sind",
-		"textBottom": "Fernbahnhöfe angebunden",
-		"value": "2",
+		"textTop": "An einer Bahnhofstr. stehen",
+		"textBottom": "Bahnhöfe",
+		"value": "1664",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
@@ -25,7 +25,7 @@
 		"color": "#008033"
 	},
 	"back": {
-		"text": "Mehr Bahnhofsdaten zu den Anbindungen, Verkehrsverbünden und Aufgbenträger...",
+		"text": "Mehr Bahnhofsdaten zu den Anbindungen, Verkehrsverbünden und Aufgabenträger...",
 		"color": "#000000",
 		"cssClass": ""
 	}

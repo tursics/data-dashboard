@@ -12,7 +12,7 @@
 		"attribution": "Michael Binzen",
 		"author": "DBOpenData@deutschebahn.com",
 		"created": "2016-06-13",
-		"updated": "2016-06-15"
+		"updated": "2016-06-21"
 	},
 	"front": {
 		"textTop": "Der schnellste Fahrstuhl fährt",
@@ -25,7 +25,7 @@
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Viele Metadaten zu den Fahrstühlen auf den Bahnhöfen gibt es hier:",
+		"text": "Mhhh. Der schnellste Fahrstuhl der Welt fährt 72 km/h. Untersuche selber die Daten...",
 		"color": "#000000",
 		"cssClass": ""
 	}

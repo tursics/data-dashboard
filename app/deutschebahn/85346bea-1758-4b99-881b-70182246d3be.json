@@ -12,12 +12,12 @@
 		"attribution": "Michael Binzen",
 		"author": "DBOpenData@deutschebahn.com",
 		"created": "2016-06-13",
-		"updated": "2016-06-15"
+		"updated": "2016-11-17"
 	},
 	"front": {
 		"textTop": "In Deutschlang gibt es",
 		"textBottom": "Abstellanlagen",
-		"value": "13135",
+		"value": "13268",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
