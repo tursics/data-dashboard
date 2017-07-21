@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/92bec216-e25d-4553-a1f1-a569490e9afe",
+		"title": "Haltestellendaten",
+		"description": "Übersicht Haltestellen DB Station&Service AG",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2016-06-21"
+	},
+	"front": {
+		"textTop": "Von Aachen bis Züssow",
+		"textBottom": "Fernbahnhöfe gibt es",
+		"value": "326",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/train.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Zu jeder Haltestelle sind u.a. die EVA-Nummer, DS100, der Name und die GPS-Position veröffentlicht",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

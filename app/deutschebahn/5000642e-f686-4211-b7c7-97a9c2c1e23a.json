@@ -7,17 +7,17 @@
 		"url": "http://data.deutschebahn.com/dataset/5000642e-f686-4211-b7c7-97a9c2c1e23a",
 		"title": "Call A Bike",
 		"description": "Reportingdaten zu Call-a-Bike, inkl. CaB-Daten von Konrad Kassel und Stadtrad Hamburg, exkl. Daten weiterer Partner.",
-		"license": "",
-		"licenseURL": "",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Call a Bike Reporting",
 		"author": "reporting@flinkster.de",
 		"created": "2016-06-11",
-		"updated": "2016-06-16"
+		"updated": "2017-06-20"
 	},
 	"front": {
 		"textTop": "Werde aktiv an",
 		"textBottom": "Fahrradstationen",
-		"value": "1472",
+		"value": "1062",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
