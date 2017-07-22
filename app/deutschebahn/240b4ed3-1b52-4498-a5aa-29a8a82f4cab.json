@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/240b4ed3-1b52-4498-a5aa-29a8a82f4cab",
+		"title": "Stationsdaten (RNI)",
+		"description": "Die Stationsdaten enthalten eine Liste der Bahnhöfe von DB RegioNetz Infrastruktur GmbH inkl. Aufgabenträger.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2016-08-03"
+	},
+	"front": {
+		"textTop": "Die DB RegioNetz betreibt",
+		"textBottom": "Stationen",
+		"value": "270",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/busstop.svg",
+		"color": "#008033"
+	},
+	"back": {
+		"text": "Zu jedem Bahnhof gibt es Informationen wie Regionalbereich, Adresse, Verkehrsverbund, ...",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
