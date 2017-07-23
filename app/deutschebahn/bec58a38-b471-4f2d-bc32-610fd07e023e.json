@@ -7,17 +7,17 @@
 		"url": "http://data.deutschebahn.com/dataset/bec58a38-b471-4f2d-bc32-610fd07e023e",
 		"title": "Reisezentren",
 		"description": "Die Reisezentren enthalten eine Liste der Verkaufsstellen inkl. Adressen, Koordinaten und Öffnungszeiten.",
-		"license": "",
-		"licenseURL": "",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Michael Binzen",
 		"author": "DBOpenData@deutschebahn.com",
 		"created": "2016-06-08",
-		"updated": "2016-06-15"
+		"updated": "2017-07-19"
 	},
 	"front": {
 		"textTop": "Am Sonntag haben",
 		"textBottom": "aller Reisezentren geöffnet",
-		"value": "45",
+		"value": "48",
 		"unit": "%",
 		"changePerDay": "",
 		"format": "int",
