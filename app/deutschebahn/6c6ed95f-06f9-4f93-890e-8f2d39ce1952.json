@@ -12,12 +12,12 @@
 		"attribution": "Michael Binzen",
 		"author": "DBOpenData@deutschebahn.com",
 		"created": "2016-06-14",
-		"updated": "2016-06-17"
+		"updated": "2017-04-24"
 	},
 	"front": {
 		"textTop": "Im Zug schlafen? Deluxe?",
-		"textBottom": "Züge fahren am Berliner Hbf",
-		"value": "16",
+		"textBottom": "Züge fahren Berlin Südkreuz",
+		"value": "6",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
