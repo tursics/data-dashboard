@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/cffe45b2-fcfc-4a61-ad30-f68af1d4ed4b",
+		"title": "",
+		"description": "",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Seemanngrafik d.i.p. im Auftrag der Deutschen Bahn AG",
+		"author": "dbopendata@deutschebahn.com",
+		"created": "",
+		"updated": ""
+	},
+	"front": {
+		"textTop": "",
+		"textBottom": "",
+		"value": "",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "deutschebahn/ice4.svg",
+		"color": " none"
+	},
+	"back": {
+		"text": "Dieses Lexikon ermöglicht einen Überblick über Triebzüge und Einzelwagen zu bekommen",
+		"color": "",
+		"cssClass": ""
+	}
+}

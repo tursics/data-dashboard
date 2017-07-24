@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/7d51bcc0-0c15-44d8-851e-52e78bb28855",
+		"title": "Bahnsteigdaten",
+		"description": "Die Bahnsteigdaten enthalten Informationen über Bahnsteighöhe und -länge.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Gerhard Welter",
+		"author": "gerhard.welter@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2017-05-10"
+	},
+	"front": {
+		"textTop": "Eine Gesamtlänge von",
+		"textBottom": "haben alle Bahnsteige",
+		"value": "2267",
+		"unit": "km",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/tree.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Es gibt Informationen zur Bahnsteiglänge und der Höhe der Bahnsteigkante",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
