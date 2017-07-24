@@ -13,6 +13,8 @@
 		"ckanDataset": "http://data.deutschebahn.com/dataset/"
 	},
 	"cards": [
+		"deutschebahn/data.deutschebahn.com.json",
+		"deutschebahn/code-for-berlin.json",
 		"deutschebahn/help.json",
 
 		"deutschebahn/12049d7f-f807-420e-ac66-2faaf96bea2b.php",
@@ -29,6 +31,7 @@
 		"deutschebahn/24c5fc38-7355-40db-8193-69e0b395d0b7.json",
 		"deutschebahn/5000642e-f686-4211-b7c7-97a9c2c1e23a.json",
 		"deutschebahn/92bec216-e25d-4553-a1f1-a569490e9afe.json",
-		"deutschebahn/240b4ed3-1b52-4498-a5aa-29a8a82f4cab.json"
+		"deutschebahn/240b4ed3-1b52-4498-a5aa-29a8a82f4cab.json",
+		"deutschebahn/d7ca2be0-1a83-4490-b249-9488c50d971f.json"
 	]
 }

@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/d7ca2be0-1a83-4490-b249-9488c50d971f",
+		"title": "Sprachenmanagement - Fachbegriffe",
+		"description": "Für konzernweite sprachliche KonsistenzEine einheitliche Verwendung von Sprache, gewinnt mit der Internationalisierung an Bedeutung – besonders in der zweiten Konzernsprache Englisch. Das DB Language Portal hilft bei der Übersetzung eisenbahn- und konzernspezifischer Wörter.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "dbopendata@deutschebahn.com",
+		"created": "2017-05-12",
+		"updated": "2017-05-12"
+	},
+	"front": {
+		"textTop": "Brauchst du",
+		"textBottom": "(polnisch für Hilfe)",
+		"value": "Pomoc",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/lifebelt.svg",
+		"color": "#000000"
+	},
+	"back": {
+		"text": "Es gibt eine Liste von Fachbegriffen in Deutsch, Englisch, Französisch und Polnisch.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

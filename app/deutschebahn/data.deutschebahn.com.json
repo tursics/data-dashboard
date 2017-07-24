@@ -1,0 +1,34 @@
+{
+"location":{
+	"country":"Germany",
+	"city":"Berlin"
+},
+"portal":{
+	"url":"http://data.deutschebahn.com/",
+	"title":"Das Datenportal der Deutsche Bahn AG.",
+	"description":"Auf diesem Portal veröffentlicht die Deutsche Bahn AG einen wachsenden Datenbestand rund um Infrastruktur und Mobilität.",
+	"license":"",
+	"licenseURL":"",
+	"attribution":"",
+	"author":"",
+	"created":"",
+	"updated":""
+},
+"front":{
+	"textTop":"",
+	"textBottom":"",
+	"value":"",
+	"unit":"",
+	"changePerDay":0,
+	"format":"",
+	"background":"deutschebahn/data.deutschebahn.com.svg",
+	"color":"",
+	"cssClass":""
+},
+"back":{
+	"text":"Die Deutsche Bahn veröffentlicht Daten in maschinenlesbarer Form auf ihrem Datenportal.",
+	"background":"",
+	"color":"#000000",
+	"cssClass":""
+}
+}
