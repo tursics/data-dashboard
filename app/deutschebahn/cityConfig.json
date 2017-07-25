@@ -5,11 +5,11 @@
 		"github": "https://github.com/tursics/data-dashboard/",
 		"showMenuCity": true,
 		"background": "deutschebahn/3496_1.jpg",
-		"uri": "http://daten-waben.tursics.de/"
+		"uri": "http://datenwaben.de/"
 	},
 	"data": {
-		"ckan": "http://daten-waben.tursics.de/deutschebahn/ckan.php",
-		"ckanPackageShow": "http://daten-waben.tursics.de/deutschebahn/ckanPackageShow.php",
+		"ckan": "http://datenwaben.de/deutschebahn/ckan.php",
+		"ckanPackageShow": "http://datenwaben.de/deutschebahn/ckanPackageShow.php",
 		"ckanDataset": "http://data.deutschebahn.com/dataset/"
 	},
 	"cards": [
@@ -34,6 +34,7 @@
 		"deutschebahn/92bec216-e25d-4553-a1f1-a569490e9afe.json",
 		"deutschebahn/240b4ed3-1b52-4498-a5aa-29a8a82f4cab.json",
 		"deutschebahn/d7ca2be0-1a83-4490-b249-9488c50d971f.json",
-		"deutschebahn/7d51bcc0-0c15-44d8-851e-52e78bb28855.json"
+		"deutschebahn/7d51bcc0-0c15-44d8-851e-52e78bb28855.json",
+		"deutschebahn/b30a3c73-ed14-4061-bf4c-553f23608d60.json"
 	]
 }

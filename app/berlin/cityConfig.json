@@ -10,6 +10,7 @@
 		"ckan": "http://datenwaben.de/berlin/ckan.php",
 		"ckanPackageShow": "http://datenwaben.de/berlin/ckanPackageShow.php",
 		"ckanDataset": "https://daten.berlin.de/datensaetze/",
+		"ckanRename": true,
 		"NOT_USED_feed": "http://datenwaben.de/berlin/rss.php",
 		"NOT_USED_feed_but_send_no_CORS_header": "http://daten.berlin.de/datensaetze/rss.xml"
 	},

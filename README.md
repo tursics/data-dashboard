@@ -1,6 +1,6 @@
 # Data honeycombs (Datenwaben)
 
-Show an #OpenData data dashboard of various cities. See the result of the [visualization](http://daten-waben.tursics.de/).
+Show an #OpenData data dashboard of various cities. See the result of the [visualization](http://datenwaben.de/).
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/previewVienna.png "Vienna")
 
@@ -9,7 +9,7 @@ Show an #OpenData data dashboard of various cities. See the result of the [visua
 >The 'Datenwaben' online portal aims to visualize the contents of the so far 300 datasets of the 'Open Government Data' initiative in an easy-to-understand manner.
 
 That's a nice summery of this project. 
-I collect many honeycombs from many cities on my [website](http://daten-waben.tursics.de/) to show the wide range of available datasets. 
+I collect many honeycombs from many cities on my [website](http://datenwaben.de/) to show the wide range of available datasets. 
 Some people fork this project and create an own version e.g. for [Chemnitz, Germany](https://github.com/CodeforChemnitz/data-dashboard). 
 
 The good guys from Berlin forked this project and build a [Drupal 7 module](https://github.com/berlinonline/data_dashboard) on top of this. 

@@ -7,8 +7,8 @@
 		"background": "moers/moers-625618.jpg"
 	},
 	"data": {
-		"ckan": "http://daten-waben.tursics.de/moers/ckan.php",
-		"ckanPackageShow": "http://daten-waben.tursics.de/moers/ckanPackageShow.php",
+		"ckan": "http://datenwaben.de/moers/ckan.php",
+		"ckanPackageShow": "http://datenwaben.de/moers/ckanPackageShow.php",
 		"ckanDataset": "http://offenesdatenportal.de/dataset/"
 	},
 	"cards": [

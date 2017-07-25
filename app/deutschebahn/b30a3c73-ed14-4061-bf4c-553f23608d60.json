@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/b30a3c73-ed14-4061-bf4c-553f23608d60",
+		"title": "Geo-Tunnel",
+		"description": "Geoinformationen zu Tunnel des Schienenverkehrsnetzes. **Erfassungsdatum: Januar 2017**",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2017-05-11",
+		"updated": "2017-05-11"
+	},
+	"front": {
+		"textTop": "Der Landrückentunnel ist mit",
+		"textBottom": "Länge der längste Tunnel",
+		"value": "10779",
+		"unit": "m",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/ground.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Alle Tunnel der Deutschen Bahn in Deutschland sind hier genau verortet.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

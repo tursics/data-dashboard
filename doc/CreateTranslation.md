@@ -22,8 +22,8 @@ Currently only German translation is loaded. This could be changed in future.
 The ```i18n.js``` file is loaded in the ```/app/index.html``` file. 
 But there is a trick: Change the URL and add the parameter ```lang=en``` to show the English translation.
 
-- use http://daten-waben.tursics.de/?lang=en to show the English version
-- use http://daten-waben.tursics.de/?lang=de to show the German version
+- use http://datenwaben.de/?lang=en to show the English version
+- use http://datenwaben.de/?lang=de to show the German version
 
 ## Multi lingual honeycomb
 
@@ -45,8 +45,8 @@ But you can add some lines in the honeycomb ```.js``` file like this:
 }
 ```
 
-Take a look at the data honeycombs of [Amsterdam](http://daten-waben.tursics.de/index.html?city=amsterdam&page=cards&lang=de). 
+Take a look at the data honeycombs of [Amsterdam](http://datenwaben.de/index.html?city=amsterdam&page=cards&lang=de). 
 All honeycombs are written in German. 
-But if you change the language of the URL to [English](http://daten-waben.tursics.de/index.html?city=amsterdam&page=cards&lang=en) (using ```&lang=en```) all honeycombs are changed too.
+But if you change the language of the URL to [English](http://datenwaben.de/index.html?city=amsterdam&page=cards&lang=en) (using ```&lang=en```) all honeycombs are changed too.
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/translationHoneycomb.png "Translated honeycomb")

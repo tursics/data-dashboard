@@ -5,11 +5,11 @@
 		"github": "https://github.com/tursics/data-dashboard/",
 		"showMenuCity": true,
 		"background": "amsterdam/amsterdam-1269462.jpg",
-		"uri": "http://daten-waben.tursics.de/"
+		"uri": "http://datenwaben.de/"
 	},
 	"data": {
-		"ckan": "http://daten-waben.tursics.de/amsterdam/ckan.php",
-		"ckanPackageShow": "http://daten-waben.tursics.de/amsterdam/ckanPackageShow.php",
+		"ckan": "http://datenwaben.de/amsterdam/ckan.php",
+		"ckanPackageShow": "http://datenwaben.de/amsterdam/ckanPackageShow.php",
 		"ckanDataset": "http://data.amsterdam.nl/dataset/"
 	},
 	"cards": [

@@ -7,8 +7,8 @@
 		"background": "bonn/aachen-927531.jpg"
 	},
 	"data": {
-		"ckan": "http://daten-waben.tursics.de/bonn/ckan.php",
-		"ckanPackageShow": "http://daten-waben.tursics.de/bonn/ckanPackageShow.php",
+		"ckan": "http://datenwaben.de/bonn/ckan.php",
+		"ckanPackageShow": "http://datenwaben.de/bonn/ckanPackageShow.php",
 		"ckanDataset": "http://opendata.bonn.de/dataset/",
 		"ckanPrettyURL": true
 	},
