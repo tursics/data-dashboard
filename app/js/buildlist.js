@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global $,config,dict,cityConfig*/
+/*global $,config,dict,cityConfig,resetCards,buildCards*/
 
 //-----------------------------------------------------------------------
 
@@ -164,7 +164,7 @@ function parseFeed() {
 
 	function readCardInfos() {
 		function colorizeCard(data, url) {
-			var i = 0;
+			var i = 0, local;
 
 			data = data || {};
 			data.portal = data.portal || {};
@@ -178,7 +178,7 @@ function parseFeed() {
 			data.front.background = data.front.background || '';
 
 			if (typeof data[dict.appLang] !== 'undefined') {
-				var local = data[dict.appLang];
+				local = data[dict.appLang];
 				data.front.textTop = local.front.textTop || data.front.textTop;
 				data.front.textBottom = local.front.textBottom || data.front.textBottom;
 				data.front.value = local.front.value || data.front.value;
@@ -209,8 +209,10 @@ function parseFeed() {
 			$.ajax(url)
 				.done(function (json) {
 					try {
-						var data = $.parseJSON(json);
-						colorizeCard(data, url);
+						if (typeof json === 'string') {
+							json = $.parseJSON(json);
+						}
+						colorizeCard(json, url);
 					} catch (e1) {
 						try {
 							if ((typeof cityConfig.meta.uri !== 'undefined') && !url.startsWith(cityConfig.meta.uri)) {
