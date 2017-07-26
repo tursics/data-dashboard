@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/84a23e92-c87b-4b69-9d7b-72fc9eb6c989",
+		"title": "Betriebsstellenverzeichnis Güterverkehr",
+		"description": "Die hier gelieferten Daten stellen die Betriebsstellen der DB Cargo AG mit Geopositionen dar. ",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Hannah Richta",
+		"author": "hannah.richta@deutschebahn.com",
+		"created": "2016-08-23",
+		"updated": "2016-08-23"
+	},
+	"front": {
+		"textTop": "Betriebsstellen auf",
+		"textBottom": "Kontinenten hat DB Cargo",
+		"value": "4",
+		"unit": "",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/sun.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Betriebsstellen sind die Knoten im Netz der DB Cargo; in Australien, Asien, Amerika und Europa.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
