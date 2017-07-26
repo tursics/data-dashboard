@@ -13,6 +13,8 @@
 		"ckanPrettyURL": true
 	},
 	"cards": [
+		"wuppertal/wuppertal-opendata.json",
+		"wuppertal/code-for-wuppertal.json",
 		"wuppertal/help.json",
 		"wuppertal/allgemein-bildende-schulen-am-1510-nach-schulformen-schulen-schueler-und-lehrerbestand.json",
 		"wuppertal/denkmal.json",
@@ -28,6 +30,7 @@
 		"wuppertal/umweltzonen-wuppertal.json",
 		"wuppertal/verleih-e-fahrraeder-wuppertal.json",
 		"wuppertal/vornamen-statistiken.json",
-		"wuppertal/wo-ist-markt.json"
+		"wuppertal/wo-ist-markt.json",
+		"wuppertal/schwebebahnhaltestellen-wuppertal.json"
 	]
 }
