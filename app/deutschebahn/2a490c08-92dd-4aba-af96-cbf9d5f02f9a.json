@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/2a490c08-92dd-4aba-af96-cbf9d5f02f9a",
+		"title": "Betriebsstellenverzeichnis",
+		"description": "Das Betriebsstellenverzeichnis (DS 100) ist eine Liste aller “Betriebsstellen” der Deutschen Bahn.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Michael Binzen",
+		"author": "DBOpenData@deutschebahn.com",
+		"created": "2016-06-13",
+		"updated": "2017-02-09"
+	},
+	"front": {
+		"textTop": "Die Betriebsstelle",
+		"textBottom": "steht für Žilina (Slowakei)",
+		"value": "„XYZ“",
+		"unit": "",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/data.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Abkürzung entspricht der Richtlinie 100.0001, die sich aus Ort und Art zusammensetzt.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
