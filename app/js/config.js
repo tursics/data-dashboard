@@ -57,22 +57,22 @@ var config = config || {
 			path: 'wuppertal',
 			badge: 'Alpha',
 			group: 'city'
-		} /*,
+		}, /*
 		{
 			name: 'Open Data Portal Österreich',
 			country: 'Austria',
 			path: 'odp.at',
 			badge: 'Alpha',
 			group: 'portal'
-		}*/
-		,{
+		},*/
+		{
 			name: 'Deutsche Bahn',
 			country: 'Germany',
 			path: 'deutschebahn',
-			badge: 'Beta',
+			badge: 'Released',
 			group: 'portal'
-		}
-		,{
+		},
+		{
 			name: 'NRW',
 			country: 'Germany',
 			path: 'nrw',
