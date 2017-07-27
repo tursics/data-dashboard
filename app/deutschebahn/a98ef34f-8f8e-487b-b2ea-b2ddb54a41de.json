@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/a98ef34f-8f8e-487b-b2ea-b2ddb54a41de",
+		"title": "Ist-Verkehrsdaten der DB Cargo auf Bst8-Ebene",
+		"description": "Die hier gelieferten Daten stellen die Anzahl der Zugfahrten und Verspätungsminuten pro Tag und Betriebsstelle dar. Berücksichtigt wurden alle Bst, über die mindestens 10 Zugfahrten stattfanden.",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Hannah Richta",
+		"author": "hannah.richta@deutschebahn.com",
+		"created": "2016-11-25",
+		"updated": "2016-12-12"
+	},
+	"front": {
+		"textTop": "An einer Betriebsstelle fährt",
+		"textBottom": "ein Güterzug vorbei",
+		"value": "alle 5",
+		"unit": "min",
+		"changePerDay": "",
+		"format": "string",
+		"background": "img/market.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Daten zeigen mit welchem Ausmaß Störungen an dieser Betriebsstelle bestanden.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}

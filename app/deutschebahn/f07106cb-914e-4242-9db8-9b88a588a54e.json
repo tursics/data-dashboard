@@ -1,0 +1,32 @@
+{
+	"location": {
+		"country": "Germany",
+		"city": "Deutsche Bahn"
+	},
+	"portal": {
+		"url": "http://data.deutschebahn.com/dataset/f07106cb-914e-4242-9db8-9b88a588a54e",
+		"title": "Sensordaten Seefrachtcontainer",
+		"description": "Die Daten enthalten Standort- und Sensordaten aus der Seefracht Containerlogistik. (Auszug)",
+		"license": "Creative Commons Namensnennung Lizenz",
+		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
+		"attribution": "Ingo Hellwig-Delaminsky ",
+		"author": "ingo.hellwig-delaminsky@dbschenker.com",
+		"created": "2016-12-09",
+		"updated": "2016-12-09"
+	},
+	"front": {
+		"textTop": "Das ist taghell, gemessen mit",
+		"textBottom": "im Seefrachtcontainer",
+		"value": "82923",
+		"unit": "Lux",
+		"changePerDay": "",
+		"format": "int",
+		"background": "img/sun.svg",
+		"color": "#ffffff"
+	},
+	"back": {
+		"text": "Die Daten enthalten Standort- und Sensordaten aus der Seefracht Containerlogistik.",
+		"color": "#000000",
+		"cssClass": ""
+	}
+}
