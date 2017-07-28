@@ -17,6 +17,9 @@
 		"deutschebahn/code-for-berlin.json",
 		"deutschebahn/help.json",
 
+		"deutschebahn/timetables.php",
+		"deutschebahn/bahnhofsfotos.php",
+
 		"deutschebahn/12049d7f-f807-420e-ac66-2faaf96bea2b.php",
 		"deutschebahn/fe68e74c-f2d2-4645-b789-015f204f2df6.php",
 		"deutschebahn/1cc0f0c6-f0fd-45a6-97f7-ca2061dc0eef.php",
