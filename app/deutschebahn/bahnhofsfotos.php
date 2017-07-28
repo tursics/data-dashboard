@@ -16,8 +16,8 @@
 		"updated": "<?php echo date("Y-m-d"); ?>"
 	},
 	"front": {
-		"textTop": "",
-		"textBottom": "",
+		"textTop": "Freiwillige sammeln",
+		"textBottom": "Fotos von Bahnhöfen",
 <?php
 	$url = 'https://api.deutschebahn.com/bahnhofsfotos/v1/de/stats';
 
@@ -36,13 +36,13 @@
 ?>
 		"unit": "",
 		"changePerDay": "",
-		"format": "string",
-		"background": "img/blueprintcard.svg",
-		"color": " none"
+		"format": "int",
+		"background": "img/family.svg",
+		"color": "#ffffff"
 	},
 	"back": {
-		"text": "",
-		"color": "",
+		"text": "Die Freiwilligen sammeln Bahnhofsfotos in freien CC-0 und CC-BY Lizenzen.",
+		"color": "#000000",
 		"cssClass": ""
 	}
 }
