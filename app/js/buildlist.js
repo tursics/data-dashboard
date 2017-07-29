@@ -164,7 +164,10 @@ function parseFeed() {
 
 	function readCardInfos() {
 		function colorizeCard(data, url) {
-			var i = 0, local;
+			var i = 0, local, date = new Date(), dateStr;
+			dateStr = date.getFullYear() + '-';
+			dateStr += ('0' + (date.getMonth() + 1)).substr(-2, 2) + '-';
+			dateStr += ('0' + date.getDate()).substr(-2, 2);
 
 			data = data || {};
 			data.portal = data.portal || {};
@@ -192,6 +195,9 @@ function parseFeed() {
 					config.feed[i].background = data.front.background;
 
 					if (config.feed[i].pubDate === data.portal.updated) {
+						config.feed[i].status = 'fine';
+						++fine;
+					} else if (dateStr === data.portal.updated) {
 						config.feed[i].status = 'fine';
 						++fine;
 					} else {
