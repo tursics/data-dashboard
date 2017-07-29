@@ -5,21 +5,21 @@
 		"city": "Deutsche Bahn"
 	},
 	"portal": {
-		"url": "http://data.deutschebahn.com/dataset/1cc0f0c6-f0fd-45a6-97f7-ca2061dc0eef",
-		"title": "Parkplätze API (Beta)",
-		"description": "Diese API stellt Parkrauminformationen zu Parkeinrichtungen an Bahnhöfen zur Verfügung.",
+		"url": "http://data.deutschebahn.com/dataset/a393943a-16e2-496d-b8c3-83425d647aca",
+		"title": "Betriebsstellen-API",
+		"description": "Das Betriebsstellenverzeichnis (DS 100) ist eine Liste aller “Betriebsstellen” der Deutschen Bahn.Die Datengrundlage ist Äquivalent zum Datensatz [Betriebsstellen](http://data.deutschebahn.com/dataset/data-betriebsstellen)",
 		"license": "Creative Commons Namensnennung Lizenz",
 		"licenseURL": "http://creativecommons.org/licenses/by/3.0/de/",
 		"attribution": "Michael Binzen",
-		"author": "DBOpenData@deutschebahn.com",
-		"created": "2016-06-13",
+		"author": "dbopendata@deutschebahn.com",
+		"created": "2017-04-21",
 		"updated": "<?php echo date("Y-m-d"); ?>"
 	},
 	"front": {
-		"textTop": "An den Bahnhöfen sind",
-		"textBottom": "Parkhäuser voll",
+		"textTop": "Berlin-Ostkreuz besteht aus",
+		"textBottom": "Betriebsstellen",
 <?php
-	$url = 'https://api.deutschebahn.com/bahnpark/v1/spaces/occupancies';
+	$url = 'https://api.deutschebahn.com/betriebsstellen/v1/betriebsstellen?name=ostkreuz';
 
 	$curl_handle = curl_init();
 	curl_setopt( $curl_handle, CURLOPT_URL, $url );
@@ -31,28 +31,17 @@
 	curl_close( $curl_handle );
 
 	$data = json_decode($json, TRUE);
-	$count = 0;
 
-	foreach( $data['allocations'] as $lot ) {
-		// 1: up to 10
-		// 2: > 10
-		// 3: > 30
-		// 4: > 50
-		if( array_key_exists('category', $lot['allocation']) && (intval($lot['allocation']['category']) == 4)) {
-			++$count;
-		}
-	}
-
-	echo '"value": "'.$count.'",';
+	echo '"value": "'.sizeof($data).'",';
 ?>
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/map.svg",
-		"color": "#c83737"
+		"background": "img/museum.svg",
+		"color": "#ffffff"
 	},
 	"back": {
-		"text": "DB BahnPark stellt ein Live-API für die Parkhäuser und Parkplätze an Bahnhöfen bereit.",
+		"text": "Eine API für Informationen zu jeder Betriebsstelle findet man hier...",
 		"color": "#000000",
 		"cssClass": ""
 	}
