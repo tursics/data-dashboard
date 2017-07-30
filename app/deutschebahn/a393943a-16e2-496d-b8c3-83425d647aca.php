@@ -41,7 +41,7 @@
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Eine API für Informationen zu jeder Betriebsstelle findet man hier...",
+		"text": "Eine API für Informationen zu jeder Betriebsstelle findet man hier: <button type='button' class='btn btn-default btn-xs btn-data' data-url='http://data.deutschebahn.com/dataset/a393943a-16e2-496d-b8c3-83425d647aca'><i class='dashboardicon'>&#xe809;</i></button>",
 		"color": "#000000",
 		"cssClass": ""
 	}

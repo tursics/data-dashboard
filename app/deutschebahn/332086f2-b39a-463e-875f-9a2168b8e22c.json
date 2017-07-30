@@ -15,17 +15,17 @@
 		"updated": "2017-04-20"
 	},
 	"front": {
-		"textTop": "An einer Bahnhofstr. stehen",
-		"textBottom": "Bahnhöfe",
+		"textTop": "\"Bahnhofstraße\" als Adresse?",
+		"textBottom": "Bahnhöfe haben so eine",
 		"value": "1664",
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/busstop.svg",
-		"color": "#008033"
+		"background": "img/map.svg",
+		"color": "#c83737"
 	},
 	"back": {
-		"text": "Mehr Bahnhofsdaten zu den Anbindungen, Verkehrsverbünden und Aufgabenträger...",
+		"text": "Mehr Bahnhofsdaten zu den Anbindungen, Verkehrsverbünden und Aufgabenträgern ...",
 		"color": "#000000",
 		"cssClass": ""
 	}

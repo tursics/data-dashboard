@@ -25,7 +25,7 @@
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Diese Daten stammen vom Netzradar und untersucht das Streckennetz auf 500 Meter genau.",
+		"text": "Diese Daten stammen vom Netzradar, der das Streckennetz auf 500 Meter genau untersucht.",
 		"color": "#000000",
 		"cssClass": ""
 	}

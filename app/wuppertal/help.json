@@ -1,7 +1,7 @@
 {
 	"location":{
 		"country":"Germany",
-		"city":"Wuppertal"
+		"city":"Berlin"
 	},
 	"portal":{
 		"url":"",
@@ -25,7 +25,7 @@
 		"color":"#000000"
 	},
 	"back":{
-		"text":"Du kannst auf jedes Sechseck klicken - für mehr Informationen. Mit <button type='button' class='btn btn-default btn-xs btn-flipp'><i class='dashboardicon'>&#xe805;</i></button> kommst du wieder zurück.",
+		"text":"Für mehr Informationen kannst Du auf jedes Sechseck klicken. Mit <button type='button' class='btn btn-default btn-xs btn-flipp'><i class='dashboardicon'>&#xe805;</i></button> kommst du wieder zurück.",
 		"color":"#000000",
 		"cssClass":""
 	},

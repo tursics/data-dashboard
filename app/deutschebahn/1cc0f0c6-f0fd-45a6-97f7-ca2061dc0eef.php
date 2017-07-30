@@ -52,7 +52,7 @@
 		"color": "#c83737"
 	},
 	"back": {
-		"text": "DB BahnPark stellt ein Live-API für die Parkhäuser und Parkplätze an Bahnhöfen bereit.",
+		"text": "DB BahnPark stellt eine Live-API für die Parkhäuser und Parkplätze an Bahnhöfen bereit.",
 		"color": "#000000",
 		"cssClass": ""
 	}

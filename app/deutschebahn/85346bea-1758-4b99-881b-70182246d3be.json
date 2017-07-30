@@ -15,7 +15,7 @@
 		"updated": "2016-11-17"
 	},
 	"front": {
-		"textTop": "In Deutschlang gibt es",
+		"textTop": "In Deutschland gibt es",
 		"textBottom": "Abstellanlagen",
 		"value": "13268",
 		"unit": "",
@@ -25,7 +25,7 @@
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Weitere Servieceinrichtung, mit ihrer Länge, den Weichen und Oberleitungen findest du hier:",
+		"text": "Weitere Serviceeinrich-tungen, mit ihrer Länge, den Weichen und Oberleitungen findest du hier:",
 		"color": "#000000",
 		"cssClass": ""
 	}
