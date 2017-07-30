@@ -1,4 +1,4 @@
-<?php header( 'Access-Control-Allow-Origin: *'); ?>
+<?php header( 'Access-Control-Allow-Origin: *'); header('Content-Type: application/json'); ?>
 {
 	"location": {
 		"country": "Germany",
@@ -17,31 +17,44 @@
 	},
 	"front": {
 <?php
-	$authKey = 'DBhackFrankfurt0316';
-//	$url = 'https://open-api.bahn.de/bin/rest.exe/location.name?authKey=' . $authKey . '&format=json&input=Berlin';
-	$url = 'https://open-api.bahn.de/bin/rest.exe/departureBoard?authKey=' . $authKey . '&format=json&id=008011160'; // Berlin Hbf (tief)
+	$now = str_replace(' ', 'T', date("Y-m-d H:i:s"));
+	$url = 'https://api.deutschebahn.com/fahrplan-plus/v1/departureBoard/008011160?date='.$now; // Berlin Hbf (tief)
 
-	$json = file_get_contents( $url );
-/*	$curl_handle = curl_init();
+	$curl_handle = curl_init();
 	curl_setopt( $curl_handle, CURLOPT_URL, $url );
 	curl_setopt( $curl_handle, CURLOPT_CONNECTTIMEOUT, 2 );
 	curl_setopt( $curl_handle, CURLOPT_RETURNTRANSFER, 1 );
 	curl_setopt( $curl_handle, CURLOPT_USERAGENT, 'Datenwaben - datenwaben.de' );
+	curl_setopt( $curl_handle, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2b344cb863ad6086779ba76dd628f9fd'));
 	$json = curl_exec( $curl_handle );
-	curl_close( $curl_handle );*/
+	curl_close( $curl_handle );
 
 	$data = json_decode($json, TRUE);
 	$train = '';
 	$datetime = 0;
 	$city = '';
 
-	foreach( $data['DepartureBoard']['Departure'] as $departure ) {
-		$train = $departure['name'];
-		$datetime = $departure['date'] . ' ' . $departure['time'];
-		$city = $departure['direction'];
+	$departure = $data[0];
+	$train = $departure['name'];
+	$datetime = $departure['dateTime'];
+	$detailsId = $departure['detailsId'];
 
-		break;
-	}
+	$url = 'https://api.deutschebahn.com/fahrplan-plus/v1/journeyDetails/'.urlencode($detailsId);
+
+	$curl_handle = curl_init();
+	curl_setopt( $curl_handle, CURLOPT_URL, $url );
+	curl_setopt( $curl_handle, CURLOPT_CONNECTTIMEOUT, 2 );
+	curl_setopt( $curl_handle, CURLOPT_RETURNTRANSFER, 1 );
+	curl_setopt( $curl_handle, CURLOPT_USERAGENT, 'Datenwaben - datenwaben.de' );
+	curl_setopt( $curl_handle, CURLOPT_HTTPHEADER, array('Authorization: Bearer 2b344cb863ad6086779ba76dd628f9fd'));
+	$json = curl_exec( $curl_handle );
+	curl_close( $curl_handle );
+
+	$data = json_decode($json, TRUE);
+
+	$journey = $data[sizeof($data) - 1];
+	$city = $journey['stopName'];
+
 	echo '"textTop": "Berlin Hbf: nächster Zug in",';
 	echo '"textBottom": "nach '.$city.'",';
 	echo '"value": "'.$datetime.'",';
