@@ -25,7 +25,7 @@
 		"color": "#ffffff"
 	},
 	"back": {
-		"text": "Es gibt Informationen zur Bahnsteiglänge und der Höhe der Bahnsteigkante",
+		"text": "Zu jedem Bahnsteig gibt es Informationen zur Länge des Bahnsteigs und zur Höhe der Bahnsteigkante",
 		"color": "#000000",
 		"cssClass": ""
 	}

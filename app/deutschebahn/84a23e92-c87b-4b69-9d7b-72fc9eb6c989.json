@@ -15,8 +15,8 @@
 		"updated": "2016-08-23"
 	},
 	"front": {
-		"textTop": "Betriebsstellen auf",
-		"textBottom": "Kontinenten hat DB Cargo",
+		"textTop": "DB Cargo hat auf",
+		"textBottom": "Kontinenten Betriebsstellen",
 		"value": "4",
 		"unit": "",
 		"changePerDay": "",

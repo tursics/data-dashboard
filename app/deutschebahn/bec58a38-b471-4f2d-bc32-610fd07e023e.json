@@ -25,7 +25,7 @@
 		"color": "#008033"
 	},
 	"back": {
-		"text": "Mehr veröffentlichte Daten sind zu den Verkaufsstellen (Name, Ort, Öffnungszeiten, ...) hier:",
+		"text": "Mehr veröffentlichte Daten zu den Verkaufsstellen (Name, Ort, Öffnungszeiten, etc.) hier:",
 		"color": "#000000",
 		"cssClass": ""
 	}
