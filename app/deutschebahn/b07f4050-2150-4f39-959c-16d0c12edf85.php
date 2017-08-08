@@ -16,10 +16,10 @@
 		"updated": "<?php echo date("Y-m-d"); ?>"
 	},
 	"front": {
-		"textTop": "Car- und Bikesharing hat",
-		"textBottom": "API-Endpunkte",
+		"textTop": "Am Frankfurter Hbf stehen",
+		"textBottom": "Flinkster Autos bereit",
 <?php
-	$url = 'https://api.deutschebahn.com/flinkster-api-ng/v1/index';
+	$url = 'https://api.deutschebahn.com/flinkster-api-ng/v1/bookingproposals?lat=50.107432&lon=8.664387&radius=1&providernetwork=1';
 
 	$curl_handle = curl_init();
 	curl_setopt( $curl_handle, CURLOPT_URL, $url );
@@ -32,12 +32,12 @@
 
 	$data = json_decode($json, TRUE);
 
-	echo '"value": "'.sizeof($data['_links']).'",';
+	echo '"value": "'.$data['size'].'",';
 ?>
 		"unit": "",
 		"changePerDay": "",
 		"format": "int",
-		"background": "img/data.svg",
+		"background": "img/market.svg",
 		"color": "#ffffff"
 	},
 	"back": {
