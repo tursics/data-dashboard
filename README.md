@@ -17,6 +17,10 @@ As a second step they integrated the data honeycombs project in the front page o
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/mediaPortalBerlin.png "Open Data Portal Berlin")
 
+The Vienna guys build a WordPress plugin and integrated the honeycombs in the [offical Open Data portal of Vienna](https://open.wien.gv.at/site/open-data-combs/).
+
+![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/mediaPortalVienna.png "Open Data Portal Berlin")
+
 The quote above I've seen in a magazine. So if you want to illustrate data why not this way ;)
 
 ![alt text](https://raw.githubusercontent.com/tursics/data-dashboard/master/doc/mediaMagazineVienna.jpg "A magazine illustrated with data honeycombs")
