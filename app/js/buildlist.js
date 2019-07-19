@@ -319,7 +319,11 @@ function getUpdates(feedUrl, ckanUrl) {
 			// it's a hack
 			url = ckanUrl;
 		} else {
-			url = ckanUrl + '&limit=400';
+			if (-1 === ckanUrl.indexOf('?')) {
+				url = ckanUrl + '?limit=400';
+			} else {
+				url = ckanUrl + '&limit=400';
+			}
 		}
 	}
 	$.ajax(url)
