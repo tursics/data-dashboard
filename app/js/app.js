@@ -413,6 +413,7 @@ function resetCards(clearFeed) {
 	config.loadCityCards = false;
 	config.loadLicenses = false;
 	config.loadBuildList = false;
+	config.loadContributor = false;
 	config.elements = [];
 	config.updates = [];
 
@@ -439,37 +440,37 @@ function installNavigation() {
 			params[split[0]] = split[1];
 		}
 
-		window.navigation.cityId = 0;
-		window.navigation.city = config.cities[0].path;
+		window.myNavigation.cityId = 0;
+		window.myNavigation.city = config.cities[0].path;
 		if (typeof params.city !== 'undefined') {
 			for (i = 0; i < config.cities.length; ++i) {
 				if (params.city === config.cities[i].path) {
-					window.navigation.cityId = i;
-					window.navigation.city = params.city;
+					window.myNavigation.cityId = i;
+					window.myNavigation.city = params.city;
 					break;
 				}
 			}
 		}
 
 		if (typeof params.page !== 'undefined') {
-			window.navigation.page = params.page;
+			window.myNavigation.page = params.page;
 		}
-		if (-1 === $.inArray(window.navigation.page, ['cards', 'about', 'build'])) {
-			window.navigation.page = 'cards';
+		if (-1 === $.inArray(window.myNavigation.page, ['cards', 'about', 'build','debug'])) {
+			window.myNavigation.page = 'cards';
 		}
 
 		if ((typeof params.lang !== 'undefined') && (2 === params.lang.length)) {
-			window.navigation.lang = params.lang;
+			window.myNavigation.lang = params.lang;
 			window.dict = gDict[params.lang] || window.dict;
 		}
 	}
 
 	function saveNavigation(pushHistory) {
-		var url = '?city=' + window.navigation.city;
-		url += '&page=' + window.navigation.page;
+		var url = '?city=' + window.myNavigation.city;
+		url += '&page=' + window.myNavigation.page;
 
-		if (typeof window.navigation.lang !== 'undefined') {
-			url += '&lang=' + window.navigation.lang;
+		if (typeof window.myNavigation.lang !== 'undefined') {
+			url += '&lang=' + window.myNavigation.lang;
 		}
 
 		try {
@@ -483,7 +484,7 @@ function installNavigation() {
 		}
 	}
 
-	window.navigation = window.navigation || {
+	window.myNavigation = window.myNavigation || {
 		city: '',
 		cityId: 0,
 		page: '',
@@ -519,7 +520,7 @@ function installNavigation() {
 			}
 
 			if ('cards' === pageName) {
-				window.navigation.replaceURI();
+				window.myNavigation.replaceURI();
 
 				resetCards(true);
 				$('body').waitForImages(function () {
@@ -527,7 +528,7 @@ function installNavigation() {
 					loadCards();
 				});
 			} else if ('about' === pageName) {
-				window.navigation.replaceURI();
+				window.myNavigation.replaceURI();
 
 				resetCards(true);
 				$('body').waitForImages(function () {
@@ -535,12 +536,20 @@ function installNavigation() {
 					about();
 				});
 			} else if ('build' === pageName) {
-				window.navigation.replaceURI();
+				window.myNavigation.replaceURI();
 
 				resetCards(true);
 				$('body').waitForImages(function () {
 					config.loadBuildList = true;
 					getUpdates(cityConfig.data.feed, cityConfig.data.ckan);
+				});
+			} else if ('debug' === pageName) {
+				window.myNavigation.replaceURI();
+
+				resetCards(true);
+				$('body').waitForImages(function () {
+					config.loadContributor = true;
+					contributor(cityConfig.data.feed, cityConfig.data.ckan);
 				});
 			} else {
 				console.log('Page "' + pageName + '" does not exist');
@@ -549,8 +558,8 @@ function installNavigation() {
 	};
 
 	loadNavigation();
-	window.navigation.useFileSystem = (0 === location.href.indexOf('file://'));
-	window.navigation.replaceURI();
+	window.myNavigation.useFileSystem = (0 === location.href.indexOf('file://'));
+	window.myNavigation.replaceURI();
 }
 
 //-----------------------------------------------------------------------
@@ -560,8 +569,8 @@ function installCity(callbackFunc) {
 
 	cityConfig = {};
 
-	var url = window.navigation.city;
-//	if(window.navigation.useFileSystem) {
+	var url = window.myNavigation.city;
+//	if(window.myNavigation.useFileSystem) {
 //		url = location.href.substr(0, location.href.lastIndexOf('/')) + '/' + url;
 //	}
 
@@ -659,7 +668,7 @@ function installMenu() {
 			}
 
 			str += '<li class="dropdown">';
-			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.navigation.cityId].name + ' <span class="caret"></span></a>';
+			str += '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">' + config.cities[window.myNavigation.cityId].name + ' <span class="caret"></span></a>';
 			str += '<ul class="dropdown-menu">';
 			if (citylist.length > 0) {
 				str += '<li class="dropdown-header">' + dict.menuCities + '</li>';
@@ -674,7 +683,7 @@ function installMenu() {
 			str += '</li>';
 		}
 
-		badge = config.cities[window.navigation.cityId].badge;
+		badge = config.cities[window.myNavigation.cityId].badge;
 		if ('Alpha' === badge) {
 			$('.container .alert')
 				.html('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + dict.alertAlpha)
@@ -712,15 +721,15 @@ function installMenu() {
 	$('#navbar').html(str);
 
 	$('#menuPageCards').click(function () {
-		window.navigation.showPage('cards');
+		window.myNavigation.showPage('cards');
 //		return false;
 	});
 	$('#menuPageAbout').click(function () {
-		window.navigation.showPage('about');
+		window.myNavigation.showPage('about');
 //		return false;
 	});
 	$('#menuPageBuild').click(function () {
-		window.navigation.showPage('build');
+		window.myNavigation.showPage('build');
 //		return false;
 	});
 }
@@ -863,7 +872,7 @@ $(document).ready(function () {
 		installSlideshow();
 		recalcBoard();
 
-		window.navigation.showPage(window.navigation.page);
+		window.myNavigation.showPage(window.myNavigation.page);
 	});
 });
 
