@@ -22,6 +22,7 @@ function showUpdateTable() {
 	str += '<th></th>';
 	str += '<th>' + dict.updateHeadTitle + '</th>';
 	str += '<th>' + dict.updateHeadDescription + '</th>';
+//	str += '<th>' + dict.updateHeadType + '</th>';
 	str += '<th>' + dict.updateHeadDate + '</th>';
 	str += '<th></th>';
 	str += '</tr></thead><tbody>';
@@ -54,6 +55,8 @@ function showUpdateTable() {
 				str += '<td>' + desc + '</td>';
 			}
 		}
+
+//		str += '<td>' + config.feed[i].type + '</td>';
 
 		days = parseInt((Date.now() - new Date(config.feed[i].pubDate)) / 1000 / 60 / 60 / 24, 10);
 		if (isNaN(days)) {
@@ -212,6 +215,9 @@ function parseFeed() {
 
 		if (config.loaded < cityConfig.cards.length) {
 			var url = cityConfig.cards[config.loaded];
+			if(window.myNavigation.useFileSystem) {
+				url = 'https://datenwaben.de/' + url;
+			}
 			$.ajax(url)
 				.done(function (json) {
 					try {
@@ -338,6 +344,7 @@ function getUpdates(feedUrl, ckanUrl) {
 				objectId = '',
 				ckanTitle = '',
 				ckanDescription = '',
+//				ckanType = '',
 				ckanDate = '',
 				ckanAuthor = '';
 
@@ -379,6 +386,7 @@ function getUpdates(feedUrl, ckanUrl) {
 
 							ckanTitle = node.data['package'].title;
 							ckanDescription = node.data['package'].notes;
+//							ckanType = ''; // todo
 							ckanDate = node.timestamp;
 							ckanAuthor = node.data['package'].maintainer;
 						} else if (typeof node.title !== 'undefined') {
@@ -387,11 +395,13 @@ function getUpdates(feedUrl, ckanUrl) {
 							if (typeof ckanDescription === 'undefined') {
 								ckanDescription = node.notes;
 							}
+//							ckanType = node.type;
 							ckanDate = node.metadata_modified;
 							ckanAuthor = node.author;
 						} else {
 							ckanTitle = node;
 							ckanDescription = '';
+//							ckanType = '';
 							ckanDate = '';
 							ckanAuthor = '';
 						}
@@ -402,6 +412,9 @@ function getUpdates(feedUrl, ckanUrl) {
 						if ((ckanDescription === 'undefined') || (ckanDescription === null)) {
 							ckanDescription = '';
 						}
+//						if ((ckanType === 'undefined') || (ckanType === null)) {
+//							ckanType = '';
+//						}
 						if ((ckanDate === 'undefined') || (ckanDate === null)) {
 							ckanDate = '';
 						}
@@ -413,6 +426,7 @@ function getUpdates(feedUrl, ckanUrl) {
 							title: ckanTitle.trim(),
 							link: datasetUrl,
 							description: ckanDescription.trim(),
+//							type: ckanType,
 							pubDate: ckanDate.trim().split('T')[0],
 							author: ckanAuthor.trim(),
 							json: '',
@@ -441,6 +455,7 @@ function getUpdates(feedUrl, ckanUrl) {
 						title: elemTitle.value,
 						link: node.find('link').text().trim(),
 						description: elemDesc.value,
+//						type: '', // todo
 						pubDate: node.find('pubDate').text().trim(),
 						author: node.find('author').text().trim(),
 						json: '',
@@ -494,6 +509,7 @@ function getUpdates(feedUrl, ckanUrl) {
 				title: dict.errorReadingCard,
 				link: url,
 				description: url,
+//				type: '',
 				pubDate: date,
 				author: '',
 				json: '',
@@ -513,6 +529,7 @@ function getUpdates(feedUrl, ckanUrl) {
 					title: dict.errorReadingCard,
 					link: card,
 					description: card,
+//					type: '',
 					pubDate: date,
 					author: '',
 					json: '',

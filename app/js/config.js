@@ -37,6 +37,20 @@ var config = config || {
 			badge: 'Alpha',
 			group: 'city'
 		},
+/*		{
+			name: 'Düsseldorf',
+			country: 'Germany',
+			path: 'dusseldorf',
+			badge: 'Alpha',
+			group: 'city'
+		},*/
+/*		{
+			name: 'Hamburg',
+			country: 'Germany',
+			path: 'hamburg',
+			badge: 'Alpha',
+			group: 'city'
+		},*/
 		{
 			name: 'Köln',
 			country: 'Germany',
@@ -48,6 +62,13 @@ var config = config || {
 			name: 'Moers',
 			country: 'Germany',
 			path: 'moers',
+			badge: 'Alpha',
+			group: 'city'
+		},
+		{
+			name: 'München',
+			country: 'Germany',
+			path: 'munich',
 			badge: 'Alpha',
 			group: 'city'
 		},
