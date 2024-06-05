@@ -1,0 +1,16 @@
+##########################################################################################
+# deactivate "directory indexing / directory listing"
+Options -Indexes
+
+# deactivate "name completion" and "show similar file names"
+CheckSpelling off
+
+##########################################################################################
+
+RewriteEngine on
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+##########################################################################################

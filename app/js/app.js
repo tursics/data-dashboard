@@ -306,6 +306,9 @@ function loadCards() {
 
 	if ((typeof cityConfig.cards !== 'undefined') && (config.loaded < cityConfig.cards.length)) {
 		var url = cityConfig.cards[config.loaded];
+		if(window.myNavigation.useFileSystem) {
+			url = 'https://datenwaben.de/' + url;
+		}
 		$.ajax(url)
 			.done(function (json) {
 				try {
@@ -570,9 +573,10 @@ function installCity(callbackFunc) {
 	cityConfig = {};
 
 	var url = window.myNavigation.city;
-//	if(window.myNavigation.useFileSystem) {
-//		url = location.href.substr(0, location.href.lastIndexOf('/')) + '/' + url;
-//	}
+	if(window.myNavigation.useFileSystem) {
+		url = 'https://datenwaben.de/' + url;
+		console.error('Load data from remote!');
+	}
 
 	url += '/cityConfig.json';
 	$.ajax(url)
